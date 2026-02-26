@@ -1,0 +1,2527 @@
+{
+  "total_interviews": 97,
+  "sycophancy_count": 0,
+  "sycophancy_rate": 0.0,
+  "clean_interviews": 97,
+  "overall_metrics": {
+    "avg_problem_resonance": 4.32,
+    "avg_solution_fit": 3.02,
+    "avg_willingness_to_pay": 2.55
+  },
+  "adjusted_metrics": {
+    "avg_problem_resonance": 4.32,
+    "avg_solution_fit": 3.02,
+    "avg_willingness_to_pay": 2.55
+  },
+  "sentiment_distribution": {
+    "neutral": 73,
+    "positive": 5,
+    "very_positive": 1,
+    "negative": 15,
+    "very_negative": 3
+  },
+  "would_buy_distribution": {
+    "maybe": 65,
+    "no": 31,
+    "yes": 1
+  },
+  "adjusted_would_buy_distribution": {
+    "maybe": 65,
+    "no": 31,
+    "yes": 1
+  },
+  "assumption_results": {
+    "Service business categories beyond pest control (lawn care, HVAC, plumbing, pool service, cleaning) have owners/operators who experience similar churn pain and would pay $200-400/month for predictive churn analytics and retention tools.": {
+      "validated": 59,
+      "invalidated": 10,
+      "mixed": 28,
+      "validation_rate": 60.8,
+      "invalidation_rate": 10.3,
+      "adjusted_validation_rate": 60.8,
+      "adjusted_invalidation_rate": 10.3
+    },
+    "If RevHawk built a proactive engagement layer that actually executed outreach (AI-powered calls, texts, emails, drip campaigns) instead of just alerting operators about at-risk customers, operators would pay 50-100% more for that capability.": {
+      "validated": 22,
+      "invalidated": 30,
+      "mixed": 45,
+      "validation_rate": 22.7,
+      "invalidation_rate": 30.9,
+      "adjusted_validation_rate": 22.7,
+      "adjusted_invalidation_rate": 30.9
+    }
+  },
+  "archetype_metrics": {
+    "overwhelmed_founder": {
+      "count": 27,
+      "problem_resonance_sum": 116,
+      "solution_fit_sum": 94,
+      "wtp_sum": 81,
+      "would_buy_yes": 1,
+      "would_buy_no": 7,
+      "would_buy_maybe": 19,
+      "sycophancy_count": 0,
+      "avg_problem_resonance": 4.3,
+      "avg_solution_fit": 3.48,
+      "avg_wtp": 3.0,
+      "buy_rate": 3.7,
+      "sycophancy_rate": 0.0
+    },
+    "data_hungry_operator": {
+      "count": 17,
+      "problem_resonance_sum": 76,
+      "solution_fit_sum": 49,
+      "wtp_sum": 38,
+      "would_buy_yes": 0,
+      "would_buy_no": 7,
+      "would_buy_maybe": 10,
+      "sycophancy_count": 0,
+      "avg_problem_resonance": 4.47,
+      "avg_solution_fit": 2.88,
+      "avg_wtp": 2.24,
+      "buy_rate": 0.0,
+      "sycophancy_rate": 0.0
+    },
+    "automation_first_buyer": {
+      "count": 17,
+      "problem_resonance_sum": 79,
+      "solution_fit_sum": 53,
+      "wtp_sum": 45,
+      "would_buy_yes": 0,
+      "would_buy_no": 1,
+      "would_buy_maybe": 16,
+      "sycophancy_count": 0,
+      "avg_problem_resonance": 4.65,
+      "avg_solution_fit": 3.12,
+      "avg_wtp": 2.65,
+      "buy_rate": 0.0,
+      "sycophancy_rate": 0.0
+    },
+    "competitive_evaluator": {
+      "count": 16,
+      "problem_resonance_sum": 70,
+      "solution_fit_sum": 49,
+      "wtp_sum": 40,
+      "would_buy_yes": 0,
+      "would_buy_no": 4,
+      "would_buy_maybe": 12,
+      "sycophancy_count": 0,
+      "avg_problem_resonance": 4.38,
+      "avg_solution_fit": 3.06,
+      "avg_wtp": 2.5,
+      "buy_rate": 0.0,
+      "sycophancy_rate": 0.0
+    },
+    "strategic_enterprise": {
+      "count": 11,
+      "problem_resonance_sum": 47,
+      "solution_fit_sum": 28,
+      "wtp_sum": 25,
+      "would_buy_yes": 0,
+      "would_buy_no": 7,
+      "would_buy_maybe": 4,
+      "sycophancy_count": 0,
+      "avg_problem_resonance": 4.27,
+      "avg_solution_fit": 2.55,
+      "avg_wtp": 2.27,
+      "buy_rate": 0.0,
+      "sycophancy_rate": 0.0
+    },
+    "red_team_skeptic": {
+      "count": 9,
+      "problem_resonance_sum": 31,
+      "solution_fit_sum": 20,
+      "wtp_sum": 18,
+      "would_buy_yes": 0,
+      "would_buy_no": 5,
+      "would_buy_maybe": 4,
+      "sycophancy_count": 0,
+      "avg_problem_resonance": 3.44,
+      "avg_solution_fit": 2.22,
+      "avg_wtp": 2.0,
+      "buy_rate": 0.0,
+      "sycophancy_rate": 0.0
+    }
+  },
+  "top_objections": [
+    [
+      "concern about losing personal touch with automated outreach",
+      2
+    ],
+    [
+      "concern about added workload even if predictive insights are provided",
+      1
+    ],
+    [
+      "fear of losing personal touch with automated outreach",
+      1
+    ],
+    [
+      "need for simplicity and actionable advice without complexity",
+      1
+    ],
+    [
+      "no direct integration with jobber creates manual data import burden",
+      1
+    ],
+    [
+      "skepticism about prediction accuracy for lawn care vs pest control",
+      1
+    ],
+    [
+      "uncertainty about roi and actionable next steps after receiving insights",
+      1
+    ],
+    [
+      "skepticism about prediction reliability",
+      1
+    ],
+    [
+      "concern about losing human touch with automated outreach",
+      1
+    ],
+    [
+      "need for ai to handle basic queries intelligently",
+      1
+    ],
+    [
+      "requirement for seamless crm integration and proof of effectiveness",
+      1
+    ],
+    [
+      "skepticism about prediction accuracy due to seasonality",
+      1
+    ],
+    [
+      "concern about data integration effort and complexity",
+      1
+    ],
+    [
+      "price sensitivity given nearing retirement and small business size",
+      1
+    ],
+    [
+      "doubt about usefulness given natural seasonal churn",
+      1
+    ]
+  ],
+  "notable_quotes": [
+    {
+      "quote": "\"If it integrates directly with FieldRoutes, that's a plus, as I don't want to be manually exporting data all the time.\"",
+      "persona": "Carlos Mendoza",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My biggest concern with automated outreach would be losing the personal touch. We pride ourselves on building relationships with our customers.\"",
+      "persona": "Carlos Mendoza",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"The manual import is a pretty big hurdle. We're a small team, and my staff are already stretched thin.\"",
+      "persona": "Emily Chen",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My biggest reservation on the $200-400 a month isn't just the cost itself... It's the uncertainty of the value.\"",
+      "persona": "Emily Chen",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My biggest concern... would be reliability and personalization. Our customers expect a certain level of service and a human touch.\"",
+      "persona": "Derek Wallace",
+      "archetype": "overwhelmed_founder",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"I'd need to see some strong evidence this isn't just a gimmick.\"",
+      "persona": "Derek Wallace",
+      "archetype": "overwhelmed_founder",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"A 'churn risk score'... sounds complicated. And honestly, a bit like a crystal ball.\"",
+      "persona": "Janice Fowler",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My main concern... is the cost. We're a small business and very price-sensitive.\"",
+      "persona": "Janice Fowler",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Manual data entry is a non-starter for us; we just don't have the staff for it.\"",
+      "persona": "Rajiv Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"I'd need a very clear demonstration of how that automated outreach would maintain our brand voice and feel personal.\"",
+      "persona": "Rajiv Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"I don't want to spend time chasing ghosts.\"",
+      "persona": "Megan Torres",
+      "archetype": "overwhelmed_founder",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"For that price, it can't just tell me who might churn. It would need to tell me why and suggest what we should do about it.\"",
+      "persona": "Megan Torres",
+      "archetype": "overwhelmed_founder",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it requires a custom build, that's usually where costs and complexity start to skyrocket.\"",
+      "persona": "Marcus Reed",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"We're not just looking for more data; we need reliable data that directly translates into campaigns that prevent churn.\"",
+      "persona": "Marcus Reed",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Do I need to hire a data person to even understand what this platform is telling me?\"",
+      "persona": "Janet Miller",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My biggest risk is spending money and time on something that doesn't actually move the needle.\"",
+      "persona": "Janet Miller",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If your platform doesn't integrate with *that*, we'd be looking at a massive data migration or a fragmented view, which defeats the purpose of centralizing.\"",
+      "persona": "Samuel Grant",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My biggest risk concern... would be the time investment required for our team to learn and adapt to yet another system.\"",
+      "persona": "Samuel Grant",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it were truly simple to set up and *automatically* told us exactly what to do for each at-risk customer, maybe. But I'm skeptical it could be that hands-off.\"",
+      "persona": "Lisa Nguyen",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Any new tool needs to prove it can significantly reduce my workload or directly increase our profit without adding much complexity.\"",
+      "persona": "Lisa Nguyen",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"I'd need to see how it directly translates into saving *my* time and actually preventing customers from leaving.\"",
+      "persona": "Monica Alvarez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Could it still feel personal? I don't want our customers to feel like they're just a number getting automated messages.\"",
+      "persona": "Monica Alvarez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My biggest reservation about automated outreach is losing that personal touch... I'd need to be absolutely sure that the automated messages feel natural and relevant.\"",
+      "persona": "Jared Kim",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it genuinely boosts renewals and takes a significant chunk of manual work off our plates, I'd say something in the range of a few hundred dollars a month could be justifiable.\"",
+      "persona": "Jared Kim",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My initial thought is it sounds like another 'black box' solution that promises the world but then requires a data scientist to actually make it work.\"",
+      "persona": "Eleanor Brooks",
+      "archetype": "overwhelmed_founder",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"I don't have the bandwidth to become an expert in another piece of software.\"",
+      "persona": "Eleanor Brooks",
+      "archetype": "overwhelmed_founder",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"It needs to essentially hand me a list and say, 'Call these three people.'\"",
+      "persona": "Markus Chan",
+      "archetype": "overwhelmed_founder",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If this tool means I have to spend hours every week messing with it, it's a non-starter.\"",
+      "persona": "Markus Chan",
+      "archetype": "overwhelmed_founder",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Are you telling me your 'machine learning' can understand why a commercial client might reduce service... versus a residential client who's truly unhappy?\"",
+      "persona": "Sophia Martin",
+      "archetype": "overwhelmed_founder",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"'Configurable' can still mean a lot of work on my end, and I'm already stretched thin.\"",
+      "persona": "Sophia Martin",
+      "archetype": "overwhelmed_founder",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"The biggest risk I'd see... if the 'actionable insights' aren't truly actionable or if they require *more* manual effort than they save.\"",
+      "persona": "Luis Hernandez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Automated, AI-driven retention campaigns without manual setup \u2013 *that* would be a game-changer.\"",
+      "persona": "Luis Hernandez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it's going to require a lot of data entry or learning a complex new system, it might just add more to my plate, not less.",
+      "persona": "Diana Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care",
+      "sycophantic": false
+    },
+    {
+      "quote": "For that kind of money, it would need to be a no-brainer ROI and incredibly easy to use, almost plug-and-play.",
+      "persona": "Diana Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it's complex or requires significant changes to their daily routines, that's where I'd likely say no.",
+      "persona": "Tanya Wilson",
+      "archetype": "overwhelmed_founder",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "It needs to be intuitive and add value without adding burden.",
+      "persona": "Tanya Wilson",
+      "archetype": "overwhelmed_founder",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it's going to automate it, it has to feel personal, like I actually wrote it or called them.",
+      "persona": "Carlos Mendoza",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care",
+      "sycophantic": false
+    },
+    {
+      "quote": "It needs to prove it saves me time and effort, not adds to it.",
+      "persona": "Carlos Mendoza",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'm not looking for an unproven beta test. We need a stable, reliable tool.",
+      "persona": "Gregory Fields",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "We'd need to agree on specific, measurable outcomes for that pilot.",
+      "persona": "Gregory Fields",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "My biggest reservation is still going to be the effectiveness. 'Seeing is believing.'",
+      "persona": "Jill Thompson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "What happens after we identify at-risk customers? Does your platform offer anything beyond just the prediction?",
+      "persona": "Jill Thompson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "My biggest risk is that it becomes another tool that just sits there, underutilized.",
+      "persona": "Dave Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'd need to see a very clear demonstration of how it integrates directly with PestPac and Salesforce.",
+      "persona": "Dave Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "Moving all our customer data from Google Sheets and Trello into some new 'structured CRM' sounds like a massive project.",
+      "persona": "Melissa Grant",
+      "archetype": "overwhelmed_founder",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "If I have to learn two new systems, it's not going to happen.",
+      "persona": "Melissa Grant",
+      "archetype": "overwhelmed_founder",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "There's a fine line between efficiency and sounding like a machine.",
+      "persona": "Thomas Nguyen",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it's clunky, they just won't use it.",
+      "persona": "Thomas Nguyen",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "It's like we have all this data, but translating it into efficient, scalable action is the missing piece.",
+      "persona": "Linda Becker",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If a system like this could genuinely reduce the manual churn triage by, say, 30%, that would be significant.",
+      "persona": "Linda Becker",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If PestPac isn't integrated yet, that's a pretty big hurdle right off the bat.",
+      "persona": "Ethan Rodriguez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "My biggest fear is investing time and money into another tool that promises the world but just becomes shelfware.",
+      "persona": "Ethan Rodriguez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it just tells me who's going to leave, but doesn't simplify the action we take, then it might just add another layer of complexity.",
+      "persona": "Nancy Wilson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "My main lingering concern... is the time investment for me or my team to get it set up initially.",
+      "persona": "Nancy Wilson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'm not sure a 'clearer picture' would change much before the fact.",
+      "persona": "Clara Benson",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it's not saving me significant time or truly preventing churn I couldn't otherwise prevent, then it's just another expense.",
+      "persona": "Clara Benson",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"AI-powered,\" \"machine learning,\" \"proactive insights\"\u2014it's all buzzwords until proven otherwise.",
+      "persona": "Derek Chen",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "Superior accuracy, demonstrated accuracy, is paramount.",
+      "persona": "Derek Chen",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'm just not convinced a generalized 'machine learning platform' can really understand the specific rhythm of a cleaning business in Austin, Texas.",
+      "persona": "Maya Patel",
+      "archetype": "data_hungry_operator",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "If I'm going to act on its recommendations, it needs to be spot-on, not just a guess.",
+      "persona": "Maya Patel",
+      "archetype": "data_hungry_operator",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "My team prides itself on knowing our customers. If a machine tells me someone's unhappy, it feels impersonal.",
+      "persona": "Ethan Rodriguez",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If the tool costs money, it better provide a clear, measurable return.",
+      "persona": "Ethan Rodriguez",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If your platform is just giving us another dashboard with similar data, but with a 'churn score' on top, I'd need to understand how it truly differentiates itself.",
+      "persona": "Jasmine Lee",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'd want to understand how precise your predictions are and how those predictions translate into measurable improvements.",
+      "persona": "Jasmine Lee",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If this thing just spits out a list of names, what am I supposed to do with it? Cold call them and say, 'Hey, a computer told me you might leave us?' That sounds like a sure way to lose a customer.",
+      "persona": "Franklin Moore",
+      "archetype": "data_hungry_operator",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "The fundamental premise... look, I've built this business on relationships. My guys know Mrs. Henderson's dog's name. A computer isn't going to build that.",
+      "persona": "Franklin Moore",
+      "archetype": "data_hungry_operator",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "If this just adds another dashboard to monitor and more tasks without streamlining anything, then it's not really helping.",
+      "persona": "Sofia Martinez",
+      "archetype": "data_hungry_operator",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "We'd need to trust the predictions \u2013 if it flags customers who aren't actually at risk, or misses ones who are, it undermines the whole thing.",
+      "persona": "Sofia Martinez",
+      "archetype": "data_hungry_operator",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "If I have to manually export data from PestPac and then import it into your system, that defeats a lot of the purpose.",
+      "persona": "Gregory Thompson",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'd need to see some concrete proof that it works for a company like mine, not just a general percentage.",
+      "persona": "Gregory Thompson",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "My main concern is that these kinds of platforms often promise the moon but deliver very little in terms of real-world application.",
+      "persona": "Hannah Kim",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "We want to be able to customize those churn model variables, too, not just take a black box approach.",
+      "persona": "Hannah Kim",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "A 'win' would be if it could consistently identify at-risk customers before our manual review process would, and for reasons we hadn't readily identified.",
+      "persona": "Ivan Goldberg",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If you could genuinely demonstrate those things... then my next step would be to bring you in for a more formal presentation.",
+      "persona": "Ivan Goldberg",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it can't significantly cut down that manual work, it's not worth looking at.",
+      "persona": "Diana Fuentes",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'd need to see some real-world examples or a clear pathway to how it would be customized for our industry, not just generic claims.",
+      "persona": "Diana Fuentes",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "The biggest hurdle for me is proving that your predictive AI improves churn accuracy while saving analyst hours.",
+      "persona": "Marcus Ellison",
+      "archetype": "data_hungry_operator",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "It's not just about the cost of your software, but the cost of not leveraging what we've already built and refined.",
+      "persona": "Marcus Ellison",
+      "archetype": "data_hungry_operator",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it flags someone, but our outreach still doesn't save them, then we've spent time and money for nothing.",
+      "persona": "Cathy Nguyen",
+      "archetype": "data_hungry_operator",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "I need to know what factors are contributing to that risk so we can tailor our outreach.",
+      "persona": "Cathy Nguyen",
+      "archetype": "data_hungry_operator",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Sounds a bit like a crystal ball, doesn't it?\"",
+      "persona": "George Patterson",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it's telling me things I already know... then what's the point?\"",
+      "persona": "George Patterson",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it's not consistently above 85-90%... it's just creating more noise for my team.\"",
+      "persona": "Jasmine Torres",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Without those elements clearly addressed, a solution like this wouldn't be a fit for Ruva right now.\"",
+      "persona": "Jasmine Torres",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My main concern... we'd have to see a *very* clear, measurable return on investment.\"",
+      "persona": "Willard James",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it requires extensive training or adds more steps... it's a non-starter.\"",
+      "persona": "Willard James",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"How does your system account for that variability? I'm highly skeptical.\"",
+      "persona": "Nina Patel",
+      "archetype": "data_hungry_operator",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Without concrete proof... it's a non-starter.\"",
+      "persona": "Nina Patel",
+      "archetype": "data_hungry_operator",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it doesn't sound like GreenScape... it could do more harm than good.\"",
+      "persona": "Samantha Ortiz",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"The Jobber integration timeline is a bit of a sticking point.\"",
+      "persona": "Samantha Ortiz",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"How does that translate to *my* business?\"",
+      "persona": "Tyler Jensen",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"I need to see how this tool specifically helps me improve that.\"",
+      "persona": "Tyler Jensen",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it doesn't work seamlessly with ServiceTitan, it's a non-starter.\"",
+      "persona": "Linda Chen",
+      "archetype": "automation_first_buyer",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If I have to assign someone to babysit this 'AI-powered' system, it defeats the purpose.\"",
+      "persona": "Linda Chen",
+      "archetype": "automation_first_buyer",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"RevHawk doesn't sound like the right fit for BlueWave right now.\"",
+      "persona": "Carlos Ramirez",
+      "archetype": "automation_first_buyer",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"We don't have the resources to dedicate to a complex integration.\"",
+      "persona": "Carlos Ramirez",
+      "archetype": "automation_first_buyer",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it's just another dashboard, another place I have to log in to see a score, then it's not solving my problem of delayed, manual follow-ups.\"",
+      "persona": "Emily Nguyen",
+      "archetype": "automation_first_buyer",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Without that direct, automated execution through GoHighLevel, it's just another data point I have to action myself, and honestly, I don't think so.\"",
+      "persona": "Emily Nguyen",
+      "archetype": "automation_first_buyer",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it can't grasp the specifics of our industry, then a generic churn prediction is just another fancy spreadsheet.\"",
+      "persona": "Gregory Ford",
+      "archetype": "automation_first_buyer",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"The outreach needs to feel genuine, not robotic, and align with our brand.\"",
+      "persona": "Gregory Ford",
+      "archetype": "automation_first_buyer",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My biggest reservation... would still be the complexity and the actual 'personalization' of those automated messages.\"",
+      "persona": "Jasmine Patel",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"We're hesitant to invest in another expensive subscription if it's not truly going to simplify things and show a clear return for a shop our size.\"",
+      "persona": "Jasmine Patel",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If you built out that capability for truly autonomous, direct outreach execution... that would be a significant differentiator.\"",
+      "persona": "Derek Wallace",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it's a black box that just sends out pre-canned messages, that won't work.\"",
+      "persona": "Derek Wallace",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Vague 'AI' isn't enough; we need explainability.\"",
+      "persona": "Martha Klein",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"The biggest risk if it didn't work? We'd waste valuable time and resources chasing false positives or miss genuinely at-risk customers.\"",
+      "persona": "Martha Klein",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"The 'predictive churn' stuff just sounds like fancy talk that doesn't apply to how we do business.\"",
+      "persona": "Robert Mills",
+      "archetype": "automation_first_buyer",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it requires my office manager to become an IT expert, then it's not going to work.\"",
+      "persona": "Robert Mills",
+      "archetype": "automation_first_buyer",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"The most likely reason I'd say no to any tool is if it's just another dashboard without actual outbound action capabilities.\"",
+      "persona": "Maya Stanton",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"It has to feel personalized and timely.\"",
+      "persona": "Maya Stanton",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it promises that level of integration and accuracy, and solves such a significant pain point, I'd expect it to be higher. It almost sounds too good to be true.\"",
+      "persona": "Carl Nguyen",
+      "archetype": "automation_first_buyer",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"I need to see it in action... all without my team having to manually intervene.\"",
+      "persona": "Carl Nguyen",
+      "archetype": "automation_first_buyer",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My main concern would be how much work it would actually be for me to set something like that up.\"",
+      "persona": "Darlene Kim",
+      "archetype": "automation_first_buyer",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it just tells me 'this person is at risk' and then I still have to manually craft an email or make a phone call, it's not saving me a ton of time.\"",
+      "persona": "Darlene Kim",
+      "archetype": "automation_first_buyer",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"I'd need to see a very clear, proven track record of this working with other PestPac users.\"",
+      "persona": "James O\u2019Connell",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My team isn't keen on learning a whole new system if it's overly complex. Minimal retraining is key.\"",
+      "persona": "James O\u2019Connell",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My biggest risk concern... if this tool tells me customer X is at high risk, and we spend time and resources on re-engagement, but they were always going to come back anyway...\"",
+      "persona": "Rashida Ali",
+      "archetype": "automation_first_buyer",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Beyond predictions, what we really need is not just knowing who is at risk, but also efficient ways to act on that information.\"",
+      "persona": "Rashida Ali",
+      "archetype": "automation_first_buyer",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it's a black box, I'm out.\"",
+      "persona": "Edgar Martinez",
+      "archetype": "automation_first_buyer",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My 'patchwork system' is free, even if it's inefficient. If this is another money pit or time sink, it's a non-starter.\"",
+      "persona": "Edgar Martinez",
+      "archetype": "automation_first_buyer",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it truly pulls the data we need and pushes relevant actions back without breaking existing workflows, that would be a start.\"",
+      "persona": "Lena Marcus",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Introducing new software... can feel overwhelming. My team is already stretched thin; I can't afford to bog them down.\"",
+      "persona": "Lena Marcus",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Proof would definitely involve a trial, or at least a very detailed, verifiable case study from a similar-sized lawn care business.\"",
+      "persona": "Monica Feldman",
+      "archetype": "competitive_evaluator",
+      "industry": "Lawn Care",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it means more work for my team, it's a non-starter, regardless of how 'smart' the predictions are.\"",
+      "persona": "Monica Feldman",
+      "archetype": "competitive_evaluator",
+      "industry": "Lawn Care",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My gut reaction is that it sounds like every other 'AI-powered' solution I've heard pitched.\"",
+      "persona": "Jared Liu",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If I'm paying this much, I need to see a clear, measurable reduction in that summer churn, and not just a few percentage points.\"",
+      "persona": "Jared Liu",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If we have to manually feed it data, it's a non-starter. We already have staff spending time on manual reminders; adding more data entry isn't simplifying operations.\"",
+      "persona": "Elsa Martinez",
+      "archetype": "competitive_evaluator",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"What's crucial for us is something that's practically hands-free. I need automated retention campaigns that genuinely require minimal oversight.\"",
+      "persona": "Elsa Martinez",
+      "archetype": "competitive_evaluator",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it *could* truly identify at-risk customers and, more importantly, the specific reasons *why* they're at risk...\"",
+      "persona": "Brian O'Connor",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If this platform can't seamlessly pull *all* the relevant data from FieldRoutes without us having to manually export and import, it's a non-starter.\"",
+      "persona": "Brian O'Connor",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"The last thing I want to do is overhaul our entire system for something that might or might not work.\"",
+      "persona": "Rashida Khan",
+      "archetype": "competitive_evaluator",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"The idea of having to 'bridge' our data to another CRM sounds like exactly the kind of complex integration headache I want to avoid.\"",
+      "persona": "Rashida Khan",
+      "archetype": "competitive_evaluator",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My biggest hesitation... would be the investment versus the return.\"",
+      "persona": "Liam Carpenter",
+      "archetype": "competitive_evaluator",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it just spits out a list without helping us prioritize or strategize, it's not much better than our current manual guesswork.\"",
+      "persona": "Liam Carpenter",
+      "archetype": "competitive_evaluator",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it can't link all that data to a single customer profile, it's just garbage in, garbage out.\"",
+      "persona": "Carmen Reyes",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My biggest reservation... would still be the reliability and the cost.\"",
+      "persona": "Carmen Reyes",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If RevHawk integrates with Salesforce, but our main customer data isn't there, how does that even work?\"",
+      "persona": "Nina Patel",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If those 15-20 hours were truly reclaimed and our targeting became significantly more effective, that would be huge.\"",
+      "persona": "Nina Patel",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"I trust my gut and my experience with customers more than some algorithm that doesn't know Mrs. Henderson has a leaky faucet every other year.\"",
+      "persona": "Ethan Brooks",
+      "archetype": "competitive_evaluator",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it means they have to learn a whole new system or input more data, forget it. They're plumbers, not data entry clerks.\"",
+      "persona": "Ethan Brooks",
+      "archetype": "competitive_evaluator",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If we have to manually clean or restructure data every time, that defeats the purpose.\"",
+      "persona": "Marcus Lytle",
+      "archetype": "competitive_evaluator",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Does it help us prioritize, or suggest specific actions based on the 'why' they might churn?\"",
+      "persona": "Marcus Lytle",
+      "archetype": "competitive_evaluator",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"My biggest barrier or risk... is still proof.\"",
+      "persona": "Sandra Kim",
+      "archetype": "competitive_evaluator",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If you can show clear uplift in contract renewals and reduced churn within, say, three months during a pilot, then we'd have something to talk about.\"",
+      "persona": "Sandra Kim",
+      "archetype": "competitive_evaluator",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "If churn is seasonal and unavoidable, then what's the point of a score telling me someone might churn? I already know that.",
+      "persona": "Victor Ramos",
+      "archetype": "competitive_evaluator",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'm not looking to hire a tech person to manage software.",
+      "persona": "Victor Ramos",
+      "archetype": "competitive_evaluator",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "My initial reaction is skepticism. PestPac is our central nervous system; if a solution can't seamlessly integrate with it without causing more work or data discrepancies, then it's just another headache.",
+      "persona": "Emily Chen",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If you could genuinely address these concerns... the next step would probably be a pilot.",
+      "persona": "Emily Chen",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'd need to see a trial, a real-world test, where it identifies clients we didn't think were at risk, and then they actually churn.",
+      "persona": "James Donovan",
+      "archetype": "competitive_evaluator",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "Could I hire a part-time person for that much to just call people? Or is this software going to save us enough in lost revenue and staff time to justify that?",
+      "persona": "James Donovan",
+      "archetype": "competitive_evaluator",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "Sounds a bit like magic, to be honest.",
+      "persona": "Derek Jensen",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I need to know it's not going to flag every customer who pauses for winter as churn risk and send my guys on a wild goose chase.",
+      "persona": "Derek Jensen",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "My biggest concern would be integration complexity and security.",
+      "persona": "Nancy Sloane",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "An AI-making calls or sending texts could easily misinterpret situations or use canned responses that alienate customers.",
+      "persona": "Nancy Sloane",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "For me to even consider an external solution, the primary condition is a demonstrated uplift in retention, validated by a pilot on our actual historical data.",
+      "persona": "Cameron Fletcher",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If your model doesn't show a clear, measurable improvement... it's a non-starter.",
+      "persona": "Cameron Fletcher",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "The data structuring piece is a major mountain.",
+      "persona": "Joanna Kim",
+      "archetype": "strategic_enterprise",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "Adding a tool that requires custom integration with our current spreadsheet system would be counterproductive and too resource-intensive.",
+      "persona": "Joanna Kim",
+      "archetype": "strategic_enterprise",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "Automating outreach? That sounds like a recipe for impersonal, irrelevant messages that annoy customers more than they help.",
+      "persona": "Ethan Patel",
+      "archetype": "strategic_enterprise",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it means dedicating significant internal resources, it's a non-starter.",
+      "persona": "Ethan Patel",
+      "archetype": "strategic_enterprise",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it can't do that, it's just noise.\"",
+      "persona": "Sophia Martinez",
+      "archetype": "strategic_enterprise",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it can't demonstrably do that, and the cost isn't negligible, then it's just another expense I don't need.\"",
+      "persona": "Sophia Martinez",
+      "archetype": "strategic_enterprise",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"We're looking for clear differentiation and demonstrated efficiency gains, not just another black box.\"",
+      "persona": "Marcus Lee",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If integrating RevHawk disrupts our existing setup or requires extensive data preparation, that's a non-starter.\"",
+      "persona": "Marcus Lee",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"The 'machine learning' part still sounds like a black box to me.\"",
+      "persona": "Linda Gomez",
+      "archetype": "strategic_enterprise",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it takes Sarah away from her core duties for too long, then it's not saving us time, it's just shifting the burden.\"",
+      "persona": "Linda Gomez",
+      "archetype": "strategic_enterprise",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Predictive value is doubted because discerning intent from silence is hard.\"",
+      "persona": "Robert Chandler",
+      "archetype": "strategic_enterprise",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Another lengthy implementation, especially requiring spreadsheet data dumping, is a non-starter.\"",
+      "persona": "Robert Chandler",
+      "archetype": "strategic_enterprise",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it's just telling me who's at risk without helping us act, it's just adding more work.\"",
+      "persona": "Melissa Nguyen",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Rapid deployment and measurable KPIs within the first three months are critical.\"",
+      "persona": "Melissa Nguyen",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it's telling me 95% will churn but only half do, it's just noise.\"",
+      "persona": "James O\u2019Connor",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Practically guaranteed ROI isn't just a nice-to-have; it's a must-have.\"",
+      "persona": "James O\u2019Connor",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"If it requires custom development or months of IT effort, that's a non-starter.\"",
+      "persona": "Alicia Reynolds",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"I want to see how it translates into specific actions, not just pretty graphs.\"",
+      "persona": "Alicia Reynolds",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Integration with custom scheduling system has always been a significant hurdle.\"",
+      "persona": "Diane Marquez",
+      "archetype": "strategic_enterprise",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "\"Unless turnkey, minimal disruption, and proven pilot, it's a non-starter for me.\"",
+      "persona": "Diane Marquez",
+      "archetype": "strategic_enterprise",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "My 'gut feeling' has served me well for over a decade. I know my customers.",
+      "persona": "Derek Hammond",
+      "archetype": "red_team_skeptic",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it means overhauling our spreadsheets or learning a whole new system from scratch, then it's a non-starter.",
+      "persona": "Derek Hammond",
+      "archetype": "red_team_skeptic",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "How do I know your AI is any better than what we\u2019ve built internally?",
+      "persona": "Maya Patel",
+      "archetype": "red_team_skeptic",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If we invest time and resources and then you're not around in 2-3 years, that's a massive setback for us.",
+      "persona": "Maya Patel",
+      "archetype": "red_team_skeptic",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "A human can read between the lines. They can understand local nuances.",
+      "persona": "Carlos Mendez",
+      "archetype": "red_team_skeptic",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "I think our current system combined with a dedicated person is probably the best approach for us.",
+      "persona": "Carlos Mendez",
+      "archetype": "red_team_skeptic",
+      "industry": "HVAC",
+      "sycophantic": false
+    },
+    {
+      "quote": "I don't see how some algorithm is going to understand why Mrs. Henderson cancels her pool service in November.",
+      "persona": "Elena Brooks",
+      "archetype": "red_team_skeptic",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "If this thing is spitting out warnings all day, who's going to act on them?",
+      "persona": "Elena Brooks",
+      "archetype": "red_team_skeptic",
+      "industry": "Pool Service",
+      "sycophantic": false
+    },
+    {
+      "quote": "I wouldn't want some automated system replacing genuine human interaction.",
+      "persona": "James McAllister",
+      "archetype": "red_team_skeptic",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'd need to know *how* it's making these predictions. I wouldn't want it to tell me a customer is at risk without explaining why.",
+      "persona": "James McAllister",
+      "archetype": "red_team_skeptic",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "The biggest risk... is the potential for disruption to our current workflow.",
+      "persona": "Sophia Nguyen",
+      "archetype": "red_team_skeptic",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If your system requires us to fundamentally change how we operate... then it's a non-starter.",
+      "persona": "Sophia Nguyen",
+      "archetype": "red_team_skeptic",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I know my customers. I've got their phone numbers, I know their houses.",
+      "persona": "Tommy Lee",
+      "archetype": "red_team_skeptic",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "Calling a customer because a computer flagged them as at risk sounds desperate and creepy.",
+      "persona": "Tommy Lee",
+      "archetype": "red_team_skeptic",
+      "industry": "Plumbing",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it just spits out a number, it's useless.",
+      "persona": "Jessica Morales",
+      "archetype": "red_team_skeptic",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "I need to know if it's because they've skipped services, had a bad technician experience, or there's a competitor offer.",
+      "persona": "Jessica Morales",
+      "archetype": "red_team_skeptic",
+      "industry": "Lawn Care & Landscaping",
+      "sycophantic": false
+    },
+    {
+      "quote": "The fundamental skepticism about AI for my kind of personal service business is absolutely a huge blocker.",
+      "persona": "Angela Price",
+      "archetype": "red_team_skeptic",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    },
+    {
+      "quote": "My CRM *is* a spreadsheet. So, if I'm understanding right, you'd need me to get a whole new system just to use yours, which sounds like a lot of expense and headache I don't need.",
+      "persona": "Angela Price",
+      "archetype": "red_team_skeptic",
+      "industry": "Cleaning Services",
+      "sycophantic": false
+    }
+  ],
+  "hidden_insights": [
+    {
+      "insight": "Even with interest in automation, the founder is wary of shifting workload rather than reducing it.",
+      "persona": "Carlos Mendoza",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Wants actionable recommendations, not just risk lists, to avoid increasing workload.",
+      "persona": "Emily Chen",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Values operational efficiency gains as much as retention improvements.",
+      "persona": "Derek Wallace",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Wants involvement of operations manager and customer service reps in evaluation.",
+      "persona": "Derek Wallace",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner prioritizes simplicity and minimal disruption over new tech adoption.",
+      "persona": "Janice Fowler",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Seasonality is a critical factor that must be handled well.",
+      "persona": "Janice Fowler",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong preference to start with insights and alerts before adopting automated outreach.",
+      "persona": "Rajiv Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Wants to avoid complexity and tools that gather dust.",
+      "persona": "Rajiv Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Founder is the primary decision-maker but highly focused on team workload impact.",
+      "persona": "Megan Torres",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Automated outreach is seen as a potential game-changer if done right.",
+      "persona": "Megan Torres",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Willing to pay $150-350/month if value is proven and integration is smooth.",
+      "persona": "Marcus Reed",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Operations Manager and tech team involvement critical for adoption.",
+      "persona": "Marcus Reed",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Technicians are frontline ears for customer dissatisfaction but not involved in retention strategy.",
+      "persona": "Janet Miller",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner is open to exploring if integration and ROI concerns are addressed.",
+      "persona": "Janet Miller",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Primary CRM is a highly customized Salesforce instance, which is a significant integration hurdle.",
+      "persona": "Samuel Grant",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Decision-making involves Head of Customer Success and CFO focused on ROI.",
+      "persona": "Samuel Grant",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong retention rate (91%) reduces perceived urgency for new tools.",
+      "persona": "Lisa Nguyen",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Small team with stretched resources limits capacity for new system adoption.",
+      "persona": "Lisa Nguyen",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner is primary decision-maker; assistant\u2019s buy-in critical for daily use.",
+      "persona": "Monica Alvarez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Personal phone calls are a valued retention method, making automation adoption sensitive.",
+      "persona": "Monica Alvarez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Operations manager is a key stakeholder for practical implementation.",
+      "persona": "Jared Kim",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Growth stage business with focus on scalable solutions.",
+      "persona": "Jared Kim",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Marketing and operations teams are critical users and evaluators.",
+      "persona": "Eleanor Brooks",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Retention is a significant pain point despite decent retention rate.",
+      "persona": "Eleanor Brooks",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner is primary user and decision-maker; plumbers not involved in retention.",
+      "persona": "Markus Chan",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Close to retirement, prioritizing simplicity and stability.",
+      "persona": "Markus Chan",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "General Manager is primary decision-maker but consults lead supervisor.",
+      "persona": "Sophia Martin",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Cleaning services have unique churn drivers requiring tailored models.",
+      "persona": "Sophia Martin",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong emphasis on automation to eliminate human error and inconsistency.",
+      "persona": "Luis Hernandez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Board-level scrutiny requires hard ROI and competitive benchmarking.",
+      "persona": "Luis Hernandez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Despite some mental load, current manual system is perceived as sufficient due to strong retention",
+      "persona": "Diana Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner is sole decision-maker and user, limiting scale of adoption",
+      "persona": "Diana Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Multi-branch structure requires scalable and branch-specific insights",
+      "persona": "Tanya Wilson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Decision-making involves multiple stakeholders beyond the founder",
+      "persona": "Tanya Wilson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner is sole user of customer relationship tools",
+      "persona": "Carlos Mendoza",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong preference for personal touch limits acceptance of generic automation",
+      "persona": "Carlos Mendoza",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Decision-making involves marketing, data analyst, and operations teams",
+      "persona": "Gregory Fields",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong emphasis on partnership and trust with vendor",
+      "persona": "Gregory Fields",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Primary decision-maker is owner with some input from operations manager",
+      "persona": "Jill Thompson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Seasonality and unique business patterns require tailored modeling",
+      "persona": "Jill Thompson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Existing tech stack is complex and mature, raising bar for new tool adoption",
+      "persona": "Dave Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Decision-making involves multiple operational stakeholders",
+      "persona": "Dave Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner and small team are overwhelmed and lack technical bandwidth",
+      "persona": "Melissa Grant",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Cost and setup complexity are bigger barriers than the problem itself",
+      "persona": "Melissa Grant",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Sales team adoption is critical and a potential bottleneck",
+      "persona": "Thomas Nguyen",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "ROI must be clearly demonstrated for a company with 82% retention",
+      "persona": "Thomas Nguyen",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong emphasis on maintaining human touch in customer outreach despite interest in automation",
+      "persona": "Linda Becker",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Willingness to pay premium for automation if it demonstrably reduces manual workload and integrates well",
+      "persona": "Linda Becker",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong protective stance over existing workflows and CRM",
+      "persona": "Ethan Rodriguez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Lean team with limited capacity for complex tools or additional hires",
+      "persona": "Ethan Rodriguez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Succession planning heavily influences openness to new systems",
+      "persona": "Nancy Wilson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Willing to pay $250-350/month if complexity and maintenance concerns are addressed",
+      "persona": "Nancy Wilson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong reliance on personal relationships and intuition over data-driven tools",
+      "persona": "Clara Benson",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Small team size limits appetite for new tech investments",
+      "persona": "Clara Benson",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Strong internal analytics capability raises bar for external solutions",
+      "persona": "Derek Chen",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Price is not a barrier; efficacy and trust are critical",
+      "persona": "Derek Chen",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Seasonality and local market nuances require adaptable models",
+      "persona": "Derek Chen",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Emotional impact of churn on cleaning staff morale is a factor",
+      "persona": "Maya Patel",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Strong desire for predictive insights but tempered by skepticism and resource constraints",
+      "persona": "Maya Patel",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Founder is sole decision-maker and gatekeeper for adoption",
+      "persona": "Ethan Rodriguez",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Strong emphasis on trustworthiness and simplicity over technology sophistication",
+      "persona": "Ethan Rodriguez",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Existing investment in BI tools raises bar for new solutions",
+      "persona": "Jasmine Lee",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Strong focus on measurable business outcomes and integration with current workflows",
+      "persona": "Jasmine Lee",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Strong preference for personal touch over data-driven insights",
+      "persona": "Franklin Moore",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Willing to consider only very basic automation that reduces manual effort",
+      "persona": "Franklin Moore",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "High operational workload makes any added complexity a barrier",
+      "persona": "Sofia Martinez",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Decision-making involves multiple roles including owner and service supervisors",
+      "persona": "Sofia Martinez",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Strong preference for flexibility and customization over polished dashboards",
+      "persona": "Gregory Thompson",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Integration is a critical gating factor",
+      "persona": "Gregory Thompson",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Strong emphasis on vendor support and ease of use",
+      "persona": "Hannah Kim",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Decision involves CEO and head of finance with detailed cost-benefit analysis",
+      "persona": "Hannah Kim",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Large scale and multi-branch complexity require advanced analytics",
+      "persona": "Ivan Goldberg",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Decision involves operations managers and executive leadership",
+      "persona": "Ivan Goldberg",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Strong preference for tailored solutions over generic models",
+      "persona": "Diana Fuentes",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Owner involvement required for investment decisions",
+      "persona": "Diana Fuentes",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Existing internal analytics capability raises the bar for new solutions",
+      "persona": "Marcus Ellison",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Operations Manager is a key stakeholder in evaluation",
+      "persona": "Marcus Ellison",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Small team size demands simplicity and minimal training",
+      "persona": "Cathy Nguyen",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Decision involves owner and management team with ROI focus",
+      "persona": "Cathy Nguyen",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Owner is sole decision maker; technicians not involved in data analysis",
+      "persona": "George Patterson",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Strong preference for simplicity and minimal time investment",
+      "persona": "George Patterson",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "CEO and Head of Operations would be key stakeholders",
+      "persona": "Jasmine Torres",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Manual churn identification is time-consuming and reactive",
+      "persona": "Jasmine Torres",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Owner is decision maker but values input from lead service manager",
+      "persona": "Willard James",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Manual tracking and human error are major pain points",
+      "persona": "Willard James",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Cleaning services have unique challenges due to irregular customer needs",
+      "persona": "Nina Patel",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Office manager is key stakeholder for adoption",
+      "persona": "Nina Patel",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Strong internal champion recently promoted to VP",
+      "persona": "Samantha Ortiz",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Automated outreach is a key differentiator over just alerts",
+      "persona": "Samantha Ortiz",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Owner is primary decision maker but values personal relationships highly",
+      "persona": "Tyler Jensen",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Focus on balancing automation with personal touch",
+      "persona": "Tyler Jensen",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Operational stability and predictable revenue are critical pain points",
+      "persona": "Linda Chen",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Decision involves multiple stakeholders beyond GM",
+      "persona": "Linda Chen",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Owner is wary of tech disruptions and requires strong assurances",
+      "persona": "Carlos Ramirez",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Manual processes and lack of CRM are significant adoption barriers",
+      "persona": "Carlos Ramirez",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Strong preference for automation that reduces manual intervention, not just predictive analytics",
+      "persona": "Emily Nguyen",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Primary user and decision-maker is herself, with limited team involvement",
+      "persona": "Emily Nguyen",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Service Manager is a key stakeholder beyond the owner",
+      "persona": "Gregory Ford",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Manual follow-up capacity is limited, so automation must be robust",
+      "persona": "Gregory Ford",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Owner is primary decision-maker; technicians and office manager less involved",
+      "persona": "Jasmine Patel",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Strong need for trust-building via trial or guarantee",
+      "persona": "Jasmine Patel",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Marketing director and operations manager are key stakeholders",
+      "persona": "Derek Wallace",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Current internal automation is sophisticated; new solution must exceed it",
+      "persona": "Derek Wallace",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Operations and finance teams are key stakeholders",
+      "persona": "Martha Klein",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Strong emphasis on avoiding additional manual work or process disruption",
+      "persona": "Martha Klein",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Owner is primary decision-maker; technicians minimally impacted",
+      "persona": "Robert Mills",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Efficiency is prioritized over new insights or analytics",
+      "persona": "Robert Mills",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Strong emphasis on integration and personalization to avoid generic outreach",
+      "persona": "Maya Stanton",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Owner is sole decision-maker; technicians and office manager less involved",
+      "persona": "Maya Stanton",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Marketing manager and IT lead are critical stakeholders",
+      "persona": "Carl Nguyen",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Trust in AI requires transparency and control over messaging",
+      "persona": "Carl Nguyen",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Small teams are highly sensitive to any added manual workload, even if the tool provides insights.",
+      "persona": "Darlene Kim",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Even automation-first buyers require strong evidence of ease and ROI before adoption.",
+      "persona": "James O\u2019Connell",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Seasonal businesses require models that understand individual customer seasonal behavior, not generic churn definitions.",
+      "persona": "Rashida Ali",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Prediction alone is insufficient; execution automation is a critical unmet need.",
+      "persona": "Rashida Ali",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Small teams prioritize time savings and transparency over advanced features.",
+      "persona": "Edgar Martinez",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Cost sensitivity is high; free but inefficient manual systems are preferred over costly uncertain tools.",
+      "persona": "Edgar Martinez",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Large organizations face significant internal resistance to new tech despite clear pain points.",
+      "persona": "Lena Marcus",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "ROI must be demonstrable to multiple stakeholders including IT and customer service.",
+      "persona": "Lena Marcus",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Budget pressures heavily influence willingness to adopt new tech in lawn care.",
+      "persona": "Monica Feldman",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Actionability of insights is as important as prediction accuracy.",
+      "persona": "Monica Feldman",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Small pest control companies are price sensitive and skeptical due to prior software disappointments.",
+      "persona": "Jared Liu",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Automated execution of retention campaigns is a critical feature to justify higher price tiers.",
+      "persona": "Jared Liu",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Cleaning companies with manual systems are unlikely to adopt predictive churn tools without full automation.",
+      "persona": "Elsa Martinez",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Skepticism is rooted in past experiences with software that increased workload without clear benefit.",
+      "persona": "Elsa Martinez",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Willing to pay more if ROI is clear but hesitant to commit without proof",
+      "persona": "Brian O'Connor",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Multiple internal stakeholders (COO, head of customer service, IT) would be involved in decision",
+      "persona": "Brian O'Connor",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Low tech sophistication is as much a mindset as a capability",
+      "persona": "Rashida Khan",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Seasonal cash flow heavily constrains willingness to invest in new tools",
+      "persona": "Rashida Khan",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Office manager is a key stakeholder for adoption",
+      "persona": "Liam Carpenter",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Decision process involves demos, proposals, and trials with relevant industry examples",
+      "persona": "Liam Carpenter",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Complexity of managing different customer segments is a critical factor",
+      "persona": "Carmen Reyes",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Multiple decision-makers involved with distinct concerns (budget, usability, operational impact)",
+      "persona": "Carmen Reyes",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Executive pressure to reduce churn by 5% is a strong motivator",
+      "persona": "Nina Patel",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Multiple internal stakeholders with distinct roles in decision-making",
+      "persona": "Nina Patel",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Retention rate is low (60%), so potential upside is significant if barriers are addressed",
+      "persona": "Ethan Brooks",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Strong resistance to technology perceived as complex or adding workload",
+      "persona": "Ethan Brooks",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Customer Service Manager is a critical stakeholder sensitive to workflow impact",
+      "persona": "Marcus Lytle",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Skepticism about buzzwords and overcomplexity is a barrier",
+      "persona": "Marcus Lytle",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "CEO is primary decision-maker, with operational manager as advisor",
+      "persona": "Sandra Kim",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Strong preference for pilot before any long-term commitment",
+      "persona": "Sandra Kim",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Owner is near retirement and not interested in tech complexity",
+      "persona": "Victor Ramos",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Lead technician's buy-in is important for adoption",
+      "persona": "Victor Ramos",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Operations manager and CFO are key stakeholders beyond the owner",
+      "persona": "Emily Chen",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Strong preference for minimal disruption to existing workflows",
+      "persona": "Emily Chen",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Operations manager is key stakeholder for feasibility and workflow impact",
+      "persona": "James Donovan",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Churn often feels unchangeable due to external factors",
+      "persona": "James Donovan",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Primary decision-maker with office manager as key user",
+      "persona": "Derek Jensen",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Balancing growth ambitions with cash flow constraints",
+      "persona": "Derek Jensen",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Multi-branch operation requires centralized yet customizable solution",
+      "persona": "Nancy Sloane",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "IT Director and Regional Managers are critical stakeholders",
+      "persona": "Nancy Sloane",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Recently promoted with pressure to improve retention in 6 months",
+      "persona": "Cameron Fletcher",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Decision-making involves CEO and CFO but only after strong pilot results",
+      "persona": "Cameron Fletcher",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "New CDO with stretched internal resources",
+      "persona": "Joanna Kim",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Decision involves Head of Operations and CEO once data is ready",
+      "persona": "Joanna Kim",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Customer expectations for personal service outweigh appeal of automation",
+      "persona": "Ethan Patel",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Data privacy concerns are a significant barrier",
+      "persona": "Ethan Patel",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Seasonality in pool service creates unique churn patterns that complicate predictive modeling",
+      "persona": "Sophia Martinez",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Strong emphasis on cost containment and margin preservation limits openness to new tools",
+      "persona": "Sophia Martinez",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "High sophistication and investment in internal solutions creates high bar for external tools",
+      "persona": "Marcus Lee",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Efficiency gains from automation are valued but must not disrupt current workflows",
+      "persona": "Marcus Lee",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "High manual effort currently consumes majority of key staff time",
+      "persona": "Linda Gomez",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Strong preference for predictable costs and risk mitigation over speculative tech benefits",
+      "persona": "Linda Gomez",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Emergency service unpredictability fundamentally limits churn prediction usefulness",
+      "persona": "Robert Chandler",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Recent tech investments create high switching costs and low appetite for new projects",
+      "persona": "Robert Chandler",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Prior negative experiences with building internal predictive tools create high skepticism",
+      "persona": "Melissa Nguyen",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Multiple stakeholders with distinct concerns (budget, operations, tech, security) influence buying",
+      "persona": "Melissa Nguyen",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Small team bandwidth severely limits tolerance for false positives or extra work",
+      "persona": "James O\u2019Connor",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Cost sensitivity is high relative to perceived value and risk",
+      "persona": "James O\u2019Connor",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Decision process involves multiple stakeholders with distinct priorities",
+      "persona": "Alicia Reynolds",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Deliberate, slow evaluation process (3-6 months) prioritizing stability",
+      "persona": "Alicia Reynolds",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Approaching retirement reduces appetite for new complex projects",
+      "persona": "Diane Marquez",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Strong preference for solutions that do not duplicate existing efforts",
+      "persona": "Diane Marquez",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Owner is nearing retirement and not interested in complicating legacy",
+      "persona": "Derek Hammond",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Decision-making is centralized solely with owner",
+      "persona": "Derek Hammond",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Large company with dedicated analytics and customer service teams involved in decisions",
+      "persona": "Maya Patel",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Skepticism rooted in operational risk and cost, not just technology",
+      "persona": "Maya Patel",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "HVAC emergency nature reduces perceived need for predictive churn tools",
+      "persona": "Carlos Mendez",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Owner is sole decision-maker and strongly resistant to tech solutions",
+      "persona": "Carlos Mendez",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Small team with limited capacity to act on alerts",
+      "persona": "Elena Brooks",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Seasonality and external factors (weather, tourism) heavily influence churn",
+      "persona": "Elena Brooks",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Small team with limited bandwidth",
+      "persona": "James McAllister",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Churn is a significant problem (35% annual loss) but investment risk is high",
+      "persona": "James McAllister",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "In-house data science team is skilled but currently bogged down",
+      "persona": "Sophia Nguyen",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Decision involves CTO and CEO beyond operations manager",
+      "persona": "Sophia Nguyen",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Owner is sole decision-maker and strongly resistant to tech solutions",
+      "persona": "Tommy Lee",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Prefers hiring additional staff over software subscriptions",
+      "persona": "Tommy Lee",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Seasonality and service type diversity complicate churn prediction",
+      "persona": "Jessica Morales",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Decision-making involves multiple stakeholders focused on data and customer success",
+      "persona": "Jessica Morales",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Microbusinesses with hands-on owners rely heavily on personal relationships and low-tech tools, making AI-driven churn prediction unattractive regardless of price.",
+      "persona": "Angela Price",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "There is a strong preference for operational simplicity and direct control over customer relationships rather than automated or predictive tools.",
+      "persona": "Angela Price",
+      "archetype": "red_team_skeptic"
+    }
+  ],
+  "confidence_distribution": {
+    "high": 97
+  }
+}

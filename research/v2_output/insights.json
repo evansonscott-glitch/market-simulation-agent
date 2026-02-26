@@ -1,0 +1,3676 @@
+[
+  {
+    "persona_id": 1,
+    "persona_name": "Carlos Mendoza",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 15,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Concern about added workload even if predictive insights are provided",
+      "Fear of losing personal touch with automated outreach",
+      "Need for simplicity and actionable advice without complexity"
+    ],
+    "buying_triggers": [
+      "Seamless integration with FieldRoutes",
+      "Clear examples of personalized automation that maintains brand voice",
+      "Minimal onboarding effort"
+    ],
+    "notable_quotes": [
+      "\"If it integrates directly with FieldRoutes, that's a plus, as I don't want to be manually exporting data all the time.\"",
+      "\"My biggest concern with automated outreach would be losing the personal touch. We pride ourselves on building relationships with our customers.\""
+    ],
+    "hidden_insights": [
+      "Even with interest in automation, the founder is wary of shifting workload rather than reducing it."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Emily Chen",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care & Landscaping",
+    "persona_company_size": 10,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "No direct integration with Jobber creates manual data import burden",
+      "Skepticism about prediction accuracy for lawn care vs pest control",
+      "Uncertainty about ROI and actionable next steps after receiving insights"
+    ],
+    "buying_triggers": [
+      "Demonstrated 80-90% prediction accuracy with proof",
+      "Clear ROI within a few months",
+      "Minimal burden on already stretched team"
+    ],
+    "notable_quotes": [
+      "\"The manual import is a pretty big hurdle. We're a small team, and my staff are already stretched thin.\"",
+      "\"My biggest reservation on the $200-400 a month isn't just the cost itself... It's the uncertainty of the value.\""
+    ],
+    "hidden_insights": [
+      "Wants actionable recommendations, not just risk lists, to avoid increasing workload."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Derek Wallace",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "HVAC",
+    "persona_company_size": 45,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Skepticism about prediction reliability",
+      "Concern about losing human touch with automated outreach",
+      "Need for AI to handle basic queries intelligently",
+      "Requirement for seamless CRM integration and proof of effectiveness"
+    ],
+    "buying_triggers": [
+      "Automated outreach that sounds authentic and brand-aligned",
+      "Integration with FieldRoutes with visible logging",
+      "Strong evidence of retention improvement"
+    ],
+    "notable_quotes": [
+      "\"My biggest concern... would be reliability and personalization. Our customers expect a certain level of service and a human touch.\"",
+      "\"I'd need to see some strong evidence this isn't just a gimmick.\""
+    ],
+    "hidden_insights": [
+      "Values operational efficiency gains as much as retention improvements.",
+      "Wants involvement of operations manager and customer service reps in evaluation."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Janice Fowler",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pool Service",
+    "persona_company_size": 4,
+    "problem_resonance": 3,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism about prediction accuracy due to seasonality",
+      "Concern about data integration effort and complexity",
+      "Price sensitivity given nearing retirement and small business size",
+      "Doubt about usefulness given natural seasonal churn"
+    ],
+    "buying_triggers": [
+      "Minimal time commitment post-setup (1-2 hours/week)",
+      "Clear differentiation between seasonal slowdowns and true churn",
+      "Affordable pricing with clear ROI"
+    ],
+    "notable_quotes": [
+      "\"A 'churn risk score'... sounds complicated. And honestly, a bit like a crystal ball.\"",
+      "\"My main concern... is the cost. We're a small business and very price-sensitive.\""
+    ],
+    "hidden_insights": [
+      "Owner prioritizes simplicity and minimal disruption over new tech adoption.",
+      "Seasonality is a critical factor that must be handled well."
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Rajiv Patel",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 38,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Manual data entry is a non-starter; needs seamless integration",
+      "Skepticism about automated outreach losing personal touch",
+      "Prefers actionable insights and alerts before considering automation",
+      "Wants simplicity and clear guidance without complexity"
+    ],
+    "buying_triggers": [
+      "Direct integration with Jobber and QuickBooks",
+      "Actionable reasons for churn and suggested next steps",
+      "Pilot program demonstrating measurable churn reduction"
+    ],
+    "notable_quotes": [
+      "\"Manual data entry is a non-starter for us; we just don't have the staff for it.\"",
+      "\"I'd need a very clear demonstration of how that automated outreach would maintain our brand voice and feel personal.\""
+    ],
+    "hidden_insights": [
+      "Strong preference to start with insights and alerts before adopting automated outreach.",
+      "Wants to avoid complexity and tools that gather dust."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Megan Torres",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 15,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Concern about complexity of integrating spreadsheets",
+      "Skepticism about accuracy and false positives",
+      "Cost sensitivity given small business size",
+      "Need for actionable insights and automated outreach to avoid extra workload"
+    ],
+    "buying_triggers": [
+      "Concrete proof of accuracy from similar businesses",
+      "Simple CSV upload integration",
+      "Automated, personalized outreach to reduce manual effort",
+      "Clear ROI justification"
+    ],
+    "notable_quotes": [
+      "\"I don't want to spend time chasing ghosts.\"",
+      "\"For that price, it can't just tell me who might churn. It would need to tell me why and suggest what we should do about it.\""
+    ],
+    "hidden_insights": [
+      "Founder is the primary decision-maker but highly focused on team workload impact.",
+      "Automated outreach is seen as a potential game-changer if done right."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Marcus Reed",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 85,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Integration complexity with proprietary CRM",
+      "Need for actionable, reliable predictions beyond current manual efforts",
+      "Concern about cost and complexity of custom integration"
+    ],
+    "buying_triggers": [
+      "Solving integration with proprietary CRM",
+      "Demonstrated measurable uplift in retention",
+      "Hands-off operation after integration",
+      "Pilot program or trial period"
+    ],
+    "notable_quotes": [
+      "\"If it requires a custom build, that's usually where costs and complexity start to skyrocket.\"",
+      "\"We're not just looking for more data; we need reliable data that directly translates into campaigns that prevent churn.\""
+    ],
+    "hidden_insights": [
+      "Willing to pay $150-350/month if value is proven and integration is smooth.",
+      "Operations Manager and tech team involvement critical for adoption."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Janet Miller",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 4,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Fear of added complexity and need for data expertise",
+      "Concern about prediction reliability and ROI",
+      "Need for seamless integration with FieldRoutes without manual work",
+      "Wants actionable insights including reasons for churn"
+    ],
+    "buying_triggers": [
+      "No added complexity and minimal ongoing effort",
+      "Clear, tangible ROI",
+      "Integration that avoids manual data entry",
+      "Insights on why customers are at risk, not just who"
+    ],
+    "notable_quotes": [
+      "\"Do I need to hire a data person to even understand what this platform is telling me?\"",
+      "\"My biggest risk is spending money and time on something that doesn't actually move the needle.\""
+    ],
+    "hidden_insights": [
+      "Technicians are frontline ears for customer dissatisfaction but not involved in retention strategy.",
+      "Owner is open to exploring if integration and ROI concerns are addressed."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Samuel Grant",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Lack of integration with primary customized Salesforce CRM",
+      "Concerns about accuracy and interpretability of predictive models",
+      "High learning curve and time investment for adoption",
+      "Need for multi-location scalability without manual adjustments"
+    ],
+    "buying_triggers": [
+      "Robust integration with customized Salesforce instance",
+      "Clear, actionable insights explaining why customers are at risk",
+      "Seamless adoption with minimal training",
+      "Multi-location case studies demonstrating effectiveness"
+    ],
+    "notable_quotes": [
+      "\"If your platform doesn't integrate with *that*, we'd be looking at a massive data migration or a fragmented view, which defeats the purpose of centralizing.\"",
+      "\"My biggest risk concern... would be the time investment required for our team to learn and adapt to yet another system.\""
+    ],
+    "hidden_insights": [
+      "Primary CRM is a highly customized Salesforce instance, which is a significant integration hurdle.",
+      "Decision-making involves Head of Customer Success and CFO focused on ROI."
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Lisa Nguyen",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care & Landscaping",
+    "persona_company_size": 15,
+    "problem_resonance": 3,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Complexity and overhead of setup and ongoing management",
+      "Lack of dedicated staff to act on insights",
+      "Skepticism about automation being truly hands-off"
+    ],
+    "buying_triggers": [
+      "Truly simple, low-touch setup and management",
+      "Automated, actionable recommendations requiring minimal manual effort",
+      "Clear ROI through workload reduction or profit increase"
+    ],
+    "notable_quotes": [
+      "\"If it were truly simple to set up and *automatically* told us exactly what to do for each at-risk customer, maybe. But I'm skeptical it could be that hands-off.\"",
+      "\"Any new tool needs to prove it can significantly reduce my workload or directly increase our profit without adding much complexity.\""
+    ],
+    "hidden_insights": [
+      "Strong retention rate (91%) reduces perceived urgency for new tools.",
+      "Small team with stretched resources limits capacity for new system adoption."
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Monica Alvarez",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 10,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Concerns about complexity and setup time",
+      "Price sensitivity due to thin margins",
+      "Fear of losing personal touch with automated communications"
+    ],
+    "buying_triggers": [
+      "Seamless integration with QuickBooks",
+      "Intuitive interface usable by assistant",
+      "Clear demonstration of time savings and churn prevention",
+      "Automation that maintains personal feel in communications"
+    ],
+    "notable_quotes": [
+      "\"I'd need to see how it directly translates into saving *my* time and actually preventing customers from leaving.\"",
+      "\"Could it still feel personal? I don't want our customers to feel like they're just a number getting automated messages.\""
+    ],
+    "hidden_insights": [
+      "Owner is primary decision-maker; assistant\u2019s buy-in critical for daily use.",
+      "Personal phone calls are a valued retention method, making automation adoption sensitive."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Jared Kim",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pool Service",
+    "persona_company_size": 15,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Concern about losing personal touch with automated outreach",
+      "Need for ease of setup and management to avoid replacing one manual task with another"
+    ],
+    "buying_triggers": [
+      "Customizable, natural-sounding automated messages",
+      "Easy setup and management",
+      "Demo tailored to pool service business",
+      "Clear onboarding process minimizing time investment"
+    ],
+    "notable_quotes": [
+      "\"My biggest reservation about automated outreach is losing that personal touch... I'd need to be absolutely sure that the automated messages feel natural and relevant.\"",
+      "\"If it genuinely boosts renewals and takes a significant chunk of manual work off our plates, I'd say something in the range of a few hundred dollars a month could be justifiable.\""
+    ],
+    "hidden_insights": [
+      "Operations manager is a key stakeholder for practical implementation.",
+      "Growth stage business with focus on scalable solutions."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Eleanor Brooks",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "HVAC",
+    "persona_company_size": 25,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about 'black box' solutions and noise from false positives",
+      "Need for HVAC-specific case studies and clear ROI",
+      "Concerns about smoothness and completeness of FieldRoutes integration",
+      "Requirement for straightforward onboarding and minimal training"
+    ],
+    "buying_triggers": [
+      "Real-world HVAC case studies with demonstrated ROI",
+      "Seamless integration pulling historical data",
+      "Clear, actionable recommendations with low complexity",
+      "Involvement and buy-in from marketing and operations managers"
+    ],
+    "notable_quotes": [
+      "\"My initial thought is it sounds like another 'black box' solution that promises the world but then requires a data scientist to actually make it work.\"",
+      "\"I don't have the bandwidth to become an expert in another piece of software.\""
+    ],
+    "hidden_insights": [
+      "Marketing and operations teams are critical users and evaluators.",
+      "Retention is a significant pain point despite decent retention rate."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Markus Chan",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 7,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Concerns about setup complexity and integration with spreadsheets",
+      "Need for high accuracy to trust predictions",
+      "Ongoing manual effort required for follow-up",
+      "Price sensitivity and preference for low ongoing effort"
+    ],
+    "buying_triggers": [
+      "Plug-and-play integration with existing spreadsheets",
+      "Consistent and accurate churn predictions",
+      "Minimal ongoing effort after setup",
+      "Clear ROI and reasonable cost"
+    ],
+    "notable_quotes": [
+      "\"It needs to essentially hand me a list and say, 'Call these three people.'\"",
+      "\"If this tool means I have to spend hours every week messing with it, it's a non-starter.\""
+    ],
+    "hidden_insights": [
+      "Owner is primary user and decision-maker; plumbers not involved in retention.",
+      "Close to retirement, prioritizing simplicity and stability."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Sophia Martin",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 20,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism about machine learning understanding cleaning service nuances",
+      "Concerns about setup time and lack of dedicated tech staff",
+      "Doubt about actionable impact beyond flagging at-risk customers",
+      "Need for clear ROI and proof of industry-specific effectiveness"
+    ],
+    "buying_triggers": [
+      "Demonstrated ability to interpret cleaning-specific signals",
+      "Minimal setup effort with vendor support",
+      "Clear ROI with measurable churn reduction",
+      "Input from lead supervisor on practicality"
+    ],
+    "notable_quotes": [
+      "\"Are you telling me your 'machine learning' can understand why a commercial client might reduce service... versus a residential client who's truly unhappy?\"",
+      "\"'Configurable' can still mean a lot of work on my end, and I'm already stretched thin.\""
+    ],
+    "hidden_insights": [
+      "General Manager is primary decision-maker but consults lead supervisor.",
+      "Cleaning services have unique churn drivers requiring tailored models."
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Luis Hernandez",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 15,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 5,
+    "overall_sentiment": "very_positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Concern that insights may require more manual effort than they save",
+      "Need for clear ROI and measurable impact on churn",
+      "Wants seamless integration without disrupting existing workflows"
+    ],
+    "buying_triggers": [
+      "Seamless native integration with FieldRoutes",
+      "Automated AI-driven retention campaigns reducing manual outreach",
+      "Clear, demonstrable reduction in seasonal churn within 6-12 months",
+      "Competitive benchmarking data for board justification",
+      "Involvement and buy-in from Operations Manager and board"
+    ],
+    "notable_quotes": [
+      "\"The biggest risk I'd see... if the 'actionable insights' aren't truly actionable or if they require *more* manual effort than they save.\"",
+      "\"Automated, AI-driven retention campaigns without manual setup \u2013 *that* would be a game-changer.\""
+    ],
+    "hidden_insights": [
+      "Strong emphasis on automation to eliminate human error and inconsistency.",
+      "Board-level scrutiny requires hard ROI and competitive benchmarking."
+    ],
+    "would_buy": "yes",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Diana Patel",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 5,
+    "problem_resonance": 3,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Concern about setup complexity and ongoing management effort",
+      "Skepticism about AI accurately identifying 'at-risk' customers given legitimate pauses",
+      "Current retention rate (91%) is strong enough to not justify investment",
+      "Price point ($200-$400/month) is significant for small business without clear ROI"
+    ],
+    "buying_triggers": [
+      "Plug-and-play system with minimal setup and ongoing effort",
+      "Clear, no-brainer ROI that pays for itself by saving even one or two customers per year",
+      "Hands-on support during setup"
+    ],
+    "notable_quotes": [
+      "If it's going to require a lot of data entry or learning a complex new system, it might just add more to my plate, not less.",
+      "For that kind of money, it would need to be a no-brainer ROI and incredibly easy to use, almost plug-and-play."
+    ],
+    "hidden_insights": [
+      "Despite some mental load, current manual system is perceived as sufficient due to strong retention",
+      "Owner is sole decision-maker and user, limiting scale of adoption"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Tanya Wilson",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "HVAC",
+    "persona_company_size": 90,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Concerns about integration complexity and disruption to established workflows",
+      "Training burden on sales and service teams",
+      "Need for intuitive, low-burden solution that adds value without extra work"
+    ],
+    "buying_triggers": [
+      "Seamless integration with FieldRoutes",
+      "Scalable churn alerts tailored per branch",
+      "Benchmarking data against similar HVAC companies",
+      "Low-cost Insights tier ($150-$200/month) with clear value",
+      "Involvement of IT Director and team leads in evaluation"
+    ],
+    "notable_quotes": [
+      "If it's complex or requires significant changes to their daily routines, that's where I'd likely say no.",
+      "It needs to be intuitive and add value without adding burden."
+    ],
+    "hidden_insights": [
+      "Multi-branch structure requires scalable and branch-specific insights",
+      "Decision-making involves multiple stakeholders beyond the founder"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Carlos Mendoza",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 9,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Automated outreach must feel personal and not robotic",
+      "Need for dead-simple, low-setup, and easy-to-use system",
+      "Concerns about cost and ROI justification",
+      "Fear of adding complexity or more work"
+    ],
+    "buying_triggers": [
+      "Automated outreach that sounds like owner and saves time",
+      "Easy integration with existing spreadsheets or minimal data entry",
+      "Clear demonstration of time savings and ROI"
+    ],
+    "notable_quotes": [
+      "If it's going to automate it, it has to feel personal, like I actually wrote it or called them.",
+      "It needs to prove it saves me time and effort, not adds to it."
+    ],
+    "hidden_insights": [
+      "Owner is sole user of customer relationship tools",
+      "Strong preference for personal touch limits acceptance of generic automation"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Gregory Fields",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 55,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Lack of current PestPac integration is a major barrier",
+      "Previous negative experience with AI vendors causes skepticism",
+      "Need for pilot with guaranteed ROI and strong vendor support",
+      "Desire for transparency and explainability of AI predictions",
+      "Need for stable, reliable tool, not a beta or constantly tinkered product"
+    ],
+    "buying_triggers": [
+      "PestPac integration fully live",
+      "Structured pilot with measurable ROI metrics",
+      "Transparent AI models with explainable predictions",
+      "Strong vendor engagement and support"
+    ],
+    "notable_quotes": [
+      "I'm not looking for an unproven beta test. We need a stable, reliable tool.",
+      "We'd need to agree on specific, measurable outcomes for that pilot."
+    ],
+    "hidden_insights": [
+      "Decision-making involves marketing, data analyst, and operations teams",
+      "Strong emphasis on partnership and trust with vendor"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Jill Thompson",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pool Service",
+    "persona_company_size": 15,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about applicability of predictive models to pool service seasonality",
+      "Concerns about effectiveness and speed of seeing results",
+      "Worries about setup effort despite FieldRoutes integration",
+      "Need for solution beyond prediction to include actionable retention tools"
+    ],
+    "buying_triggers": [
+      "Low-touch, automated integration with FieldRoutes",
+      "Quick ramp-up time for predictive insights (days to a week)",
+      "Platform offering actionable retention capabilities beyond just alerts",
+      "Clear demonstration of value and ease of use"
+    ],
+    "notable_quotes": [
+      "My biggest reservation is still going to be the effectiveness. 'Seeing is believing.'",
+      "What happens after we identify at-risk customers? Does your platform offer anything beyond just the prediction?"
+    ],
+    "hidden_insights": [
+      "Primary decision-maker is owner with some input from operations manager",
+      "Seasonality and unique business patterns require tailored modeling"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Dave Patel",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "HVAC",
+    "persona_company_size": 45,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about AI promises and differentiation from existing tools",
+      "Concerns about workflow disruption and additional tool complexity",
+      "Need for HVAC-specific signals and case studies",
+      "Requirement for seamless integration with PestPac and Salesforce",
+      "Demand for clear proof of value and actionable insights"
+    ],
+    "buying_triggers": [
+      "Demonstration of HVAC-specific use cases and signals",
+      "Seamless integration without manual data transfer",
+      "Involvement and buy-in from service manager and customer service",
+      "Clear, actionable insights with suggested next steps",
+      "Pilot or demo showing measurable benefits"
+    ],
+    "notable_quotes": [
+      "My biggest risk is that it becomes another tool that just sits there, underutilized.",
+      "I'd need to see a very clear demonstration of how it integrates directly with PestPac and Salesforce."
+    ],
+    "hidden_insights": [
+      "Existing tech stack is complex and mature, raising bar for new tool adoption",
+      "Decision-making involves multiple operational stakeholders"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Melissa Grant",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 7,
+    "problem_resonance": 3,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Current manual system is zero cost and known pain",
+      "High setup cost and complexity of moving data into structured CRM",
+      "Lack of IT resources and team capacity for new tools",
+      "Skepticism about immediate, visible benefit and ROI",
+      "Fear of learning curve for multiple new systems"
+    ],
+    "buying_triggers": [
+      "Turnkey solution with data migration handled by vendor",
+      "Quick, tangible results with minimal effort",
+      "Integration with existing email for automated, personalized outreach",
+      "Clear demonstration of ROI and time savings"
+    ],
+    "notable_quotes": [
+      "Moving all our customer data from Google Sheets and Trello into some new 'structured CRM' sounds like a massive project.",
+      "If I have to learn two new systems, it's not going to happen."
+    ],
+    "hidden_insights": [
+      "Owner and small team are overwhelmed and lack technical bandwidth",
+      "Cost and setup complexity are bigger barriers than the problem itself"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Thomas Nguyen",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 30,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Concerns about adding complexity and another dashboard",
+      "Need for deep integration with FieldRoutes to avoid double data entry",
+      "Skepticism about automation sounding robotic and damaging relationships",
+      "Need for control over messaging templates and customization",
+      "Demand for clear ROI and ease of adoption by sales team"
+    ],
+    "buying_triggers": [
+      "Deep integration with FieldRoutes with no double data entry",
+      "Ability to customize and control automated outreach messages",
+      "Clear, actionable insights with prioritized tasks for sales team",
+      "Demonstrated ROI and retention improvement",
+      "Ease of adoption and minimal disruption to sales workflows"
+    ],
+    "notable_quotes": [
+      "There's a fine line between efficiency and sounding like a machine.",
+      "If it's clunky, they just won't use it."
+    ],
+    "hidden_insights": [
+      "Sales team adoption is critical and a potential bottleneck",
+      "ROI must be clearly demonstrated for a company with 82% retention"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Linda Becker",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 135,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Concerns about seamless and truly native integration with FieldRoutes",
+      "Wary of automated outreach removing the human element",
+      "Need for control and customization over automated messaging",
+      "Concerns about initial setup time and disruption",
+      "Need for integration with financial reporting tools like Power BI"
+    ],
+    "buying_triggers": [
+      "Native, seamless FieldRoutes integration without disruption",
+      "Customizable, controlled automated outreach limited to initial low-to-medium risk scenarios",
+      "Demonstrable reduction (~30%) in manual churn triage effort",
+      "Ease of exporting data to Power BI for executive reporting",
+      "Involvement and buy-in from Director of Data Analytics and Head of Customer Success"
+    ],
+    "notable_quotes": [
+      "It's like we have all this data, but translating it into efficient, scalable action is the missing piece.",
+      "If a system like this could genuinely reduce the manual churn triage by, say, 30%, that would be significant."
+    ],
+    "hidden_insights": [
+      "Strong emphasis on maintaining human touch in customer outreach despite interest in automation",
+      "Willingness to pay premium for automation if it demonstrably reduces manual workload and integrates well"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Ethan Rodriguez",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 15,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Lack of current PestPac integration is a major hurdle",
+      "Previous experience with complicated solutions that added workload",
+      "Concerns about needing a data specialist to interpret insights",
+      "Fear of investing in 'shelfware' due to complexity and lack of clear value",
+      "Need for true, bi-directional integration without manual data handling"
+    ],
+    "buying_triggers": [
+      "Robust, seamless PestPac integration with minimal manual effort",
+      "Clear, actionable insights understandable by non-specialists",
+      "Reliability and accuracy of churn predictions to avoid false positives",
+      "Intuitive interface for primary users like Office Manager"
+    ],
+    "notable_quotes": [
+      "If PestPac isn't integrated yet, that's a pretty big hurdle right off the bat.",
+      "My biggest fear is investing time and money into another tool that promises the world but just becomes shelfware."
+    ],
+    "hidden_insights": [
+      "Strong protective stance over existing workflows and CRM",
+      "Lean team with limited capacity for complex tools or additional hires"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Nancy Wilson",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 50,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about predictive accuracy and usefulness of churn forecasts",
+      "Concern about losing personal touch with automated outreach",
+      "Worries about initial time investment and complexity of setup",
+      "Need for low-maintenance solution due to succession planning",
+      "Desire for some vendor support in setup to reduce burden"
+    ],
+    "buying_triggers": [
+      "Simple, low-effort integration manageable by office manager",
+      "Highly customizable automated campaigns that preserve personal brand voice",
+      "Minimal ongoing management required after setup",
+      "Vendor assistance or done-for-you setup",
+      "Involvement of operations manager in evaluation"
+    ],
+    "notable_quotes": [
+      "If it just tells me who's going to leave, but doesn't simplify the action we take, then it might just add another layer of complexity.",
+      "My main lingering concern... is the time investment for me or my team to get it set up initially."
+    ],
+    "hidden_insights": [
+      "Succession planning heavily influences openness to new systems",
+      "Willing to pay $250-350/month if complexity and maintenance concerns are addressed"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Clara Benson",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Lawn Care & Landscaping",
+    "persona_company_size": 10,
+    "problem_resonance": 3,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism that machine learning can outperform personal intuition",
+      "Limited customer data beyond manual spreadsheets",
+      "Cost concerns given small team and lean operations",
+      "Fear of added tech overhead and complexity",
+      "Need for clear, demonstrable proof of value"
+    ],
+    "buying_triggers": [
+      "Clear evidence of predictive accuracy beyond current manual methods",
+      "Significant time savings in manual tracking",
+      "Simplicity and ease of implementation",
+      "Cost justified by measurable churn reduction"
+    ],
+    "notable_quotes": [
+      "I'm not sure a 'clearer picture' would change much before the fact.",
+      "If it's not saving me significant time or truly preventing churn I couldn't otherwise prevent, then it's just another expense."
+    ],
+    "hidden_insights": [
+      "Strong reliance on personal relationships and intuition over data-driven tools",
+      "Small team size limits appetite for new tech investments"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Derek Chen",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 135,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about vendor claims due to past disappointments",
+      "Need for transparency and explainability of churn model",
+      "Concerns about integration effort and customization to business nuances",
+      "Questioning if internal team can build better models",
+      "Requirement for demonstrated superior accuracy and trial validation"
+    ],
+    "buying_triggers": [
+      "Transparent, explainable churn risk factors",
+      "Proven 30%+ reduction in manual analyst workload",
+      "Trial period with own data and analyst validation",
+      "Integration with existing tools like ServiceTitan Marketing Pro",
+      "Buy-in from analytics and customer success teams"
+    ],
+    "notable_quotes": [
+      "\"AI-powered,\" \"machine learning,\" \"proactive insights\"\u2014it's all buzzwords until proven otherwise.",
+      "Superior accuracy, demonstrated accuracy, is paramount."
+    ],
+    "hidden_insights": [
+      "Strong internal analytics capability raises bar for external solutions",
+      "Price is not a barrier; efficacy and trust are critical",
+      "Seasonality and local market nuances require adaptable models"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Maya Patel",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 15,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism about complexity and relevance of machine learning for small cleaning business",
+      "Manual data spread across multiple spreadsheets complicates integration",
+      "Doubt that generalized platform can capture unique business rhythms",
+      "Concerns about cost vs. benefit for small operation",
+      "Need for clear ROI and trustworthiness of data"
+    ],
+    "buying_triggers": [
+      "Ability to consolidate disparate data sources easily",
+      "Predictive insights tailored to cleaning industry nuances",
+      "Clear, measurable ROI in customer retention",
+      "Minimal complexity and learning curve",
+      "Single decision-maker with strong ROI proof"
+    ],
+    "notable_quotes": [
+      "I'm just not convinced a generalized 'machine learning platform' can really understand the specific rhythm of a cleaning business in Austin, Texas.",
+      "If I'm going to act on its recommendations, it needs to be spot-on, not just a guess."
+    ],
+    "hidden_insights": [
+      "Emotional impact of churn on cleaning staff morale is a factor",
+      "Strong desire for predictive insights but tempered by skepticism and resource constraints"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Ethan Rodriguez",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 5,
+    "problem_resonance": 3,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "No CRM in place, only spreadsheets, making integration difficult",
+      "Machine learning and risk scores feel complex and overkill for small team",
+      "Strong preference for personal touch and direct customer feedback",
+      "Concern about losing personal connection and adding unnecessary costs",
+      "Need for highly actionable, simple insights with clear ROI"
+    ],
+    "buying_triggers": [
+      "Easy ingestion of spreadsheet data",
+      "Clear, actionable risk alerts with concrete next steps",
+      "Demonstrated ability to uncover risks missed by current methods",
+      "Trustworthy data with minimal false positives",
+      "Low learning curve and no need for dedicated analyst"
+    ],
+    "notable_quotes": [
+      "My team prides itself on knowing our customers. If a machine tells me someone's unhappy, it feels impersonal.",
+      "If the tool costs money, it better provide a clear, measurable return."
+    ],
+    "hidden_insights": [
+      "Founder is sole decision-maker and gatekeeper for adoption",
+      "Strong emphasis on trustworthiness and simplicity over technology sophistication"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Jasmine Lee",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Uncertainty about CRM compatibility and integration effort",
+      "Skepticism about accuracy and explainability of AI churn models",
+      "Concern about duplication of existing BI tools and added cost",
+      "Need for seamless integration with existing CRM and marketing automation",
+      "Requirement for proof of concept or pilot with measurable results"
+    ],
+    "buying_triggers": [
+      "Transparent, explainable churn risk factors with actionable insights",
+      "Minimal IT effort for setup and integration",
+      "Ability to feed churn scores back into CRM and trigger targeted campaigns",
+      "Case studies or pilot demonstrating measurable churn reduction",
+      "Alignment with CEO\u2019s goal to reduce churn by 5%"
+    ],
+    "notable_quotes": [
+      "If your platform is just giving us another dashboard with similar data, but with a 'churn score' on top, I'd need to understand how it truly differentiates itself.",
+      "I'd want to understand how precise your predictions are and how those predictions translate into measurable improvements."
+    ],
+    "hidden_insights": [
+      "Existing investment in BI tools raises bar for new solutions",
+      "Strong focus on measurable business outcomes and integration with current workflows"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Franklin Moore",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 12,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 1,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Integration complexity with spreadsheets and QuickBooks",
+      "Skepticism about accuracy and value of predictive warnings",
+      "Concern that warnings could harm personal customer relationships",
+      "Looking to retire soon, low motivation to adopt new tech"
+    ],
+    "buying_triggers": [
+      "Simple automated renewal reminders without predictions",
+      "Minimal setup and effort, solves manual time-consuming tasks"
+    ],
+    "notable_quotes": [
+      "If this thing just spits out a list of names, what am I supposed to do with it? Cold call them and say, 'Hey, a computer told me you might leave us?' That sounds like a sure way to lose a customer.",
+      "The fundamental premise... look, I've built this business on relationships. My guys know Mrs. Henderson's dog's name. A computer isn't going to build that."
+    ],
+    "hidden_insights": [
+      "Strong preference for personal touch over data-driven insights",
+      "Willing to consider only very basic automation that reduces manual effort"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Sofia Martinez",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pool Service",
+    "persona_company_size": 22,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about AI accuracy given unique seasonal patterns",
+      "Data integration challenges due to lack of formal CRM",
+      "Concern about added workload and learning curve for team",
+      "Budget approval difficulties without clear ROI"
+    ],
+    "buying_triggers": [
+      "Seamless data ingestion handled by vendor",
+      "Actionable insights that reduce administrative overhead",
+      "Trustworthy predictions with low false positives"
+    ],
+    "notable_quotes": [
+      "If this just adds another dashboard to monitor and more tasks without streamlining anything, then it's not really helping.",
+      "We'd need to trust the predictions \u2013 if it flags customers who aren't actually at risk, or misses ones who are, it undermines the whole thing."
+    ],
+    "hidden_insights": [
+      "High operational workload makes any added complexity a barrier",
+      "Decision-making involves multiple roles including owner and service supervisors"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Gregory Thompson",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 25,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "No current direct integration with PestPac",
+      "Manual data export/import negates value",
+      "Skepticism about predictive accuracy specific to his business",
+      "Need for actionable insights beyond red flags",
+      "Requirement for deep customization and data export"
+    ],
+    "buying_triggers": [
+      "Seamless PestPac integration",
+      "Proof of predictive accuracy on his customer base",
+      "Actionable insights explaining reasons for churn risk"
+    ],
+    "notable_quotes": [
+      "If I have to manually export data from PestPac and then import it into your system, that defeats a lot of the purpose.",
+      "I'd need to see some concrete proof that it works for a company like mine, not just a general percentage."
+    ],
+    "hidden_insights": [
+      "Strong preference for flexibility and customization over polished dashboards",
+      "Integration is a critical gating factor"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Hannah Kim",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 30,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism about overpromised AI capabilities",
+      "Concerns about integration complexity and need for data scientists",
+      "Cost versus measurable retention improvement",
+      "Need for transparent churn model methodology",
+      "Preference for human outreach over automated communication"
+    ],
+    "buying_triggers": [
+      "Plug-and-play integration with CRM and Zendesk",
+      "Clear, actionable insights usable by current team",
+      "Demonstrable ROI beyond marginal retention gains",
+      "Robust vendor support during implementation and ongoing"
+    ],
+    "notable_quotes": [
+      "My main concern is that these kinds of platforms often promise the moon but deliver very little in terms of real-world application.",
+      "We want to be able to customize those churn model variables, too, not just take a black box approach."
+    ],
+    "hidden_insights": [
+      "Strong emphasis on vendor support and ease of use",
+      "Decision involves CEO and head of finance with detailed cost-benefit analysis"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Ivan Goldberg",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 150,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about integration maturity with FieldRoutes",
+      "Need for set-and-forget integration with no workflow disruption",
+      "Requirement for actionable, unobvious insights beyond manual review",
+      "Need for multi-branch churn visibility and comparative analytics",
+      "Cost must be justified by labor savings and retention gains"
+    ],
+    "buying_triggers": [
+      "Truly seamless FieldRoutes integration",
+      "Insights that identify at-risk customers earlier and for non-obvious reasons",
+      "Multi-branch analytics dashboard",
+      "Demonstration with own data and clear ROI"
+    ],
+    "notable_quotes": [
+      "A 'win' would be if it could consistently identify at-risk customers before our manual review process would, and for reasons we hadn't readily identified.",
+      "If you could genuinely demonstrate those things... then my next step would be to bring you in for a more formal presentation."
+    ],
+    "hidden_insights": [
+      "Large scale and multi-branch complexity require advanced analytics",
+      "Decision involves operations managers and executive leadership"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Diana Fuentes",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Lawn Care & Landscaping",
+    "persona_company_size": 40,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 1,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "No dedicated CRM, reliance on spreadsheets complicates integration",
+      "Skepticism about predictive accuracy given lawn care seasonality and weather",
+      "Past negative experiences with generic software vendors",
+      "Concern about added complexity to busy field teams",
+      "Need for integration with QuickBooks for billing correlation"
+    ],
+    "buying_triggers": [
+      "Demonstrable time savings on manual churn reporting",
+      "Proof of predictive accuracy customized for lawn care seasonality and weather"
+    ],
+    "notable_quotes": [
+      "If it can't significantly cut down that manual work, it's not worth looking at.",
+      "I'd need to see some real-world examples or a clear pathway to how it would be customized for our industry, not just generic claims."
+    ],
+    "hidden_insights": [
+      "Strong preference for tailored solutions over generic models",
+      "Owner involvement required for investment decisions"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Marcus Ellison",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "HVAC",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Need to prove predictive accuracy exceeds current manual methods",
+      "Requirement for seamless Salesforce integration",
+      "Skepticism about black-box AI without raw data transparency",
+      "Need for API integration with internal reporting systems",
+      "High bar due to existing internal investment in analytics"
+    ],
+    "buying_triggers": [
+      "Demonstrable improvement in churn prediction accuracy",
+      "Significant reduction in analyst labor hours",
+      "Seamless Salesforce and API integration",
+      "Raw data export for model validation"
+    ],
+    "notable_quotes": [
+      "The biggest hurdle for me is proving that your predictive AI improves churn accuracy while saving analyst hours.",
+      "It's not just about the cost of your software, but the cost of not leveraging what we've already built and refined."
+    ],
+    "hidden_insights": [
+      "Existing internal analytics capability raises the bar for new solutions",
+      "Operations Manager is a key stakeholder in evaluation"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Cathy Nguyen",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pool Service",
+    "persona_company_size": 15,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about AI/ML value and risk of complicating workflows",
+      "Concerns about false positives wasting resources and annoying customers",
+      "Need for simple, actionable insights without data overload",
+      "Requirement to understand specific factors contributing to churn risk",
+      "Cost concerns relative to actual saved customers"
+    ],
+    "buying_triggers": [
+      "Simple dashboard integrated with existing workflows",
+      "Clear explanation of churn risk factors",
+      "High accuracy with low false positives",
+      "Management buy-in based on clear ROI"
+    ],
+    "notable_quotes": [
+      "If it flags someone, but our outreach still doesn't save them, then we've spent time and money for nothing.",
+      "I need to know what factors are contributing to that risk so we can tailor our outreach."
+    ],
+    "hidden_insights": [
+      "Small team size demands simplicity and minimal training",
+      "Decision involves owner and management team with ROI focus"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "George Patterson",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 4,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism that software can outperform 15 years of personal experience",
+      "Cost concerns and time required to learn a new system",
+      "Doubt about actionable value beyond existing manual calls",
+      "Concern about intrusive outreach messaging"
+    ],
+    "buying_triggers": [
+      "Clear proof of earlier and more accurate churn prediction than current methods",
+      "Simple, low-effort interface with actionable insights",
+      "Sustainable improvement in retention from 78% to 80-85%"
+    ],
+    "notable_quotes": [
+      "\"Sounds a bit like a crystal ball, doesn't it?\"",
+      "\"If it's telling me things I already know... then what's the point?\""
+    ],
+    "hidden_insights": [
+      "Owner is sole decision maker; technicians not involved in data analysis",
+      "Strong preference for simplicity and minimal time investment"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Jasmine Torres",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 40,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Concerns about complex data integration from varied sources",
+      "Skepticism about AI model accuracy with limited churn examples",
+      "Data privacy and security as non-negotiable",
+      "Need for segmentation by customer tier and automated targeted campaigns"
+    ],
+    "buying_triggers": [
+      "High prediction accuracy (85-90%) with clear reasons for churn risk",
+      "Robust data security and privacy protocols",
+      "Clear ROI demonstrated via case studies",
+      "Ease of integration with minimal internal IT effort"
+    ],
+    "notable_quotes": [
+      "\"If it's not consistently above 85-90%... it's just creating more noise for my team.\"",
+      "\"Without those elements clearly addressed, a solution like this wouldn't be a fit for Ruva right now.\""
+    ],
+    "hidden_insights": [
+      "CEO and Head of Operations would be key stakeholders",
+      "Manual churn identification is time-consuming and reactive"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Willard James",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 14,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about accuracy and value of AI over human intuition",
+      "Integration challenges with non-specialized CRM",
+      "Cost concerns and fear of paying for ineffective software",
+      "Need for simple, low-effort adoption with minimal training",
+      "Risk of being locked into long contracts without proof of value"
+    ],
+    "buying_triggers": [
+      "Ability to integrate via simple Excel exports",
+      "Clear, measurable ROI with retention of at least two customers per month",
+      "Short trial period with no long-term commitment",
+      "Minimal training and ease of use for busy service managers"
+    ],
+    "notable_quotes": [
+      "\"My main concern... we'd have to see a *very* clear, measurable return on investment.\"",
+      "\"If it requires extensive training or adds more steps... it's a non-starter.\""
+    ],
+    "hidden_insights": [
+      "Owner is decision maker but values input from lead service manager",
+      "Manual tracking and human error are major pain points"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Nina Patel",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 10,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 1,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Lack of structured CRM data and reliance on QuickBooks and shared docs",
+      "Skepticism about model applicability to irregular, non-subscription cleaning services",
+      "Need for proof that models can differentiate normal irregularity from churn",
+      "Requirement for industry-specific benchmarks and validation",
+      "Reluctance to overhaul existing data collection for new software"
+    ],
+    "buying_triggers": [
+      "Demonstrated ability to work with existing unstructured data",
+      "Concrete proof and benchmarks specific to cleaning industry",
+      "Seamless integration that does not disrupt current workflows",
+      "Involvement and buy-in from office manager who handles customer communication"
+    ],
+    "notable_quotes": [
+      "\"How does your system account for that variability? I'm highly skeptical.\"",
+      "\"Without concrete proof... it's a non-starter.\""
+    ],
+    "hidden_insights": [
+      "Cleaning services have unique challenges due to irregular customer needs",
+      "Office manager is key stakeholder for adoption"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Samantha Ortiz",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Lawn Care & Landscaping",
+    "persona_company_size": 30,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Concern about quality and personalization of automated outreach",
+      "Current lack of full two-way integration with primary CRM (Jobber)",
+      "Need to understand manual effort required during integration phase"
+    ],
+    "buying_triggers": [
+      "Highly personalized, brand-aligned automated outreach",
+      "Robust API integration with Jobber and HubSpot",
+      "Involvement of Head of Customer Success in evaluation",
+      "Pricing in $350-$700/month range with clear value"
+    ],
+    "notable_quotes": [
+      "\"If it doesn't sound like GreenScape... it could do more harm than good.\"",
+      "\"The Jobber integration timeline is a bit of a sticking point.\""
+    ],
+    "hidden_insights": [
+      "Strong internal champion recently promoted to VP",
+      "Automated outreach is a key differentiator over just alerts"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Tyler Jensen",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 7,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about AI accuracy compared to personal customer knowledge",
+      "Concerns about integration complexity with spreadsheet-based data",
+      "Budget constraints and reluctance to add monthly expenses",
+      "Need for proof with companies of similar size",
+      "Desire for trial without long-term commitment"
+    ],
+    "buying_triggers": [
+      "Concrete case studies with businesses of similar size",
+      "Trial period with no long-term lock-in",
+      "Demonstrated improvement in retention from current 75%",
+      "Ability to maintain personal touch in outreach"
+    ],
+    "notable_quotes": [
+      "\"How does that translate to *my* business?\"",
+      "\"I need to see how this tool specifically helps me improve that.\""
+    ],
+    "hidden_insights": [
+      "Owner is primary decision maker but values personal relationships highly",
+      "Focus on balancing automation with personal touch"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Linda Chen",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "HVAC",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Lack of seamless integration with primary CRM (ServiceTitan)",
+      "Current solution tiers require manual intervention, adding workload",
+      "Need for fully hands-off, multi-channel automated outreach",
+      "Demand for proven accuracy specific to HVAC industry",
+      "Strict requirements on customizable messaging and detailed reporting",
+      "Financial model must be predictable with quick ROI"
+    ],
+    "buying_triggers": [
+      "Seamless, reliable integration with ServiceTitan and Salesforce",
+      "Fully automated, customizable multi-channel outreach",
+      "Clear, measurable ROI within short timeframe",
+      "Involvement of Head of Operations and IT for evaluation"
+    ],
+    "notable_quotes": [
+      "\"If it doesn't work seamlessly with ServiceTitan, it's a non-starter.\"",
+      "\"If I have to assign someone to babysit this 'AI-powered' system, it defeats the purpose.\""
+    ],
+    "hidden_insights": [
+      "Operational stability and predictable revenue are critical pain points",
+      "Decision involves multiple stakeholders beyond GM"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Carlos Ramirez",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pool Service",
+    "persona_company_size": 8,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 1,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "No use of specialized CRM; reliance on spreadsheets and manual tools",
+      "Integration complexity and manual setup are major barriers",
+      "Lack of IT resources to support complex data ingestion",
+      "Skepticism about AI accuracy and relevance to pool service industry",
+      "Fear of impersonal, robotic outreach damaging customer relationships",
+      "Price sensitivity and resource constraints"
+    ],
+    "buying_triggers": [
+      "Out-of-the-box, low-maintenance solution with minimal disruption",
+      "Clear plan for vendor-managed data ingestion and setup",
+      "Trial with actual data demonstrating accuracy and ROI",
+      "Full control over messaging to maintain personal touch"
+    ],
+    "notable_quotes": [
+      "\"RevHawk doesn't sound like the right fit for BlueWave right now.\"",
+      "\"We don't have the resources to dedicate to a complex integration.\""
+    ],
+    "hidden_insights": [
+      "Owner is wary of tech disruptions and requires strong assurances",
+      "Manual processes and lack of CRM are significant adoption barriers"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Emily Nguyen",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 10,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Current product only provides scores and alerts, no automated outreach",
+      "Integration needed with GoHighLevel for outreach execution",
+      "Skepticism about future roadmap features and past negative experiences"
+    ],
+    "buying_triggers": [
+      "Fully integrated, automated multi-channel outreach directly within GoHighLevel",
+      "Clear ROI in reduced churn and saved time",
+      "Actionable AI that suggests specific campaigns based on churn reasons"
+    ],
+    "notable_quotes": [
+      "\"If it's just another dashboard, another place I have to log in to see a score, then it's not solving my problem of delayed, manual follow-ups.\"",
+      "\"Without that direct, automated execution through GoHighLevel, it's just another data point I have to action myself, and honestly, I don't think so.\""
+    ],
+    "hidden_insights": [
+      "Strong preference for automation that reduces manual intervention, not just predictive analytics",
+      "Primary user and decision-maker is herself, with limited team involvement"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Gregory Ford",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Skepticism about machine learning understanding plumbing-specific behaviors",
+      "Need for automated, tailored outreach to avoid manual follow-up burden",
+      "Outreach must feel genuine and align with brand"
+    ],
+    "buying_triggers": [
+      "Demonstrated plumbing-specific churn analytics",
+      "Automated, effective outreach tailored to plumbing customer segments",
+      "Integration with scheduling and customer notes"
+    ],
+    "notable_quotes": [
+      "\"If it can't grasp the specifics of our industry, then a generic churn prediction is just another fancy spreadsheet.\"",
+      "\"The outreach needs to feel genuine, not robotic, and align with our brand.\""
+    ],
+    "hidden_insights": [
+      "Service Manager is a key stakeholder beyond the owner",
+      "Manual follow-up capacity is limited, so automation must be robust"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Jasmine Patel",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 4,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Skepticism about accuracy of machine learning and setup complexity",
+      "Concern about whether outreach is truly automated or just flagged",
+      "Price sensitivity given small business size",
+      "Data security and support availability"
+    ],
+    "buying_triggers": [
+      "Seamless integration with FieldRoutes",
+      "Intuitive, minimal setup for automated campaigns",
+      "Clear ROI and evidence of retention improvement",
+      "Trial period or strong guarantee"
+    ],
+    "notable_quotes": [
+      "\"My biggest reservation... would still be the complexity and the actual 'personalization' of those automated messages.\"",
+      "\"We're hesitant to invest in another expensive subscription if it's not truly going to simplify things and show a clear return for a shop our size.\""
+    ],
+    "hidden_insights": [
+      "Owner is primary decision-maker; technicians and office manager less involved",
+      "Strong need for trust-building via trial or guarantee"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Derek Wallace",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Lawn Care & Landscaping",
+    "persona_company_size": 20,
+    "problem_resonance": 5,
+    "solution_fit": 2,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Current platform lacks full autonomous outreach execution",
+      "Need for very flexible API and deep customization of outreach content",
+      "Skepticism about prediction accuracy and false positives",
+      "Requirement for transparency in predictive drivers and industry-specific data"
+    ],
+    "buying_triggers": [
+      "Fully autonomous outreach execution built into platform",
+      "High accuracy (85-90%) with lawn-care-specific data factors",
+      "Easy customization of outreach content and logic",
+      "Live demo and pilot program to validate claims"
+    ],
+    "notable_quotes": [
+      "\"If you built out that capability for truly autonomous, direct outreach execution... that would be a significant differentiator.\"",
+      "\"If it's a black box that just sends out pre-canned messages, that won't work.\""
+    ],
+    "hidden_insights": [
+      "Marketing director and operations manager are key stakeholders",
+      "Current internal automation is sophisticated; new solution must exceed it"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Martha Klein",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "No current Salesforce integration; integration complexity is a major concern",
+      "Need for explainability and transparency in AI predictions",
+      "Risk of false positives wasting resources and damaging customer relationships",
+      "Desire for customizable risk factors to fit seasonal and business logic"
+    ],
+    "buying_triggers": [
+      "Seamless Salesforce integration without heavy development",
+      "Clear evidence of prediction accuracy and methodology",
+      "Customization of risk factors to business specifics",
+      "Support from operations and executive teams"
+    ],
+    "notable_quotes": [
+      "\"Vague 'AI' isn't enough; we need explainability.\"",
+      "\"The biggest risk if it didn't work? We'd waste valuable time and resources chasing false positives or miss genuinely at-risk customers.\""
+    ],
+    "hidden_insights": [
+      "Operations and finance teams are key stakeholders",
+      "Strong emphasis on avoiding additional manual work or process disruption"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Robert Mills",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "HVAC",
+    "persona_company_size": 10,
+    "problem_resonance": 3,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about predictive churn relevance to HVAC business",
+      "Concern about complexity and additional workload for office manager",
+      "Need for extremely simple, 'set and forget' automated reminders",
+      "Price sensitivity and small business scale"
+    ],
+    "buying_triggers": [
+      "Truly straightforward automated reminders that reduce manual effort",
+      "Minimal setup and no ongoing training or updates",
+      "Affordable pricing aligned with small business budgets"
+    ],
+    "notable_quotes": [
+      "\"The 'predictive churn' stuff just sounds like fancy talk that doesn't apply to how we do business.\"",
+      "\"If it requires my office manager to become an IT expert, then it's not going to work.\""
+    ],
+    "hidden_insights": [
+      "Owner is primary decision-maker; technicians minimally impacted",
+      "Efficiency is prioritized over new insights or analytics"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Maya Stanton",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 15,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Skepticism about AI dashboards that don't lead to action",
+      "Need for reliable, personalized automated outreach",
+      "Critical importance of seamless integration with GoHighLevel",
+      "Concern about setup complexity and irrelevant messaging"
+    ],
+    "buying_triggers": [
+      "Predictive analytics combined with reliable, integrated automated outreach",
+      "Minimal disruption to existing workflows",
+      "Measurable lift in retention and time savings",
+      "Owner as primary decision-maker"
+    ],
+    "notable_quotes": [
+      "\"The most likely reason I'd say no to any tool is if it's just another dashboard without actual outbound action capabilities.\"",
+      "\"It has to feel personalized and timely.\""
+    ],
+    "hidden_insights": [
+      "Strong emphasis on integration and personalization to avoid generic outreach",
+      "Owner is sole decision-maker; technicians and office manager less involved"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Carl Nguyen",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "HVAC",
+    "persona_company_size": 30,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Skepticism about prediction accuracy and AI-driven outreach appropriateness",
+      "Need for deep, bi-directional integration with existing tools",
+      "Requirement for clear explanations and customizable messaging",
+      "Price point perceived as low, raising doubts about claims"
+    ],
+    "buying_triggers": [
+      "End-to-end demo showing data integration, prediction, and outreach",
+      "Customizable templates and review workflows for AI outreach",
+      "Involvement of marketing and IT teams in evaluation",
+      "Proof of seamless, robust integration"
+    ],
+    "notable_quotes": [
+      "\"If it promises that level of integration and accuracy, and solves such a significant pain point, I'd expect it to be higher. It almost sounds too good to be true.\"",
+      "\"I need to see it in action... all without my team having to manually intervene.\""
+    ],
+    "hidden_insights": [
+      "Marketing manager and IT lead are critical stakeholders",
+      "Trust in AI requires transparency and control over messaging"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Darlene Kim",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 6,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Concerns about setup effort and complexity",
+      "Skepticism about prediction reliability and ROI",
+      "Worries about manual work still required after predictions"
+    ],
+    "buying_triggers": [
+      "Reliable, easy-to-integrate predictions with minimal setup",
+      "Clear, quantifiable ROI showing retention of 2-3 customers per month",
+      "Automation that reduces manual outreach workload"
+    ],
+    "notable_quotes": [
+      "\"My main concern would be how much work it would actually be for me to set something like that up.\"",
+      "\"If it just tells me 'this person is at risk' and then I still have to manually craft an email or make a phone call, it's not saving me a ton of time.\""
+    ],
+    "hidden_insights": [
+      "Small teams are highly sensitive to any added manual workload, even if the tool provides insights."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "James O\u2019Connell",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 15,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Previous AI tools added complexity without clear results",
+      "Need proven track record specifically with PestPac users",
+      "Concern about integration disrupting current operations",
+      "Skepticism about reducing manual effort"
+    ],
+    "buying_triggers": [
+      "Demonstrated ROI and reduction in manual retention hours",
+      "Seamless integration with PestPac",
+      "Minimal training and operational disruption"
+    ],
+    "notable_quotes": [
+      "\"I'd need to see a very clear, proven track record of this working with other PestPac users.\"",
+      "\"My team isn't keen on learning a whole new system if it's overly complex. Minimal retraining is key.\""
+    ],
+    "hidden_insights": [
+      "Even automation-first buyers require strong evidence of ease and ROI before adoption."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Rashida Ali",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pool Service",
+    "persona_company_size": 40,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Skepticism about accuracy given seasonal churn patterns",
+      "Concern about ramp-up period and resource drain during learning phase",
+      "Need for automated, scalable outreach beyond just predictions"
+    ],
+    "buying_triggers": [
+      "Demonstrated 80-90% accuracy tailored to seasonal business",
+      "Integration with existing tools like Zapier and Google Sheets",
+      "Automated, cross-channel outreach to reduce manual workload",
+      "Trial with real data showing measurable results"
+    ],
+    "notable_quotes": [
+      "\"My biggest risk concern... if this tool tells me customer X is at high risk, and we spend time and resources on re-engagement, but they were always going to come back anyway...\"",
+      "\"Beyond predictions, what we really need is not just knowing who is at risk, but also efficient ways to act on that information.\""
+    ],
+    "hidden_insights": [
+      "Seasonal businesses require models that understand individual customer seasonal behavior, not generic churn definitions.",
+      "Prediction alone is insufficient; execution automation is a critical unmet need."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Edgar Martinez",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 8,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism due to past bad experiences with AI tools",
+      "Concerns about transparency and understanding why customers are flagged",
+      "Worries about implementation complexity and cost for a small team",
+      "Uncertainty about data integration with disparate sources"
+    ],
+    "buying_triggers": [
+      "Transparent explanations of churn risk factors",
+      "Low-touch, automated data syncing from spreadsheets",
+      "Affordable pricing with clear, immediate ROI",
+      "Minimal disruption to current workflows"
+    ],
+    "notable_quotes": [
+      "\"If it's a black box, I'm out.\"",
+      "\"My 'patchwork system' is free, even if it's inefficient. If this is another money pit or time sink, it's a non-starter.\""
+    ],
+    "hidden_insights": [
+      "Small teams prioritize time savings and transparency over advanced features.",
+      "Cost sensitivity is high; free but inefficient manual systems are preferred over costly uncertain tools."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Lena Marcus",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 95,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Concerns about integration complexity and operational disruption",
+      "Skepticism about machine learning 'black box' and nuanced understanding",
+      "Employee resistance and learning curve for new tools",
+      "Need for rock-solid ROI justification"
+    ],
+    "buying_triggers": [
+      "Truly seamless FieldRoutes integration with minimal IT involvement",
+      "Actionable insights with clear reasons and recommended actions",
+      "Significant reduction in manual retention hours",
+      "Targeted demo and pilot program specific to Evergreen's environment"
+    ],
+    "notable_quotes": [
+      "\"If it truly pulls the data we need and pushes relevant actions back without breaking existing workflows, that would be a start.\"",
+      "\"Introducing new software... can feel overwhelming. My team is already stretched thin; I can't afford to bog them down.\""
+    ],
+    "hidden_insights": [
+      "Large organizations face significant internal resistance to new tech despite clear pain points.",
+      "ROI must be demonstrable to multiple stakeholders including IT and customer service."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Monica Feldman",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 25,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about prediction accuracy with imperfect data",
+      "Concerns about integration complexity and team workload",
+      "Need for proof via trial or detailed case study",
+      "Budget constraints and need for clear ROI metrics"
+    ],
+    "buying_triggers": [
+      "Verifiable case study or trial with similar-sized lawn care business",
+      "Minimal data cleaning and integration effort from their side",
+      "Actionable insights with clear next steps",
+      "Measurable retention lift within 3 months"
+    ],
+    "notable_quotes": [
+      "\"Proof would definitely involve a trial, or at least a very detailed, verifiable case study from a similar-sized lawn care business.\"",
+      "\"If it means more work for my team, it's a non-starter, regardless of how 'smart' the predictions are.\""
+    ],
+    "hidden_insights": [
+      "Budget pressures heavily influence willingness to adopt new tech in lawn care.",
+      "Actionability of insights is as important as prediction accuracy."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Jared Liu",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 20,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about accuracy and differentiation from existing FieldRoutes alerts",
+      "Concerns about integration and having to use multiple systems",
+      "Worries about complexity and setup of automated campaigns",
+      "Price sensitivity and need for clear, measurable ROI"
+    ],
+    "buying_triggers": [
+      "Seamless integration with FieldRoutes and minimal system switching",
+      "Automated, personalized retention campaigns with minimal manual setup",
+      "Clear evidence of significant churn reduction, especially in summer",
+      "Affordable pricing justified by measurable ROI"
+    ],
+    "notable_quotes": [
+      "\"My gut reaction is that it sounds like every other 'AI-powered' solution I've heard pitched.\"",
+      "\"If I'm paying this much, I need to see a clear, measurable reduction in that summer churn, and not just a few percentage points.\""
+    ],
+    "hidden_insights": [
+      "Small pest control companies are price sensitive and skeptical due to prior software disappointments.",
+      "Automated execution of retention campaigns is a critical feature to justify higher price tiers."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Elsa Martinez",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 10,
+    "problem_resonance": 5,
+    "solution_fit": 2,
+    "willingness_to_pay": 1,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Data integration is a major blocker; manual data input is a non-starter",
+      "Skepticism about adding complexity and manual workload",
+      "Need for automated retention campaigns, not just risk flags",
+      "Concerns about resource constraints and stretched staff"
+    ],
+    "buying_triggers": [
+      "Truly hands-free, fully integrated automated retention campaigns requiring minimal oversight",
+      "Clear demonstration that the tool reduces manual workload",
+      "Involvement of office manager to validate ease of use"
+    ],
+    "notable_quotes": [
+      "\"If we have to manually feed it data, it's a non-starter. We already have staff spending time on manual reminders; adding more data entry isn't simplifying operations.\"",
+      "\"What's crucial for us is something that's practically hands-free. I need automated retention campaigns that genuinely require minimal oversight.\""
+    ],
+    "hidden_insights": [
+      "Cleaning companies with manual systems are unlikely to adopt predictive churn tools without full automation.",
+      "Skepticism is rooted in past experiences with software that increased workload without clear benefit."
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Brian O'Connor",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 120,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Need seamless integration with FieldRoutes; manual data handling is a non-starter",
+      "Skepticism about AI being a black box without clear explanations",
+      "Concern about added manual work for outreach if not automated"
+    ],
+    "buying_triggers": [
+      "Demonstrable accuracy with clear explanations of churn reasons",
+      "Proof of effectiveness specifically in pest control context",
+      "Automated, personalized outreach that complements existing workflows"
+    ],
+    "notable_quotes": [
+      "\"If it *could* truly identify at-risk customers and, more importantly, the specific reasons *why* they're at risk...\"",
+      "\"If this platform can't seamlessly pull *all* the relevant data from FieldRoutes without us having to manually export and import, it's a non-starter.\""
+    ],
+    "hidden_insights": [
+      "Willing to pay more if ROI is clear but hesitant to commit without proof",
+      "Multiple internal stakeholders (COO, head of customer service, IT) would be involved in decision"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Rashida Khan",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pool Service",
+    "persona_company_size": 10,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "No CRM currently; relies on spreadsheets and paper, making integration difficult",
+      "Skepticism about complexity and cost, especially given seasonal cash flow",
+      "Reluctance to overhaul existing systems or add complexity",
+      "Needs simplicity and minimal effort; high monthly fees are a barrier"
+    ],
+    "buying_triggers": [
+      "Incredibly simple, intuitive tool with minimal learning curve",
+      "Cost tied directly to value with flexibility for seasonal revenue",
+      "Avoidance of complex data bridging or CRM migration"
+    ],
+    "notable_quotes": [
+      "\"The last thing I want to do is overhaul our entire system for something that might or might not work.\"",
+      "\"The idea of having to 'bridge' our data to another CRM sounds like exactly the kind of complex integration headache I want to avoid.\""
+    ],
+    "hidden_insights": [
+      "Low tech sophistication is as much a mindset as a capability",
+      "Seasonal cash flow heavily constrains willingness to invest in new tools"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Liam Carpenter",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "HVAC",
+    "persona_company_size": 20,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Concerns about whether pest control churn models apply to HVAC-specific factors",
+      "Manual data tracking makes integration and data ingestion challenging",
+      "Investment risk vs. ROI is a major hesitation",
+      "Need actionable insights, not just risk scores",
+      "Must not disrupt existing manual scheduling processes"
+    ],
+    "buying_triggers": [
+      "Clear, low-friction data ingestion path",
+      "Demonstrated ROI with measurable churn reduction",
+      "Actionable, prioritized insights with suggested interventions",
+      "Relevant case studies or pilots in HVAC context"
+    ],
+    "notable_quotes": [
+      "\"My biggest hesitation... would be the investment versus the return.\"",
+      "\"If it just spits out a list without helping us prioritize or strategize, it's not much better than our current manual guesswork.\""
+    ],
+    "hidden_insights": [
+      "Office manager is a key stakeholder for adoption",
+      "Decision process involves demos, proposals, and trials with relevant industry examples"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Carmen Reyes",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 40,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Need integration with multiple systems (CRM, CallTrackingMetrics, QuickBooks)",
+      "Skepticism about AI being a black box without transparency",
+      "Concern about complexity managing residential vs. commercial lines",
+      "ROI must be clear and demonstrable for a mid-sized company",
+      "Actionable insights must include specific recommended actions"
+    ],
+    "buying_triggers": [
+      "Seamless integration pulling historical and ongoing data",
+      "Transparent, actionable insights with clear next steps",
+      "Strong ROI evidence and ease of use for service operations",
+      "Support from CEO and Head of Service Operations"
+    ],
+    "notable_quotes": [
+      "\"If it can't link all that data to a single customer profile, it's just garbage in, garbage out.\"",
+      "\"My biggest reservation... would still be the reliability and the cost.\""
+    ],
+    "hidden_insights": [
+      "Complexity of managing different customer segments is a critical factor",
+      "Multiple decision-makers involved with distinct concerns (budget, usability, operational impact)"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Nina Patel",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Lack of direct integration with primary customer data source",
+      "Risk of creating data silos and manual steps in workflow",
+      "Skepticism about practical implementation and campaign hand-off",
+      "Need for strong, relevant case studies and measurable ROI",
+      "Concerns about disruption to existing operations"
+    ],
+    "buying_triggers": [
+      "Direct integration with primary customer data system",
+      "Seamless automated feeds into existing outreach tools",
+      "Proof of 5% churn reduction with clear timeline",
+      "Involvement of IT and Marketing leadership in evaluation"
+    ],
+    "notable_quotes": [
+      "\"If RevHawk integrates with Salesforce, but our main customer data isn't there, how does that even work?\"",
+      "\"If those 15-20 hours were truly reclaimed and our targeting became significantly more effective, that would be huge.\""
+    ],
+    "hidden_insights": [
+      "Executive pressure to reduce churn by 5% is a strong motivator",
+      "Multiple internal stakeholders with distinct roles in decision-making"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Ethan Brooks",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 12,
+    "problem_resonance": 5,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "No CRM beyond spreadsheets; IT support is minimal",
+      "Skepticism about complexity and trust in predictive algorithms",
+      "Concerns about setup effort and ongoing management burden",
+      "Budget constraints and need for low-risk pilot with money-back guarantee",
+      "Tool must not add work or require data entry from field staff"
+    ],
+    "buying_triggers": [
+      "Direct ingestion from spreadsheets without manual re-entry",
+      "Plug-and-play simplicity with vendor handling complexity",
+      "Low-cost pilot with guaranteed ROI and quick measurable results",
+      "No added workload for plumbers or staff"
+    ],
+    "notable_quotes": [
+      "\"I trust my gut and my experience with customers more than some algorithm that doesn't know Mrs. Henderson has a leaky faucet every other year.\"",
+      "\"If it means they have to learn a whole new system or input more data, forget it. They're plumbers, not data entry clerks.\""
+    ],
+    "hidden_insights": [
+      "Retention rate is low (60%), so potential upside is significant if barriers are addressed",
+      "Strong resistance to technology perceived as complex or adding workload"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Marcus Lytle",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Lawn Care & Landscaping",
+    "persona_company_size": 25,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Concern about complexity and need for IT resources",
+      "Data integration must be simple, automated or minimal manual effort",
+      "Accuracy must be high (70-80% true positives) with low false positives",
+      "Risk of poor adoption if tool adds complexity or is not intuitive",
+      "Need actionable insights with prioritization and suggested actions"
+    ],
+    "buying_triggers": [
+      "One-time or very simple recurring data upload process",
+      "Demonstrated accuracy with relevant pilot using own data",
+      "Intuitive user experience for frontline staff",
+      "Clear value proposition for CEO and Customer Service Manager"
+    ],
+    "notable_quotes": [
+      "\"If we have to manually clean or restructure data every time, that defeats the purpose.\"",
+      "\"Does it help us prioritize, or suggest specific actions based on the 'why' they might churn?\""
+    ],
+    "hidden_insights": [
+      "Customer Service Manager is a critical stakeholder sensitive to workflow impact",
+      "Skepticism about buzzwords and overcomplexity is a barrier"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Sandra Kim",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "HVAC",
+    "persona_company_size": 12,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about differentiation from existing CRM and marketing tools",
+      "Concerns about complexity and resource requirements for integration",
+      "Need for measurable, rapid ROI with clear attribution",
+      "Risk of long-term commitment without pilot proof"
+    ],
+    "buying_triggers": [
+      "Handled integration with minimal internal effort",
+      "Pilot phase demonstrating churn reduction within 3 months",
+      "Clear metrics and tracking to attribute impact",
+      "CEO-led decision with operational input"
+    ],
+    "notable_quotes": [
+      "\"My biggest barrier or risk... is still proof.\"",
+      "\"If you can show clear uplift in contract renewals and reduced churn within, say, three months during a pilot, then we'd have something to talk about.\""
+    ],
+    "hidden_insights": [
+      "CEO is primary decision-maker, with operational manager as advisor",
+      "Strong preference for pilot before any long-term commitment"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Victor Ramos",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pool Service",
+    "persona_company_size": 10,
+    "problem_resonance": 3,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Churn is largely seasonal and unavoidable in pool service",
+      "Complexity and effort of integration with spreadsheets is a concern",
+      "Skepticism about added value beyond existing gut feeling and manual processes",
+      "Budget constraints and preference for low-effort solutions"
+    ],
+    "buying_triggers": [
+      "Clear evidence that the system identifies preventable churn beyond seasonal patterns",
+      "Very low-effort, simple integration",
+      "Proof of accuracy in identifying 20-30% of at-risk customers before gut feeling"
+    ],
+    "notable_quotes": [
+      "If churn is seasonal and unavoidable, then what's the point of a score telling me someone might churn? I already know that.",
+      "I'm not looking to hire a tech person to manage software."
+    ],
+    "hidden_insights": [
+      "Owner is near retirement and not interested in tech complexity",
+      "Lead technician's buy-in is important for adoption"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Emily Chen",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about seamless integration with PestPac based on past vendor failures",
+      "Need for actionable insights, not just dashboards",
+      "Concern about AI hype and unproven ROI",
+      "Cost sensitivity due to small operation size",
+      "Desire for retention campaigns integrated or closely linked with PestPac"
+    ],
+    "buying_triggers": [
+      "Truly seamless PestPac integration with zero extra data entry",
+      "Clear, actionable customer flags with intervention suggestions",
+      "Demonstrated churn reduction and ROI in a pilot with own data"
+    ],
+    "notable_quotes": [
+      "My initial reaction is skepticism. PestPac is our central nervous system; if a solution can't seamlessly integrate with it without causing more work or data discrepancies, then it's just another headache.",
+      "If you could genuinely address these concerns... the next step would probably be a pilot."
+    ],
+    "hidden_insights": [
+      "Operations manager and CFO are key stakeholders beyond the owner",
+      "Strong preference for minimal disruption to existing workflows"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "James Donovan",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 30,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about machine learning effectiveness given external churn factors (moves, business changes)",
+      "Concerns about data quality and integration with spreadsheets and Stripe",
+      "Cost vs. hiring part-time person for retention calls",
+      "Need for verifiable trial with own data proving identification of preventable churn",
+      "Wary of adding complexity without clear ROI"
+    ],
+    "buying_triggers": [
+      "Trial with own data showing accurate early identification of at-risk customers",
+      "Clear ROI that justifies $200-$400 monthly cost over alternative uses",
+      "Integration that does not add manual work"
+    ],
+    "notable_quotes": [
+      "I'd need to see a trial, a real-world test, where it identifies clients we didn't think were at risk, and then they actually churn.",
+      "Could I hire a part-time person for that much to just call people? Or is this software going to save us enough in lost revenue and staff time to justify that?"
+    ],
+    "hidden_insights": [
+      "Operations manager is key stakeholder for feasibility and workflow impact",
+      "Churn often feels unchangeable due to external factors"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Derek Jensen",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 15,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about predictive accuracy for small seasonal business",
+      "Concerns about false positives wasting team time",
+      "Wants quick setup and fast visible results",
+      "Budget sensitivity but open if ROI is clear"
+    ],
+    "buying_triggers": [
+      "Proof of 80-90% accuracy with own data",
+      "Quick implementation with results in 24-48 hours",
+      "API-level integration with FieldRoutes requiring minimal effort"
+    ],
+    "notable_quotes": [
+      "Sounds a bit like magic, to be honest.",
+      "I need to know it's not going to flag every customer who pauses for winter as churn risk and send my guys on a wild goose chase."
+    ],
+    "hidden_insights": [
+      "Primary decision-maker with office manager as key user",
+      "Balancing growth ambitions with cash flow constraints"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Nancy Sloane",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 200,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Integration complexity with multiple existing systems (FieldRoutes, ServiceTitan, Voice for Pest)",
+      "Concerns about incomplete data ingestion reducing model accuracy",
+      "Worries about AI-driven outreach losing personal touch and brand control",
+      "Need for regional oversight and customization of automated outreach",
+      "Security and vendor support concerns"
+    ],
+    "buying_triggers": [
+      "Comprehensive integration with all relevant data fields",
+      "Automated outreach with regional customization and brand alignment",
+      "Robust enterprise-level support and security guarantees"
+    ],
+    "notable_quotes": [
+      "My biggest concern would be integration complexity and security.",
+      "An AI-making calls or sending texts could easily misinterpret situations or use canned responses that alienate customers."
+    ],
+    "hidden_insights": [
+      "Multi-branch operation requires centralized yet customizable solution",
+      "IT Director and Regional Managers are critical stakeholders"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Cameron Fletcher",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 150,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about solution outperforming existing in-house churn model",
+      "Concerns about workflow disruption and learning curve for sales reps",
+      "Need for seamless integration into existing workflows (FieldRoutes, Slack)",
+      "Demand for quick, compelling pilot results on own data",
+      "Previous negative experiences with software vendors"
+    ],
+    "buying_triggers": [
+      "Demonstrated significant uplift in retention accuracy via pilot on historical data",
+      "Minimal disruption and easy adoption for sales team",
+      "Insights integrated into existing workflows without extra manual effort"
+    ],
+    "notable_quotes": [
+      "For me to even consider an external solution, the primary condition is a demonstrated uplift in retention, validated by a pilot on our actual historical data.",
+      "If your model doesn't show a clear, measurable improvement... it's a non-starter."
+    ],
+    "hidden_insights": [
+      "Recently promoted with pressure to improve retention in 6 months",
+      "Decision-making involves CEO and CFO but only after strong pilot results"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Joanna Kim",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "Lawn Care & Landscaping",
+    "persona_company_size": 100,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Current data is unstructured and in spreadsheets, making integration complex",
+      "Skepticism about AI-powered solutions and seasonal nuance capture",
+      "Tight budget and resource constraints",
+      "Need for immediate and undeniable ROI to justify adoption",
+      "Adding another complex system feels counterproductive currently"
+    ],
+    "buying_triggers": [
+      "Clean, structured data infrastructure in place",
+      "Clear, transparent pricing including integration costs",
+      "Demonstrable ROI that justifies cost and effort quickly"
+    ],
+    "notable_quotes": [
+      "The data structuring piece is a major mountain.",
+      "Adding a tool that requires custom integration with our current spreadsheet system would be counterproductive and too resource-intensive."
+    ],
+    "hidden_insights": [
+      "New CDO with stretched internal resources",
+      "Decision involves Head of Operations and CEO once data is ready"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Ethan Patel",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "HVAC",
+    "persona_company_size": 100,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Complexity and resource demands of integrating disparate, messy data sources",
+      "Strong preference for human, personal outreach over automated AI messaging",
+      "Concerns about data privacy and security with third-party systems",
+      "Lack of internal IT resources to support long rollout or integration",
+      "Skepticism about value of risk scores without clear actionability"
+    ],
+    "buying_triggers": [
+      "Simple, low-effort integration with minimal internal resource use",
+      "Data privacy and security assurances",
+      "Human-centric outreach options rather than automated AI messaging"
+    ],
+    "notable_quotes": [
+      "Automating outreach? That sounds like a recipe for impersonal, irrelevant messages that annoy customers more than they help.",
+      "If it means dedicating significant internal resources, it's a non-starter."
+    ],
+    "hidden_insights": [
+      "Customer expectations for personal service outweigh appeal of automation",
+      "Data privacy concerns are a significant barrier"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Sophia Martinez",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "Pool Service",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism about ability to differentiate seasonal pauses from true churn",
+      "Concerns about complexity and cost of integration",
+      "Need for simplicity and clear ROI before considering new system"
+    ],
+    "buying_triggers": [
+      "Accurate distinction between seasonal pause and true churn",
+      "Incredibly simple integration and use",
+      "Clear, demonstrable ROI smoothing seasonal revenue spikes"
+    ],
+    "notable_quotes": [
+      "\"If it can't do that, it's just noise.\"",
+      "\"If it can't demonstrably do that, and the cost isn't negligible, then it's just another expense I don't need.\""
+    ],
+    "hidden_insights": [
+      "Seasonality in pool service creates unique churn patterns that complicate predictive modeling",
+      "Strong emphasis on cost containment and margin preservation limits openness to new tools"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Marcus Lee",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "Pest Control",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Already have proprietary churn prediction models",
+      "Need clear differentiation and efficiency gains over existing solution",
+      "Integration complexity is a major risk"
+    ],
+    "buying_triggers": [
+      "Superior predictive power catching early churn signals",
+      "Near real-time insights",
+      "Automation of retention interventions",
+      "Seamless integration with existing systems"
+    ],
+    "notable_quotes": [
+      "\"We're looking for clear differentiation and demonstrated efficiency gains, not just another black box.\"",
+      "\"If integrating RevHawk disrupts our existing setup or requires extensive data preparation, that's a non-starter.\""
+    ],
+    "hidden_insights": [
+      "High sophistication and investment in internal solutions creates high bar for external tools",
+      "Efficiency gains from automation are valued but must not disrupt current workflows"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Linda Gomez",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 45,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about machine learning's ability to understand individual customer nuances",
+      "Fear of complex, time-consuming data integration",
+      "Preference for known, predictable costs over uncertain software ROI",
+      "Need for zero effort setup and meaningful guarantee"
+    ],
+    "buying_triggers": [
+      "Truly effortless data integration with dedicated onboarding support",
+      "System learns customer-specific patterns without manual programming",
+      "Clear fixed pricing with ROI guarantee",
+      "Ease of use for day-to-day users like office manager"
+    ],
+    "notable_quotes": [
+      "\"The 'machine learning' part still sounds like a black box to me.\"",
+      "\"If it takes Sarah away from her core duties for too long, then it's not saving us time, it's just shifting the burden.\""
+    ],
+    "hidden_insights": [
+      "High manual effort currently consumes majority of key staff time",
+      "Strong preference for predictable costs and risk mitigation over speculative tech benefits"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Robert Chandler",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 60,
+    "problem_resonance": 3,
+    "solution_fit": 2,
+    "willingness_to_pay": 1,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism about predictive value given emergency nature of plumbing calls",
+      "Vendor fatigue and recent major CRM investment",
+      "Significant integration challenges with spreadsheet-based data",
+      "Need for immediate, demonstrable ROI and minimal disruption"
+    ],
+    "buying_triggers": [
+      "Truly plug-and-play integration with existing CRM",
+      "Clear, fast ROI with minimal implementation effort",
+      "Predictive accuracy that discerns intent from silence"
+    ],
+    "notable_quotes": [
+      "\"Predictive value is doubted because discerning intent from silence is hard.\"",
+      "\"Another lengthy implementation, especially requiring spreadsheet data dumping, is a non-starter.\""
+    ],
+    "hidden_insights": [
+      "Emergency service unpredictability fundamentally limits churn prediction usefulness",
+      "Recent tech investments create high switching costs and low appetite for new projects"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Melissa Nguyen",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "Pest Control",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Skepticism from prior failed internal predictive model attempts",
+      "Concerns about integration complexity with bespoke CRM",
+      "Need for rapid deployment and measurable KPIs within 3 months",
+      "Requirement for automation of targeted campaigns, not just alerts"
+    ],
+    "buying_triggers": [
+      "Seamless integration with pest control CRMs",
+      "High predictive accuracy demonstrated with peer case studies",
+      "Automated, smart retention campaign triggers",
+      "Clear, immediate ROI and rapid time to value"
+    ],
+    "notable_quotes": [
+      "\"If it's just telling me who's at risk without helping us act, it's just adding more work.\"",
+      "\"Rapid deployment and measurable KPIs within the first three months are critical.\""
+    ],
+    "hidden_insights": [
+      "Prior negative experiences with building internal predictive tools create high skepticism",
+      "Multiple stakeholders with distinct concerns (budget, operations, tech, security) influence buying"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "James O\u2019Connor",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "Pest Control",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism about accuracy and false positives burdening small team",
+      "Concerns about cost relative to business size and unclear ROI",
+      "Fear of complex integration with FieldRoutes and additional workload",
+      "Need for practically guaranteed ROI to justify expense"
+    ],
+    "buying_triggers": [
+      "High accuracy (85-90%) with low false positives",
+      "Seamless integration with FieldRoutes",
+      "Clear, undeniable ROI linked to saved customers",
+      "Minimal setup and learning time"
+    ],
+    "notable_quotes": [
+      "\"If it's telling me 95% will churn but only half do, it's just noise.\"",
+      "\"Practically guaranteed ROI isn't just a nice-to-have; it's a must-have.\""
+    ],
+    "hidden_insights": [
+      "Small team bandwidth severely limits tolerance for false positives or extra work",
+      "Cost sensitivity is high relative to perceived value and risk"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Alicia Reynolds",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "Pest Control",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "validated"
+    },
+    "key_objections": [
+      "Integration challenges with custom CRM",
+      "Need for concrete evidence of accuracy and actionable insights",
+      "CFO skepticism about cost vs. value",
+      "Concerns about ongoing support and product evolution"
+    ],
+    "buying_triggers": [
+      "Low-friction integration plan manageable by existing IT",
+      "Case studies with tangible churn reduction and financial impact",
+      "Live demo with anonymized or real data",
+      "Clear ROI model addressing CFO concerns",
+      "Strong ongoing support and continuous product improvement"
+    ],
+    "notable_quotes": [
+      "\"If it requires custom development or months of IT effort, that's a non-starter.\"",
+      "\"I want to see how it translates into specific actions, not just pretty graphs.\""
+    ],
+    "hidden_insights": [
+      "Decision process involves multiple stakeholders with distinct priorities",
+      "Deliberate, slow evaluation process (3-6 months) prioritizing stability"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Diane Marquez",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "HVAC",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Fragmented data sources and custom scheduling software complicate integration",
+      "Skepticism that external platform can outperform trusted internal models",
+      "Fear of disruption and added complexity near retirement",
+      "Need for turnkey solution with minimal IT involvement and proven ROI"
+    ],
+    "buying_triggers": [
+      "Seamless integration with minimal internal effort",
+      "Successful pilot demonstrating superior predictive accuracy",
+      "Clear reduction in workload and operational efficiency gains"
+    ],
+    "notable_quotes": [
+      "\"Integration with custom scheduling system has always been a significant hurdle.\"",
+      "\"Unless turnkey, minimal disruption, and proven pilot, it's a non-starter for me.\""
+    ],
+    "hidden_insights": [
+      "Approaching retirement reduces appetite for new complex projects",
+      "Strong preference for solutions that do not duplicate existing efforts"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Derek Hammond",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "Lawn Care & Landscaping",
+    "persona_company_size": 10,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 1,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism that algorithm can outperform gut feeling and experience",
+      "Concerns about complexity, learning curve, and added cost",
+      "Fear of disrupting existing workflows and spreadsheets",
+      "Small team with low tech-savviness"
+    ],
+    "buying_triggers": [
+      "Incredible simplicity with no complicated setup or training",
+      "Clear, undeniable ROI that saves time or prevents lost customers",
+      "Seamless integration with existing processes without overhaul"
+    ],
+    "notable_quotes": [
+      "My 'gut feeling' has served me well for over a decade. I know my customers.",
+      "If it means overhauling our spreadsheets or learning a whole new system from scratch, then it's a non-starter."
+    ],
+    "hidden_insights": [
+      "Owner is nearing retirement and not interested in complicating legacy",
+      "Decision-making is centralized solely with owner"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Maya Patel",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 120,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Past negative experience with inaccurate AI churn predictions",
+      "Concerns about startup stability and long-term support",
+      "Integration must be seamless with FieldRoutes",
+      "Need for evidence of accuracy and ROI from comparable large companies"
+    ],
+    "buying_triggers": [
+      "Compelling evidence of accuracy and measurable churn reduction",
+      "Transparent roadmap ensuring long-term support",
+      "Seamless integration with FieldRoutes and actionable insights",
+      "Clear ROI and references from similar-sized companies"
+    ],
+    "notable_quotes": [
+      "How do I know your AI is any better than what we\u2019ve built internally?",
+      "If we invest time and resources and then you're not around in 2-3 years, that's a massive setback for us."
+    ],
+    "hidden_insights": [
+      "Large company with dedicated analytics and customer service teams involved in decisions",
+      "Skepticism rooted in operational risk and cost, not just technology"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Carlos Mendez",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "HVAC",
+    "persona_company_size": 25,
+    "problem_resonance": 2,
+    "solution_fit": 1,
+    "willingness_to_pay": 1,
+    "overall_sentiment": "very_negative",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Belief that churn is a normal, manageable part of business",
+      "Strong preference for human retention coordinator over software",
+      "Skepticism that machine learning can capture HVAC customer nuances",
+      "Concern about adding complexity and workload to small team"
+    ],
+    "buying_triggers": [
+      "None clearly identified; human interaction prioritized over software"
+    ],
+    "notable_quotes": [
+      "A human can read between the lines. They can understand local nuances.",
+      "I think our current system combined with a dedicated person is probably the best approach for us."
+    ],
+    "hidden_insights": [
+      "HVAC emergency nature reduces perceived need for predictive churn tools",
+      "Owner is sole decision-maker and strongly resistant to tech solutions"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Elena Brooks",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "Pool Service",
+    "persona_company_size": 15,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism about AI understanding seasonal and nuanced customer behavior",
+      "Lack of current integration with PestPac is a deal-breaker",
+      "Concerns about cost and added complexity for small team",
+      "Worries about false alarms and actionable insights"
+    ],
+    "buying_triggers": [
+      "Accurate, actionable insights that explain *why* a customer is at risk",
+      "Seamless integration with PestPac",
+      "Clear cost-benefit justification especially for seasonal churn"
+    ],
+    "notable_quotes": [
+      "I don't see how some algorithm is going to understand why Mrs. Henderson cancels her pool service in November.",
+      "If this thing is spitting out warnings all day, who's going to act on them?"
+    ],
+    "hidden_insights": [
+      "Small team with limited capacity to act on alerts",
+      "Seasonality and external factors (weather, tourism) heavily influence churn"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "James McAllister",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 15,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about AI accuracy interpreting unstructured data like complaints in spreadsheets",
+      "Concern about AI replacing personal human interaction",
+      "Need for transparency in how predictions are made",
+      "Worries about data privacy and security",
+      "Potential time burden on already stretched team"
+    ],
+    "buying_triggers": [
+      "High accuracy (80-90%) and transparency in predictions",
+      "System that complements rather than replaces human interaction",
+      "Clear ROI and minimal time burden",
+      "Involvement of operations manager in evaluation"
+    ],
+    "notable_quotes": [
+      "I wouldn't want some automated system replacing genuine human interaction.",
+      "I'd need to know *how* it's making these predictions. I wouldn't want it to tell me a customer is at risk without explaining why."
+    ],
+    "hidden_insights": [
+      "Small team with limited bandwidth",
+      "Churn is a significant problem (35% annual loss) but investment risk is high"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Sophia Nguyen",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 120,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Concerns about integration robustness and stability after recent CRM migration",
+      "Skepticism about added complexity and disruption to workflows",
+      "Need for clear measurable ROI and data privacy assurances",
+      "Timing is challenging due to focus on stabilization"
+    ],
+    "buying_triggers": [
+      "Undeniable proof of robust FieldRoutes integration",
+      "Clear data privacy and security protocols",
+      "Minimal workflow disruption and training overhead",
+      "Measurable ROI that justifies cost and onboarding effort"
+    ],
+    "notable_quotes": [
+      "The biggest risk... is the potential for disruption to our current workflow.",
+      "If your system requires us to fundamentally change how we operate... then it's a non-starter."
+    ],
+    "hidden_insights": [
+      "In-house data science team is skilled but currently bogged down",
+      "Decision involves CTO and CEO beyond operations manager"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Tommy Lee",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 4,
+    "problem_resonance": 2,
+    "solution_fit": 1,
+    "willingness_to_pay": 1,
+    "overall_sentiment": "very_negative",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Belief that churn is natural and not predictable",
+      "Strong preference for personal relationships over software",
+      "Skepticism about value of churn prediction for small business",
+      "Concerns about integration complexity and cost",
+      "Fear of awkward customer interactions based on algorithmic flags"
+    ],
+    "buying_triggers": [
+      "Integration that is literally plug-and-play with zero IT effort",
+      "Clear, significant time or revenue savings"
+    ],
+    "notable_quotes": [
+      "I know my customers. I've got their phone numbers, I know their houses.",
+      "Calling a customer because a computer flagged them as at risk sounds desperate and creepy."
+    ],
+    "hidden_insights": [
+      "Owner is sole decision-maker and strongly resistant to tech solutions",
+      "Prefers hiring additional staff over software subscriptions"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Jessica Morales",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "Lawn Care & Landscaping",
+    "persona_company_size": 25,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed"
+    },
+    "key_objections": [
+      "Past experience with vague, non-actionable churn predictions",
+      "Skepticism about integration with PestPac",
+      "Need for actionable 'why' explanations behind risk scores",
+      "Concern about differentiation of seasonal vs actual churn",
+      "Pricing is moderate concern but secondary to trust and proof"
+    ],
+    "buying_triggers": [
+      "Clear, actionable insights with explanations",
+      "Demonstrated integration with PestPac",
+      "Use case tailored to lawn care and landscaping seasonal patterns",
+      "Involvement of BI lead and Head of Customer Success in evaluation"
+    ],
+    "notable_quotes": [
+      "If it just spits out a number, it's useless.",
+      "I need to know if it's because they've skipped services, had a bad technician experience, or there's a competitor offer."
+    ],
+    "hidden_insights": [
+      "Seasonality and service type diversity complicate churn prediction",
+      "Decision-making involves multiple stakeholders focused on data and customer success"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Angela Price",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 3,
+    "problem_resonance": 1,
+    "solution_fit": 1,
+    "willingness_to_pay": 1,
+    "overall_sentiment": "very_negative",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism about AI predicting customer churn in a personal service business",
+      "Current CRM is just a spreadsheet, so integration requires adopting a new system",
+      "Cost of $200-$400/month is too high for a small business with limited budget",
+      "Additional complexity and learning curve from new tools is undesirable",
+      "Prefers personal relationship and direct communication over algorithmic predictions"
+    ],
+    "buying_triggers": [
+      "A tool that is extremely simple, cheap, and directly integrates with existing spreadsheet data",
+      "A solution that makes daily operations easier without adding complexity or cost"
+    ],
+    "notable_quotes": [
+      "The fundamental skepticism about AI for my kind of personal service business is absolutely a huge blocker.",
+      "My CRM *is* a spreadsheet. So, if I'm understanding right, you'd need me to get a whole new system just to use yours, which sounds like a lot of expense and headache I don't need."
+    ],
+    "hidden_insights": [
+      "Microbusinesses with hands-on owners rely heavily on personal relationships and low-tech tools, making AI-driven churn prediction unattractive regardless of price.",
+      "There is a strong preference for operational simplicity and direct control over customer relationships rather than automated or predictive tools."
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  }
+]

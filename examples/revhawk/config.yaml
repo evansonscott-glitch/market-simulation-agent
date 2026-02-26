@@ -1,0 +1,58 @@
+# ──────────────────────────────────────────────
+# Philo Ventures Market Simulator — RevHawk Config
+# ──────────────────────────────────────────────
+# This is an example config for running a simulation
+# against RevHawk's pest control market.
+
+product:
+  name: "RevHawk"
+  description: |
+    RevHawk.pro is a machine learning tool that helps service businesses
+    (currently focused on Pest Control) predict and mitigate customer churn.
+    It integrates with CRM systems like PestRoutes/FieldRoutes, ingests detailed
+    customer data, and uses ML models to predict which customers are likely to
+    churn based on multiple signals. Company operators use it to know who is at
+    risk, why, and how to 'save' those customers.
+
+    Current pricing: $150-$350/month MRR.
+    Current customers: ~15 paying pest control companies.
+    Product tiers: Insights (analytics), Actions (AI health scores + campaigns),
+    Retention Manager (all-in-one).
+  target_market: |
+    Pest control company owners and operators in the United States.
+    Primarily subscription-based residential pest control companies
+    with 500-50,000+ customers. Companies range from 2-person startups
+    to multi-branch enterprises with 200+ employees.
+
+# ── What to Test ──
+# Use 'assumptions' for hypothesis validation (true/false style)
+# Use 'questions' for open-ended exploration
+assumptions:
+  - "Pest control operators with 1,000+ customers would pay $200-400/month for predictive churn analytics"
+  - "Operators want automated retention outreach, not just churn alerts"
+
+questions:
+  - "How do you currently communicate with customers about retention and LTV growth? Through your existing marketing automation platform, or would you prefer a managed service?"
+  - "What signals do you consider most valuable for predicting customer churn?"
+  - "Which types of retention and LTV communications would you most want to automate?"
+  - "On a scale of 1-10, how open are you to using proactive discounts as a way of building customer loyalty?"
+
+# ── Simulation Settings ──
+settings:
+  persona_count: 100
+  interview_turns: 5
+  interaction_context: "warm_demo"  # warm_demo | cold_outreach | blended
+  llm_model: "gemini-2.5-flash"
+  persona_concurrency: 5
+  interview_concurrency: 10
+
+# ── Context Files (relative to this config file) ──
+# Provide these for higher-quality simulations.
+# If world_model is not provided, one will be auto-generated.
+context:
+  world_model: "context/world_model.md"
+  transcripts: "context/transcripts.md"
+  customer_list: "context/customer_list.md"
+
+# ── Output ──
+output_dir: "output"

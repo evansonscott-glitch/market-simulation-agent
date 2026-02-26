@@ -1,0 +1,2137 @@
+{
+  "total_interviews": 97,
+  "overall_metrics": {
+    "avg_problem_resonance": 4.7,
+    "avg_solution_fit": 3.97,
+    "avg_willingness_to_pay": 3.45
+  },
+  "sentiment_distribution": {
+    "positive": 45,
+    "neutral": 24,
+    "very_positive": 27,
+    "negative": 1
+  },
+  "would_buy_distribution": {
+    "maybe": 58,
+    "yes": 34,
+    "no": 5
+  },
+  "assumption_results": {
+    "Owner-operators of lawn care companies with 500+ recurring residential customers and annual churn above 15% would pay $200-400/month for an ML-based churn prediction tool that integrates with their CRM (ServiceTitan, Jobber, Service Autopilot), because they currently have no systematic way to identify at-risk customers before they cancel.": {
+      "validated": 72,
+      "invalidated": 8,
+      "mixed": 17,
+      "validation_rate": 74.22680412371135,
+      "invalidation_rate": 8.24742268041237
+    },
+    "Pest control and lawn care operators who currently see churn risk scores but act on fewer than 30% of flagged accounts would pay 50-100% more per month for an automated outreach layer that sends personalized retention campaigns to at-risk customers via email, SMS, and AI voice calls, because the bottleneck is not knowing who's at risk \u2014 it's having the bandwidth to act on it.": {
+      "validated": 64,
+      "invalidated": 21,
+      "mixed": 12,
+      "validation_rate": 65.97938144329896,
+      "invalidation_rate": 21.649484536082475
+    }
+  },
+  "archetype_metrics": {
+    "overwhelmed_founder": {
+      "count": 40,
+      "problem_resonance_sum": 192,
+      "solution_fit_sum": 154,
+      "wtp_sum": 131,
+      "would_buy_yes": 14,
+      "would_buy_no": 2,
+      "would_buy_maybe": 24,
+      "avg_problem_resonance": 4.8,
+      "avg_solution_fit": 3.85,
+      "avg_wtp": 3.27,
+      "buy_rate": 35.0
+    },
+    "automation_first_buyer": {
+      "count": 24,
+      "problem_resonance_sum": 115,
+      "solution_fit_sum": 98,
+      "wtp_sum": 87,
+      "would_buy_yes": 9,
+      "would_buy_no": 1,
+      "would_buy_maybe": 14,
+      "avg_problem_resonance": 4.79,
+      "avg_solution_fit": 4.08,
+      "avg_wtp": 3.62,
+      "buy_rate": 37.5
+    },
+    "competitive_evaluator": {
+      "count": 13,
+      "problem_resonance_sum": 58,
+      "solution_fit_sum": 52,
+      "wtp_sum": 44,
+      "would_buy_yes": 5,
+      "would_buy_no": 2,
+      "would_buy_maybe": 6,
+      "avg_problem_resonance": 4.46,
+      "avg_solution_fit": 4.0,
+      "avg_wtp": 3.38,
+      "buy_rate": 38.5
+    },
+    "data_hungry_operator": {
+      "count": 10,
+      "problem_resonance_sum": 45,
+      "solution_fit_sum": 40,
+      "wtp_sum": 37,
+      "would_buy_yes": 3,
+      "would_buy_no": 0,
+      "would_buy_maybe": 7,
+      "avg_problem_resonance": 4.5,
+      "avg_solution_fit": 4.0,
+      "avg_wtp": 3.7,
+      "buy_rate": 30.0
+    },
+    "strategic_enterprise": {
+      "count": 10,
+      "problem_resonance_sum": 46,
+      "solution_fit_sum": 41,
+      "wtp_sum": 36,
+      "would_buy_yes": 3,
+      "would_buy_no": 0,
+      "would_buy_maybe": 7,
+      "avg_problem_resonance": 4.6,
+      "avg_solution_fit": 4.1,
+      "avg_wtp": 3.6,
+      "buy_rate": 30.0
+    }
+  },
+  "top_objections": [
+    [
+      "price sensitivity and need for clear roi",
+      3
+    ],
+    [
+      "need for seamless integration with fieldroutes",
+      3
+    ],
+    [
+      "cost sensitivity for small business",
+      2
+    ],
+    [
+      "concern about personalization quality of automated outreach",
+      2
+    ],
+    [
+      "concern about additional effort and complexity for already stretched team",
+      1
+    ],
+    [
+      "need clear roi to justify $200-$400/month spend",
+      1
+    ],
+    [
+      "skepticism about value of just predicting churn without automated actions",
+      1
+    ],
+    [
+      "no direct integration with pestpak is a significant barrier",
+      1
+    ],
+    [
+      "wary of complexity and time required to learn new tech",
+      1
+    ],
+    [
+      "needs concrete proof of roi and effectiveness compared to manual outreach",
+      1
+    ],
+    [
+      "needs simple, ready-to-use campaign templates to reduce effort",
+      1
+    ],
+    [
+      "concern about complexity and training burden on stretched teams",
+      1
+    ],
+    [
+      "need seamless integration with fieldroutes",
+      1
+    ],
+    [
+      "wants assurance that automated outreach is truly personalized and not generic",
+      1
+    ],
+    [
+      "no crm usage, data is in spreadsheets and square payments",
+      1
+    ]
+  ],
+  "notable_quotes": [
+    {
+      "quote": "If it truly integrated with Jobber and gave us actionable insights without a lot of extra staff time, that would definitely address my concern about effort.",
+      "persona": "Jesse Ramirez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "For it to be a no-brainer, it would need to do more than just predict. It would need to automate some of the retention efforts.",
+      "persona": "Jesse Ramirez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "Manual data transfer initially sounds like more work for me or my already busy staff, which is exactly what I'm trying to avoid.",
+      "persona": "Linda Chang",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "I need to know this works, and not just in theory.",
+      "persona": "Linda Chang",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "We probably only get to about 30-40% of at-risk customers with any real effort.",
+      "persona": "Marcus Ellsworth",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "My main concern would be complexity. It needs to be fairly turnkey.",
+      "persona": "Marcus Ellsworth",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "My main goal is to spend less time on this stuff, not more time learning new software.",
+      "persona": "Tamika Jones",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "It would have to be affordable, and really prove it saves me time and money.",
+      "persona": "Tamika Jones",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "I need to trust that the insights it's giving us are actually accurate and not just some black box.",
+      "persona": "Raj Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "It needs to be fairly plug-and-play.",
+      "persona": "Raj Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If the integration with ServiceTitan was clunky or unreliable, that would be a dealbreaker.",
+      "persona": "Sarah Whitfield",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "If the AI voice calls sounded robotic or annoyed our customers, that's a big no.",
+      "persona": "Sarah Whitfield",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "My 'CRM' is a stack of paper files and some notes I keep in my head.",
+      "persona": "Gary Simmons",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it meant I could save a few customers a year without much extra effort on my part, maybe I'd consider something.",
+      "persona": "Gary Simmons",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "We need specialized tools for specialized problems, not just general automation.",
+      "persona": "Emily Vargas",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care & Pest Control"
+    },
+    {
+      "quote": "If it could genuinely save even 5% of those at-risk customers, that would be huge.",
+      "persona": "Emily Vargas",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care & Pest Control"
+    },
+    {
+      "quote": "Knowing who is at risk is one thing, but knowing why and what to do about it is just as important.",
+      "persona": "David Russo",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Does your system offer any way to see how our retention rates stack up against others in the industry?",
+      "persona": "David Russo",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it could genuinely give us actionable insights and prioritize effectively, that would be a game-changer.",
+      "persona": "Monique Taylor",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "If it could reliably identify 80% of at-risk customers and give us those actionable insights, $200-400 a month is definitely something I'd consider.",
+      "persona": "Monique Taylor",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "An early warning system sounds appealing, especially if it integrates with ServiceTitan.",
+      "persona": "Lena Morales",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "The value would really come from automating some of that outreach or at least making the outreach we do much more effective and targeted.",
+      "persona": "Lena Morales",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "If a tool could genuinely tell me which 10 customers are about to cancel, that would be huge.",
+      "persona": "Troy Henderson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it was too complicated to set up or use, that's a non-starter.",
+      "persona": "Troy Henderson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it flagged 100 high-risk customers, honestly, reaching out to all of them effectively with our current setup would be a stretch.",
+      "persona": "DeAnna Wu",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "For me to seriously consider moving forward, I'd need proof that automated retention campaigns actually increase the number of saved customers without needing to hire more staff.",
+      "persona": "DeAnna Wu",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "It's one thing to say a customer is at risk, it's another to tell us what specific steps we should take.",
+      "persona": "Carlos Jimenez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If we could save 3-5 customers a month consistently? That's huge for us.",
+      "persona": "Carlos Jimenez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it could connect to my spreadsheets directly, without me having to learn a whole new system or hire someone, that's a big 'if.'",
+      "persona": "Maggie O'Sullivan",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "It should just work in the background and give me clear, actionable insights, not a bunch of complicated charts I need a degree to understand.",
+      "persona": "Maggie O'Sullivan",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "Predicting churn before it happens would be a game-changer.",
+      "persona": "Jamal Thompson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Automated, prioritized retention campaigns would be huge.",
+      "persona": "Jamal Thompson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it could just pull the info we already have and make sense of it without us having to manually input everything all over again, that would take away a lot of the 'complicated' feeling.",
+      "persona": "Brittany Nguyen",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "I'm a practical person... can I really trust AI-based churn predictions?",
+      "persona": "Brittany Nguyen",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "If it could reliably tell us who is at risk and why, that would be huge.",
+      "persona": "Patrick Doyle",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Seeing some success stories from other pest control companies our size would go a long way.",
+      "persona": "Patrick Doyle",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "The AI-driven churn risk scores are interesting, but the automated, personalized communication part is what really catches my attention.",
+      "persona": "Emily Carter",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "If this tool could factor in seasonality, that would be helpful.",
+      "persona": "Emily Carter",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "If it truly saves us a lot of time and genuinely improves our retention rate, it could be justified.",
+      "persona": "Vince Alvarez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "I'd want to see a clear improvement in our retention rate, ideally moving it up significantly from that 72%.",
+      "persona": "Vince Alvarez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it could genuinely tell us who's likely to leave, and not just guess, that would be interesting.",
+      "persona": "Maria Delgado",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn care"
+    },
+    {
+      "quote": "If it did work, the value would be huge... it would free up my time from constantly chasing cancellations.",
+      "persona": "Maria Delgado",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn care"
+    },
+    {
+      "quote": "Predicting churn before it happens definitely sounds appealing.",
+      "persona": "Derrick Chang",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest control"
+    },
+    {
+      "quote": "If RevHawk could not only identify those at-risk customers but also automatically trigger personalized outreach... that would address your concern about bandwidth.",
+      "persona": "Derrick Chang",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest control"
+    },
+    {
+      "quote": "My reps are stretched thin, and if something could handle those first touches, it would free them up.",
+      "persona": "Linda McCarthy",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest control"
+    },
+    {
+      "quote": "The idea of tailoring it with our specific data and even voice cloning... that's certainly more sophisticated than I imagined.",
+      "persona": "Linda McCarthy",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest control"
+    },
+    {
+      "quote": "Our 'CRM' is basically a bunch of spreadsheets and Google Forms.",
+      "persona": "Tyler Brooks",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn care"
+    },
+    {
+      "quote": "The biggest concern is just getting overwhelmed... Adding another thing to 'manage' is a big ask.",
+      "persona": "Tyler Brooks",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn care"
+    },
+    {
+      "quote": "If we could reliably act on 80-90% of those churn scores, it would be a game-changer.",
+      "persona": "Jasmine Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest control"
+    },
+    {
+      "quote": "Pushing the communication history back into FieldRoutes is non-negotiable for us.",
+      "persona": "Jasmine Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest control"
+    },
+    {
+      "quote": "Retention is always on my mind... acting on alerts quickly and effectively is where we fall short.",
+      "persona": "Harold Thompson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn care"
+    },
+    {
+      "quote": "If it can really predict before a missed payment, that's a big step up from just reacting.",
+      "persona": "Harold Thompson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn care"
+    },
+    {
+      "quote": "I need something that feels very simple and trustworthy, with clear instructions, not just buzzwords.",
+      "persona": "Sandra Kim",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest control"
+    },
+    {
+      "quote": "If it means I need to hire someone just to manage this new software, then no, that won't work for me.",
+      "persona": "Sandra Kim",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest control"
+    },
+    {
+      "quote": "The idea of freeing up our retention managers to focus on the really tough cases is very attractive.",
+      "persona": "Ethan Rodriguez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn care"
+    },
+    {
+      "quote": "We'd need clear, actionable insights on what's working and how it's impacting retention.",
+      "persona": "Ethan Rodriguez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn care"
+    },
+    {
+      "quote": "Saving 10-15% of at-risk customers would be significant and move the needle for us.",
+      "persona": "Carmen Alvarez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest control"
+    },
+    {
+      "quote": "Operational complexity is something I'm always trying to reduce.",
+      "persona": "Carmen Alvarez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest control"
+    },
+    {
+      "quote": "The biggest impact is just the mental load... sometimes things slip through the cracks.",
+      "persona": "Gregory Johnson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn care"
+    },
+    {
+      "quote": "If it could genuinely help me keep even 5-10 customers a year, that could make a difference.",
+      "persona": "Gregory Johnson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Lawn care"
+    },
+    {
+      "quote": "\"My biggest pain point is still the manual follow-ups. If it just tells me who's at risk, but I still have to spend hours calling them... then it only solves half the problem.\"",
+      "persona": "Javier Morales",
+      "archetype": "overwhelmed_founder",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"Now *that* would be a game-changer. If it could automatically send out a personalized email or text... that would save us a ton of time and make it much more scalable.\"",
+      "persona": "Javier Morales",
+      "archetype": "overwhelmed_founder",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"The automated outreach part does sound more appealing... That's where we really feel the time crunch.\"",
+      "persona": "Denise Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"I'd need to be confident that it actually reduces manual work... straightforward guidance on how to use it.\"",
+      "persona": "Denise Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"Our CRM is basically a bunch of Google Sheets and some manual notes. So, if your tool needs to 'integrate' with one of those, it's not going to work for us right off the bat.\"",
+      "persona": "Tyrell Jenkins",
+      "archetype": "overwhelmed_founder",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"Anything that adds more manual work is a non-starter.\"",
+      "persona": "Tyrell Jenkins",
+      "archetype": "overwhelmed_founder",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"Automated retention actions to free up my sales team is definitely a hidden need I have.\"",
+      "persona": "Susan Kim",
+      "archetype": "overwhelmed_founder",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"I'd need to see some real-world case studies or a pilot showing tangible churn reduction.\"",
+      "persona": "Susan Kim",
+      "archetype": "overwhelmed_founder",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"If it can genuinely feel like a human touch and not just a robot, that's a different story.\"",
+      "persona": "Eli Whittaker",
+      "archetype": "overwhelmed_founder",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"Scaling retention without adding headcount is a big deal for us right now.\"",
+      "persona": "Eli Whittaker",
+      "archetype": "overwhelmed_founder",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"If I have to spend hours learning something new, it's just not going to happen.\"",
+      "persona": "Marilyn Schroeder",
+      "archetype": "overwhelmed_founder",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"It needs to tell me 'Marilyn, call this customer' and why.\"",
+      "persona": "Marilyn Schroeder",
+      "archetype": "overwhelmed_founder",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"If it could genuinely move our retention from 67% up to, say, 80-85% consistently, that's a significant increase in revenue and stability.\"",
+      "persona": "Carlos Medina",
+      "archetype": "overwhelmed_founder",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"Our customers often value that personal touch... any 'automated' outreach needs to feel genuine.\"",
+      "persona": "Carlos Medina",
+      "archetype": "overwhelmed_founder",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"We probably only get to about 30-40% of the high-risk customers... The rest might get a more generic email or just fall through the cracks.\"",
+      "persona": "Lisa Grant",
+      "archetype": "overwhelmed_founder",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"My biggest concern would be integration disrupting our existing analytics... security and compliance are paramount.\"",
+      "persona": "Lisa Grant",
+      "archetype": "overwhelmed_founder",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"If it requires me to babysit it, it defeats the purpose.\"",
+      "persona": "Derek O\u2019Connor",
+      "archetype": "overwhelmed_founder",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"Can this system help us identify patterns or even help address them proactively before they become full-blown issues?\"",
+      "persona": "Derek O\u2019Connor",
+      "archetype": "overwhelmed_founder",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"If it genuinely meant we could save a significant number of customers we're currently losing due to lack of follow-up, then yes, that increased cost would be completely worthwhile.\"",
+      "persona": "Amy Chen",
+      "archetype": "overwhelmed_founder",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"I'd need to see some real-world case studies or demos that show how the automation maintains a personal touch.\"",
+      "persona": "Amy Chen",
+      "archetype": "overwhelmed_founder",
+      "industry": "pest control"
+    },
+    {
+      "quote": "A system that learns from our actual historical data and flags specific reasons, not just generic concerns, sounds much more useful than what I'm picturing.",
+      "persona": "Kara Whitman",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "My biggest dream feature would be automated multi-channel outreach... without me having to constantly build new Zapier workflows.",
+      "persona": "Kara Whitman",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "The idea of automating initial outreach for 90-100% of at-risk customers... is a significant leap and would free up my team immensely.",
+      "persona": "Miguel Estrada",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "We need something that plays nice with our existing tech, not another silo.",
+      "persona": "Miguel Estrada",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it could reliably tell me who the top 20-30 at-risk customers were each month, that would be huge.",
+      "persona": "Lena Huang",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "We can't afford to overhaul our entire system right now.",
+      "persona": "Lena Huang",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "I need to see that it truly reduces manual steps, not just shifts them around.",
+      "persona": "Derek Mitchell",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Proof of reliable, set-and-forget campaigns with robust reporting is a must.",
+      "persona": "Derek Mitchell",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "What would make me not use it? If it doesn't truly integrate seamlessly, that would be a deal-breaker.",
+      "persona": "Jamal Rivers",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "The AI-driven outreach would need to sound natural and on-brand, not robotic.",
+      "persona": "Jamal Rivers",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "For me to feel comfortable, the messages would need to sound like they came from us.",
+      "persona": "Susan Tran",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "Even a few percentage points increase in retention would be significant for us.",
+      "persona": "Susan Tran",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "If it could reliably tell me who's about to churn... that would be huge.",
+      "persona": "Ravi Patel",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Price and complexity would make me not use it.",
+      "persona": "Ravi Patel",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "The 'why' and 'how to save' are definitely where my interest is piqued.",
+      "persona": "Emily Jenkins",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it's a six-month integration project, that's a non-starter.",
+      "persona": "Emily Jenkins",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Predicting churn before our team flags it, and knowing why, would be a game-changer.",
+      "persona": "Tommy Lewis",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "Scaling personalization manually for 3000 customers is impossible.",
+      "persona": "Tommy Lewis",
+      "archetype": "automation_first_buyer",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "The quality of automated outreach is a big concern for me.",
+      "persona": "Helen Martinez",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "We need to see measurable improvement in retention quickly.",
+      "persona": "Helen Martinez",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it could genuinely predict churn before it happens, that would be a significant advantage.",
+      "persona": "Cassandra Lee",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "Getting these systems to talk to each other for a cohesive customer journey, especially for retention campaigns, is a constant headache.",
+      "persona": "Cassandra Lee",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "If it truly automates personalized outreach, that's interesting. My team doesn't have the bandwidth.",
+      "persona": "Miguel Ramirez",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "If the AI voice call feature isn't reliable or sounds completely robotic, that's a non-starter.",
+      "persona": "Miguel Ramirez",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "If it could handle the bulk of the initial outreach and free up my team to focus on the more complex cases, that would be a significant improvement.",
+      "persona": "Bethany Clarke",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "We need to clearly see the ROI of these efforts \u2013 how is this automation directly impacting our retention rate and revenue?",
+      "persona": "Bethany Clarke",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "Migrating all our customer data to a new CRM just for this would be a huge headache and cost that I'm not looking to take on.",
+      "persona": "Tommy Nguyen",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "If it could work with our spreadsheets, then that would definitely be interesting.",
+      "persona": "Tommy Nguyen",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "A robust autopilot outreach layer that integrates seamlessly with and enhances our existing models is precisely what we're looking for.",
+      "persona": "Jerome Stanton",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "Transparency into your ML models and explainability is also key \u2013 we need to understand why a customer is flagged.",
+      "persona": "Jerome Stanton",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "Losing customers we know we could save, just because we lack the time, is frustrating.",
+      "persona": "Darla Simmons",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "If it truly reduces churn by a noticeable amount and frees up my team, then a few hundred dollars a month seems reasonable.",
+      "persona": "Darla Simmons",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "I don't have time to be digging through dashboards or running complex reports.",
+      "persona": "Frankie Delgado",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "If it's something that's going to cost me hundreds of dollars a month, it's just not going to happen.",
+      "persona": "Frankie Delgado",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "A price point of $200-400 a month sounds reasonable, especially if it can truly reduce churn and free up my team.",
+      "persona": "Janice Abbott",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "If I can't show that this tool is directly improving our retention rate, then it's just another expense.",
+      "persona": "Janice Abbott",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "A premium for a truly hands-off, integrated solution that actually works is something we'd consider.",
+      "persona": "Leonard Kim",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "How does your system ensure the personalization is genuine and doesn't sound like a robot?",
+      "persona": "Leonard Kim",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "If it could tell us, 'this customer is canceling lawn because of X, and they also have pest service with us,' that's gold.",
+      "persona": "Gloria Mendoza",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control / lawn care hybrid"
+    },
+    {
+      "quote": "If it gives us predictions but no clear, automated way to act on them, it's just adding another layer of analysis.",
+      "persona": "Gloria Mendoza",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control / lawn care hybrid"
+    },
+    {
+      "quote": "\"It's not enough to just know someone is at risk; we need actionable intelligence.\"",
+      "persona": "Marcus Ellington",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"If it could reliably prevent 70-80% of our churners... that kind of insight... would easily be worth a few hundred dollars a month.\"",
+      "persona": "Marcus Ellington",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"My main concern would be: will the AI outreach feel impersonal to our customers?\"",
+      "persona": "Lisa Tran",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"$300-400 a month for a system that could genuinely plug that leak and free up my staff? That's a very reasonable investment for us.\"",
+      "persona": "Lisa Tran",
+      "archetype": "automation_first_buyer",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"My 'CRM' is basically a few Excel files and a bunch of paper invoices.\"",
+      "persona": "Jamal Rodriguez",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care and pest control"
+    },
+    {
+      "quote": "\"It has to genuinely save me time or make me money that I can clearly see.\"",
+      "persona": "Jamal Rodriguez",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care and pest control"
+    },
+    {
+      "quote": "\"Having a more predictive, proactive model would be a significant step up.\"",
+      "persona": "Emily Chen",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"The price point of $200-400 a month sounds reasonable, especially if it delivers on those promises.\"",
+      "persona": "Emily Chen",
+      "archetype": "automation_first_buyer",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"It feels like we're just throwing things against the wall sometimes.\"",
+      "persona": "Jenna Morales",
+      "archetype": "competitive_evaluator",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"A risk score combined with automated, smart outreach that actually works would be a game-changer.\"",
+      "persona": "Jenna Morales",
+      "archetype": "competitive_evaluator",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"If your model can truly identify those customers weeks or months in advance, that's a game-changer for us.\"",
+      "persona": "Raj Patel",
+      "archetype": "competitive_evaluator",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"The impact... could be huge for missed renewals and our overall retention rate.\"",
+      "persona": "Raj Patel",
+      "archetype": "competitive_evaluator",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"A 'risk score' sounds... complicated.\"",
+      "persona": "Lisa Nguyen",
+      "archetype": "competitive_evaluator",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"If it somehow magically pulled data from my messy spreadsheets and Trello boards and just gave me a quick list, that might be different. But that sounds like science fiction.\"",
+      "persona": "Lisa Nguyen",
+      "archetype": "competitive_evaluator",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"We have our own custom churn prediction model... Would your system be able to ingest the outputs from our model?\"",
+      "persona": "Tom Sanders",
+      "archetype": "competitive_evaluator",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"I'd need to see a clear demonstration of how your proprietary model performs against our historical data.\"",
+      "persona": "Tom Sanders",
+      "archetype": "competitive_evaluator",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"We probably only get to about half of the flagged customers... bandwidth is the biggest challenge.\"",
+      "persona": "Maria Torres",
+      "archetype": "competitive_evaluator",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"I'd need to see clear, measurable success KPIs... not just a feeling that things are better.\"",
+      "persona": "Maria Torres",
+      "archetype": "competitive_evaluator",
+      "industry": "pest control"
+    },
+    {
+      "quote": "\"The idea of automating that initial outreach and only having my team focus on the truly critical cases is definitely appealing.\"",
+      "persona": "Derek Collins",
+      "archetype": "competitive_evaluator",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "\"A make-or-break factor would be a unified solution... so we're not jumping between systems.\"",
+      "persona": "Derek Collins",
+      "archetype": "competitive_evaluator",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "If it could reliably tell me the 5-10 customers most likely to churn, that would definitely be valuable.",
+      "persona": "Jamal Owens",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Cost is a big one. As a young startup, budget is tight. If it's expensive, it's a non-starter.",
+      "persona": "Jamal Owens",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it's sending out generic 'we miss you' emails when a customer has an open support ticket, that's a non-starter.",
+      "persona": "Elena Foster",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Saving an additional 50-100 customers a year would be significant for us.",
+      "persona": "Elena Foster",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "We need to understand the nuances of why customers churn for different segments.",
+      "persona": "Marcus Reed",
+      "archetype": "competitive_evaluator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "Our current tools just aren't granular enough to give us the precise insights we need.",
+      "persona": "Marcus Reed",
+      "archetype": "competitive_evaluator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "I'm basically drowning with manual outreach and can only reach 20-30% of flagged customers.",
+      "persona": "Heather Kim",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "What would make me not use it? If it's difficult to integrate or if I lose control over the customer communication.",
+      "persona": "Heather Kim",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Knowing why a customer is at risk would be incredibly valuable.",
+      "persona": "Samantha Lee",
+      "archetype": "competitive_evaluator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "If the tool could handle some of the initial communication without my team having to manually craft every email or text, that would be a huge time-saver.",
+      "persona": "Samantha Lee",
+      "archetype": "competitive_evaluator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "I got burned once, so I'm skeptical about guarantees on prediction accuracy.",
+      "persona": "Miguel Hernandez",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "It needs to be genuinely easy to use and not require someone dedicated just to managing it.",
+      "persona": "Miguel Hernandez",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Our 'CRM' is literally a spreadsheet, and we use Google Calendar for scheduling.",
+      "persona": "Jared Thompson",
+      "archetype": "competitive_evaluator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "If it takes more than a couple of hours to set up and maybe 15-30 minutes a week to maintain, that's probably too much.",
+      "persona": "Jared Thompson",
+      "archetype": "competitive_evaluator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "We\u2019ve invested a lot in ServiceTitan and built our own churn model; how much better could it really be?",
+      "persona": "Sara Lindstrom",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "Without the ability to export raw data, it's just a black box.",
+      "persona": "Sara Lindstrom",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "My team is already stretched thin; automated outreach would be a game-changer.",
+      "persona": "Darnell Thompson",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "It needs to show me clear results, a real lift in retention that I can tie directly back to revenue.",
+      "persona": "Darnell Thompson",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "A 70-80% accuracy rate for predicting churn weeks or months in advance would be a game-changer.",
+      "persona": "Evelyn Park",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "Can we explicitly tell the system to flag specific local churn drivers, like pest outbreaks?",
+      "persona": "Evelyn Park",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "The automation part for personalized campaigns, especially freeing up the team, sounds interesting.",
+      "persona": "Frank Gallagher",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "It's absolutely critical that it uses our existing scoring. If we have to retrain or adapt our data for a new model, it negates the whole point.",
+      "persona": "Frank Gallagher",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it could work with our spreadsheets, that's a different story.",
+      "persona": "Tina Rodriguez",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "I'd need to see a very clear, undeniable benefit and return on investment to justify that kind of cost.",
+      "persona": "Tina Rodriguez",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "I appreciate the transparency you're describing, especially the ability to see the reasons behind the churn prediction.",
+      "persona": "Raj Patel",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "We need to be able to export all churn data, including the predictive factors, for our own deep dives and validation.",
+      "persona": "Raj Patel",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it could actually integrate with GorillaDesk without a huge headache, that would be a game-changer.",
+      "persona": "Linda Chavez",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Knowing why someone is at risk before they call to cancel would be huge.",
+      "persona": "Linda Chavez",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "The data needs to be granular and relevant to each service line.",
+      "persona": "Elliot Barnes",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care & Pest Control"
+    },
+    {
+      "quote": "I'd love to see how our retention rates for both lawn and pest services stack up against others in the industry.",
+      "persona": "Elliot Barnes",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care & Pest Control"
+    },
+    {
+      "quote": "If the data going into the model is poor, then the outputs will be unreliable.",
+      "persona": "Monica Fields",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "The flexibility to fine-tune the model to our specific customer behaviors would be crucial.",
+      "persona": "Monica Fields",
+      "archetype": "data_hungry_operator",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "Can a piece of software really predict that for a small business like ours?",
+      "persona": "Tommy Nguyen",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "It has to be really easy to use. I don't have time to learn complicated software.",
+      "persona": "Tommy Nguyen",
+      "archetype": "data_hungry_operator",
+      "industry": "Lawn Care"
+    },
+    {
+      "quote": "Generic outreach is a non-starter.",
+      "persona": "Marissa Cohen",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it could demonstrably increase our retention rate and reduce manual effort, the cost would be less of a concern.",
+      "persona": "Marissa Cohen",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "More data is only useful if we have the capacity to act on it effectively.",
+      "persona": "Javier Morales",
+      "archetype": "strategic_enterprise",
+      "industry": "Lawn Care & Pest Control"
+    },
+    {
+      "quote": "The automated outreach sounds promising, especially if it can truly reduce the manual workload.",
+      "persona": "Javier Morales",
+      "archetype": "strategic_enterprise",
+      "industry": "Lawn Care & Pest Control"
+    },
+    {
+      "quote": "FieldRoutes gives us a score, but it's not always clear why a customer is scored a certain way.",
+      "persona": "Estelle Nguyen",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "If it could handle the initial touchpoints without me needing to hire more people, that would absolutely change my perspective.",
+      "persona": "Estelle Nguyen",
+      "archetype": "strategic_enterprise",
+      "industry": "Pest Control"
+    },
+    {
+      "quote": "We don't really have a process for spotting customers who might leave. Usually, we only find out they're unhappy when they call to cancel or complain.",
+      "persona": "Tom Whitman",
+      "archetype": "strategic_enterprise",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "It needs to tell me, in plain English, 'Tom, these five customers are likely to leave this month, and here's why.'",
+      "persona": "Tom Whitman",
+      "archetype": "strategic_enterprise",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "We already have our own churn models, which are quite robust for what they do.",
+      "persona": "Nina Patel",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control"
+    },
+    {
+      "quote": "Data security and governance are non-negotiable.",
+      "persona": "Nina Patel",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control"
+    },
+    {
+      "quote": "If it could automatically trigger multi-channel messages, that would free up significant time.",
+      "persona": "Marcus Lee",
+      "archetype": "strategic_enterprise",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "We're always playing catch-up instead of building a solid, loyal base.",
+      "persona": "Marcus Lee",
+      "archetype": "strategic_enterprise",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "The idea of integrating support ticket sentiment directly into our churn prediction is a significant unmet need for us.",
+      "persona": "Olivia Simmons",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control"
+    },
+    {
+      "quote": "Reducing false positives would be a huge win for my team.",
+      "persona": "Olivia Simmons",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control"
+    },
+    {
+      "quote": "My spreadsheets are pretty basic; they're not exactly set up for fancy integrations.",
+      "persona": "Caleb Johnson",
+      "archetype": "strategic_enterprise",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "If it's too complicated to set up, requires me to hire someone just to manage it, or if the 'insights' are just things I already know or can guess.",
+      "persona": "Caleb Johnson",
+      "archetype": "strategic_enterprise",
+      "industry": "lawn care"
+    },
+    {
+      "quote": "Reducing false positives would be a huge win for my team; it would allow them to focus their efforts much more effectively.",
+      "persona": "Sophia Ramirez",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control"
+    },
+    {
+      "quote": "We need something that can scale personalized communication across multiple channels, not just better identify who to talk to.",
+      "persona": "Sophia Ramirez",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control"
+    },
+    {
+      "quote": "We might miss early warning signs, or by the time we do react, the customer is already halfway out the door.",
+      "persona": "Derek O'Neal",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control"
+    },
+    {
+      "quote": "Price sensitivity is low here. What really matters is the value it delivers in reducing churn and freeing up resources.",
+      "persona": "Derek O'Neal",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control"
+    }
+  ],
+  "hidden_insights": [
+    {
+      "insight": "Owner is the main decision-maker but operations manager would be a key user",
+      "persona": "Jesse Ramirez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong preference for automation to reduce manual workload rather than just predictive analytics",
+      "persona": "Jesse Ramirez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner is sole decision-maker but office manager's buy-in on ease of use is important",
+      "persona": "Linda Chang",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Skepticism toward 'machine learning' buzzwords without tangible benefits",
+      "persona": "Linda Chang",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Operates in multiple markets with different churn drivers, values regional benchmarking",
+      "persona": "Marcus Ellsworth",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Multiple internal stakeholders involved including VP Operations and Head of IT",
+      "persona": "Marcus Ellsworth",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner is primary user and decision-maker; field crew not involved in customer relationship management",
+      "persona": "Tamika Jones",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Significant challenge in organizing and maintaining customer data manually",
+      "persona": "Tamika Jones",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Retention specialist is a key user who needs better data to be effective",
+      "persona": "Raj Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Multiple decision-makers involved including Head of Operations and retention specialist",
+      "persona": "Raj Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Retention team is overwhelmed and would benefit from automation",
+      "persona": "Sarah Whitfield",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Operations Manager excited about efficiency gains; CFO skeptical needing clear ROI",
+      "persona": "Sarah Whitfield",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner is sole decision-maker and primary user",
+      "persona": "Gary Simmons",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong preference for low-tech, low-effort solutions",
+      "persona": "Gary Simmons",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Retention is squeezed into existing roles without dedicated team",
+      "persona": "Emily Vargas",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Multiple stakeholders involved including Head of Operations and Sales Manager",
+      "persona": "Emily Vargas",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Office manager would be key user implementing outreach",
+      "persona": "David Russo",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "PE firm involvement adds pressure for benchmarking and measurable results",
+      "persona": "David Russo",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Retention manager is a key user focused on ease of use and workload reduction",
+      "persona": "Monique Taylor",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Manual monthly review meetings are becoming a bottleneck as company scales",
+      "persona": "Monique Taylor",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "The bottleneck is not just knowing who's at risk but having the bandwidth to act on it effectively.",
+      "persona": "Lena Morales",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Smaller operators may not have structured CRM data, limiting integration and prediction capabilities.",
+      "persona": "Troy Henderson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Even with good visibility, the main bottleneck is the capacity to act on churn signals effectively.",
+      "persona": "DeAnna Wu",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Prioritized, actionable insights are critical to convert data into effective retention actions.",
+      "persona": "Carlos Jimenez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Long-established businesses relying on personal relationships may resist complex tech but still feel pain from churn unpredictability.",
+      "persona": "Maggie O'Sullivan",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Automated outreach that supports rather than replaces human touch is highly valued.",
+      "persona": "Jamal Thompson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Very small teams rely heavily on simple tools and are skeptical of complex AI solutions.",
+      "persona": "Brittany Nguyen",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Large companies need scalable, proven solutions with strong operational buy-in.",
+      "persona": "Patrick Doyle",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Seasonality is a significant factor in churn for lawn care businesses and needs to be accounted for.",
+      "persona": "Emily Carter",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Authenticity in automated outreach is critical to protect brand reputation.",
+      "persona": "Vince Alvarez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong preference for simplicity due to team's lack of data expertise",
+      "persona": "Maria Delgado",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Decision primarily driven by founder with operations manager involved in implementation",
+      "persona": "Maria Delgado",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong desire for benchmarking against competitors",
+      "persona": "Derrick Chang",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Decision authority rests with founder, with office manager involved in implementation",
+      "persona": "Derrick Chang",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Next generation leadership (daughter) involved in decision",
+      "persona": "Linda McCarthy",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong emphasis on maintaining personal touch despite automation",
+      "persona": "Linda McCarthy",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Small business with limited tech infrastructure limits integration options",
+      "persona": "Tyler Brooks",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Founder is sole decision-maker and highly price sensitive",
+      "persona": "Tyler Brooks",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Operations manager is key stakeholder for adoption",
+      "persona": "Jasmine Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Value seen not just in retention but in reducing pressure on ops team",
+      "persona": "Jasmine Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Operations manager and CFO involved in evaluation and approval",
+      "persona": "Harold Thompson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Interest in industry benchmarking as part of reporting",
+      "persona": "Harold Thompson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Founder is sole decision-maker and reluctant to burden small team",
+      "persona": "Sandra Kim",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Past negative experience with complex solutions creates skepticism",
+      "persona": "Sandra Kim",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Head of Operations involved as key stakeholder for scalability",
+      "persona": "Ethan Rodriguez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Not price sensitive if clear ROI and operational improvements are demonstrated",
+      "persona": "Ethan Rodriguez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Retention improvements linked to potential PE acquisition strategy",
+      "persona": "Carmen Alvarez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Multiple stakeholders including Head of Operations and CFO involved",
+      "persona": "Carmen Alvarez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Founder is sole decision-maker with limited tech infrastructure",
+      "persona": "Gregory Johnson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Underlying worry about sustainable cash flow and growth",
+      "persona": "Gregory Johnson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Automated task delegation for follow-ups was an unrecognized but critical need.",
+      "persona": "Javier Morales",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner is the primary decision maker but values office manager's buy-in for daily use.",
+      "persona": "Denise Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Small businesses without formal CRM systems are currently out of scope for this tool.",
+      "persona": "Tyrell Jenkins",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Free trials are critical for adoption in small, resource-constrained businesses.",
+      "persona": "Tyrell Jenkins",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Competitive benchmarking is a desired feature to understand local market performance.",
+      "persona": "Susan Kim",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Sales Manager and Head of Operations are key secondary stakeholders.",
+      "persona": "Susan Kim",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Seasonal churn is a significant issue; proactive campaigns tied to seasonality are valuable.",
+      "persona": "Eli Whittaker",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Marketing and operations teams are key stakeholders beyond the owner.",
+      "persona": "Eli Whittaker",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Small business owners often juggle multiple roles and need extremely low-friction tools.",
+      "persona": "Marilyn Schroeder",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner is sole decision maker and gatekeeper for adoption.",
+      "persona": "Marilyn Schroeder",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Seasonality and local market nuances are important for outreach relevance.",
+      "persona": "Carlos Medina",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Family business culture values personal connection highly.",
+      "persona": "Carlos Medina",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Large companies with PE ownership require strong ROI and compliance assurances.",
+      "persona": "Lisa Grant",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Maintaining consistent customer experience across channels is critical.",
+      "persona": "Lisa Grant",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Owner is primary decision maker and values simplicity and clear metrics.",
+      "persona": "Derek O\u2019Connor",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Understanding root causes of churn is important, not just flagging risk.",
+      "persona": "Derek O\u2019Connor",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Deeper insights into root causes of churn beyond surface reasons are needed.",
+      "persona": "Amy Chen",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Bandwidth constraints make automation highly valuable if done right.",
+      "persona": "Amy Chen",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong preference for actionable steps beyond identification, emphasizing automation of outreach to reduce manual workload.",
+      "persona": "Kara Whitman",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Willing to invest in the low to mid-thousands monthly if ROI is clear, showing high value placed on automation and integration.",
+      "persona": "Miguel Estrada",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Price competition from smaller DIY operators is a significant churn driver, highlighting need to understand 'why' customers churn.",
+      "persona": "Lena Huang",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Integration is a deal-breaker; without it, solution adds complexity rather than reducing it.",
+      "persona": "Derek Mitchell",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Founder is primary decision-maker, emphasizing need for clear ROI and quick results.",
+      "persona": "Jamal Rivers",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Struggle with fragmented data sources and desire for deeper insights beyond churn flags.",
+      "persona": "Susan Tran",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Strong emphasis on personal relationships and distrust of impersonal automation.",
+      "persona": "Ravi Patel",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Lack of in-house data science expertise makes ML-based solution attractive over custom rules.",
+      "persona": "Emily Jenkins",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Strong desire for sophisticated automation to scale personalization and multi-channel outreach.",
+      "persona": "Tommy Lewis",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Strong focus on brand consistency and customer service quality in automated communications.",
+      "persona": "Helen Martinez",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Strong need for multi-platform integration beyond CRM, including marketing tools like Mailchimp and HubSpot.",
+      "persona": "Cassandra Lee",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Decision involves both operations manager and owner with budget control.",
+      "persona": "Cassandra Lee",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Founder/CEO is sole decision-maker, simplifying buying process.",
+      "persona": "Miguel Ramirez",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Multi-channel communication beyond email is important.",
+      "persona": "Miguel Ramirez",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Large customer base (12,000) makes manual outreach increasingly unsustainable.",
+      "persona": "Bethany Clarke",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Multiple stakeholders involved: CEO, Head of Marketing, IT director.",
+      "persona": "Bethany Clarke",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Smaller lawn care companies may not be on standard CRMs, limiting applicability of CRM-dependent tools.",
+      "persona": "Tommy Nguyen",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Owner is sole decision-maker and values simplicity highly.",
+      "persona": "Tommy Nguyen",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Company has advanced in-house ML capabilities, raising the bar for external solutions.",
+      "persona": "Jerome Stanton",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Multiple internal stakeholders (Marketing, Operations) would be excited about automation.",
+      "persona": "Jerome Stanton",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "PE ownership increases pressure on demonstrating clear ROI.",
+      "persona": "Darla Simmons",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Head of Customer Service would be involved in evaluation.",
+      "persona": "Darla Simmons",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Small operators may be skeptical of ML tools and wary of complexity and cost.",
+      "persona": "Frankie Delgado",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Feeling of customers leaving due to feeling forgotten is a key churn driver.",
+      "persona": "Frankie Delgado",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Executives are numbers-driven and require clear ROI metrics.",
+      "persona": "Janice Abbott",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "IT involvement needed for integration validation.",
+      "persona": "Janice Abbott",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Data accuracy across systems is a constant concern.",
+      "persona": "Leonard Kim",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Multiple internal stakeholders involved: Head of Customer Success and Head of Operations.",
+      "persona": "Leonard Kim",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Fragmented retention efforts across verticals cause missed opportunities.",
+      "persona": "Gloria Mendoza",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Key stakeholders include Head of Customer Success and CFO focused on bottom line.",
+      "persona": "Gloria Mendoza",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Seasonality is a critical factor in churn prediction for lawn care businesses and must be accounted for to avoid false alarms.",
+      "persona": "Marcus Ellington",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Integration that can write back data to CRM is highly valued to solve fragmented communication issues.",
+      "persona": "Lisa Tran",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Low-tech operations require non-CRM-dependent solutions and extreme simplicity to adopt churn prediction tools.",
+      "persona": "Jamal Rodriguez",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Lean teams require solutions that minimize implementation effort and provide API access for integration with internal tools.",
+      "persona": "Emily Chen",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Sales teams are burdened by manual churn follow-up and need both accuracy and actionable guidance to improve efficiency.",
+      "persona": "Jenna Morales",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Large pest control companies face significant bandwidth constraints and need scalable automation with proven accuracy.",
+      "persona": "Raj Patel",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Small, low-tech lawn care businesses are highly skeptical of ML tools and need extremely simple, low-effort solutions.",
+      "persona": "Lisa Nguyen",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Advanced pest control companies have invested heavily in custom analytics and require solutions that complement rather than replace existing models.",
+      "persona": "Tom Sanders",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Smaller pest control companies are highly sensitive to cost and require strong evidence of ROI and ease of use.",
+      "persona": "Maria Torres",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Mid-sized lawn care companies want integrated, unified solutions that consolidate data and outreach to reduce complexity.",
+      "persona": "Derek Collins",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Small teams highly value simplicity and fear tools that add complexity or require dedicated IT support.",
+      "persona": "Jamal Owens",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Integration with customer support tools and intelligent personalization are critical to avoid alienating customers.",
+      "persona": "Elena Foster",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Multiple stakeholders (Operations VP, CFO) involved in buying decisions.",
+      "persona": "Elena Foster",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "PE-backed companies prioritize scalability and clear ROI reporting to boards.",
+      "persona": "Marcus Reed",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Cross-functional alignment between sales and service is a pain point.",
+      "persona": "Marcus Reed",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Retention specialists in small-medium companies are overwhelmed and need automation that respects customer experience.",
+      "persona": "Heather Kim",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "CEO involvement is critical for budget approval, focused on ROI and operational efficiency.",
+      "persona": "Heather Kim",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Small teams rely heavily on owner approval and need clear, quick ROI demonstration.",
+      "persona": "Samantha Lee",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Manual follow-up is a major bottleneck limiting retention efforts.",
+      "persona": "Samantha Lee",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Small teams have very limited bandwidth and high price sensitivity.",
+      "persona": "Miguel Hernandez",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Founder/CEO is sole decision-maker and highly cautious about new tech investments.",
+      "persona": "Miguel Hernandez",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Very small, low-tech businesses are not currently target customers for integrated ML churn tools.",
+      "persona": "Jared Thompson",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Owner is sole decision-maker but relies on admin input for usability.",
+      "persona": "Jared Thompson",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Sophisticated users require transparency and data export for trust and validation.",
+      "persona": "Sara Lindstrom",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Internal BI teams play a critical role in evaluating new predictive tools.",
+      "persona": "Sara Lindstrom",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Small teams need automation not just for prediction but for outreach to overcome bandwidth limits.",
+      "persona": "Darnell Thompson",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Founder is sole decision-maker and highly ROI-focused.",
+      "persona": "Darnell Thompson",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Local environmental factors like weather are significant churn drivers needing explicit modeling.",
+      "persona": "Evelyn Park",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Senior leadership involvement is critical, with focus on operational efficiency and ROI.",
+      "persona": "Evelyn Park",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Customer has heavily invested in internal ML models and is protective of that investment.",
+      "persona": "Frank Gallagher",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Willing to consider automation only if it acts as an 'action layer' on top of existing intelligence.",
+      "persona": "Frank Gallagher",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Small teams prioritize simplicity and low overhead over advanced features.",
+      "persona": "Tina Rodriguez",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Understanding the 'why' behind churn is as important as prediction.",
+      "persona": "Tina Rodriguez",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Technical sophistication requires open data access and API flexibility.",
+      "persona": "Raj Patel",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Willing to invest if solution integrates well with existing BI tools and workflows.",
+      "persona": "Raj Patel",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Manual tracking of complaints and churn is time-consuming and ineffective.",
+      "persona": "Linda Chavez",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Desire for automation that enhances relationship building, not replaces it.",
+      "persona": "Linda Chavez",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Manual segmentation and outreach is a major time sink.",
+      "persona": "Elliot Barnes",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Competitive benchmarking is a highly valued feature for strategic planning.",
+      "persona": "Elliot Barnes",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Manual data pulls and disparate data sources cause delays and inefficiencies.",
+      "persona": "Monica Fields",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Customization of ML models is important even with benchmarking.",
+      "persona": "Monica Fields",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Smallest operators prioritize simplicity and cost above advanced features.",
+      "persona": "Tommy Nguyen",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Growth focus currently outweighs retention system investment.",
+      "persona": "Tommy Nguyen",
+      "archetype": "data_hungry_operator"
+    },
+    {
+      "insight": "Enterprise customers value strategic partnerships and ongoing collaboration.",
+      "persona": "Marissa Cohen",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Automation must augment, not replace, skilled account managers.",
+      "persona": "Marissa Cohen",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Even with strong internal analytics, real-time actionable insights are valued.",
+      "persona": "Javier Morales",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Scaling personalization without proportional manpower increase is a hidden need.",
+      "persona": "Javier Morales",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Existing churn tools are insufficient due to lack of explainability and actionability.",
+      "persona": "Estelle Nguyen",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Executive buy-in depends on clear ROI and ease of use.",
+      "persona": "Estelle Nguyen",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Owner-operator is the primary user and decision-maker; limited bandwidth for additional tools",
+      "persona": "Tom Whitman",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Concern that churn prediction tools are built for bigger companies and require heavy training",
+      "persona": "Tom Whitman",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Large enterprise customers prioritize integration and security over price",
+      "persona": "Nina Patel",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Automated outreach must be highly targeted and brand-aligned to be acceptable",
+      "persona": "Nina Patel",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Operations leaders are key champions but final budget approval lies with owners",
+      "persona": "Marcus Lee",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Automation is highly valued to address bandwidth constraints",
+      "persona": "Marcus Lee",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Sentiment analysis from support tickets is a critical blind spot in current models",
+      "persona": "Olivia Simmons",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Manual outreach is a major bottleneck limiting scalability",
+      "persona": "Olivia Simmons",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Small operators rely heavily on founder intuition and manual processes",
+      "persona": "Caleb Johnson",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Labor shortage and operational disruptions are major ongoing concerns",
+      "persona": "Caleb Johnson",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "False positives in churn alerts cause wasted effort and reduce team focus",
+      "persona": "Sophia Ramirez",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Manual outreach limits scalability and personalization at larger scale",
+      "persona": "Sophia Ramirez",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Large enterprise customers prioritize accuracy validation and nuanced automation over cost",
+      "persona": "Derek O'Neal",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Multiple stakeholders and long evaluation cycles are standard in PE-owned companies",
+      "persona": "Derek O'Neal",
+      "archetype": "strategic_enterprise"
+    }
+  ]
+}

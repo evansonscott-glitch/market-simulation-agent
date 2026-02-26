@@ -1,0 +1,3659 @@
+[
+  {
+    "id": 1,
+    "name": "Jesse Ramirez",
+    "title": "Founder & CEO",
+    "company_name": "GreenEdge Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 12,
+    "company_annual_revenue": "$1.5M",
+    "company_age_years": 5,
+    "geography": "Raleigh, NC",
+    "current_crm": "Jobber",
+    "other_tools": [
+      "QuickBooks",
+      "Google Sheets"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "72%",
+    "customer_count": 600,
+    "key_pain_points": [
+      "Too many churns in spring despite subscriptions",
+      "Manual tracking of cancellations in spreadsheets",
+      "No clear actionable insights to retain customers"
+    ],
+    "current_retention_approach": "Relies on manual follow-ups by team leads and basic customer notes",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Company growing steadily but Jesse feels stretched thin managing operations and sales.",
+    "hidden_needs": [
+      "Automated retention campaigns that require minimal setup",
+      "Clear prioritization of which customers to focus on"
+    ],
+    "likely_objections": [
+      "Is this tool really easy enough for me to use without extra staff?",
+      "I\u2019m not sure the ROI will justify the monthly spend"
+    ],
+    "buying_trigger": "Seeing clear benchmarks showing our churn is worse than similar local lawn care businesses"
+  },
+  {
+    "id": 2,
+    "name": "Linda Chang",
+    "title": "Owner",
+    "company_name": "Pinecrest Pest Solutions",
+    "industry": "Pest Control",
+    "company_size_employees": 8,
+    "company_annual_revenue": "$900K",
+    "company_age_years": 7,
+    "geography": "Boise, ID",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Mailchimp"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "68%",
+    "customer_count": 450,
+    "key_pain_points": [
+      "High churn around contract renewals",
+      "No predictive churn insights, only reactive calls",
+      "Limited staff bandwidth to do retention outreach"
+    ],
+    "current_retention_approach": "Call customers who complain and offer discounts manually",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Linda recently lost a big client after a competitor undercut pricing. She\u2019s wary of new tech promises.",
+    "hidden_needs": [
+      "Simple \u2018tell me exactly what to say\u2019 campaign templates",
+      "Integration that doesn\u2019t disrupt current workflows"
+    ],
+    "likely_objections": [
+      "I don\u2019t want to waste time learning something complicated",
+      "How do I know it works better than just calling customers myself?"
+    ],
+    "buying_trigger": "Proof that automated messaging can save at least 10% more customers than manual outreach"
+  },
+  {
+    "id": 3,
+    "name": "Marcus Ellsworth",
+    "title": "Founder & President",
+    "company_name": "Summit Pest Management",
+    "industry": "Pest Control",
+    "company_size_employees": 110,
+    "company_annual_revenue": "$18M",
+    "company_age_years": 22,
+    "geography": "Denver, CO",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Salesforce",
+      "Zendesk"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "79%",
+    "customer_count": 8500,
+    "key_pain_points": [
+      "Retention plateau despite large marketing spend",
+      "Manual churn prediction models are time-consuming",
+      "Difficulty scaling retention efforts across multi-city operations"
+    ],
+    "current_retention_approach": "Data analysts create churn models but outreach is manual and fragmented",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Marcus is eager to adopt innovations but wants a turnkey solution due to bandwidth limits.",
+    "hidden_needs": [
+      "Automated outreach that integrates seamlessly with FieldRoutes and lower manual effort",
+      "Benchmarks tailored by region and service type"
+    ],
+    "likely_objections": [
+      "Will this add complexity or require additional training for staff?",
+      "Is this scalable for our size and diverse markets?"
+    ],
+    "buying_trigger": "Seeing a strong demo proving predictive accuracy and automated campaigns tailored for large pest control companies"
+  },
+  {
+    "id": 4,
+    "name": "Tamika Jones",
+    "title": "Founder & CEO",
+    "company_name": "Jones Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 7,
+    "company_annual_revenue": "$750K",
+    "company_age_years": 3,
+    "geography": "Atlanta, GA",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Square POS"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "65%",
+    "customer_count": 520,
+    "key_pain_points": [
+      "No system for tracking customer cancellations systematically",
+      "Spends too much time on manual follow-ups",
+      "No visibility on why customers leave"
+    ],
+    "current_retention_approach": "Calls or texts customers individually after noticing no-shows",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Just started growing out of sole proprietorship; hesitant to invest in new software",
+    "hidden_needs": [
+      "Affordable, easy onboarding without tech jargon",
+      "Confidence that tool will save time rather than add work"
+    ],
+    "likely_objections": [
+      "Is this too advanced for such a small team?",
+      "Can I trust the predictions without a data background?"
+    ],
+    "buying_trigger": "A simple, no-tech demo showing how automatic alerts and campaigns will reduce her manual workload"
+  },
+  {
+    "id": 5,
+    "name": "Raj Patel",
+    "title": "Founder & COO",
+    "company_name": "PestGuard Services",
+    "industry": "Pest Control",
+    "company_size_employees": 18,
+    "company_annual_revenue": "$3.2M",
+    "company_age_years": 6,
+    "geography": "Chicago, IL",
+    "current_crm": "Briostack",
+    "other_tools": [
+      "HubSpot",
+      "Slack"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "70%",
+    "customer_count": 1100,
+    "key_pain_points": [
+      "Churn spikes after price increases",
+      "Manual efforts to identify at-risk customers inconsistent",
+      "Sales team unable to prioritize retention outreach"
+    ],
+    "current_retention_approach": "Monthly team meetings to review customer lists, reactive calls post-churn",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Raj recently hired a retention specialist but wants to empower the team with better data",
+    "hidden_needs": [
+      "Automated prioritization of customers and customizable triggers",
+      "Confidence in AI recommendations without needing a data analyst"
+    ],
+    "likely_objections": [
+      "Do we have the bandwidth to adopt this alongside existing tools?",
+      "Will it integrate cleanly with Briostack?"
+    ],
+    "buying_trigger": "A clear integration plan and demo showing time savings in prioritizing outreach"
+  },
+  {
+    "id": 6,
+    "name": "Sarah Whitfield",
+    "title": "Founder",
+    "company_name": "EverGreen Lawn Specialists",
+    "industry": "Lawn Care",
+    "company_size_employees": 60,
+    "company_annual_revenue": "$10M",
+    "company_age_years": 15,
+    "geography": "Portland, OR",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "Trello",
+      "Google Analytics"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "75%",
+    "customer_count": 4000,
+    "key_pain_points": [
+      "Seasonal churn difficult to predict",
+      "Customer data siloed across platforms",
+      "Retention team overwhelmed by volume of flagged accounts"
+    ],
+    "current_retention_approach": "Manual segmenting but inconsistent automated communication",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Sarah is focused on growing subscription models and wants a data-driven retention edge",
+    "hidden_needs": [
+      "Automated outreach with personalization to reduce manual tasks",
+      "Benchmarking against other West Coast lawn care firms"
+    ],
+    "likely_objections": [
+      "Will this solution handle seasonal churn patterns effectively?",
+      "How customizable are the automated campaigns?"
+    ],
+    "buying_trigger": "Seeing clear ROI case studies from similarly sized subscription lawn care businesses"
+  },
+  {
+    "id": 7,
+    "name": "Gary Simmons",
+    "title": "Owner/Operator",
+    "company_name": "Simmons Pest Control",
+    "industry": "Pest Control",
+    "company_size_employees": 4,
+    "company_annual_revenue": "$600K",
+    "company_age_years": 10,
+    "geography": "Birmingham, AL",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "60%",
+    "customer_count": 350,
+    "key_pain_points": [
+      "No formal churn tracking or prediction",
+      "Time spent chasing past-due payments reduces service quality",
+      "Struggles with managing customer relationships and follow-ups"
+    ],
+    "current_retention_approach": "Manual notes on paper, calls customers after missed payments",
+    "disposition_toward_new_tools": "resistant",
+    "personal_context": "Gary is nearing retirement, skeptical of technology and reluctant to spend on new tools",
+    "hidden_needs": [
+      "Easy-to-understand, hands-off churn alerts",
+      "Peace of mind that existing customers won\u2019t just slip away unnoticed"
+    ],
+    "likely_objections": [
+      "Sounds complicated and expensive for a small shop like mine",
+      "Won\u2019t this replace personal relationships with customers?"
+    ],
+    "buying_trigger": "A simple trial period with real churn risk alerts that save customers without extra work"
+  },
+  {
+    "id": 8,
+    "name": "Emily Vargas",
+    "title": "Founder & CEO",
+    "company_name": "Precision Lawn & Pest",
+    "industry": "Lawn Care & Pest Control",
+    "company_size_employees": 25,
+    "company_annual_revenue": "$6.5M",
+    "company_age_years": 4,
+    "geography": "Tucson, AZ",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "Zendesk",
+      "HubSpot"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "68%",
+    "customer_count": 1800,
+    "key_pain_points": [
+      "High churn during seasonal transitions",
+      "Sales and service teams don\u2019t share churn insights well",
+      "Limited time to manually follow-up on churn risk alerts"
+    ],
+    "current_retention_approach": "Uses ServiceTitan churn scores but acts on less than 20% of flagged accounts",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Rapid growth has stressed operational systems; wants to streamline retention to preserve gains",
+    "hidden_needs": [
+      "Automated, personalized outreach to reduce manual workload",
+      "Integrated insights that combine lawn care and pest control customer data"
+    ],
+    "likely_objections": [
+      "Won\u2019t this duplicate effort with existing ServiceTitan features?",
+      "Is the automated outreach effective and professional?"
+    ],
+    "buying_trigger": "Demo showing automation can double the retention impact without adding headcount"
+  },
+  {
+    "id": 9,
+    "name": "David Russo",
+    "title": "Founder",
+    "company_name": "Russo Pest & Lawn Services",
+    "industry": "Pest Control",
+    "company_size_employees": 15,
+    "company_annual_revenue": "$2.5M",
+    "company_age_years": 9,
+    "geography": "Philadelphia, PA",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Mailchimp",
+      "Trello"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "73%",
+    "customer_count": 1200,
+    "key_pain_points": [
+      "Churn caused by billing problems and missed appointments",
+      "Retention efforts reactive, not proactive",
+      "Company recently acquired by PE firm, pressure to improve margins"
+    ],
+    "current_retention_approach": "Occasional discount offers to at-risk customers identified by gut feeling",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Transitioning leadership to more data-oriented practices but wary of new vendor complexity",
+    "hidden_needs": [
+      "Retention solutions that align with new PE mandates",
+      "Ability to benchmark performance against peers in the region"
+    ],
+    "likely_objections": [
+      "Will this tool require dedicated analysts or disrupt current workflows?",
+      "Does it justify the cost given current churn rates?"
+    ],
+    "buying_trigger": "Competitive benchmarking showing clear performance gaps and easy-to-follow retention playbooks"
+  },
+  {
+    "id": 10,
+    "name": "Monique Taylor",
+    "title": "Founder & Managing Director",
+    "company_name": "Taylor Superior Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 45,
+    "company_annual_revenue": "$7.8M",
+    "company_age_years": 12,
+    "geography": "Seattle, WA",
+    "current_crm": "Service Autopilot",
+    "other_tools": [
+      "Slack",
+      "Google Workspace"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "71%",
+    "customer_count": 3200,
+    "key_pain_points": [
+      "Churn linked to inconsistent technician performance and communication",
+      "Retention team overwhelmed by large customer base",
+      "Lack of actionable insights to prioritize high-risk accounts"
+    ],
+    "current_retention_approach": "Monthly review meetings to manually assign outreach tasks",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Family-run business expanding with new leadership but retaining founder as active decision maker",
+    "hidden_needs": [
+      "Automated prioritization to free up retention manager\u2019s bandwidth",
+      "Insights that highlight actionable causes of churn"
+    ],
+    "likely_objections": [
+      "Can this really replace manual review meetings?",
+      "Is the integration with Service Autopilot seamless and reliable?"
+    ],
+    "buying_trigger": "Demonstration of automated retention campaigns that reduce manual workload by 50%"
+  },
+  {
+    "id": 11,
+    "name": "Lena Morales",
+    "title": "Founder & CEO",
+    "company_name": "GreenBlades Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 18,
+    "company_annual_revenue": "$1.5M",
+    "company_age_years": 6,
+    "geography": "Raleigh, NC",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "QuickBooks",
+      "Google Workspace"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "72%",
+    "customer_count": 620,
+    "key_pain_points": [
+      "High seasonal cancellations",
+      "Limited staff bandwidth for customer follow-up",
+      "Lack of predictive insight on churn triggers"
+    ],
+    "current_retention_approach": "Manual phone calls and occasional email blasts to flagged churn suspects",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Company grew steadily over 6 years but retention issues are threatening margins; Lena juggles operations and sales daily.",
+    "hidden_needs": [
+      "Simple, actionable recommendations without needing data expertise",
+      "Automated outreach to reduce manual calling"
+    ],
+    "likely_objections": [
+      "Is this too complex to use without a dedicated analyst?",
+      "Will it work given our seasonal churn?"
+    ],
+    "buying_trigger": "Seeing how churn risk scores compare to industry averages and an easy way to automate follow-up"
+  },
+  {
+    "id": 12,
+    "name": "Troy Henderson",
+    "title": "Owner-Operator",
+    "company_name": "Henderson Pest Solutions",
+    "industry": "Pest Control",
+    "company_size_employees": 7,
+    "company_annual_revenue": "$850K",
+    "company_age_years": 3,
+    "geography": "Boise, ID",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Google Sheets",
+      "Square Payments"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "68%",
+    "customer_count": 400,
+    "key_pain_points": [
+      "No systematic way to track at-risk customers",
+      "Manual follow-up is time-consuming",
+      "Difficulty in interpreting churn signals"
+    ],
+    "current_retention_approach": "Ad hoc calls when customers complain or skip payments",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Troy recently expanded from solo operation to small team and feels things are slipping through cracks.",
+    "hidden_needs": [
+      "Clear guidance on what actions to take",
+      "Affordable solution that won't add workload"
+    ],
+    "likely_objections": [
+      "Will I need a data expert to make sense of this?",
+      "Is this overkill for my business size?"
+    ],
+    "buying_trigger": "A demo that shows simple, automated alerts and easy next steps to prevent churn"
+  },
+  {
+    "id": 13,
+    "name": "DeAnna Wu",
+    "title": "Founder & CEO",
+    "company_name": "Skyline Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 45,
+    "company_annual_revenue": "$7.2M",
+    "company_age_years": 9,
+    "geography": "Seattle, WA",
+    "current_crm": "Jobber",
+    "other_tools": [
+      "Slack",
+      "HubSpot CRM"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "76%",
+    "customer_count": 1100,
+    "key_pain_points": [
+      "Retention campaigns are manual and inconsistent",
+      "Difficulty scaling customer success efforts",
+      "Lack of unified churn risk data across multiple channels"
+    ],
+    "current_retention_approach": "Manual segmentation in Jobber with email campaigns run by marketing",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "DeAnna's company is in growth mode; she is eager to leverage technology to gain competitive advantage.",
+    "hidden_needs": [
+      "Automated personalized outreach",
+      "Integration with existing CRM and marketing tools"
+    ],
+    "likely_objections": [
+      "How quickly can this be implemented without disrupting current workflows?",
+      "Will it justify the higher monthly price?"
+    ],
+    "buying_trigger": "Proof that automated retention campaigns increase saved customers without extra staff"
+  },
+  {
+    "id": 14,
+    "name": "Carlos Jimenez",
+    "title": "Owner",
+    "company_name": "EcoShield Pest Management",
+    "industry": "Pest Control",
+    "company_size_employees": 25,
+    "company_annual_revenue": "$3.8M",
+    "company_age_years": 11,
+    "geography": "San Antonio, TX",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Trello",
+      "QuickBooks"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "75%",
+    "customer_count": 900,
+    "key_pain_points": [
+      "High churn from competitors' aggressive pricing",
+      "Customer complaints causing cancellations",
+      "Limited insight into payment-related churn"
+    ],
+    "current_retention_approach": "Regular team meetings to discuss problem accounts with CRM flags",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Carlos feels stuck using basic CRM churn flags and wants to improve retention before growth stalls.",
+    "hidden_needs": [
+      "Actionable, prioritized next steps",
+      "Competitive benchmarking data to motivate team"
+    ],
+    "likely_objections": [
+      "Will this really help us act faster on churn risks?",
+      "What is the ROI for a business our size?"
+    ],
+    "buying_trigger": "Seeing AI-generated playbooks that reduce manual guesswork and show clear ROI"
+  },
+  {
+    "id": 15,
+    "name": "Maggie O'Sullivan",
+    "title": "Founder and President",
+    "company_name": "O'Sullivan Lawn & Garden",
+    "industry": "Lawn Care",
+    "company_size_employees": 12,
+    "company_annual_revenue": "$1.1M",
+    "company_age_years": 20,
+    "geography": "Portland, ME",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "MailChimp",
+      "Excel"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "70%",
+    "customer_count": 550,
+    "key_pain_points": [
+      "Manual churn tracking is unreliable",
+      "No clear data to guide retention efforts",
+      "Seasonal cancellations reduce revenue predictability"
+    ],
+    "current_retention_approach": "Personal phone calls from Maggie herself to key customers",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Maggie is near retirement, cautious about new tech and prefers simple, proven solutions.",
+    "hidden_needs": [
+      "Low-complexity tool that doesn't require hiring",
+      "Assurance that tool will not disrupt current personal touch"
+    ],
+    "likely_objections": [
+      "This seems complicated \u2014 do I need a tech person?",
+      "Is this worth the cost given our size and slow growth?"
+    ],
+    "buying_trigger": "A simple demonstration showing how churn risk prediction can save time and stress"
+  },
+  {
+    "id": 16,
+    "name": "Jamal Thompson",
+    "title": "Founder & CEO",
+    "company_name": "Precision Pest Control",
+    "industry": "Pest Control",
+    "company_size_employees": 55,
+    "company_annual_revenue": "$13M",
+    "company_age_years": 7,
+    "geography": "Atlanta, GA",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Salesforce",
+      "RingCentral"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "78%",
+    "customer_count": 1700,
+    "key_pain_points": [
+      "Retention efforts limited by reactive manual outreach",
+      "Difficulty prioritizing customers for intervention",
+      "Churn linked to billing/payment issues going unnoticed"
+    ],
+    "current_retention_approach": "Monthly churn reports with manual outreach by retention team",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Jamal is scaling fast but retention remains a bottleneck; eager for AI-based automation.",
+    "hidden_needs": [
+      "Automated prioritized retention campaigns",
+      "Clear ROI metrics for leadership reporting"
+    ],
+    "likely_objections": [
+      "How will this integrate with our current PestPak setup?",
+      "Will automation feel impersonal to customers?"
+    ],
+    "buying_trigger": "Demonstration of automated, personalized outreach boosting retention without adding headcount"
+  },
+  {
+    "id": 17,
+    "name": "Brittany Nguyen",
+    "title": "Founder",
+    "company_name": "FreshCut Lawn Services",
+    "industry": "Lawn Care",
+    "company_size_employees": 3,
+    "company_annual_revenue": "$400K",
+    "company_age_years": 2,
+    "geography": "Denver, CO",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Venmo",
+      "Google Calendar"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "60%",
+    "customer_count": 200,
+    "key_pain_points": [
+      "Struggles to keep customers beyond first season",
+      "No system for tracking cancellations",
+      "Limited marketing and follow-up resources"
+    ],
+    "current_retention_approach": "Informal customer thank-you notes and occasional texts",
+    "disposition_toward_new_tools": "resistant",
+    "personal_context": "Brittany just started post-pandemic, burned by a previous marketing tool that cost too much",
+    "hidden_needs": [
+      "Affordable, low-effort solution",
+      "Confidence that tool won\u2019t add complexity or cost burden"
+    ],
+    "likely_objections": [
+      "Is this even meant for companies this small?",
+      "Can I really trust AI-based churn predictions?"
+    ],
+    "buying_trigger": "Simple pricing and promise of saving customers without extra work or tech fuss"
+  },
+  {
+    "id": 18,
+    "name": "Patrick Doyle",
+    "title": "Owner",
+    "company_name": "Summit Pest Defense",
+    "industry": "Pest Control",
+    "company_size_employees": 120,
+    "company_annual_revenue": "$18M",
+    "company_age_years": 25,
+    "geography": "Denver, CO",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Tableau",
+      "Zendesk"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "80%",
+    "customer_count": 4500,
+    "key_pain_points": [
+      "Retention campaigns not scalable enough",
+      "Team struggles to interpret churn data meaningfully",
+      "Lost customers due to overlooked billing issues"
+    ],
+    "current_retention_approach": "Mix of manual and automated email reminders plus customer service outreach",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Patrick inherited business; wants to modernize retention but is wary of overcomplicating operations.",
+    "hidden_needs": [
+      "One-stop actionable retention dashboard",
+      "Better visibility into customer engagement signals"
+    ],
+    "likely_objections": [
+      "Will this disrupt existing workflows?",
+      "Can it prove ROI quickly at scale?"
+    ],
+    "buying_trigger": "Seeing automated churn predictions integrated with FieldRoutes plus success stories from similar sized peers"
+  },
+  {
+    "id": 19,
+    "name": "Emily Carter",
+    "title": "Founder & CEO",
+    "company_name": "Pure Green Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 32,
+    "company_annual_revenue": "$4.5M",
+    "company_age_years": 8,
+    "geography": "Minneapolis, MN",
+    "current_crm": "Service Autopilot",
+    "other_tools": [
+      "Mailchimp",
+      "Trello"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "69%",
+    "customer_count": 900,
+    "key_pain_points": [
+      "Difficulty tracking churn seasonality",
+      "Retention efforts lack automation",
+      "Manual campaign execution is inconsistent"
+    ],
+    "current_retention_approach": "Manual email campaigns combined with personal follow-ups for VIP clients",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Emily\u2019s business faces competitive pricing pressure and unpredictable churn; she wants a data-driven edge.",
+    "hidden_needs": [
+      "Automated, personalized communication",
+      "Benchmarking data against regional competitors"
+    ],
+    "likely_objections": [
+      "How much training is required?",
+      "Will this justify the subscription cost?"
+    ],
+    "buying_trigger": "Seeing clear AI-driven churn risk scores plus easy automated outreach to lighten workload"
+  },
+  {
+    "id": 20,
+    "name": "Vince Alvarez",
+    "title": "Founder & Owner",
+    "company_name": "Alvarez Pest Control",
+    "industry": "Pest Control",
+    "company_size_employees": 9,
+    "company_annual_revenue": "$950K",
+    "company_age_years": 4,
+    "geography": "Orlando, FL",
+    "current_crm": "GorillaDesk",
+    "other_tools": [
+      "QuickBooks",
+      "Google Workspace"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "72%",
+    "customer_count": 500,
+    "key_pain_points": [
+      "Inconsistent follow-up on churn alerts",
+      "No automated outreach capabilities",
+      "Overwhelmed by manual retention efforts"
+    ],
+    "current_retention_approach": "Uses CRM churn flags but relies on manual phone calls and emails",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Vince\u2019s team is stretched thin; he\u2019s interested in tools that can reduce manual work and improve customer retention.",
+    "hidden_needs": [
+      "Automated, AI-driven next steps",
+      "Confidence that tool will integrate smoothly with GorillaDesk"
+    ],
+    "likely_objections": [
+      "Will this tool really save time in day-to-day operations?",
+      "Is the pricing justified for our company size?"
+    ],
+    "buying_trigger": "Seeing automated retention workflows that deliver measurable improvements without extra staff"
+  },
+  {
+    "id": 21,
+    "name": "Maria Delgado",
+    "title": "Founder & CEO",
+    "company_name": "GreenCrest Lawn Care",
+    "industry": "Lawn care",
+    "company_size_employees": 18,
+    "company_annual_revenue": "$1.1M",
+    "company_age_years": 7,
+    "geography": "Tampa, FL",
+    "current_crm": "Jobber",
+    "other_tools": [
+      "Google Sheets",
+      "Mailchimp"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "68%",
+    "customer_count": 600,
+    "key_pain_points": [
+      "Manual churn tracking with no predictive insights",
+      "Team bandwidth to follow up on cancellations",
+      "High seasonal churn in winter months"
+    ],
+    "current_retention_approach": "Manual call-backs and personal outreach based on gut feeling",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Maria grew the company steadily post-2016 but is struggling to find time to dig into retention analytics while managing operations.",
+    "hidden_needs": [
+      "Automated alerts that don't require manual data digging",
+      "Simple prescriptive next steps without ambiguity"
+    ],
+    "likely_objections": [
+      "Is this too complex for my small team?",
+      "Are the monthly savings worth the cost?"
+    ],
+    "buying_trigger": "Clear demonstration of ROI via automated churn preventions that replace manual outreach"
+  },
+  {
+    "id": 22,
+    "name": "Derrick Chang",
+    "title": "Owner",
+    "company_name": "TrueShield Pest Solutions",
+    "industry": "Pest control",
+    "company_size_employees": 12,
+    "company_annual_revenue": "$1.8M",
+    "company_age_years": 5,
+    "geography": "Seattle, WA",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Slack",
+      "QuickBooks"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "high",
+    "current_retention_rate": "72%",
+    "customer_count": 850,
+    "key_pain_points": [
+      "Unable to systematically identify which customers are at risk",
+      "Retention efforts happen only after cancellations",
+      "Difficulty coordinating retention tasks with small staff"
+    ],
+    "current_retention_approach": "Ad-hoc retention calls after customers complain or cancel",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Derrick recently lost a key large customer to a competitor, making retention a critical focus area.",
+    "hidden_needs": [
+      "Confidence in decision-making without needing data expertise",
+      "Benchmarking to competitive pest control companies in the Northwest"
+    ],
+    "likely_objections": [
+      "Will the tool work well with our existing CRM integration?",
+      "Can this automate outreach so I don\u2019t have to micromanage?"
+    ],
+    "buying_trigger": "Seeing competitive benchmarking that proves substantial churn reduction potential"
+  },
+  {
+    "id": 23,
+    "name": "Linda McCarthy",
+    "title": "Founder & President",
+    "company_name": "McCarthy Pest Control",
+    "industry": "Pest control",
+    "company_size_employees": 55,
+    "company_annual_revenue": "$9.3M",
+    "company_age_years": 25,
+    "geography": "Pittsburgh, PA",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Excel",
+      "Salesforce"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "78%",
+    "customer_count": 4200,
+    "key_pain_points": [
+      "No centralized retention strategy across teams",
+      "Inconsistent follow-up on at-risk accounts flagged by CRM",
+      "Difficulty scaling retention with aging leadership team"
+    ],
+    "current_retention_approach": "Rely on sales reps to manage churn risks manually with no predictive data",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Linda is preparing to hand off operations to her daughter but wants to stabilize retention metrics first.",
+    "hidden_needs": [
+      "Simplified dashboards that executives can understand instantly",
+      "Ability to delegate retention without losing control"
+    ],
+    "likely_objections": [
+      "We already have churn risk scores; why pay more?",
+      "How does this integrate with PestPak\u2019s existing analytics?"
+    ],
+    "buying_trigger": "Automated retention campaigns integrated with PestPak that reduce manual effort"
+  },
+  {
+    "id": 24,
+    "name": "Tyler Brooks",
+    "title": "CEO & Founder",
+    "company_name": "FreshLawn Services",
+    "industry": "Lawn care",
+    "company_size_employees": 7,
+    "company_annual_revenue": "$650K",
+    "company_age_years": 2,
+    "geography": "Boise, ID",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Google Forms",
+      "Mailchimp"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "60%",
+    "customer_count": 520,
+    "key_pain_points": [
+      "No system to track or predict customer cancellations",
+      "Overwhelmed managing growth and customer service manually",
+      "Limited budget for advanced software"
+    ],
+    "current_retention_approach": "Phone calls to select customers deemed important based on memory",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Tyler recently hired his first technician and needs systems to scale but fears complexity and cost.",
+    "hidden_needs": [
+      "A simple, no-fuss solution that automates retention outreach",
+      "Affordable pricing aligned with small size and cash flow"
+    ],
+    "likely_objections": [
+      "Do I really need this now or can I do it myself?",
+      "Will the learning curve be too steep?"
+    ],
+    "buying_trigger": "A trial with hands-on onboarding showing quick wins with no tech headache"
+  },
+  {
+    "id": 25,
+    "name": "Jasmine Patel",
+    "title": "Founder & COO",
+    "company_name": "EcoGuard Pest Solutions",
+    "industry": "Pest control",
+    "company_size_employees": 22,
+    "company_annual_revenue": "$3.4M",
+    "company_age_years": 4,
+    "geography": "Denver, CO",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "HubSpot",
+      "Zendesk"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "70%",
+    "customer_count": 1500,
+    "key_pain_points": [
+      "High manual effort required to convert churn risk scores into actions",
+      "Retention team stretched too thin to follow up on all flagged accounts",
+      "Lack of proven automated outreach to close retention gaps"
+    ],
+    "current_retention_approach": "Daily team meetings to review churn risk scores, manual calling and emailing",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Jasmine\u2019s company is growing fast, and the retention burden is overwhelming the small ops team.",
+    "hidden_needs": [
+      "Automated workflows that reduce manual chase and provide prescriptive action",
+      "Integration with FieldRoutes and other tools so no double work"
+    ],
+    "likely_objections": [
+      "Is the automated outreach personalized enough to avoid annoying customers?",
+      "Will adoption by my retention team be smooth?"
+    ],
+    "buying_trigger": "A pilot showing clear uplift in retention with automated outreach replacing manual work"
+  },
+  {
+    "id": 26,
+    "name": "Harold Thompson",
+    "title": "Founder",
+    "company_name": "Thompson Lawn & Garden",
+    "industry": "Lawn care",
+    "company_size_employees": 45,
+    "company_annual_revenue": "$8.7M",
+    "company_age_years": 18,
+    "geography": "Columbus, OH",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "QuickBooks",
+      "Google Workspace"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "low",
+    "current_retention_rate": "70%",
+    "customer_count": 1800,
+    "key_pain_points": [
+      "Churn tracking exists but acting on alerts is inconsistent",
+      "Limited time for manual retention campaigns",
+      "No benchmarking against industry peers"
+    ],
+    "current_retention_approach": "Occasional email campaigns, reactive phone outreach by customer service reps",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Harold is considering retirement in a few years and wants to boost company valuation by improving retention.",
+    "hidden_needs": [
+      "Reliable data to present to potential investors or buyers",
+      "Confidence that retention improvements are sustainable post-retirement"
+    ],
+    "likely_objections": [
+      "How will this fit into current workflows without disrupting them?",
+      "What evidence shows I\u2019ll get measurable retention improvement?"
+    ],
+    "buying_trigger": "Industry benchmarking reports plus automated outreach that requires minimal oversight"
+  },
+  {
+    "id": 27,
+    "name": "Sandra Kim",
+    "title": "Founder & CEO",
+    "company_name": "Pioneer Pest Services",
+    "industry": "Pest control",
+    "company_size_employees": 5,
+    "company_annual_revenue": "$700K",
+    "company_age_years": 3,
+    "geography": "Portland, ME",
+    "current_crm": "GorillaDesk",
+    "other_tools": [
+      "Mailchimp",
+      "Excel"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "65%",
+    "customer_count": 400,
+    "key_pain_points": [
+      "No predictive insights, only reactive retention efforts",
+      "Limited team bandwidth to understand churn data",
+      "Concerned about complexity of new solutions"
+    ],
+    "current_retention_approach": "Follow-up calls and manual tracking in spreadsheets",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Sandra is first-time founder, recently burned by a competitor solution that was overly complex and didn\u2019t deliver.",
+    "hidden_needs": [
+      "A very simple and trustworthy solution with clear instruction",
+      "Reassurance that no data expert is needed"
+    ],
+    "likely_objections": [
+      "Will I need to hire someone just to use this?",
+      "Is this cost-effective for such a small operation?"
+    ],
+    "buying_trigger": "A hands-on demo with simple dashboards and a concierge onboarding experience"
+  },
+  {
+    "id": 28,
+    "name": "Ethan Rodriguez",
+    "title": "Founder & COO",
+    "company_name": "Summit Lawn Care",
+    "industry": "Lawn care",
+    "company_size_employees": 60,
+    "company_annual_revenue": "$12.5M",
+    "company_age_years": 12,
+    "geography": "Sacramento, CA",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "HubSpot",
+      "Zendesk"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "72%",
+    "customer_count": 2200,
+    "key_pain_points": [
+      "Retention team under capacity to follow up on all churn flags",
+      "Current churn risk scores not translating to action effectively",
+      "Need for automated, personalized outreach to reduce manual processes"
+    ],
+    "current_retention_approach": "Roundtable reviews of churn data, manual emails and calls by retention managers",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Ethan's company is experiencing rapid growth but retention lags causing revenue leakage.",
+    "hidden_needs": [
+      "Seamless integration with ServiceTitan and marketing automation",
+      "Scalable retention processes that reduce headcount pressure"
+    ],
+    "likely_objections": [
+      "Will the automated outreach feel authentic to customers?",
+      "How flexible is the platform for tailoring messaging?"
+    ],
+    "buying_trigger": "Proof of concept showing increased retention with reduced team workload via automation"
+  },
+  {
+    "id": 29,
+    "name": "Carmen Alvarez",
+    "title": "Founder & CEO",
+    "company_name": "Alvarez Pest Management",
+    "industry": "Pest control",
+    "company_size_employees": 90,
+    "company_annual_revenue": "$14.2M",
+    "company_age_years": 20,
+    "geography": "Houston, TX",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Salesforce",
+      "Slack"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "low",
+    "current_retention_rate": "75%",
+    "customer_count": 3500,
+    "key_pain_points": [
+      "Data silos between CRM and retention efforts",
+      "Retention processes rely heavily on manual team effort",
+      "Demand for actionable insights with a clear playbook"
+    ],
+    "current_retention_approach": "Manual churn tracking with periodic team brainstorms to develop playbooks",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Carmen is focused on preparing the company for possible PE acquisition, needing strong retention metrics.",
+    "hidden_needs": [
+      "Automated outreach to reduce operational complexity",
+      "Data-driven insights aligned with PE investor expectations"
+    ],
+    "likely_objections": [
+      "How robust are the AI predictions for larger data sets?",
+      "Will this disrupt the sales and renewal team workflows?"
+    ],
+    "buying_trigger": "Demonstrated ability to reduce churn with automated campaigns while integrating smoothly into current CRM"
+  },
+  {
+    "id": 30,
+    "name": "Gregory Johnson",
+    "title": "Founder",
+    "company_name": "Johnson Lawn & Landscape",
+    "industry": "Lawn care",
+    "company_size_employees": 4,
+    "company_annual_revenue": "$450K",
+    "company_age_years": 1,
+    "geography": "Raleigh, NC",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Google Calendar",
+      "WhatsApp"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "58%",
+    "customer_count": 300,
+    "key_pain_points": [
+      "No formal retention system in place",
+      "Struggles to keep track of customer visits and cancellations",
+      "Limited time and money for complex software"
+    ],
+    "current_retention_approach": "Personal memory and sticky notes to call back customers",
+    "disposition_toward_new_tools": "resistant",
+    "personal_context": "Gregory recently started and is skeptical about paying for software before proving need.",
+    "hidden_needs": [
+      "Affordable entry-level retention tool that can grow with the business",
+      "Step-by-step guidance to avoid overwhelm"
+    ],
+    "likely_objections": [
+      "Is this really necessary for such a small business?",
+      "Won\u2019t the software take too long to learn and set up?"
+    ],
+    "buying_trigger": "A very low-cost starter option with personal onboarding and proof of saved revenue"
+  },
+  {
+    "id": 31,
+    "name": "Javier Morales",
+    "title": "Founder & CEO",
+    "company_name": "GreenRoots Lawn Care",
+    "industry": "lawn care",
+    "company_size_employees": 12,
+    "company_annual_revenue": "$1.1M",
+    "company_age_years": 6,
+    "geography": "San Antonio, TX",
+    "current_crm": "Jobber",
+    "other_tools": [
+      "QuickBooks",
+      "Google Workspace"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "68%",
+    "customer_count": 650,
+    "key_pain_points": [
+      "No systematic churn prediction",
+      "High seasonal cancellations",
+      "Manual follow-ups take too much time"
+    ],
+    "current_retention_approach": "Manual tracking in Jobber and spreadsheets, relies on gut feeling",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Company growing steadily but Javier feels stretched thin managing operations and customer retention alone.",
+    "hidden_needs": [
+      "Automated task delegation",
+      "Simple prescriptive next steps, not just data"
+    ],
+    "likely_objections": [
+      "Need to see clear ROI for small-medium size",
+      "Is this just another complicated dashboard I won't use?"
+    ],
+    "buying_trigger": "Seeing how RevHawk can automate outreach and show my churn rate vs. local competitors"
+  },
+  {
+    "id": 32,
+    "name": "Denise Patel",
+    "title": "Owner & Operator",
+    "company_name": "AccuShield Pest Control",
+    "industry": "pest control",
+    "company_size_employees": 8,
+    "company_annual_revenue": "$900K",
+    "company_age_years": 4,
+    "geography": "Seattle, WA",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Mailchimp"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "high",
+    "current_retention_rate": "72%",
+    "customer_count": 520,
+    "key_pain_points": [
+      "Difficulty identifying why customers churn",
+      "Limited time to execute retention campaigns",
+      "Billing issues causing frustration"
+    ],
+    "current_retention_approach": "Ad hoc phone calls to customers who complain, no predictive system",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Still building trust in data-driven tools; burned by a previous expensive tool that didn\u2019t deliver promised automation.",
+    "hidden_needs": [
+      "Confidence that the tool will reduce manual work",
+      "Straightforward guidance on customer outreach scripts"
+    ],
+    "likely_objections": [
+      "Will this require me to hire additional staff or data experts?",
+      "Is it too soon for a company our size to invest?"
+    ],
+    "buying_trigger": "A demo showing clear, simple next steps and automation that saves me time"
+  },
+  {
+    "id": 33,
+    "name": "Tyrell Jenkins",
+    "title": "Founder",
+    "company_name": "SouthStar Lawn & Pest",
+    "industry": "lawn care",
+    "company_size_employees": 5,
+    "company_annual_revenue": "$550K",
+    "company_age_years": 2,
+    "geography": "Jackson, MS",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Google Sheets"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "60%",
+    "customer_count": 300,
+    "key_pain_points": [
+      "No churn visibility or prediction",
+      "Manually chasing customers wastes time",
+      "Difficulty balancing ops and retention"
+    ],
+    "current_retention_approach": "No formal retention strategy; reactive calls after cancellations",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Just starting up; wary of adding recurring costs but knows he can\u2019t grow without retention improvements.",
+    "hidden_needs": [
+      "A low-friction onboarding experience",
+      "Proof that tool works for very small companies"
+    ],
+    "likely_objections": [
+      "Is this tool really affordable or just a fancy 'nice to have'?",
+      "Will it integrate with my basic workflow?"
+    ],
+    "buying_trigger": "Seeing a streamlined integration with minimal fuss and a trial period to prove value"
+  },
+  {
+    "id": 34,
+    "name": "Susan Kim",
+    "title": "Owner & President",
+    "company_name": "Kim\u2019s Pest Defense",
+    "industry": "pest control",
+    "company_size_employees": 65,
+    "company_annual_revenue": "$9.3M",
+    "company_age_years": 26,
+    "geography": "Boston, MA",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Salesforce",
+      "Zendesk"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "75%",
+    "customer_count": 4200,
+    "key_pain_points": [
+      "Legacy systems lack predictive analytics",
+      "Sales team overwhelmed by manual churn alerts",
+      "Competitive market pressures retention hard"
+    ],
+    "current_retention_approach": "Uses PestPak churn risk scores inconsistently; mostly manual interventions",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Recently took back operational control after CEO left; eager to modernize but wary of complexity.",
+    "hidden_needs": [
+      "Automated retention actions to free up sales",
+      "Competitive benchmarking vs. regional rivals"
+    ],
+    "likely_objections": [
+      "Will this disrupt our current PestPak workflows?",
+      "Can it handle a large customer base reliably?"
+    ],
+    "buying_trigger": "Proof that automation will reduce churn while integrating smoothly with PestPak"
+  },
+  {
+    "id": 35,
+    "name": "Eli Whittaker",
+    "title": "Founder & CEO",
+    "company_name": "Precision Lawn Specialists",
+    "industry": "lawn care",
+    "company_size_employees": 45,
+    "company_annual_revenue": "$5.8M",
+    "company_age_years": 9,
+    "geography": "Denver, CO",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "Trello",
+      "Mailchimp"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "70%",
+    "customer_count": 950,
+    "key_pain_points": [
+      "Churn predictions available but no bandwidth to act on them",
+      "Seasonal customer drop-offs",
+      "Limited marketing team resources"
+    ],
+    "current_retention_approach": "Uses ServiceTitan churn reports but only acts on ~20% flagged customers manually",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Rapid growth over last 3 years; looking for automation to scale retention without adding headcount.",
+    "hidden_needs": [
+      "Automated outreach campaigns",
+      "Easy-to-interpret AI recommendations for retention"
+    ],
+    "likely_objections": [
+      "Will automation truly replicate human outreach quality?",
+      "Is the pricing justified by time saved?"
+    ],
+    "buying_trigger": "Demonstration that automated campaigns increase retention and reduce manual workload significantly"
+  },
+  {
+    "id": 36,
+    "name": "Marilyn Schroeder",
+    "title": "Owner",
+    "company_name": "Schroeder Pest Solutions",
+    "industry": "pest control",
+    "company_size_employees": 3,
+    "company_annual_revenue": "$400K",
+    "company_age_years": 1,
+    "geography": "Rochester, NY",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Google Calendar"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "55%",
+    "customer_count": 180,
+    "key_pain_points": [
+      "No retention system or tools",
+      "Struggling to keep repeat customers",
+      "Limited marketing or sales knowledge"
+    ],
+    "current_retention_approach": "No proactive retention; relies on word-of-mouth and repeat business",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "New to industry; side-business turned full-time; worries about investing in tech she can\u2019t master.",
+    "hidden_needs": [
+      "Simple onboarding and minimal manual data entry",
+      "Clear step-by-step instructions"
+    ],
+    "likely_objections": [
+      "Will I be able to use it without a tech background?",
+      "Can I afford this as a startup?"
+    ],
+    "buying_trigger": "A no-risk pilot showing easy use and tangible churn reductions quickly"
+  },
+  {
+    "id": 37,
+    "name": "Carlos Medina",
+    "title": "Founder & Operator",
+    "company_name": "Medina Lawn Care",
+    "industry": "lawn care",
+    "company_size_employees": 28,
+    "company_annual_revenue": "$3.2M",
+    "company_age_years": 15,
+    "geography": "Miami, FL",
+    "current_crm": "Service Autopilot",
+    "other_tools": [
+      "Constant Contact"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "67%",
+    "customer_count": 750,
+    "key_pain_points": [
+      "Seasonal churn spikes in winter",
+      "Hard to personalize retention outreach at scale",
+      "Limited internal marketing expertise"
+    ],
+    "current_retention_approach": "Seasonal manual email campaigns and calls, with spotty tracking",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Family business transitioning to subscription services; Carlos wants smarter retention as growth plateaus.",
+    "hidden_needs": [
+      "Automated multi-channel campaigns",
+      "Better benchmarking against similar FL lawn care companies"
+    ],
+    "likely_objections": [
+      "Will automated calls annoy customers?",
+      "Can this system adapt to our seasonal business?"
+    ],
+    "buying_trigger": "Seeing a targeted plan that reduces churn through automated, personalized outreach in winter months"
+  },
+  {
+    "id": 38,
+    "name": "Lisa Grant",
+    "title": "CEO & Founder",
+    "company_name": "Summit Pest Management",
+    "industry": "pest control",
+    "company_size_employees": 150,
+    "company_annual_revenue": "$19M",
+    "company_age_years": 30,
+    "geography": "Charlotte, NC",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Tableau",
+      "HubSpot"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "79%",
+    "customer_count": 8500,
+    "key_pain_points": [
+      "Large volume churn data hard to interpret",
+      "Retention campaigns lack personalization",
+      "In-house data team overloaded"
+    ],
+    "current_retention_approach": "Uses FieldRoutes churn scoring with manual team follow-ups, but bandwidth is a bottleneck",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Recently completed PE acquisition; Lisa wants to demonstrate value from tech investments while scaling rapidly.",
+    "hidden_needs": [
+      "End-to-end automated retention workflows",
+      "Enterprise-level integration and support"
+    ],
+    "likely_objections": [
+      "Will integration disrupt existing analytics workflows?",
+      "How secure and compliant is the data handling?"
+    ],
+    "buying_trigger": "A comprehensive demo showing scalability, automation, and ROI with PE-level reporting"
+  },
+  {
+    "id": 39,
+    "name": "Derek O\u2019Connor",
+    "title": "Founder",
+    "company_name": "LawnGuard Services",
+    "industry": "lawn care",
+    "company_size_employees": 18,
+    "company_annual_revenue": "$1.7M",
+    "company_age_years": 5,
+    "geography": "Cleveland, OH",
+    "current_crm": "Real Green",
+    "other_tools": [
+      "Slack",
+      "Google Ads"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "69%",
+    "customer_count": 620,
+    "key_pain_points": [
+      "Lack of clear next steps after churn risk alerts",
+      "Small team with no dedicated marketing",
+      "Service inconsistency leads to complaints"
+    ],
+    "current_retention_approach": "Receives churn risk scores but acts on less than 25% due to bandwidth",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Derek is eager to build a system that can scale retention efficiently without hiring more staff.",
+    "hidden_needs": [
+      "Automated, personalized retention outreach",
+      "Actionable recommendations presented simply"
+    ],
+    "likely_objections": [
+      "Is the automated outreach personalized enough to avoid backlash?",
+      "Will this integrate cleanly with Real Green?"
+    ],
+    "buying_trigger": "Seeing a trial showing clear lift in retention with minimal staff effort"
+  },
+  {
+    "id": 40,
+    "name": "Amy Chen",
+    "title": "Founder & COO",
+    "company_name": "PestAway Experts",
+    "industry": "pest control",
+    "company_size_employees": 10,
+    "company_annual_revenue": "$1.2M",
+    "company_age_years": 3,
+    "geography": "Portland, OR",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "HubSpot CRM",
+      "Twilio"
+    ],
+    "archetype": "overwhelmed_founder",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "74%",
+    "customer_count": 700,
+    "key_pain_points": [
+      "Low bandwidth to act on churn alerts",
+      "Manual outreach does not scale",
+      "Unclear customer segment prioritization"
+    ],
+    "current_retention_approach": "Uses FieldRoutes churn scores but without automation; manual follow-ups only",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Amy is tech-savvy and wants AI-driven automation to free up her limited team\u2019s time.",
+    "hidden_needs": [
+      "Seamless automated outreach multi-channel campaigns",
+      "Insight into the 'why' behind churn signals"
+    ],
+    "likely_objections": [
+      "Will automation deliver the same personal touch?",
+      "Are there hidden costs beyond base subscription?"
+    ],
+    "buying_trigger": "Seeing a package that automates outreach fully with proven churn reduction metrics"
+  },
+  {
+    "id": 41,
+    "name": "Kara Whitman",
+    "title": "Founder & CEO",
+    "company_name": "GreenLawn Solutions",
+    "industry": "Lawn Care",
+    "company_size_employees": 18,
+    "company_annual_revenue": "$1.8M",
+    "company_age_years": 6,
+    "geography": "Raleigh, NC",
+    "current_crm": "Jobber",
+    "other_tools": [
+      "Mailchimp",
+      "Zapier"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "70%",
+    "customer_count": 600,
+    "key_pain_points": [
+      "High churn due to seasonal cancellations",
+      "Limited bandwidth for manual outreach",
+      "Inconsistent tech adoption across team"
+    ],
+    "current_retention_approach": "Manual tracking of churn risks in Jobber and sporadic email campaigns",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Scaling rapidly with subscription model, Kara built custom workflows but lacks fully automated outreach.",
+    "hidden_needs": [
+      "Seamless integration with Jobber and marketing tools",
+      "Automated multi-channel outreach to keep customers engaged year-round"
+    ],
+    "likely_objections": [
+      "Does this truly automate outreach or just flag customers?",
+      "We already have partial automation via Zapier workflows"
+    ],
+    "buying_trigger": "A proven autopilot system that triggers personalized campaigns automatically without manual intervention"
+  },
+  {
+    "id": 42,
+    "name": "Miguel Estrada",
+    "title": "Operations Manager",
+    "company_name": "Eagle Pest Solutions",
+    "industry": "Pest Control",
+    "company_size_employees": 75,
+    "company_annual_revenue": "$9.5M",
+    "company_age_years": 12,
+    "geography": "Phoenix, AZ",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "HubSpot",
+      "Dialpad"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "low",
+    "current_retention_rate": "78%",
+    "customer_count": 4000,
+    "key_pain_points": [
+      "Retention team overwhelmed with churn alerts",
+      "Lack of automated follow-up campaigns",
+      "Inability to connect CRM churn scores with marketing sequences"
+    ],
+    "current_retention_approach": "Manual assignment of churn risk customers to agents who prioritize calls",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Recently promoted and eager to implement tech that scales retention without adding headcount.",
+    "hidden_needs": [
+      "Direct integration with HubSpot for campaign triggers",
+      "Automated outbound calls to reduce manual agent workload"
+    ],
+    "likely_objections": [
+      "We have a partial in-house system that flags churn but no outreach layer",
+      "How well does this integrate with HubSpot and call tools?"
+    ],
+    "buying_trigger": "Integration with HubSpot and a reliable autopilot outreach layer that frees up agents"
+  },
+  {
+    "id": 43,
+    "name": "Lena Huang",
+    "title": "Owner",
+    "company_name": "Pine Valley Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 7,
+    "company_annual_revenue": "$850K",
+    "company_age_years": 4,
+    "geography": "Portland, OR",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Google Forms",
+      "Twilio"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "high",
+    "current_retention_rate": "65%",
+    "customer_count": 550,
+    "key_pain_points": [
+      "No systematic churn identification",
+      "Limited bandwidth to do manual outreach",
+      "Price competition from smaller DIY operators"
+    ],
+    "current_retention_approach": "Manual tracking in spreadsheets, occasional SMS blasts via Twilio",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Considering expansion but cash-flow constrained after recent investment in new equipment.",
+    "hidden_needs": [
+      "Affordable automation that reduces manual tracking",
+      "Simple integration despite lack of formal CRM"
+    ],
+    "likely_objections": [
+      "Is the cost justified for a small team without CRM?",
+      "How quickly can this be implemented given our manual systems?"
+    ],
+    "buying_trigger": "Affordable, easy-to-deploy autopilot that works without complex CRM integration"
+  },
+  {
+    "id": 44,
+    "name": "Derek Mitchell",
+    "title": "VP of Customer Success",
+    "company_name": "EcoGuard Pest Solutions",
+    "industry": "Pest Control",
+    "company_size_employees": 180,
+    "company_annual_revenue": "$22M",
+    "company_age_years": 20,
+    "geography": "Philadelphia, PA",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Salesforce",
+      "Marketo"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "84%",
+    "customer_count": 12000,
+    "key_pain_points": [
+      "Churn risk alerts are disconnected from campaign tools",
+      "High reliance on manual intervention for retention",
+      "Demand for scalability in customer outreach"
+    ],
+    "current_retention_approach": "Risk flagged in PestPak, campaigns managed in Marketo with manual syncing",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Oversaw failed rollout of previous analytics tool; wary of vendor promises on automation.",
+    "hidden_needs": [
+      "Bulletproof integration with PestPak and Marketo to avoid data silos",
+      "Reliable set-and-forget campaigns with robust reporting"
+    ],
+    "likely_objections": [
+      "Does it really automate outreach or just add complexity?",
+      "We already have complex systems; how to prevent more fragmentation?"
+    ],
+    "buying_trigger": "Proof of end-to-end automation that reduces manual steps and integrates flawlessly"
+  },
+  {
+    "id": 45,
+    "name": "Jamal Rivers",
+    "title": "Founder & President",
+    "company_name": "Summit Pest & Lawn",
+    "industry": "Pest Control",
+    "company_size_employees": 25,
+    "company_annual_revenue": "$3.2M",
+    "company_age_years": 3,
+    "geography": "Denver, CO",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "ActiveCampaign",
+      "RingCentral"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "72%",
+    "customer_count": 1700,
+    "key_pain_points": [
+      "Churn prediction available but no automated follow-up",
+      "Small team with no bandwidth to manually act on flags",
+      "Inconsistent customer communications"
+    ],
+    "current_retention_approach": "Relies on FieldRoutes churn scores, manual email/SMS outreach via ActiveCampaign",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Rapidly growing startup; built custom automations but lacks integrated AI-driven outreach.",
+    "hidden_needs": [
+      "Turnkey automation that syncs with ActiveCampaign triggers",
+      "AI-driven outreach that blends voice and SMS for better engagement"
+    ],
+    "likely_objections": [
+      "How different is this from what we already built in-house?",
+      "What is the ROI given current churn rates?"
+    ],
+    "buying_trigger": "Fully automated retention campaigns that plug into existing tools and show measurable lift"
+  },
+  {
+    "id": 46,
+    "name": "Susan Tran",
+    "title": "General Manager",
+    "company_name": "Lush Lawn Experts",
+    "industry": "Lawn Care",
+    "company_size_employees": 45,
+    "company_annual_revenue": "$7.8M",
+    "company_age_years": 8,
+    "geography": "Minneapolis, MN",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "HubSpot",
+      "Google Analytics"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "76%",
+    "customer_count": 3500,
+    "key_pain_points": [
+      "Underutilization of churn flags due to limited outreach bandwidth",
+      "Fragmented customer communication channels",
+      "Desire for deeper insights tied to automated workflows"
+    ],
+    "current_retention_approach": "Churn scoring in ServiceTitan, manual follow-up emails and calls by client services",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Recently took over GM role; wants to modernize retention with automation but wary of complexity.",
+    "hidden_needs": [
+      "Smooth integration into existing ServiceTitan workflows",
+      "Actionable automation reducing human error and workload"
+    ],
+    "likely_objections": [
+      "Will this cause additional workflow disruptions?",
+      "Is ongoing support adequate for mid-size companies?"
+    ],
+    "buying_trigger": "Reliable set-and-forget system that integrates natively with ServiceTitan and campaign tools"
+  },
+  {
+    "id": 47,
+    "name": "Ravi Patel",
+    "title": "Owner-Operator",
+    "company_name": "Precision Pest Control",
+    "industry": "Pest Control",
+    "company_size_employees": 4,
+    "company_annual_revenue": "$450K",
+    "company_age_years": 2,
+    "geography": "Atlanta, GA",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "QuickBooks"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "60%",
+    "customer_count": 300,
+    "key_pain_points": [
+      "No churn prediction or automation",
+      "Manual customer tracking is error-prone",
+      "Lack of marketing automation experience"
+    ],
+    "current_retention_approach": "Personal calls and manual follow-up, no software-based churn insights",
+    "disposition_toward_new_tools": "resistant",
+    "personal_context": "Just started; burned by expensive CRM trials; prefers simple, low-cost solutions.",
+    "hidden_needs": [
+      "Simple onboarding with minimal complexity",
+      "Low monthly cost with clear value demonstration"
+    ],
+    "likely_objections": [
+      "Too expensive for my small operation",
+      "I don't have time to learn complex new tools"
+    ],
+    "buying_trigger": "A low-cost, no-fuss autopilot system proven to increase retention for small operators"
+  },
+  {
+    "id": 48,
+    "name": "Emily Jenkins",
+    "title": "Director of Sales & Retention",
+    "company_name": "Capital Pest Services",
+    "industry": "Pest Control",
+    "company_size_employees": 135,
+    "company_annual_revenue": "$18M",
+    "company_age_years": 25,
+    "geography": "Washington, D.C.",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Salesforce",
+      "Outreach.io"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "82%",
+    "customer_count": 9000,
+    "key_pain_points": [
+      "Existing churn system lacks automated campaign execution",
+      "High churn in specific residential segments",
+      "Need for AI-driven prioritization of outreach"
+    ],
+    "current_retention_approach": "PestPak churn scores manually exported to Salesforce and Outreach for campaigns",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Company recently acquired by PE firm; Emily pressured to improve retention via automation.",
+    "hidden_needs": [
+      "Turnkey automated integration with PestPak and Salesforce",
+      "Actionable AI insights that optimize sales reps\u2019 time"
+    ],
+    "likely_objections": [
+      "Is this better than customizing our Salesforce Outreach workflows?",
+      "Can it handle large-scale data and complex customer segmentation?"
+    ],
+    "buying_trigger": "An AI-powered autopilot that reduces manual data transfers and scales outreach campaigns effortlessly"
+  },
+  {
+    "id": 49,
+    "name": "Tommy Lewis",
+    "title": "Chief Technology Officer",
+    "company_name": "NextGen Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 60,
+    "company_annual_revenue": "$12M",
+    "company_age_years": 10,
+    "geography": "Salt Lake City, UT",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "HubSpot",
+      "Twilio"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "74%",
+    "customer_count": 3000,
+    "key_pain_points": [
+      "Manual churn intervention limits scalability",
+      "Need for personalization at scale in drip campaigns",
+      "Integration gaps between CRM and communication platforms"
+    ],
+    "current_retention_approach": "Manual churn flag review, campaigns via HubSpot with limited automation",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Built many internal automations but seeks a robust ML churn prediction and autopilot solution.",
+    "hidden_needs": [
+      "Granular control over trigger rules and campaign flows",
+      "AI voice outreach integrated with SMS and email for multi-touch"
+    ],
+    "likely_objections": [
+      "We have homegrown partial solutions already",
+      "How flexible is the automation logic for custom workflows?"
+    ],
+    "buying_trigger": "An ML-powered, fully customizable autopilot system that integrates deeply with ServiceTitan and HubSpot"
+  },
+  {
+    "id": 50,
+    "name": "Helen Martinez",
+    "title": "CEO",
+    "company_name": "Allied Pest & Lawn Services",
+    "industry": "Pest Control",
+    "company_size_employees": 90,
+    "company_annual_revenue": "$14.3M",
+    "company_age_years": 18,
+    "geography": "Charlotte, NC",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Mailchimp",
+      "CallRail"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "73%",
+    "customer_count": 8000,
+    "key_pain_points": [
+      "High churn in highly competitive market",
+      "Retention campaigns currently reactive and manual",
+      "Difficulty linking churn data to outreach performance"
+    ],
+    "current_retention_approach": "FieldRoutes churn dashboards + manual Mailchimp campaigns and phone calls",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Company mature but revenue plateauing; Helen exploring tech to reignite growth and reduce churn.",
+    "hidden_needs": [
+      "Automated retention campaigns that deliver measurable ROI quickly",
+      "Simplified reporting to track impact on churn reduction"
+    ],
+    "likely_objections": [
+      "Can this deliver results fast enough for a mature company?",
+      "Will this add complexity to already busy teams?"
+    ],
+    "buying_trigger": "Proven autopilot retention system with clear ROI metrics and easy integration with FieldRoutes"
+  },
+  {
+    "id": 51,
+    "name": "Cassandra Lee",
+    "title": "Operations Manager",
+    "company_name": "GreenGlow Lawn Care",
+    "industry": "lawn care",
+    "company_size_employees": 25,
+    "company_annual_revenue": "$3.5M",
+    "company_age_years": 7,
+    "geography": "Raleigh, NC",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "HubSpot",
+      "Mailchimp"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "70%",
+    "customer_count": 850,
+    "key_pain_points": [
+      "High churn due to seasonal cancellations",
+      "Manual outreach is resource-intensive",
+      "Difficulty coordinating retention campaigns across multiple platforms"
+    ],
+    "current_retention_approach": "Manual churn tracking via CRM reports and sporadic email campaigns",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Recently promoted to Operations Manager; wants to prove the value of automation and reduce team workload.",
+    "hidden_needs": [
+      "A fully integrated system that eliminates manual intervention",
+      "Clear ROI demonstration to justify budget approval"
+    ],
+    "likely_objections": [
+      "Does this tool integrate with our existing campaign stack without disrupting workflows?",
+      "We already have partial automations, is this redundant?"
+    ],
+    "buying_trigger": "A seamless automation that triggers multichannel outreach without manual steps."
+  },
+  {
+    "id": 52,
+    "name": "Miguel Ramirez",
+    "title": "Founder & CEO",
+    "company_name": "Southwest Exterminators",
+    "industry": "pest control",
+    "company_size_employees": 12,
+    "company_annual_revenue": "$1.8M",
+    "company_age_years": 5,
+    "geography": "Phoenix, AZ",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Slack",
+      "Zoho Campaigns"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "low",
+    "current_retention_rate": "72%",
+    "customer_count": 600,
+    "key_pain_points": [
+      "Limited internal staff bandwidth to follow up on churn signals",
+      "Lack of automated outreach campaigns to at-risk clients",
+      "Difficulty interpreting churn risk scores into actionable steps"
+    ],
+    "current_retention_approach": "Using FieldRoutes churn scores but relies on calls by sales reps",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Burned by an expensive churn tool that only provided dashboards, hungry for a set-and-forget system.",
+    "hidden_needs": [
+      "Hands-off automation that guarantees outreach execution",
+      "Integration with SMS and voice call campaigns"
+    ],
+    "likely_objections": [
+      "Is this just another dashboard or does it actually do the outreach?",
+      "How reliable is the AI voice call feature?"
+    ],
+    "buying_trigger": "Automated multichannel outreach triggered directly from churn risk detection."
+  },
+  {
+    "id": 53,
+    "name": "Bethany Clarke",
+    "title": "VP of Customer Success",
+    "company_name": "Pine Valley Pest Management",
+    "industry": "pest control",
+    "company_size_employees": 130,
+    "company_annual_revenue": "$18M",
+    "company_age_years": 22,
+    "geography": "Pittsburgh, PA",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Salesforce",
+      "Marketo"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "78%",
+    "customer_count": 12000,
+    "key_pain_points": [
+      "Current churn risk scores are not actioned promptly",
+      "Existing internal tooling is complex and siloed",
+      "Need for scalable, automated retention outreach due to expanding customer base"
+    ],
+    "current_retention_approach": "Internal churn analytics with manual campaign execution via marketing tools",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Facing pressure from PE owners to improve retention KPIs; evaluating multiple automation vendors.",
+    "hidden_needs": [
+      "A tool that integrates deeply with existing marketing automation",
+      "Reporting that clearly ties retention efforts to revenue impact"
+    ],
+    "likely_objections": [
+      "We have a custom-built solution; why switch?",
+      "Will your system disrupt our current marketing workflows?"
+    ],
+    "buying_trigger": "Demonstrated seamless integration with PestPak and marketing tools enabling true autopilot retention."
+  },
+  {
+    "id": 54,
+    "name": "Tommy Nguyen",
+    "title": "Owner",
+    "company_name": "EcoLawn Services",
+    "industry": "lawn care",
+    "company_size_employees": 8,
+    "company_annual_revenue": "$850K",
+    "company_age_years": 3,
+    "geography": "Seattle, WA",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Google Workspace"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "high",
+    "current_retention_rate": "65%",
+    "customer_count": 450,
+    "key_pain_points": [
+      "No systematic churn prediction or retention workflow",
+      "Manual follow-ups miss many at-risk customers",
+      "Struggles to justify automation investments with tight margin"
+    ],
+    "current_retention_approach": "Reactive phone calls after customer complaints or cancellations",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Bootstrapped solo owner wary of monthly SaaS costs but realizing manual approach is unsustainable.",
+    "hidden_needs": [
+      "Affordable, low-maintenance automation that reduces manual work",
+      "Simple integration without CRM migration"
+    ],
+    "likely_objections": [
+      "I don\u2019t want to pay for a tool that I won\u2019t fully use",
+      "Our customer base is too small for complex automation"
+    ],
+    "buying_trigger": "A low-cost, easy-to-adopt autopilot retention workflow compatible with spreadsheets."
+  },
+  {
+    "id": 55,
+    "name": "Jerome Stanton",
+    "title": "CTO",
+    "company_name": "BigNest Pest Solutions",
+    "industry": "pest control",
+    "company_size_employees": 75,
+    "company_annual_revenue": "$10M",
+    "company_age_years": 15,
+    "geography": "Denver, CO",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Tableau",
+      "Custom Python scripts"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "77%",
+    "customer_count": 4500,
+    "key_pain_points": [
+      "Internal churn prediction models require heavy data science resources",
+      "Automations are fragmented and limited in scale",
+      "Silos between ops and marketing hinder retention execution"
+    ],
+    "current_retention_approach": "Custom-built churn analytics with manual campaign triggers",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Tech-savvy executive seeking to augment internal ML with a plug-and-play autopilot system.",
+    "hidden_needs": [
+      "Flexible API integrations with in-house tools",
+      "Transparency into ML models and explainability"
+    ],
+    "likely_objections": [
+      "How does this compare to our advanced in-house solution?",
+      "Is your AI customizable or a black box?"
+    ],
+    "buying_trigger": "A robust autopilot outreach layer that integrates with and enhances existing models."
+  },
+  {
+    "id": 56,
+    "name": "Darla Simmons",
+    "title": "Director of Operations",
+    "company_name": "BrightWay Services",
+    "industry": "lawn care",
+    "company_size_employees": 45,
+    "company_annual_revenue": "$7.2M",
+    "company_age_years": 12,
+    "geography": "Minneapolis, MN",
+    "current_crm": "Jobber",
+    "other_tools": [
+      "Mailchimp",
+      "Twilio"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "68%",
+    "customer_count": 3200,
+    "key_pain_points": [
+      "Churn predictions exist but low follow-through on campaigns",
+      "Limited automation in outreach requiring manual staff effort",
+      "Difficulty segmenting customers for personalized retention"
+    ],
+    "current_retention_approach": "Use CRM churn flags with manual email and SMS campaigns",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Company recently acquired by PE; tasked with elevating retention automation.",
+    "hidden_needs": [
+      "Automated personalized multi-channel campaigns",
+      "Easy-to-understand reporting for execs"
+    ],
+    "likely_objections": [
+      "Will it integrate with Jobber and Twilio without complex setup?",
+      "Does it offer true automation or just alerts?"
+    ],
+    "buying_trigger": "An actionable AI-driven outreach engine that removes manual steps."
+  },
+  {
+    "id": 57,
+    "name": "Frankie Delgado",
+    "title": "Owner-Operator",
+    "company_name": "Delgado Pest Control",
+    "industry": "pest control",
+    "company_size_employees": 3,
+    "company_annual_revenue": "$400K",
+    "company_age_years": 2,
+    "geography": "Orlando, FL",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "60%",
+    "customer_count": 150,
+    "key_pain_points": [
+      "No formal churn tracking or prediction",
+      "Personalized retention difficult due to time constraints",
+      "Limited budget for automation tools"
+    ],
+    "current_retention_approach": "Relies on personal follow-up calls when time allows",
+    "disposition_toward_new_tools": "resistant",
+    "personal_context": "Just started business after layoff; skeptical about paying monthly for tools he doesn\u2019t fully understand.",
+    "hidden_needs": [
+      "Simple 'set and forget' automation with minimal setup",
+      "Affordable pricing that scales with growth"
+    ],
+    "likely_objections": [
+      "I can\u2019t afford expensive software for a small business",
+      "Will this actually save me time or add complexity?"
+    ],
+    "buying_trigger": "A cost-effective autopilot solution that requires zero daily management."
+  },
+  {
+    "id": 58,
+    "name": "Janice Abbott",
+    "title": "Head of Customer Retention",
+    "company_name": "Northridge Pest Solutions",
+    "industry": "pest control",
+    "company_size_employees": 60,
+    "company_annual_revenue": "$13M",
+    "company_age_years": 18,
+    "geography": "Albany, NY",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "HubSpot",
+      "Zapier"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "80%",
+    "customer_count": 8000,
+    "key_pain_points": [
+      "Retention team overloaded, can\u2019t manually call all at-risk accounts",
+      "Current tools lack easy automation links to outreach platforms",
+      "Difficulty proving incremental lift from churn prevention efforts"
+    ],
+    "current_retention_approach": "Manual prioritization of top risk customers with CRM and marketing workflows",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Hired to modernize retention using automation and AI; looking for dependable autopilot features.",
+    "hidden_needs": [
+      "Confidence that automation won\u2019t alienate customers",
+      "Customizable outreach messaging templates"
+    ],
+    "likely_objections": [
+      "Can this scale without losing personalization?",
+      "How easily can we control the pacing of outreach campaigns?"
+    ],
+    "buying_trigger": "An automated outreach tool with granular controls and reporting proving impact."
+  },
+  {
+    "id": 59,
+    "name": "Leonard Kim",
+    "title": "Founder & CTO",
+    "company_name": "TrueGreen Lawn Experts",
+    "industry": "lawn care",
+    "company_size_employees": 18,
+    "company_annual_revenue": "$1.7M",
+    "company_age_years": 4,
+    "geography": "San Jose, CA",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "Segment",
+      "Intercom",
+      "Custom BI"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "72%",
+    "customer_count": 900,
+    "key_pain_points": [
+      "Complex data pipelines but no automated retention campaigns",
+      "Manual handoff between churn prediction and outreach teams",
+      "Need for hands-off, scalable retention workflows"
+    ],
+    "current_retention_approach": "Data science churn models but manual campaign execution",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Built much in-house but open to outsourcing automation to save engineering time.",
+    "hidden_needs": [
+      "Flexibility to integrate with existing data infrastructure",
+      "Clear SLA and support for mission-critical system"
+    ],
+    "likely_objections": [
+      "How customizable is the automation logic?",
+      "Will this create data silos or sync cleanly with ServiceTitan?"
+    ],
+    "buying_trigger": "A turnkey autopilot retention engine that integrates as an extension to existing stack."
+  },
+  {
+    "id": 60,
+    "name": "Gloria Mendoza",
+    "title": "COO",
+    "company_name": "Evergreen Pest & Lawn",
+    "industry": "pest control / lawn care hybrid",
+    "company_size_employees": 95,
+    "company_annual_revenue": "$13.8M",
+    "company_age_years": 10,
+    "geography": "Houston, TX",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Salesforce Marketing Cloud",
+      "Twilio",
+      "Slack"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "73%",
+    "customer_count": 9500,
+    "key_pain_points": [
+      "Multiple service lines increase churn complexity",
+      "Retention efforts fragmented between pest and lawn teams",
+      "Need for unified automated retention to reduce costs and improve customer lifetime value"
+    ],
+    "current_retention_approach": "Separate churn tracking and manual campaigns by vertical",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Recently hired to streamline operations post-growth spike; pushing for integration and automation.",
+    "hidden_needs": [
+      "Cross-vertical churn insights and action plans",
+      "Automation that reduces interdepartmental handoffs"
+    ],
+    "likely_objections": [
+      "Can your solution handle complex multi-service customer data?",
+      "Is the automation customizable per vertical?"
+    ],
+    "buying_trigger": "An integrated autopilot churn mitigation platform supporting hybrid service models."
+  },
+  {
+    "id": 61,
+    "name": "Marcus Ellington",
+    "title": "Founder & CEO",
+    "company_name": "GreenFix Lawn Care",
+    "industry": "lawn care",
+    "company_size_employees": 25,
+    "company_annual_revenue": "$3.2M",
+    "company_age_years": 6,
+    "geography": "Charlotte, NC",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "HubSpot",
+      "Mailchimp"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "70%",
+    "customer_count": 800,
+    "key_pain_points": [
+      "High churn during winter season",
+      "Manual outreach taking too much time",
+      "No automated prediction of churn risk"
+    ],
+    "current_retention_approach": "Weekly manual review of at-risk customers with spreadsheets and email campaigns",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Marcus recently scaled his company quickly from a 5-person startup and is eager to automate retention but burned by a previous platform promising automations that didn\u2019t deliver.",
+    "hidden_needs": [
+      "Seamless integration with existing marketing tools",
+      "Transparency in AI decision-making to trust automation"
+    ],
+    "likely_objections": [
+      "Does it integrate well with ServiceTitan and HubSpot workflows?",
+      "We already run email drip campaigns; how is this better?"
+    ],
+    "buying_trigger": "Full automation of outreach actions directly integrated with ServiceTitan and HubSpot with clear ROI reporting"
+  },
+  {
+    "id": 62,
+    "name": "Lisa Tran",
+    "title": "Operations Manager",
+    "company_name": "Precision Pest Solutions",
+    "industry": "pest control",
+    "company_size_employees": 12,
+    "company_annual_revenue": "$1.8M",
+    "company_age_years": 4,
+    "geography": "Portland, OR",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Slack"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "low",
+    "current_retention_rate": "75%",
+    "customer_count": 600,
+    "key_pain_points": [
+      "Limited staff bandwidth to call all flagged churn risks",
+      "Fragmented communication between field techs and office",
+      "No automated customer engagement beyond basic emails"
+    ],
+    "current_retention_approach": "Manual outreach after churn risk reports, mostly cold calling and follow-up emails",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Lisa joined recently to professionalize operations and push automated workflows but struggles with team adoption and lack of time to manually act on churn data.",
+    "hidden_needs": [
+      "Automated multichannel outreach (email/SMS/voice) without needing more staff",
+      "Detailed but digestible reports for team meetings"
+    ],
+    "likely_objections": [
+      "Will the AI outreach feel impersonal to our customers?",
+      "Can this replace our current manual calling without alienating clients?"
+    ],
+    "buying_trigger": "A truly \u2018set-and-forget\u2019 automated outreach system that frees up the team without losing customer relationship quality"
+  },
+  {
+    "id": 63,
+    "name": "Jamal Rodriguez",
+    "title": "Owner-Operator",
+    "company_name": "Rodriguez Lawn & Pest",
+    "industry": "lawn care and pest control",
+    "company_size_employees": 4,
+    "company_annual_revenue": "$600K",
+    "company_age_years": 2,
+    "geography": "San Antonio, TX",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "60%",
+    "customer_count": 350,
+    "key_pain_points": [
+      "High churn due to inconsistent follow-up",
+      "No formal churn tracking or predictive insight",
+      "Limited marketing automation knowledge"
+    ],
+    "current_retention_approach": "Ad hoc calls and SMS messages after noticing missed payments or complaints",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Jamal is overwhelmed juggling fieldwork and office tasks, burned by a previous expensive software that was complicated and underused.",
+    "hidden_needs": [
+      "Simple, affordable automation with minimal setup",
+      "Clear proof that automation will save time and increase revenue"
+    ],
+    "likely_objections": [
+      "Can I really afford the monthly cost for a small business?",
+      "Is it easy enough for me and my small team to use without tech support?"
+    ],
+    "buying_trigger": "An entry-level plan with straightforward automation that works out-of-the-box and demonstrably reduces churn"
+  },
+  {
+    "id": 65,
+    "name": "Emily Chen",
+    "title": "Co-Founder & CTO",
+    "company_name": "EcoLawn Care Solutions",
+    "industry": "lawn care",
+    "company_size_employees": 18,
+    "company_annual_revenue": "$1.5M",
+    "company_age_years": 3,
+    "geography": "Seattle, WA",
+    "current_crm": "Jobber",
+    "other_tools": [
+      "Zapier",
+      "Google Workspace"
+    ],
+    "archetype": "automation_first_buyer",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "72%",
+    "customer_count": 700,
+    "key_pain_points": [
+      "Limited bandwidth to manually manage churn flagged accounts",
+      "Need fully automated, multi-channel outreach triggered by real-time data",
+      "Current churn notifications are too generic and not actionable"
+    ],
+    "current_retention_approach": "Alerts sent to account managers who prioritize by intuition, resulting in low outreach rates",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Emily built several in-house automations but wants a turnkey machine learning solution to scale retention efforts rapidly without adding headcount.",
+    "hidden_needs": [
+      "API access for custom integrations and data exports",
+      "Configurable drip campaigns tailored by customer segment"
+    ],
+    "likely_objections": [
+      "Does it allow me to customize outreach workflows?",
+      "How does it compare with my current prototype automation?"
+    ],
+    "buying_trigger": "A plug-and-play AI tool that automates end-to-end outreach with flexibility to customize triggers and campaigns"
+  },
+  {
+    "id": 65,
+    "name": "Jenna Morales",
+    "title": "Director of Operations",
+    "company_name": "GreenLawn Pros",
+    "industry": "Lawn Care",
+    "company_size_employees": 35,
+    "company_annual_revenue": "$4.5M",
+    "company_age_years": 12,
+    "geography": "Raleigh, NC",
+    "current_crm": "Jobber",
+    "other_tools": [
+      "QuickBooks",
+      "Mailchimp"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "72%",
+    "customer_count": 600,
+    "key_pain_points": [
+      "High churn due to seasonal cancellations",
+      "Manual retention follow-ups take too much time",
+      "Lack of predictive insights to prioritize outreach"
+    ],
+    "current_retention_approach": "Monthly manual review of at-risk customers with email reminders sent by sales reps",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Recently promoted to operations after company doubled in size; balancing legacy processes with new tech adoption",
+    "hidden_needs": [
+      "Wants easy integration without disrupting current workflows",
+      "Needs clear ROI to justify expense to CEO"
+    ],
+    "likely_objections": [
+      "How does this differ from Jobber\u2019s basic churn reports?",
+      "Can we get flexible pricing since we\u2019ll only use partial features?"
+    ],
+    "buying_trigger": "A risk score plus automated outreach that demonstrably reduces churn with minimal manual work"
+  },
+  {
+    "id": 66,
+    "name": "Raj Patel",
+    "title": "VP of Customer Success",
+    "company_name": "Ace Pest Solutions",
+    "industry": "Pest Control",
+    "company_size_employees": 120,
+    "company_annual_revenue": "$18M",
+    "company_age_years": 25,
+    "geography": "Atlanta, GA",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Zendesk",
+      "Salesforce"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "79%",
+    "customer_count": 4200,
+    "key_pain_points": [
+      "Existing churn scores lack actionable insights",
+      "Retention team overwhelmed and under-resourced",
+      "Contract renewals frequently missed"
+    ],
+    "current_retention_approach": "Use in-house dashboards and alerts; retention campaigns done manually by team",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Joined from SaaS industry; pushing for data-driven tools to scale retention",
+    "hidden_needs": [
+      "Needs scalable automated outreach to offload team",
+      "Wants proof of AI model accuracy before full rollout"
+    ],
+    "likely_objections": [
+      "Your churn prediction isn\u2019t much better than our internal system",
+      "We need a pilot and trial period before committing"
+    ],
+    "buying_trigger": "A clear demo showing superior predictive accuracy and automated campaigns saving team hours"
+  },
+  {
+    "id": 67,
+    "name": "Lisa Nguyen",
+    "title": "Owner / Founder",
+    "company_name": "FreshCut Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 8,
+    "company_annual_revenue": "$750K",
+    "company_age_years": 4,
+    "geography": "Portland, OR",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Google Calendar",
+      "Trello"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "68%",
+    "customer_count": 350,
+    "key_pain_points": [
+      "No systematic way to track churn risk",
+      "Time-consuming manual customer management",
+      "Limited budget for new software"
+    ],
+    "current_retention_approach": "Relies on personal relationships and reactive customer calls",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Balancing time between fieldwork and admin; burnt by overhyped tools that didn\u2019t help",
+    "hidden_needs": [
+      "Needs very simple, no-frills solution",
+      "Wants assurance of incremental revenue gains"
+    ],
+    "likely_objections": [
+      "Too expensive for our small size",
+      "Won\u2019t use automation; prefer personal touch"
+    ],
+    "buying_trigger": "A low-cost, easy-to-install solution with clear, simple ROI metrics"
+  },
+  {
+    "id": 68,
+    "name": "Tom Sanders",
+    "title": "Director of Analytics",
+    "company_name": "Elite Pest Control Services",
+    "industry": "Pest Control",
+    "company_size_employees": 230,
+    "company_annual_revenue": "$30M",
+    "company_age_years": 30,
+    "geography": "Philadelphia, PA",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Tableau",
+      "Python scripts"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "83%",
+    "customer_count": 9000,
+    "key_pain_points": [
+      "Internal churn models require heavy manual data manipulation",
+      "Difficulty integrating retention campaigns across platforms",
+      "Sales team ignores churn alerts due to alert fatigue"
+    ],
+    "current_retention_approach": "Custom-built churn prediction and manual sales follow-up",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Looking to offload manual data work; pressure from executives for streamlined solutions",
+    "hidden_needs": [
+      "Wants flexible APIs and export options for integration",
+      "Needs to reduce internal friction between teams"
+    ],
+    "likely_objections": [
+      "Why pay for a product when we have our own model?",
+      "Can your system handle complex datasets and exports?"
+    ],
+    "buying_trigger": "Demonstration of seamless integration and automation reducing manual workload"
+  },
+  {
+    "id": 69,
+    "name": "Maria Torres",
+    "title": "Operations Manager",
+    "company_name": "Sunshine Lawn & Pest",
+    "industry": "Pest Control",
+    "company_size_employees": 18,
+    "company_annual_revenue": "$1.8M",
+    "company_age_years": 7,
+    "geography": "Tampa, FL",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Slack"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "high",
+    "current_retention_rate": "70%",
+    "customer_count": 900,
+    "key_pain_points": [
+      "Low team bandwidth to act on churn alerts",
+      "Difficulty tracking effectiveness of retention campaigns",
+      "Service quality inconsistencies cause dissatisfaction"
+    ],
+    "current_retention_approach": "Manual customer calls and some email outreach based on CRM churn predictions",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Recently inherited retention responsibilities; eager to prove impact but constrained by budget",
+    "hidden_needs": [
+      "Needs automated follow-ups to reduce team workload",
+      "Wants measurable success KPIs for retention"
+    ],
+    "likely_objections": [
+      "Can\u2019t justify higher monthly spend without clear success metrics",
+      "How does this fit with FieldRoutes natively?"
+    ],
+    "buying_trigger": "Automated outreach layer that shows measurable lift in retention without added headcount"
+  },
+  {
+    "id": 70,
+    "name": "Derek Collins",
+    "title": "General Manager",
+    "company_name": "Evergreen Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 60,
+    "company_annual_revenue": "$9M",
+    "company_age_years": 18,
+    "geography": "Denver, CO",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "Google Workspace",
+      "HubSpot CRM"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "74%",
+    "customer_count": 1200,
+    "key_pain_points": [
+      "Retention efforts spread across several disconnected platforms",
+      "Churn risk scores exist but no automated follow-ups",
+      "Difficulty prioritizing outreach with limited staff"
+    ],
+    "current_retention_approach": "Manual prioritization using ServiceTitan reports; personal emails and calls",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Company recently restructured; wants to modernize retention without ballooning costs",
+    "hidden_needs": [
+      "Needs unified solution integrating CRM and outreach",
+      "Wants to justify spend via improved renewal rates"
+    ],
+    "likely_objections": [
+      "Why pay extra when we have basic churn scores in ServiceTitan?",
+      "Can we trial automated campaigns before buying?"
+    ],
+    "buying_trigger": "Automated campaigns integrated with ServiceTitan that prove ROI in first 90 days"
+  },
+  {
+    "id": 71,
+    "name": "Jamal Owens",
+    "title": "Founder & CEO",
+    "company_name": "BugZero Pest Control",
+    "industry": "Pest Control",
+    "company_size_employees": 3,
+    "company_annual_revenue": "$300K",
+    "company_age_years": 2,
+    "geography": "Birmingham, AL",
+    "current_crm": "GorillaDesk",
+    "other_tools": [],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "65%",
+    "customer_count": 150,
+    "key_pain_points": [
+      "No formal churn tracking or prediction",
+      "Limited time to execute retention outreach",
+      "Budget constraints as a young startup"
+    ],
+    "current_retention_approach": "Personal calls and relationship building",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Just launched post-pandemic; wary of paying for complex tools that don\u2019t fit startup pace",
+    "hidden_needs": [
+      "Requires simple dashboard and alerts",
+      "Needs flexible month-to-month pricing"
+    ],
+    "likely_objections": [
+      "My CRM has basics, why add more cost?",
+      "Can I cancel anytime if it doesn\u2019t help?"
+    ],
+    "buying_trigger": "Affordable, no-commitment trial proving churn reduction for a small team"
+  },
+  {
+    "id": 72,
+    "name": "Elena Foster",
+    "title": "Senior Product Manager",
+    "company_name": "Summit Pest Control",
+    "industry": "Pest Control",
+    "company_size_employees": 85,
+    "company_annual_revenue": "$12M",
+    "company_age_years": 15,
+    "geography": "Seattle, WA",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Salesforce",
+      "Zendesk"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "77%",
+    "customer_count": 3400,
+    "key_pain_points": [
+      "Retention team acts on fewer than 20% of churn alerts",
+      "Difficulty scaling personalized outreach",
+      "Need to demonstrate consistent ROI to executives"
+    ],
+    "current_retention_approach": "Manual outreach based on churn alerts; inconsistent follow-through",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Recently led CRM migration; keen on adding intelligent automation",
+    "hidden_needs": [
+      "Wants customizable automated campaigns",
+      "Needs integration with existing customer support tools"
+    ],
+    "likely_objections": [
+      "We already tried similar automated tools; what\u2019s better here?",
+      "Can you prove uplift with comparable customers?"
+    ],
+    "buying_trigger": "Results from pilot showing improved retention and automation reducing manual work"
+  },
+  {
+    "id": 73,
+    "name": "Marcus Reed",
+    "title": "Chief Operating Officer",
+    "company_name": "TrueGreen Lawn & Pest",
+    "industry": "Lawn Care",
+    "company_size_employees": 180,
+    "company_annual_revenue": "$22M",
+    "company_age_years": 40,
+    "geography": "Minneapolis, MN",
+    "current_crm": "Real Green",
+    "other_tools": [
+      "Microsoft Dynamics",
+      "Power BI"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "80%",
+    "customer_count": 7000,
+    "key_pain_points": [
+      "Complex customer base with mixed residential/commercial services",
+      "Existing churn tools not granular enough",
+      "Difficulty aligning sales and service teams on retention priorities"
+    ],
+    "current_retention_approach": "Data-driven retention using Real Green with manual campaign adjustments",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "PE-backed company under pressure to improve margins and retention",
+    "hidden_needs": [
+      "Needs multi-segment churn modeling",
+      "Wants executive dashboard for board reporting"
+    ],
+    "likely_objections": [
+      "How is your model superior to Real Green\u2019s native tools?",
+      "Will your system scale with our rapid growth?"
+    ],
+    "buying_trigger": "Clear differentiation with superior predictive accuracy and executive reporting"
+  },
+  {
+    "id": 74,
+    "name": "Heather Kim",
+    "title": "Retention Specialist",
+    "company_name": "EcoShield Pest Management",
+    "industry": "Pest Control",
+    "company_size_employees": 28,
+    "company_annual_revenue": "$3.8M",
+    "company_age_years": 9,
+    "geography": "San Diego, CA",
+    "current_crm": "Briostack",
+    "other_tools": [
+      "HubSpot",
+      "Mailgun"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "71%",
+    "customer_count": 1100,
+    "key_pain_points": [
+      "Manually managing churn alerts is overwhelming",
+      "Retention campaigns lack personalization",
+      "Difficult to measure campaign impact"
+    ],
+    "current_retention_approach": "Manual email and phone outreach to top flagged customers",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Newly hired to improve retention; eager to prove value quickly",
+    "hidden_needs": [
+      "Needs automation that complements existing CRM",
+      "Wants templates and AI help for messaging"
+    ],
+    "likely_objections": [
+      "Will this overwhelm customers with too many messages?",
+      "Can I control how and when automated campaigns send?"
+    ],
+    "buying_trigger": "Automated, personalized campaigns with clear controls and measurable lift in retention"
+  },
+  {
+    "id": 75,
+    "name": "Samantha Lee",
+    "title": "Operations Manager",
+    "company_name": "GreenShield Lawn Care",
+    "industry": "lawn care",
+    "company_size_employees": 35,
+    "company_annual_revenue": "$4.3M",
+    "company_age_years": 12,
+    "geography": "Charlotte, NC",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "QuickBooks",
+      "Google Workspace"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "70%",
+    "customer_count": 650,
+    "key_pain_points": [
+      "Inconsistent follow-up on at-risk customers",
+      "Limited team bandwidth for retention outreach",
+      "No predictive tools to anticipate cancellations"
+    ],
+    "current_retention_approach": "Manual tracking via CRM notes and reactive outreach after cancellations",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Recently promoted from field supervisor; inherited retention challenges; wants to prove ROI before convincing owner.",
+    "hidden_needs": [
+      "A simple way to automate outreach without increasing staff workload",
+      "Clear, concise reporting tools for owner presentations"
+    ],
+    "likely_objections": [
+      "How is RevHawk better than ServiceTitan's native churn features?",
+      "We can't commit to long contracts without proof of ROI."
+    ],
+    "buying_trigger": "A trial period demonstrating clear reductions in churn and time saved on retention efforts."
+  },
+  {
+    "id": 76,
+    "name": "Miguel Hernandez",
+    "title": "Founder & CEO",
+    "company_name": "Hernandez Pest Solutions",
+    "industry": "pest control",
+    "company_size_employees": 8,
+    "company_annual_revenue": "$850K",
+    "company_age_years": 5,
+    "geography": "Albuquerque, NM",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Mailchimp",
+      "Trello"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "high",
+    "current_retention_rate": "68%",
+    "customer_count": 520,
+    "key_pain_points": [
+      "High churn during contract renewals",
+      "Difficulty identifying which customers to prioritize for retention",
+      "Small team makes manual outreach overwhelming"
+    ],
+    "current_retention_approach": "Ad hoc calls and discount offers based on gut feeling",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Burned by a previous ML churn vendor that promised more automation than delivered; now skeptical but interested.",
+    "hidden_needs": [
+      "Affordable incremental features to improve retention without big upfront costs",
+      "Ability to prove value quickly to hesitant stakeholders"
+    ],
+    "likely_objections": [
+      "Can you guarantee better predictions than previous solutions we've tried?",
+      "Why pay more when our churn problem is seasonal and partially unavoidable?"
+    ],
+    "buying_trigger": "Clear evidence RevHawk outperforms competitors with affordable tier that fits small company budget."
+  },
+  {
+    "id": 78,
+    "name": "Jared Thompson",
+    "title": "Owner & Operator",
+    "company_name": "Thompson Lawncare",
+    "industry": "lawn care",
+    "company_size_employees": 4,
+    "company_annual_revenue": "$375K",
+    "company_age_years": 3,
+    "geography": "Boise, ID",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Google Calendar",
+      "QuickBooks"
+    ],
+    "archetype": "competitive_evaluator",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "60%",
+    "customer_count": 150,
+    "key_pain_points": [
+      "No structured customer data to track churn risk",
+      "Limited time and resources to manage retention proactively",
+      "Seasonal cancellations heavily impact revenue"
+    ],
+    "current_retention_approach": "Rely on personal relationships and reactive follow-up calls",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "About to hire first office admin; wary of complex software; wants only affordable, easy solutions.",
+    "hidden_needs": [
+      "Simple, actionable insights without steep learning curve",
+      "Affordable pay-as-you-go options reflecting small business scale"
+    ],
+    "likely_objections": [
+      "Too expensive for a small company with limited budget",
+      "Worried about complexity and integration hassle with current manual systems"
+    ],
+    "buying_trigger": "A very low-cost entry tier with strong support and minimal setup effort."
+  },
+  {
+    "id": 78,
+    "name": "Sara Lindstrom",
+    "title": "Operations Manager",
+    "company_name": "GreenGuard Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 30,
+    "company_annual_revenue": "$4.2M",
+    "company_age_years": 7,
+    "geography": "Madison, WI",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "Excel",
+      "Mailchimp"
+    ],
+    "archetype": "data_hungry_operator",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "68%",
+    "customer_count": 600,
+    "key_pain_points": [
+      "Manual churn analysis is time-consuming",
+      "Hard to pinpoint behavioral drivers of churn",
+      "Current retention campaigns have low engagement"
+    ],
+    "current_retention_approach": "Monthly manual review of customer data and targeted email campaigns",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Sara recently inherited the role from the retiring founder and is under pressure to prove ROI on tech investments.",
+    "hidden_needs": [
+      "Automated but customizable data exports to validate churn predictions",
+      "Benchmarking against similar Midwest lawn care companies"
+    ],
+    "likely_objections": [
+      "Our own churn model has been developed over years, how is yours better?",
+      "Need to export raw data to cross-check results with our BI team"
+    ],
+    "buying_trigger": "Demonstrated accuracy outperforming their internal churn model with exportable raw data"
+  },
+  {
+    "id": 79,
+    "name": "Darnell Thompson",
+    "title": "Founder & CEO",
+    "company_name": "PestSafe Solutions",
+    "industry": "Pest Control",
+    "company_size_employees": 12,
+    "company_annual_revenue": "$1.4M",
+    "company_age_years": 4,
+    "geography": "Charlotte, NC",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Google Sheets"
+    ],
+    "archetype": "data_hungry_operator",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "high",
+    "current_retention_rate": "72%",
+    "customer_count": 650,
+    "key_pain_points": [
+      "Limited bandwidth to manually follow up on churn signals",
+      "Data from FieldRoutes not granular enough for churn prediction",
+      "Difficulty justifying spend on new tech with thin margins"
+    ],
+    "current_retention_approach": "Informal review of customer complaints and payment issues",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Darnell is bootstrapping growth and recently lost a top customer due to poor retention practices.",
+    "hidden_needs": [
+      "Automated customer outreach to reduce manual follow-up burden",
+      "Clear ROI demonstration tied to revenue impact"
+    ],
+    "likely_objections": [
+      "We already get churn alerts from FieldRoutes, why pay more?",
+      "What\u2019s the real lift in retention if I can\u2019t assign dedicated staff?"
+    ],
+    "buying_trigger": "Proof that automated outreach actions drive measurable churn reduction without extra internal resource"
+  },
+  {
+    "id": 80,
+    "name": "Evelyn Park",
+    "title": "Director of Customer Experience",
+    "company_name": "EcoLawn Services",
+    "industry": "Lawn Care",
+    "company_size_employees": 18,
+    "company_annual_revenue": "$1.6M",
+    "company_age_years": 3,
+    "geography": "Portland, OR",
+    "current_crm": "Jobber",
+    "other_tools": [
+      "Zapier",
+      "HubSpot"
+    ],
+    "archetype": "data_hungry_operator",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "69%",
+    "customer_count": 550,
+    "key_pain_points": [
+      "Integration gaps creating delays in churn signal delivery",
+      "Lack of actionable insights beyond raw scores",
+      "Difficulty correlating churn to weather-related disruptions"
+    ],
+    "current_retention_approach": "Semi-automated alerts set up through Jobber with manual campaign triggers",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Evelyn joined from tech and is advocating for more AI-driven customer engagement.",
+    "hidden_needs": [
+      "Ability to customize rules for specific local churn drivers",
+      "Deeper industry benchmarking including regional climate factors"
+    ],
+    "likely_objections": [
+      "How do you handle seasonal churn anomalies in your model?",
+      "Will this integrate cleanly without disrupting existing workflows?"
+    ],
+    "buying_trigger": "Robust customization options and proven integration with Jobber enabling seamless workflow"
+  },
+  {
+    "id": 81,
+    "name": "Frank Gallagher",
+    "title": "Vice President of Analytics",
+    "company_name": "Ridgeview Pest Management",
+    "industry": "Pest Control",
+    "company_size_employees": 110,
+    "company_annual_revenue": "$17M",
+    "company_age_years": 25,
+    "geography": "Pittsburgh, PA",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Power BI",
+      "SQL Server"
+    ],
+    "archetype": "data_hungry_operator",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "78%",
+    "customer_count": 5800,
+    "key_pain_points": [
+      "Existing churn prediction model built internally but expensive to maintain",
+      "Difficulty scaling retention actions across large customer base",
+      "Lack of industry benchmarking data for regional comparison"
+    ],
+    "current_retention_approach": "Internal ML models paired with manual outreach teams",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Frank is wary after investing heavily in a failed churn model replacement last year.",
+    "hidden_needs": [
+      "Transparent model explainability and access to raw data",
+      "Cost-effective automation layer to reduce manual retention labor"
+    ],
+    "likely_objections": [
+      "Our internal model outperforms most market solutions, why switch?",
+      "Can we export data and integrate with our Power BI dashboards?"
+    ],
+    "buying_trigger": "Demonstrated incremental accuracy and cost savings with exportable data and seamless BI integration"
+  },
+  {
+    "id": 82,
+    "name": "Tina Rodriguez",
+    "title": "Founder & COO",
+    "company_name": "Sunshine Lawn Pros",
+    "industry": "Lawn Care",
+    "company_size_employees": 8,
+    "company_annual_revenue": "$850K",
+    "company_age_years": 2,
+    "geography": "Tampa, FL",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "Google Workspace"
+    ],
+    "archetype": "data_hungry_operator",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "60%",
+    "customer_count": 450,
+    "key_pain_points": [
+      "No automated churn detection, relying on gut feeling",
+      "High churn due to seasonal cancellations and price pressure",
+      "Unable to benchmark against competitors"
+    ],
+    "current_retention_approach": "Reactive calls after customers stop paying",
+    "disposition_toward_new_tools": "resistant",
+    "personal_context": "Tina is overwhelmed managing daily ops and is skeptical about new complex tech.",
+    "hidden_needs": [
+      "Simple turnkey solution with minimal setup",
+      "Clear cost-benefit without technical overhead"
+    ],
+    "likely_objections": [
+      "This seems complicated and expensive for a small team",
+      "We don\u2019t have time or expertise to manage complex analytics"
+    ],
+    "buying_trigger": "A simple automated retention solution with fast setup and clear ROI justification"
+  },
+  {
+    "id": 83,
+    "name": "Raj Patel",
+    "title": "Chief Technology Officer",
+    "company_name": "Summit Pest Control",
+    "industry": "Pest Control",
+    "company_size_employees": 70,
+    "company_annual_revenue": "$13M",
+    "company_age_years": 12,
+    "geography": "Denver, CO",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Tableau",
+      "Python"
+    ],
+    "archetype": "data_hungry_operator",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "75%",
+    "customer_count": 3200,
+    "key_pain_points": [
+      "Existing churn signals are siloed and often inaccurate",
+      "Lack of customizable data exports to validate ML predictions",
+      "Scaling outreach with limited customer success resources"
+    ],
+    "current_retention_approach": "Manual data extraction and targeted email/SMS campaigns",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Raj is exploring options to improve retention without rebuilding internal ML infrastructure.",
+    "hidden_needs": [
+      "Full data transparency and ability to run custom analysis",
+      "Modular system that can integrate with existing BI stack"
+    ],
+    "likely_objections": [
+      "How does your ML model handle our unique customer segmentation?",
+      "We need to be able to export all churn data for deep dives"
+    ],
+    "buying_trigger": "Modular API access with proven accuracy and seamless FieldRoutes integration"
+  },
+  {
+    "id": 84,
+    "name": "Linda Chavez",
+    "title": "Owner & Head of Customer Care",
+    "company_name": "BrightShield Pest Services",
+    "industry": "Pest Control",
+    "company_size_employees": 15,
+    "company_annual_revenue": "$2M",
+    "company_age_years": 5,
+    "geography": "San Antonio, TX",
+    "current_crm": "GorillaDesk",
+    "other_tools": [
+      "Constant Contact"
+    ],
+    "archetype": "data_hungry_operator",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "70%",
+    "customer_count": 720,
+    "key_pain_points": [
+      "Complaints and payment lapses poorly tracked in CRM",
+      "Low engagement with retention campaigns due to manual triggers",
+      "Lack of actionable insights from churn scores"
+    ],
+    "current_retention_approach": "Manual review of flagged customers, phone calls for repairs and billing fixes",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Linda is focused on growing customer lifetime value and open to automations.",
+    "hidden_needs": [
+      "Automated multi-channel campaign triggers",
+      "Insights into complaint-related churn causes"
+    ],
+    "likely_objections": [
+      "How do you ensure AI recommendations don\u2019t alienate customers?",
+      "Will it integrate with GorillaDesk without heavy IT involvement?"
+    ],
+    "buying_trigger": "Automated retention campaigns proven to improve engagement with minimal manual work"
+  },
+  {
+    "id": 85,
+    "name": "Elliot Barnes",
+    "title": "General Manager",
+    "company_name": "Evergreen Lawn & Pest",
+    "industry": "Lawn Care & Pest Control",
+    "company_size_employees": 45,
+    "company_annual_revenue": "$7.5M",
+    "company_age_years": 15,
+    "geography": "Richmond, VA",
+    "current_crm": "Service Autopilot",
+    "other_tools": [
+      "Slack",
+      "Google Analytics"
+    ],
+    "archetype": "data_hungry_operator",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "low",
+    "current_retention_rate": "73%",
+    "customer_count": 2800,
+    "key_pain_points": [
+      "Churn spikes during seasonal transitions hard to predict",
+      "Retention actions inconsistent across lawn and pest services",
+      "Limited ability to benchmark performance by service line"
+    ],
+    "current_retention_approach": "Manual segmentation and phone outreach team",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Elliot inherited mixed legacy systems from previous management and is pushing for modernization.",
+    "hidden_needs": [
+      "Unified churn prediction across multiple service verticals",
+      "Industry benchmarks split by lawn and pest for competitive analysis"
+    ],
+    "likely_objections": [
+      "Can it handle dual vertical data and variable seasonal impact?",
+      "Is pricing justified if we only adopt for certain services?"
+    ],
+    "buying_trigger": "Multi-vertical churn prediction with benchmarks showing improved retention across business units"
+  },
+  {
+    "id": 86,
+    "name": "Monica Fields",
+    "title": "Customer Insights Analyst",
+    "company_name": "Pinnacle Pest Control",
+    "industry": "Pest Control",
+    "company_size_employees": 90,
+    "company_annual_revenue": "$12.8M",
+    "company_age_years": 18,
+    "geography": "Columbus, OH",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Excel",
+      "Tableau"
+    ],
+    "archetype": "data_hungry_operator",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "77%",
+    "customer_count": 5100,
+    "key_pain_points": [
+      "Internal churn predictions not benchmarked with industry data",
+      "Disparate data sources causing delays in insights delivery",
+      "Retention campaigns lacking personalization at scale"
+    ],
+    "current_retention_approach": "Monthly churn score reports and segmented email marketing",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Monica advocates for deeper analytics and is eager to trial advanced ML churn models.",
+    "hidden_needs": [
+      "Benchmarking data to validate assumptions",
+      "Automated personalized retention outreach capabilities"
+    ],
+    "likely_objections": [
+      "If data quality is poor, model outputs will be unreliable",
+      "Need flexibility to export and manipulate raw churn data"
+    ],
+    "buying_trigger": "High fidelity ML model with integrated benchmarking and exportable datasets for validation"
+  },
+  {
+    "id": 87,
+    "name": "Tommy Nguyen",
+    "title": "Founder & CEO",
+    "company_name": "FreshStart Lawn Care",
+    "industry": "Lawn Care",
+    "company_size_employees": 4,
+    "company_annual_revenue": "$450K",
+    "company_age_years": 1,
+    "geography": "Boise, ID",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [],
+    "archetype": "data_hungry_operator",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "55%",
+    "customer_count": 170,
+    "key_pain_points": [
+      "No churn data or predictive insights",
+      "Struggling to keep customers beyond first season",
+      "Limited budget for retention tools"
+    ],
+    "current_retention_approach": "Personal follow-up calls and manual scheduling",
+    "disposition_toward_new_tools": "indifferent",
+    "personal_context": "Tommy is a new entrepreneur focused on rapid customer acquisition, skeptical about investing in churn tech this early.",
+    "hidden_needs": [
+      "Affordable solution that can scale as business grows",
+      "Simple onboarding without tech complexity"
+    ],
+    "likely_objections": [
+      "Too early for us to invest in churn prediction tools",
+      "Can this tool truly deliver value without a bigger customer base?"
+    ],
+    "buying_trigger": "Affordable entry tier with proof of value for very small businesses"
+  },
+  {
+    "id": 88,
+    "name": "Marissa Cohen",
+    "title": "Chief Data Officer",
+    "company_name": "Guardian Pest Defense",
+    "industry": "pest control",
+    "company_size_employees": 180,
+    "company_annual_revenue": "$22M",
+    "company_age_years": 38,
+    "geography": "Baltimore, MD",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "Tableau",
+      "AWS SageMaker"
+    ],
+    "archetype": "strategic_enterprise",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "85%",
+    "customer_count": 15000,
+    "key_pain_points": [
+      "Internal churn models require heavy maintenance",
+      "Manual intervention bottlenecks in retention workflows",
+      "Limited automation in customer outreach"
+    ],
+    "current_retention_approach": "Custom-built churn prediction with manual customer follow-ups by account managers",
+    "disposition_toward_new_tools": "cautious",
+    "personal_context": "Marissa has overseen multiple internal AI initiatives and is wary of overpromising vendors; interested in partnership but skeptical of fit.",
+    "hidden_needs": [
+      "Seamless integration with existing data pipelines",
+      "Strategic partnership for continual model improvement"
+    ],
+    "likely_objections": [
+      "We already have a more accurate internal model",
+      "Need to see RevHawk perform on our data before any pilot"
+    ],
+    "buying_trigger": "Proof of concept demonstrating better predictive accuracy and reduced manual workload"
+  },
+  {
+    "id": 89,
+    "name": "Javier Morales",
+    "title": "VP of Customer Success",
+    "company_name": "EverGreen Lawn & Pest",
+    "industry": "lawn care",
+    "company_size_employees": 120,
+    "company_annual_revenue": "$13.5M",
+    "company_age_years": 15,
+    "geography": "Denver, CO",
+    "current_crm": "ServiceTitan",
+    "other_tools": [
+      "Salesforce",
+      "HubSpot"
+    ],
+    "archetype": "strategic_enterprise",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "78%",
+    "customer_count": 22000,
+    "key_pain_points": [
+      "Churn prediction models do not handle seasonality well",
+      "Customer outreach campaigns lack personalization",
+      "Scaling retention across regions is inconsistent"
+    ],
+    "current_retention_approach": "Internal data science team creates quarterly churn insights; outreach handled by large customer success team",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Javier is actively seeking scalable solutions to complement internal tools as the company expands to new states.",
+    "hidden_needs": [
+      "Automated outreach to reduce manual customer success team workload",
+      "Cross-regional benchmarking to identify best practices"
+    ],
+    "likely_objections": [
+      "We already invest heavily in internal analytics, what unique value?",
+      "How will this integrate with our complex ServiceTitan setup?"
+    ],
+    "buying_trigger": "Ability to automate personalized retention actions and reduce manpower requirements"
+  },
+  {
+    "id": 90,
+    "name": "Estelle Nguyen",
+    "title": "Director of Operations",
+    "company_name": "Pinnacle Pest Solutions",
+    "industry": "pest control",
+    "company_size_employees": 70,
+    "company_annual_revenue": "$9.3M",
+    "company_age_years": 12,
+    "geography": "Atlanta, GA",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Excel",
+      "Slack"
+    ],
+    "archetype": "strategic_enterprise",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "72%",
+    "customer_count": 12000,
+    "key_pain_points": [
+      "Lack of real-time at-risk customer alerts",
+      "Inconsistent follow-up on churn signals",
+      "Difficulty proving ROI on retention efforts"
+    ],
+    "current_retention_approach": "Monthly manual churn reports with team discussions, but low follow-through due to bandwidth",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Estelle recently replaced a CIO who pushed aggressive tech adoption; she prefers proven ROI and ease of use.",
+    "hidden_needs": [
+      "Low-friction implementation with quick internal buy-in",
+      "Dashboard that executives can easily interpret"
+    ],
+    "likely_objections": [
+      "Tool looks redundant with FieldRoutes churn scoring",
+      "Price seems high unless clear automation benefits"
+    ],
+    "buying_trigger": "Automated outreach that demonstrably increases retention without adding headcount"
+  },
+  {
+    "id": 91,
+    "name": "Tom Whitman",
+    "title": "CEO",
+    "company_name": "Southern Lawn Craft",
+    "industry": "lawn care",
+    "company_size_employees": 18,
+    "company_annual_revenue": "$1.1M",
+    "company_age_years": 7,
+    "geography": "Jacksonville, FL",
+    "current_crm": "Jobber",
+    "other_tools": [
+      "Google Sheets"
+    ],
+    "archetype": "strategic_enterprise",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "65%",
+    "customer_count": 650,
+    "key_pain_points": [
+      "No systematic way to identify at-risk customers",
+      "Manual retention efforts take too much time",
+      "Budget constraints prevent tech investments"
+    ],
+    "current_retention_approach": "Rely on gut feel and reactive customer calls after cancellations",
+    "disposition_toward_new_tools": "resistant",
+    "personal_context": "Tom is personally handling most operational roles; skeptical of complex tools after prior investments failed to deliver.",
+    "hidden_needs": [
+      "Simple, low-cost solution integrated with Jobber",
+      "Proof that automation saves time and money"
+    ],
+    "likely_objections": [
+      "Cost too high for small firm",
+      "Integration complexity with Jobber"
+    ],
+    "buying_trigger": "Clear demonstration of time saved and easy Jobber integration with no heavy training"
+  },
+  {
+    "id": 92,
+    "name": "Nina Patel",
+    "title": "Chief Analytics Officer",
+    "company_name": "Atlas Pest Management",
+    "industry": "pest control",
+    "company_size_employees": 210,
+    "company_annual_revenue": "$28M",
+    "company_age_years": 45,
+    "geography": "Chicago, IL",
+    "current_crm": "PestPak",
+    "other_tools": [
+      "SAS",
+      "Azure ML"
+    ],
+    "archetype": "strategic_enterprise",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "83%",
+    "customer_count": 27000,
+    "key_pain_points": [
+      "Internal churn models struggle with new competitor behaviors",
+      "Manual campaign creation delays retention actions",
+      "Executive pressure for improved customer lifetime value"
+    ],
+    "current_retention_approach": "Proprietary AI churn models plus segmented manual retention campaigns",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Nina is exploring partnerships focused on augmenting their models and automating outreach to reduce cycle time.",
+    "hidden_needs": [
+      "Plug-and-play solution augmenting internal churn predictions",
+      "Enterprise-grade security and long-term partnership"
+    ],
+    "likely_objections": [
+      "How does RevHawk complement rather than replace internal models?",
+      "Will data sharing comply with corporate governance?"
+    ],
+    "buying_trigger": "NDA-enabled trial showing performance gain and automation benefits"
+  },
+  {
+    "id": 93,
+    "name": "Marcus Lee",
+    "title": "Operations Manager",
+    "company_name": "Green Blade Lawn Care",
+    "industry": "lawn care",
+    "company_size_employees": 45,
+    "company_annual_revenue": "$4.2M",
+    "company_age_years": 9,
+    "geography": "Portland, OR",
+    "current_crm": "Service Autopilot",
+    "other_tools": [
+      "Mailchimp"
+    ],
+    "archetype": "strategic_enterprise",
+    "tech_sophistication": "medium",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "70%",
+    "customer_count": 6200,
+    "key_pain_points": [
+      "Staff overloaded, unable to act on churn alerts consistently",
+      "Retention efforts are reactive rather than proactive",
+      "Lack of best practice benchmarks for retention"
+    ],
+    "current_retention_approach": "Monthly churn reports reviewed manually; retention campaigns sent irregularly by marketing",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Marcus seeks tools to help automate workflows to free up field staff for service delivery.",
+    "hidden_needs": [
+      "Automated multi-channel outreach to reduce manual steps",
+      "Benchmarking data to justify retention budget increases"
+    ],
+    "likely_objections": [
+      "Not sure if integration with Service Autopilot is mature enough",
+      "Budget constraints for premium tiers"
+    ],
+    "buying_trigger": "Automated churn outreach that integrates smoothly and frees staff time"
+  },
+  {
+    "id": 94,
+    "name": "Olivia Simmons",
+    "title": "VP Customer Experience",
+    "company_name": "PestShield National",
+    "industry": "pest control",
+    "company_size_employees": 350,
+    "company_annual_revenue": "$40M",
+    "company_age_years": 30,
+    "geography": "Seattle, WA",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Zendesk",
+      "Snowflake"
+    ],
+    "archetype": "strategic_enterprise",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "86%",
+    "customer_count": 38000,
+    "key_pain_points": [
+      "Existing churn models don\u2019t fully capture customer sentiment from support tickets",
+      "Retention campaigns lack AI personalization and scale",
+      "Need to quickly identify root causes for churn events"
+    ],
+    "current_retention_approach": "Internal churn models with manual support and sales interventions",
+    "disposition_toward_new_tools": "open",
+    "personal_context": "Olivia leads a digital transformation initiative aiming for predictive and automated customer retention at scale.",
+    "hidden_needs": [
+      "Integration with support and CRM data for holistic risk prediction",
+      "Partner willing to co-develop advanced retention workflows"
+    ],
+    "likely_objections": [
+      "Need to validate claims with pilot on company\u2019s real data",
+      "Long internal evaluation cycles may delay adoption"
+    ],
+    "buying_trigger": "Demonstrated improvement in churn prediction precision plus automated retention workflows"
+  },
+  {
+    "id": 95,
+    "name": "Caleb Johnson",
+    "title": "Founder & President",
+    "company_name": "FreshCut Lawn Services",
+    "industry": "lawn care",
+    "company_size_employees": 12,
+    "company_annual_revenue": "$1.5M",
+    "company_age_years": 5,
+    "geography": "Nashville, TN",
+    "current_crm": "spreadsheets/manual",
+    "other_tools": [
+      "QuickBooks"
+    ],
+    "archetype": "strategic_enterprise",
+    "tech_sophistication": "low",
+    "price_sensitivity": "high",
+    "current_retention_rate": "60%",
+    "customer_count": 700,
+    "key_pain_points": [
+      "No churn prediction or systematic retention process",
+      "Too busy with day-to-day ops to focus on retention analytics",
+      "Limited budget for software tools"
+    ],
+    "current_retention_approach": "Owner-driven personal outreach after cancellations",
+    "disposition_toward_new_tools": "resistant",
+    "personal_context": "Caleb is skeptical of ML tools after a poor experience with a marketing vendor; prefers simple, affordable solutions.",
+    "hidden_needs": [
+      "Affordable entry-level solution with clear, quick wins",
+      "Low technical barrier to adoption"
+    ],
+    "likely_objections": [
+      "Too costly and complex for a small company",
+      "Uncertain ROI for churn prediction tools"
+    ],
+    "buying_trigger": "A low-cost pilot proving value with minimal setup"
+  },
+  {
+    "id": 96,
+    "name": "Sophia Ramirez",
+    "title": "Director of Digital Transformation",
+    "company_name": "Ironclad Pest Control",
+    "industry": "pest control",
+    "company_size_employees": 85,
+    "company_annual_revenue": "$10.8M",
+    "company_age_years": 20,
+    "geography": "Phoenix, AZ",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Microsoft Power BI",
+      "Twilio"
+    ],
+    "archetype": "strategic_enterprise",
+    "tech_sophistication": "high",
+    "price_sensitivity": "medium",
+    "current_retention_rate": "76%",
+    "customer_count": 14500,
+    "key_pain_points": [
+      "Current churn alerts overwhelm retention team with false positives",
+      "Retention outreach lacks personalization and scale",
+      "Internal churn models slow to adapt to market changes"
+    ],
+    "current_retention_approach": "Semi-manual churn analysis with limited automation in email campaigns",
+    "disposition_toward_new_tools": "enthusiastic",
+    "personal_context": "Sophia is driving initiatives to augment analytics with AI-driven automated retention at her firm.",
+    "hidden_needs": [
+      "Reduction in false positives to focus retention efforts",
+      "Multi-channel automated outreach integrated with SMS and voice"
+    ],
+    "likely_objections": [
+      "Doubts about integration complexity with FieldRoutes and Twilio",
+      "Need successful pilot to justify spend"
+    ],
+    "buying_trigger": "Automated automated outreach layer that reduces workload and increases retention efficiency"
+  },
+  {
+    "id": 97,
+    "name": "Derek O'Neal",
+    "title": "Chief Operating Officer",
+    "company_name": "PestGuard Elite",
+    "industry": "pest control",
+    "company_size_employees": 230,
+    "company_annual_revenue": "$33M",
+    "company_age_years": 37,
+    "geography": "Raleigh, NC",
+    "current_crm": "FieldRoutes",
+    "other_tools": [
+      "Looker",
+      "AWS Glue"
+    ],
+    "archetype": "strategic_enterprise",
+    "tech_sophistication": "high",
+    "price_sensitivity": "low",
+    "current_retention_rate": "84%",
+    "customer_count": 20000,
+    "key_pain_points": [
+      "Internal churn scoring slow to incorporate new data",
+      "Manual retention efforts do not scale with growth",
+      "Need a proven partner for enterprise-grade retention automation"
+    ],
+    "current_retention_approach": "Built internal ML models; retention campaigns triggered by manual reviews",
+    "disposition_toward_new_tools": "skeptical",
+    "personal_context": "Derek\u2019s team just rebuilt an internal churn model; skeptical about vendor solutions but open to partnerships that add clear value.",
+    "hidden_needs": [
+      "Rapid deployment without disrupting existing workflows",
+      "Strategic vendor partnership offering ongoing support"
+    ],
+    "likely_objections": [
+      "Our model outperforms most vendors",
+      "Long evaluation cycles due to PE ownership"
+    ],
+    "buying_trigger": "Clear gap in automation and retention action scalability that RevHawk can fill"
+  }
+]

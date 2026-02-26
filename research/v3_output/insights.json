@@ -1,0 +1,3651 @@
+[
+  {
+    "persona_id": 1,
+    "persona_name": "Carlos Mendoza",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 7,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Concern about margin erosion from discounts",
+      "Preference for value-added services over discounts",
+      "Wants integration with existing Jobber system to avoid complexity"
+    ],
+    "buying_triggers": [
+      "Seamless integration with Jobber",
+      "Clear, actionable insights with minimal manual effort",
+      "Automated personalized follow-ups that feel like they come from him"
+    ],
+    "notable_quotes": [
+      "\"The manual follow-ups are a real time-sink.\"",
+      "\"I don't want to train customers to always expect a discount, you know? It can devalue the service.\""
+    ],
+    "hidden_insights": [
+      "Strong preference for automation that reduces manual effort but maintains personal touch",
+      "Worries about missing silent churners and balancing acquisition vs retention"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Jasmine Patel",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 10,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Concern about losing personal touch and brand voice with external tool",
+      "Worries about margin erosion and discount overuse",
+      "Manual effort required to integrate new tools"
+    ],
+    "buying_triggers": [
+      "Seamless integration with PestPac and ServiceTitan",
+      "Automated, personalized messaging triggered by specific churn signals",
+      "Clear ROI on retention actions"
+    ],
+    "notable_quotes": [
+      "\"My main concern is margin erosion... giving discounts just for loyalty, without a clear ROI, could cut into our profitability.\"",
+      "\"I need something that gives us actionable insights and automates the initial outreach without requiring us to hire a new data analyst or marketing specialist.\""
+    ],
+    "hidden_insights": [
+      "Strong emphasis on protecting brand voice and existing investments in ServiceTitan",
+      "Desires automation that supports current team efficiency rather than adding complexity"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Elliot Greene",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 10,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "mixed",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Prefers personal, manual communication over automation",
+      "Wary of complexity and learning new systems",
+      "Concern about discounts devaluing service and margin impact"
+    ],
+    "buying_triggers": [
+      "Simple, easy-to-use tool that plugs into existing spreadsheets",
+      "Automated alerts with suggested personal messages",
+      "Minimal disruption to current workflows"
+    ],
+    "notable_quotes": [
+      "\"We pride ourselves on personal service. Maybe just simple reminders... Nothing that sounds like a faceless corporation.\"",
+      "\"I'm retiring in a few years, so I'm not looking for a massive overhaul.\""
+    ],
+    "hidden_insights": [
+      "Strong resistance to automation that feels impersonal",
+      "Business scale and owner\u2019s near retirement influence openness to new tools"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Sophia Nguyen",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Cleaning",
+    "persona_company_size": 10,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Lack of current tracking for churn signals",
+      "Concern about margin erosion from discounts",
+      "Need for targeted, intelligent application of incentives"
+    ],
+    "buying_triggers": [
+      "Integration with Housecall Pro and Zapier",
+      "Automated, actionable insights with suggested personalized outreach",
+      "Tracking effectiveness of retention actions"
+    ],
+    "notable_quotes": [
+      "\"It's our brand, after all. We use Zapier, so if a platform could integrate with that and Housecall Pro, that would be a plus.\"",
+      "\"I don't want another tool that just gives me data; I need one that tells me what to do with it.\""
+    ],
+    "hidden_insights": [
+      "Control over brand messaging is important but intelligence on timing/content is more critical",
+      "Wants to move from reactive to proactive retention but lacks current data sophistication"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Derek Johnson",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "HVAC",
+    "persona_company_size": 45,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Reluctance to add complexity or replace ServiceTitan",
+      "Concern about overusing discounts and devaluing brand",
+      "Need for automation that integrates seamlessly with existing workflows"
+    ],
+    "buying_triggers": [
+      "Solution that sits on top of ServiceTitan and triggers communications within it",
+      "Automated, smart differentiation of customer risk levels",
+      "Clear ROI and minimal disruption to current processes"
+    ],
+    "notable_quotes": [
+      "\"We have the data, but turning it into actionable, automated insights without adding another full-time person is the real challenge.\"",
+      "\"It absolutely cannot disrupt our current ServiceTitan workflows. That's non-negotiable.\""
+    ],
+    "hidden_insights": [
+      "Strong preference for augmentation rather than replacement of existing tools",
+      "Willingness to pay higher if ROI and integration are clear"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Linda Brooks",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 6,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "mixed",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Limited time and expertise to manage retention campaigns",
+      "Concern about discounting devaluing service and margins",
+      "Need for automation that feels personal and not spammy"
+    ],
+    "buying_triggers": [
+      "Integration with FieldRoutes to avoid managing multiple systems",
+      "Hands-off, trustworthy automation with actionable steps",
+      "Pre-written messages or offers to save time"
+    ],
+    "notable_quotes": [
+      "\"I'm out in the field, not analyzing data.\"",
+      "\"I need trustworthy, hands-off guidance.\""
+    ],
+    "hidden_insights": [
+      "Seasonal churn is a major challenge",
+      "Strong desire for simple, low-effort automation that does not add complexity"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Samir Khatri",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 10,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Need for seamless integration with RealGreen",
+      "Concern about margin protection and discount overuse",
+      "Manual effort currently required for retention communications"
+    ],
+    "buying_triggers": [
+      "Automated predictive scoring of at-risk customers",
+      "Personalized, automated communications triggered by customer profile",
+      "Integration with RealGreen without adding headcount"
+    ],
+    "notable_quotes": [
+      "\"It feels like we're always playing catch-up.\"",
+      "\"If a tool could help identify customers who would respond best to a value-add versus a discount, that would be much more appealing.\""
+    ],
+    "hidden_insights": [
+      "Seasonal churn creates revenue gaps and manual chasing is resource intensive",
+      "Strong preference for smart, targeted incentives over blanket discounts"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Grace Lee",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Cleaning",
+    "persona_company_size": 10,
+    "problem_resonance": 3,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "invalidated",
+      "assumption_3": "mixed",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Nervousness about automation and generic messaging",
+      "Lack of tracking or red flags before churn",
+      "Concern about discounting devaluing service and setting expectations"
+    ],
+    "buying_triggers": [
+      "Simple, intuitive tool that integrates with existing systems",
+      "Automated, personalized outreach that saves time without complexity",
+      "Clear identification of at-risk customers before they churn"
+    ],
+    "notable_quotes": [
+      "\"The idea of 'automating' things makes me a bit nervous, especially if it sounds like some generic message.\"",
+      "\"It feels like we're always reacting, never really ahead of things.\""
+    ],
+    "hidden_insights": [
+      "Churn often comes as silence with no warning",
+      "Strong preference for personal touch and simplicity over complex automation"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Tom\u00e1s Rivera",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 25,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Concern about margin erosion from discounts",
+      "Reluctance to add new platforms that disrupt existing workflows",
+      "Need for clear ROI to justify new tool cost"
+    ],
+    "buying_triggers": [
+      "Seamless integration with PestPac",
+      "Accurate early churn prediction especially for seasonal customers",
+      "Targeted, personalized interventions rather than blanket discounts",
+      "Clear demonstration of ROI"
+    ],
+    "notable_quotes": [
+      "The thought of adding another platform just for outreach, and then having to integrate that with PestPac, sounds like a headache.",
+      "I'd much rather focus on demonstrating value... If we could use data to identify customers who need a discount to stay, that's one thing, but blanket discounts worry me."
+    ],
+    "hidden_insights": [
+      "Strong preference for value-adds and premium offerings over discounts to protect margins and avoid price wars.",
+      "Worries about reactive retention approaches and desires proactive, data-driven interventions."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Brenda Wilson",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 3,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong preference for personal communication over automated outreach",
+      "Concerns that discounts erode margins and devalue services",
+      "Limited time and resources to manage new platforms"
+    ],
+    "buying_triggers": [
+      "Simple, low-cost automation for routine messages (appointment reminders, thank you notes)",
+      "Tools that do not add complexity or require hiring additional staff",
+      "Maintaining personal touch for critical retention communications"
+    ],
+    "notable_quotes": [
+      "The thought of handing that over to some automated service... it feels a bit impersonal.",
+      "Giving discounts for loyalty feels like I'm just cutting into my own pocket without a guaranteed return."
+    ],
+    "hidden_insights": [
+      "Intuition and personal relationships are primary churn signals rather than data-driven metrics.",
+      "Referral programs considered as alternative loyalty drivers but not yet explored."
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Maria Vasquez",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 7,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Concern about margin impact from discounts",
+      "Limited time to set up and manage new platforms",
+      "Fear of training customers to expect discounts"
+    ],
+    "buying_triggers": [
+      "Automation that saves time and reduces manual effort",
+      "Smart, personalized messaging based on service history",
+      "Simple setup and integration with existing tools"
+    ],
+    "notable_quotes": [
+      "If a specialized tool meant I had to spend more time setting things up or learning a new system, I'd probably lean towards sticking with Mailchimp.",
+      "It's just a lot of guesswork and hoping for the best."
+    ],
+    "hidden_insights": [
+      "Strong desire for predictive insights integrated into existing workflows (e.g., flags in Jobber).",
+      "Wants automation for routine communications but retains skepticism about discount-based loyalty."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Ethan Rapp",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Cleaning",
+    "persona_company_size": 20,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Need for authentic, non-robotic communication",
+      "Margin concerns around discounts",
+      "Limited time to manage complex software"
+    ],
+    "buying_triggers": [
+      "Hands-off, effective automation that requires minimal oversight",
+      "Personalized messaging to re-engage customers",
+      "Automation of appointment reminders and follow-ups"
+    ],
+    "notable_quotes": [
+      "I'm open to a tool handling communications, as long as it feels authentic and not like some robotic outreach.",
+      "I'd want a solution that pretty much runs itself."
+    ],
+    "hidden_insights": [
+      "High no-show and cancellation rates are a major pain point impacting revenue.",
+      "Wants automation that reduces manual tracking and follow-up burden."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Anjali Menon",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 12,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "very_positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Manual data export/import is time-consuming",
+      "Concern about devaluing brand with discounts if not targeted"
+    ],
+    "buying_triggers": [
+      "Seamless integration with FieldRoutes",
+      "Automated, personalized retention campaigns",
+      "Clear insights and ROI tracking",
+      "Targeted, strategic discounts to prevent churn"
+    ],
+    "notable_quotes": [
+      "If something could integrate directly with FieldRoutes and automate more, I'd definitely be open to it.",
+      "My main concern isn't necessarily margins if it's targeted and prevents a full churn."
+    ],
+    "hidden_insights": [
+      "Wants a 'set it and forget it' system that reduces manual effort.",
+      "Sees value in combining data-driven churn prediction with personalized outreach."
+    ],
+    "would_buy": "yes",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Dave Whitaker",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "HVAC",
+    "persona_company_size": 20,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Manual and clunky processes for communication",
+      "Margin concerns about discounts",
+      "Desire to avoid disruption and steep learning curves"
+    ],
+    "buying_triggers": [
+      "Integration with ServiceTitan",
+      "Automated renewal reminders and post-service follow-ups",
+      "Simple, usable system for existing staff"
+    ],
+    "notable_quotes": [
+      "I'd want something that works seamlessly with ServiceTitan, without us having to do a lot of extra work.",
+      "I don't want to train customers to always expect a discount."
+    ],
+    "hidden_insights": [
+      "Uncertainty about customer satisfaction and churn risk is a major stressor.",
+      "Values personalized advice and quick service access over discounts."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Nina Patel",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 9,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Cost sensitivity and training burden of new systems",
+      "Concerns about discounts eroding margins and devaluing service",
+      "Difficulty identifying subtle churn signals with current tools"
+    ],
+    "buying_triggers": [
+      "Integration with Briostack and existing workflows",
+      "Automated maintenance reminders and 'we miss you' campaigns",
+      "Easy to use, affordable solution with minimal training"
+    ],
+    "notable_quotes": [
+      "Not knowing who's about to drop off makes planning and managing cash flow really difficult.",
+      "It would need to do that without me having to hire a data analyst or spend thousands on a new system."
+    ],
+    "hidden_insights": [
+      "Strong desire for early warning signals to reduce unpredictability in revenue.",
+      "Prefers value-driven loyalty tactics over discounts."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Carlos Mendez",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 3,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Limited time and capacity to manage new systems",
+      "Margin concerns about discounts",
+      "Need for seamless integration with PestRoutes"
+    ],
+    "buying_triggers": [
+      "Integration with PestRoutes",
+      "Automated, personalized messages triggered by behavioral signals",
+      "Pre-written messages and suggested actions to minimize manual work"
+    ],
+    "notable_quotes": [
+      "If a tool could genuinely do it for me, without adding a bunch of extra work or a steep learning curve, I'd consider it.",
+      "The biggest thing that keeps me up at night is those seasonal churn spikes."
+    ],
+    "hidden_insights": [
+      "Seasonality is a major churn driver causing unpredictable revenue.",
+      "Strong preference for a 'smart assistant' that handles retention busywork."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "medium"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Heather Collins",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 12,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Reluctance to add a new communication platform due to complexity and training",
+      "Concern about margin erosion from discounts",
+      "Wants targeted offers to avoid wasting resources"
+    ],
+    "buying_triggers": [
+      "Seamless integration with RealGreen and HubSpot",
+      "Automated, personalized outreach with minimal manual effort",
+      "Clear ROI demonstration"
+    ],
+    "notable_quotes": [
+      "Introducing a completely separate communication system just adds complexity and another platform for my team to learn, which I'm not keen on.",
+      "We don't want to just be giving away services if a customer wasn't actually going to leave."
+    ],
+    "hidden_insights": [
+      "Strong preference for value-adds over discounts to maintain brand value",
+      "High volume of customers makes manual intervention infeasible"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Mohammed Al-Khalil",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "HVAC",
+    "persona_company_size": 5,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "mixed",
+      "assumption_3": "invalidated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Prefers personal calls over automation to maintain customer relationships",
+      "Skeptical that automation can maintain personal touch",
+      "Not interested in adding complexity or losing control"
+    ],
+    "buying_triggers": [
+      "Simple, non-intrusive reminders that do not replace personal calls",
+      "Low cost and ease of use"
+    ],
+    "notable_quotes": [
+      "I'm not looking to replace direct conversations with some automated system.",
+      "If a tool makes things more complicated or less personal, it's not for us."
+    ],
+    "hidden_insights": [
+      "Strong emphasis on personal relationships over technology",
+      "Limited current use of technology, mostly manual tracking"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Jessica Tran",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 6,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Unease with outsourcing customer communication",
+      "Concern about margin erosion from discounts",
+      "Need for seamless integration with Briostack"
+    ],
+    "buying_triggers": [
+      "Integration with Briostack",
+      "Automation that maintains control over messaging",
+      "Smart, low-overhead automation of reminders and follow-ups"
+    ],
+    "notable_quotes": [
+      "The idea of someone else directly managing our customer outreach makes me a bit uneasy, to be honest.",
+      "I also worry about setting a precedent where customers always expect a discount."
+    ],
+    "hidden_insights": [
+      "Strong desire for control over brand voice",
+      "Preference for value-add loyalty strategies over discounts"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Tom Hardy",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Concern about integration with PestPac",
+      "Worries about margin erosion from discounts",
+      "Skepticism about discounts as long-term loyalty drivers"
+    ],
+    "buying_triggers": [
+      "Turnkey solution with seamless PestPac integration",
+      "Accurate risk prediction with actionable interventions",
+      "Low learning curve and clear ROI"
+    ],
+    "notable_quotes": [
+      "If it can't pull the right customer data and service history seamlessly, then it's just creating more manual work, and that's not going to fly.",
+      "Discounts feel like a band-aid, not a long-term solution for loyalty."
+    ],
+    "hidden_insights": [
+      "Strong desire for data-driven, actionable insights",
+      "Preference for value demonstration over discounting"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Maria Gonzalez",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 12,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Nervousness about losing control over messaging",
+      "Concern about margin erosion and brand devaluation from discounts",
+      "Implementation complexity and disruption fears"
+    ],
+    "buying_triggers": [
+      "Integration with Jobber",
+      "Automated, personalized, and easy-to-approve messaging",
+      "Minimal disruption and simple user experience"
+    ],
+    "notable_quotes": [
+      "It needs to be smart, but not complicated. I don't have time to learn another complex system or hire a data person.",
+      "I worry discounts might train customers to expect them, or make them question our standard pricing."
+    ],
+    "hidden_insights": [
+      "High retention rate but feels manual effort is a bottleneck",
+      "Strong preference for value-add loyalty strategies"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Ethan Carter",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "HVAC",
+    "persona_company_size": 8,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "mixed",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Prefers simple reminders over complex platforms",
+      "Concern about margin erosion and brand devaluation from discounts",
+      "Wants to maintain personal touch and avoid complexity"
+    ],
+    "buying_triggers": [
+      "Simple, actionable reminders without complex software",
+      "Low cost and ease of use"
+    ],
+    "notable_quotes": [
+      "I just want to keep track of my customers better.",
+      "I don't want to spend hours learning a new system just to send an email."
+    ],
+    "hidden_insights": [
+      "Relies heavily on personal memory and manual tracking",
+      "Skeptical of complex tech solutions"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Jasmine Patel",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 55,
+    "problem_resonance": 4,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about integration complexity and losing control over messaging",
+      "Concern about margin erosion and discount effectiveness",
+      "Current process is reactive and time-consuming"
+    ],
+    "buying_triggers": [
+      "Seamless integration with PestPac and Salesforce Marketing Cloud",
+      "Automated, segmented, personalized retention campaigns",
+      "Machine learning that explains why customers are at risk"
+    ],
+    "notable_quotes": [
+      "Correlating service issues to actual churn, that's where it gets murky.",
+      "I don't want to spend my time manually uploading data or training a new system from scratch."
+    ],
+    "hidden_insights": [
+      "Strong investment in existing platforms makes switching costly",
+      "Desire for explainable AI insights, not just risk flags"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Devin Reed",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 6,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Wary of generic or robotic communication",
+      "Concern about margin erosion from discounts",
+      "Limited time and resources to manage complex tools"
+    ],
+    "buying_triggers": [
+      "Simple, plug-and-play solution that fits existing workflows",
+      "Personalized, authentic messaging automation",
+      "Affordable pricing with quick ROI"
+    ],
+    "notable_quotes": [
+      "If it's something that just adds another layer of complexity or requires a dedicated person to manage, that's probably a non-starter.",
+      "I definitely don't want to spam people. It needs to be timely and relevant."
+    ],
+    "hidden_insights": [
+      "Strong preference for personal connection despite openness to some automation",
+      "Frustration with lack of insight into why customers leave"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Olivia Nguyen",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 20,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Concern about discounts hurting margins and devaluing brand",
+      "Need for personalized, non-generic communication",
+      "Integration must be seamless to avoid manual work"
+    ],
+    "buying_triggers": [
+      "Seamless integration with Briostack",
+      "Personalized, proactive communication that reduces manual effort",
+      "Targeted win-back campaigns tailored to cancellation reasons"
+    ],
+    "notable_quotes": [
+      "We lose customers, and often we don't really know why until it's too late.",
+      "I'd prefer if a tool could handle some of the outreach, especially the proactive stuff, as long as it feels personalized and not just automated spam."
+    ],
+    "hidden_insights": [
+      "Despite being overwhelmed, Olivia is open to automation if it truly reduces her workload and feels authentic.",
+      "She values non-discount loyalty incentives more than discounts but is not closed to strategic discounts."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Mark Thompson",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Concern about losing personal touch if communication is fully outsourced",
+      "Discounts may hurt margins and devalue service",
+      "Current tools have limited communication features"
+    ],
+    "buying_triggers": [
+      "Integration with FieldRoutes and ServiceTitan Marketing Pro",
+      "Automation that preserves personal touch and feels non-generic",
+      "Targeted, personalized follow-ups especially for missed payments"
+    ],
+    "notable_quotes": [
+      "I'm cautious about handing over all customer communication to an outside platform.",
+      "Giving discounts just eats into our bottom line, especially if they're not truly preventing churn."
+    ],
+    "hidden_insights": [
+      "Strong preference for maintaining personal touch even when automating",
+      "Missed payments are the clearest churn signal for them"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Sofia Martinez",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "validated",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Wary of losing control and authenticity in communications",
+      "Concerned about complexity and learning curve of new software",
+      "Discounts seen as margin risk and brand cheapening"
+    ],
+    "buying_triggers": [
+      "Simple, affordable solution that integrates with existing scheduling data",
+      "Automation that allows review before sending messages",
+      "Minimal tech overhead and easy to use"
+    ],
+    "notable_quotes": [
+      "I don't want some automated system sending out messages that don't sound like us.",
+      "We're barely keeping up with the work we have, so adding more manual tracking feels impossible."
+    ],
+    "hidden_insights": [
+      "Strong need for control and authenticity limits openness to automation",
+      "Price sensitivity is high; discounts are not favored",
+      "Prefers minimal disruption and simplicity over feature richness"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Jacob Ellis",
+    "persona_archetype": "overwhelmed_founder",
+    "persona_industry": "Pest Control",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "very_positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Integration must be seamless with PestPac",
+      "Avoid overwhelming team with manual data handling"
+    ],
+    "buying_triggers": [
+      "Automated, personalized outreach based on accurate churn signals",
+      "Clear ROI demonstration",
+      "Next best action recommendations and automation"
+    ],
+    "notable_quotes": [
+      "My retention team is smart, but they're drowning in spreadsheets, not strategizing.",
+      "I want our data to work for us, proactively retaining and growing our customer base without overwhelming my team."
+    ],
+    "hidden_insights": [
+      "Strong desire for automation that reduces manual workload",
+      "Willing to pay for solution that delivers clear ROI and integrates well"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Carla Jensen",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Lawn care",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Skepticism about automated messaging sounding generic",
+      "Wants to maintain control over brand voice",
+      "Discounts seen as margin and brand risk"
+    ],
+    "buying_triggers": [
+      "Seamless integration with Jobber",
+      "Automation that creates personalized, non-spammy messages",
+      "Accurate early churn prediction with actionable insights"
+    ],
+    "notable_quotes": [
+      "I've been burned before by 'automated' systems that don't quite get our voice right.",
+      "I see the churn numbers in Jobber after the fact. It's like trying to close the barn door after the horses are already out."
+    ],
+    "hidden_insights": [
+      "Strong control orientation limits openness to full automation",
+      "Wants predictive insights but not at cost of brand voice or manual effort"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Derek Simmons",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest control",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Concern about discounting devaluing service and attracting price-sensitive customers",
+      "Current process is clunky and inconsistent",
+      "Need for ROI quantification before intervention"
+    ],
+    "buying_triggers": [
+      "Seamless integration with PestPac",
+      "Automated, personalized next best action recommendations",
+      "Clear projected ROI on retention efforts"
+    ],
+    "notable_quotes": [
+      "Despite all our data and dashboards, we're still reactive more often than proactive.",
+      "It's hard to put a number on the 'why' behind churn."
+    ],
+    "hidden_insights": [
+      "Strong desire for data-driven, ROI-focused retention automation",
+      "Discounts are a last resort, preference for value-adds and personalized communication"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Maria Lopez",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "HVAC",
+    "persona_company_size": 7,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "mixed",
+      "assumption_3": "mixed",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Avoid adding complexity or new platforms",
+      "Discounts risk margin erosion and brand devaluation",
+      "Current churn signals are mostly gut feeling, not tracked"
+    ],
+    "buying_triggers": [
+      "Simple, easy-to-use solution integrating with spreadsheets or existing tools",
+      "Automated reminders and risk flags without heavy management overhead",
+      "Minimal training and set-it-and-forget-it usability"
+    ],
+    "notable_quotes": [
+      "I don't want to become a tech expert at this stage in my career.",
+      "Losing good customers because we didn't reach out at the right time keeps me up at night."
+    ],
+    "hidden_insights": [
+      "Strong preference for simplicity over feature richness",
+      "Manual processes dominate, limiting predictive capability"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "James Patel",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest control",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Reluctance to add new communication platforms",
+      "Need for highly customizable, explainable churn predictions",
+      "Concern about integration complexity and data silos"
+    ],
+    "buying_triggers": [
+      "Seamless integration with FieldRoutes and Salesforce Marketing Cloud",
+      "Highly accurate, explainable churn predictions with actionable insights",
+      "Insights that feed directly into existing automation workflows"
+    ],
+    "notable_quotes": [
+      "We're reacting to churn, not preventing it.",
+      "I need to know who to talk to and what to talk about, based on solid data."
+    ],
+    "hidden_insights": [
+      "Strong preference for intelligence layer over new communication channel",
+      "Wants flexibility to tweak models and add data sources"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Tina Wu",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Lawn care",
+    "persona_company_size": 5,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Cautious about adding another subscription and learning curve",
+      "Margin erosion concerns with frequent discounts",
+      "Worries about customers expecting discounts and booking only when discounted"
+    ],
+    "buying_triggers": [
+      "Integration with existing CRM (Briostack) and possibly Instagram",
+      "Automation that reduces manual work without high cost or complexity",
+      "Personalized, non-discounted outreach options"
+    ],
+    "notable_quotes": [
+      "What keeps me up at night is the feeling that we're missing something \u2013 that there are customers on the verge of leaving, and we only find out when it's too late.",
+      "If discounts become too frequent or deep, it really impacts our profitability."
+    ],
+    "hidden_insights": [
+      "Strong preference for automation that feels personal and does not add complexity",
+      "Open to discounts but only moderately and with concern for brand and margin"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Marcus Grant",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Plumbing",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Reluctance to add another platform due to integration and training overhead",
+      "Concerns about margin erosion and discount overuse",
+      "Need for targeted discounts rather than broad offers"
+    ],
+    "buying_triggers": [
+      "Seamless integration with ServiceTitan",
+      "Automation of proactive, top-of-mind communications",
+      "Targeted, value-added loyalty programs like maintenance plans"
+    ],
+    "notable_quotes": [
+      "If it can't integrate with what we already have, it's probably not going to be a good fit.",
+      "If we do discounts, they need to be targeted and for a clear purpose, not just throwing money at everyone."
+    ],
+    "hidden_insights": [
+      "Strong preference for maintaining existing workflows and data centralization",
+      "Discounts are a tool but used cautiously and strategically"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Karen O'Brien",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Cleaning services",
+    "persona_company_size": 10,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Strong need for seamless integration with Housecall Pro without disrupting scheduling or billing",
+      "Concern about losing brand voice and control over communications",
+      "Margin erosion and service devaluation concerns with discounts"
+    ],
+    "buying_triggers": [
+      "Truly seamless integration with Housecall Pro",
+      "Predictive churn signals specific to cleaning industry",
+      "Automated personalized outreach that feels authentic"
+    ],
+    "notable_quotes": [
+      "Any disruption [to scheduling or billing] there would be a deal-breaker.",
+      "We pride ourselves on quality, and I don't want customers to start expecting discounts or only booking when there's a deal."
+    ],
+    "hidden_insights": [
+      "High skepticism about generic marketing tools for retention",
+      "Preference for loyalty programs based on value-adds rather than discounts"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Elliot Grant",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Pest control",
+    "persona_company_size": 18,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Preference to maintain control over communications within PestRoutes",
+      "Concerns about margin erosion and discount effectiveness",
+      "Skepticism about integration promises"
+    ],
+    "buying_triggers": [
+      "Seamless integration with PestRoutes",
+      "Predictive churn scoring with clear rationale",
+      "Automated personalized, non-discount-based interventions"
+    ],
+    "notable_quotes": [
+      "I've been burned by software vendors promising seamless integrations that turn into a nightmare.",
+      "Does a discount truly build loyalty, or does it just keep them around until a cheaper option comes along?"
+    ],
+    "hidden_insights": [
+      "Strong desire for proactive, data-driven retention rather than reactive",
+      "Value-added services and personalized attention preferred over discounts"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Nina Kaur",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Lawn care",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong preference for integration with existing platforms (RealGreen, Marketo) rather than replacement",
+      "Discounts seen as risky due to margin erosion and brand devaluation",
+      "Need for actionable, prescriptive retention strategies rather than generic recommendations"
+    ],
+    "buying_triggers": [
+      "Seamless integration without disrupting existing data flows",
+      "Accurate churn prediction differentiated by customer segment",
+      "Prescriptive, actionable retention insights with data transparency"
+    ],
+    "notable_quotes": [
+      "The last thing I need is another tool that creates more data silos or forces us to adapt our processes to its limitations.",
+      "Proactive discounts... can train customers to wait for a discount, eroding our margins."
+    ],
+    "hidden_insights": [
+      "Sophisticated data environment with custom dashboards but manual effort remains high",
+      "Strong emphasis on data ownership and transparency"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Samir Desai",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "HVAC",
+    "persona_company_size": 4,
+    "problem_resonance": 3,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "mixed",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Strong skepticism about new software adding complexity and cost",
+      "Current manual methods are low-cost and familiar",
+      "Open to discounts but wary of margin impact"
+    ],
+    "buying_triggers": [
+      "Simple, low-cost solution that automates service reminders",
+      "No additional complexity or learning curve",
+      "Clear, automatic identification of at-risk customers"
+    ],
+    "notable_quotes": [
+      "My existing methods are... they work. They're not fancy, but they don't cost me anything extra and I understand them.",
+      "I'd want something that just tells me exactly who's about to leave and why, without me having to dig through records or learn a new system."
+    ],
+    "hidden_insights": [
+      "Preference for simplicity and minimal disruption over sophisticated features",
+      "Discounts are a practical tool for immediate cash flow despite margin concerns"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Clara Mitchell",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "Lawn care",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Concern about margin erosion and training customers to expect discounts",
+      "Need for transparency and data export to verify accuracy",
+      "Preference to maintain control over messaging and brand voice"
+    ],
+    "buying_triggers": [
+      "Integration with Jobber for automated churn prediction",
+      "Actionable insights explaining why customers are at risk",
+      "Ability to export raw data and integrate with existing tools like Mailchimp"
+    ],
+    "notable_quotes": [
+      "What keeps me up at night is knowing we have all this data in Jobber, but we're not really using it to its full potential for retention.",
+      "If a discount is truly necessary to save a customer, it needs to be targeted and strategic, not a broad-brush approach."
+    ],
+    "hidden_insights": [
+      "Manual churn tracking is reactive and insufficient",
+      "Strong desire for transparency and control over data and messaging"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Jamal Edwards",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "HVAC",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Need for integration with existing tools (ServiceTitan, Salesforce, HubSpot)",
+      "Difficulty quantifying churn signals and linking service quality to churn",
+      "Margin concerns and executive pressure against over-discounting"
+    ],
+    "buying_triggers": [
+      "Accurate, HVAC-specific churn prediction integrated with ServiceTitan",
+      "Automated personalized, non-discount-based interventions",
+      "Benchmarks and insights to justify investments in retention"
+    ],
+    "notable_quotes": [
+      "We know we have service quality issues sometimes, but we can't really quantify their impact on customers leaving.",
+      "If I could wave a magic wand, the ideal solution would predict churn before it happens, with high accuracy, specifically for HVAC businesses."
+    ],
+    "hidden_insights": [
+      "Operating without industry benchmarks creates uncertainty about retention performance",
+      "Strong desire for actionable insights linking service quality and churn"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Svetlana Petrova",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "cleaning",
+    "persona_company_size": 8,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Automated outreach feels generic and impersonal, which conflicts with her business's personal touch",
+      "Time constraints and complexity of new tools are major barriers",
+      "Discounts are seen as margin-eroding and brand devaluing"
+    ],
+    "buying_triggers": [
+      "A tool that provides simple, actionable insights with personalized, subtle messaging that does not add workload",
+      "Seamless, low-effort integration without complex setup"
+    ],
+    "notable_quotes": [
+      "I'm skeptical about tools that promise to 'manage outreach.' I've seen those automated emails, and they often sound generic.",
+      "Discounts... I'd say a 3 or 4. We're a small business, and our margins aren't huge. Constantly offering discounts just eats into what we make."
+    ],
+    "hidden_insights": [
+      "Strong preference for personal relationships over automation despite acknowledging time constraints",
+      "Relies heavily on intuition and subtle behavioral cues rather than explicit data signals"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Miguel Alvarez",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "pest control",
+    "persona_company_size": 20,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Concern about workflow disruption if new tool does not integrate with existing platforms",
+      "Cautious about discounts due to margin and brand value concerns"
+    ],
+    "buying_triggers": [
+      "Seamless integration with FieldRoutes and Mailchimp",
+      "Automated, personalized, value-focused outreach triggered by predictive signals",
+      "Clear ROI in reducing seasonal churn and improving revenue predictability"
+    ],
+    "notable_quotes": [
+      "We're not looking to rip out and replace our existing setup unless there's a compelling reason.",
+      "On a scale of 1 to 10, I'd say a 5. We're cautious about discounts... we'd rather focus on demonstrating value than constantly dropping prices."
+    ],
+    "hidden_insights": [
+      "Strong emphasis on leveraging existing investments and minimizing disruption",
+      "Sees value in automation but only if it enhances current workflows and messaging control"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Karen Li",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "plumbing",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Reluctance to add complexity or new tools beyond existing Briostack and Outreach integration",
+      "Discounts seen as margin-eroding and potentially devaluing service"
+    ],
+    "buying_triggers": [
+      "A predictive system that integrates with existing CRM and communication tools",
+      "Smart automation for win-back campaigns, renewal reminders, and personalized loyalty messages",
+      "Flexibility to handle plumbing-specific churn dynamics"
+    ],
+    "notable_quotes": [
+      "We're not looking for more tools just for the sake of it.",
+      "I'd rather focus on reinforcing trust... alternatives would be tiered service plans or preferred customer status rather than cutting cost."
+    ],
+    "hidden_insights": [
+      "Churn prediction needs to be tailored to plumbing's unique service dynamics",
+      "Strong preference for value-added loyalty benefits over discounts"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Evan Thompson",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "pest control",
+    "persona_company_size": 4,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong preference for personal, manual communication over automated outreach",
+      "Skepticism about generic automation and prior negative experiences with complex tools",
+      "Discounts seen as margin-eroding and only a last resort"
+    ],
+    "buying_triggers": [
+      "A simple, affordable tool that flags at-risk customers early and suggests personalized outreach without replacing personal calls"
+    ],
+    "notable_quotes": [
+      "I'd be worried it would sound\u2026 robotic. Impersonal.",
+      "Giving discounts before there's even a problem feels like leaving money on the table."
+    ],
+    "hidden_insights": [
+      "High distrust of automation despite acknowledging its potential value if done right",
+      "Wants predictive signals but only to augment personal outreach, not replace it"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Mei Chen",
+    "persona_archetype": "data_hungry_operator",
+    "persona_industry": "lawn care",
+    "persona_company_size": 100,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Current challenge is real-time integration of churn predictions into Marketo",
+      "Discounts seen as margin-eroding and risk devaluing premium brand"
+    ],
+    "buying_triggers": [
+      "Automated, adaptive churn prediction models that integrate seamlessly and transparently with existing marketing tools",
+      "Ability to validate and understand model methodology"
+    ],
+    "notable_quotes": [
+      "Our current models are good, but refining that cross-service line prediction and segmenting campaigns precisely is a massive lift.",
+      "I'd want a system that could automatically learn and adapt its churn prediction models to these nuances in real-time."
+    ],
+    "hidden_insights": [
+      "Complexity of multi-service line churn prediction is a significant barrier",
+      "Strong desire for transparency and control over AI/ML models"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Derek Sandoval",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "lawn care",
+    "persona_company_size": 12,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Concern about losing control over messaging and brand voice if outreach is fully managed externally",
+      "Margins and brand perception concerns limit broad discount use"
+    ],
+    "buying_triggers": [
+      "Seamless integration with Jobber and Mailchimp",
+      "Automated, personalized, branded outreach with clear reasons for churn risk",
+      "Ability to upsell/cross-sell automatically"
+    ],
+    "notable_quotes": [
+      "I'd be open to a tool that manages outreach, especially if it integrates well and maintains our brand voice.",
+      "I'd want that to be highly targeted... not training customers to expect discounts."
+    ],
+    "hidden_insights": [
+      "Manual processes are inefficient and a source of frustration",
+      "Technician gut feeling is valuable but not scalable"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Sonia Patel",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "HVAC",
+    "persona_company_size": 30,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Need for seamless integration to avoid complexity",
+      "Wary of tools that add manual work or require marketing expertise",
+      "Discounts must be strategic and targeted to avoid margin erosion and brand devaluation"
+    ],
+    "buying_triggers": [
+      "Set-it-and-forget-it automated system with transparent reporting",
+      "Proactive engagement to address off-season churn",
+      "Integration with ServiceTitan and HubSpot"
+    ],
+    "notable_quotes": [
+      "I'm wary of anything that adds complexity to our existing marketing stack.",
+      "I've seen too many 'AI-powered' tools that promise the moon but end up being another manual chore."
+    ],
+    "hidden_insights": [
+      "Near retirement focus increases desire for low-maintenance solutions",
+      "Off-season churn is a significant pain point"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Marcus Nguyen",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "pest control",
+    "persona_company_size": 6,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "mixed",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Reluctance to add new platforms that increase complexity or require extra data entry",
+      "Discounts seen as margin-eroding and only partially effective for loyalty"
+    ],
+    "buying_triggers": [
+      "Integration with FieldRoutes to avoid workflow disruption",
+      "Accurate churn prediction with minimal false positives",
+      "Automated, personalized, value-driven communications beyond discounts",
+      "Affordable and simple to use without dedicated analyst"
+    ],
+    "notable_quotes": [
+      "If a new tool means more logins, more data entry, and more complexity, it's a non-starter.",
+      "I'd much rather focus on demonstrating our value... maybe offering a free add-on service or exclusive content."
+    ],
+    "hidden_insights": [
+      "Winter churn spike is a recurring, predictable problem",
+      "Strong preference for value-based loyalty over discounting"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Janice Williams",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Residential & Commercial Cleaning",
+    "persona_company_size": 85,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Concern about adding complexity and workload with a new system managing outreach",
+      "Need for control over messaging to maintain brand voice",
+      "Skepticism about discounts devaluing brand and their long-term effectiveness",
+      "Desire for automation that maintains personal touch and is easy to use"
+    ],
+    "buying_triggers": [
+      "Simple integration with existing tools",
+      "Automation that suggests personalized actions without generic messaging",
+      "Solution that reduces manual workload without disrupting current processes"
+    ],
+    "notable_quotes": [
+      "The idea of us managing retention communication through yet another new system sounds like more work, not less, especially if it's complex.",
+      "We want the latter [customers stay because they value the service], not because they got a good deal."
+    ],
+    "hidden_insights": [
+      "Despite being an automation-first buyer, Janice is highly sensitive to brand perception and personal touch, which may limit adoption of generic automated outreach.",
+      "She has intuitive but untracked churn signals, indicating a gap that ML could fill if integrated well."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Elias Romero",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pest Control",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Reluctance to replace or duplicate existing Salesforce Marketing Cloud setup",
+      "Need for proof that new tool outperforms current in-house processes",
+      "Concern about discounting devaluing brand and training customers to expect coupons"
+    ],
+    "buying_triggers": [
+      "Seamless integration with existing CRM and marketing platforms",
+      "Automation that bridges gap from churn prediction to campaign execution without manual intervention",
+      "Highly customizable, API-first platform that reduces developer dependency"
+    ],
+    "notable_quotes": [
+      "The 'glue' that connects real-time data insights to immediate, personalized outreach is still too manual.",
+      "If it can take action, not just recommend it, and learn from results, that would be ideal."
+    ],
+    "hidden_insights": [
+      "Elias has invested heavily in technology and expects any new solution to demonstrably outperform existing tools.",
+      "He values automation but only if it reduces manual overhead and integrates tightly with current systems."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Linda Park",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Plumbing",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "invalidated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Adding another platform sounds like more work, not less",
+      "Concern about losing personal touch with customers",
+      "Skepticism about discounts due to tight margins and brand value",
+      "Preference for simple, personal communication over generic automation"
+    ],
+    "buying_triggers": [
+      "Solution that is super easy to use and integrates invisibly",
+      "Ability to identify churn risk early with actionable insights",
+      "Automation that suggests personal, genuine outreach rather than generic marketing"
+    ],
+    "notable_quotes": [
+      "If it's going to annoy my customers, I'd rather just not send it.",
+      "It feels like a punch to the gut when you find out someone you've served for years went somewhere else."
+    ],
+    "hidden_insights": [
+      "Despite being labeled 'automation_first_buyer', Linda is highly skeptical of automation that reduces personal connection.",
+      "She relies heavily on personal relationships and is wary of technology that might disrupt that."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Carlos Mendez",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Adding a new platform risks creating silos and duplicate effort",
+      "Need for seamless integration with HubSpot to avoid manual campaign rebuilding",
+      "Concern about discounts devaluing premium brand and training customers to expect price cuts"
+    ],
+    "buying_triggers": [
+      "Unified platform that integrates directly with HubSpot",
+      "Automation that identifies at-risk customers and triggers personalized campaigns without manual data stitching",
+      "Ability to target off-season win-back and upsell campaigns effectively"
+    ],
+    "notable_quotes": [
+      "If something doesn't integrate seamlessly and allow us to trigger campaigns within HubSpot, it's probably not going to work for us.",
+      "It's clunky and time-consuming trying to stitch data from Briostack and HubSpot to predict churn."
+    ],
+    "hidden_insights": [
+      "Carlos is highly invested in existing tools and wary of adding complexity.",
+      "He desires predictive signals richer than what CRM alone provides to drive automation."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Patricia Klein",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 3,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "invalidated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Automation sounds like more work and complexity",
+      "Lack of tech resources to manage campaigns or learn software",
+      "Skepticism about discounts due to margin constraints and brand value",
+      "Preference for personal, manual outreach over automated messaging"
+    ],
+    "buying_triggers": [
+      "Truly hands-off automation that requires no management or setup",
+      "Accurate churn prediction with automatic, personalized outreach",
+      "Solution that saves time without needing marketing expertise"
+    ],
+    "notable_quotes": [
+      "If I had to automate something, it would be gentle reminders that just happen without me managing it.",
+      "I don't have the time or the tech resources to be managing campaigns or figuring out complex platforms."
+    ],
+    "hidden_insights": [
+      "Small operation with minimal technology adoption and high reliance on personal touch.",
+      "Strong desire for automation but only if it is completely hands-off and simple."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Ahmed El-Sayed",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "HVAC",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Wary of adding tools that increase workload without true automation",
+      "Concern about discounts being given indiscriminately and eroding margins"
+    ],
+    "buying_triggers": [
+      "End-to-end automation from churn prediction to personalized multi-channel outreach",
+      "Seamless integration with ServiceTitan and Marketo",
+      "Automation that requires minimal manual input and proves ROI"
+    ],
+    "notable_quotes": [
+      "If your platform could automate the whole process from identifying risk to sending targeted communications without babysitting, that's interesting.",
+      "If your RevHawk.pro can actually automate outbound communications end-to-end based on these predictions, that would be a game-changer."
+    ],
+    "hidden_insights": [
+      "Open to proactive discounts if precisely targeted and effective.",
+      "Sees automation as critical to reduce manual overhead and improve timeliness of retention efforts."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Joanne Fischer",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 3,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Preference to leverage existing Salesforce Marketing Cloud for control and brand consistency",
+      "Concern about integrations adding complexity and potential failures",
+      "Low enthusiasm for discounts due to margin and brand value concerns",
+      "Challenge of automating personalized value-adds without manual effort"
+    ],
+    "buying_triggers": [
+      "Seamless integration with PestPac and Salesforce",
+      "Real-time, intelligent churn identification with automated personalized outreach",
+      "Solution that proves ROI quickly without resource-intensive implementation"
+    ],
+    "notable_quotes": [
+      "Having another system try to replicate or override that just sounds like more complexity and potential for things to go wrong.",
+      "We get the reports, then we try to act, but by then, it might be too late for some customers."
+    ],
+    "hidden_insights": [
+      "Strong desire for automation but only if it reduces manual work and integrates tightly with existing tools.",
+      "Skepticism about discounts and preference for value-driven loyalty programs."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Maya Thompson",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Lawn care",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Concern about adding siloed communication tools that don't integrate with HubSpot",
+      "Caution around discounts to protect margins and brand value"
+    ],
+    "buying_triggers": [
+      "Hands-off, accurate churn prediction using multiple data sources",
+      "Automated, personalized multi-channel outreach integrated deeply with HubSpot",
+      "Self-learning system with real-time reporting and optimization"
+    ],
+    "notable_quotes": [
+      "If a new solution can't integrate seamlessly with HubSpot, it's likely to create more manual work.",
+      "What keeps me up is the feeling that we're reacting to churn instead of preventing it."
+    ],
+    "hidden_insights": [
+      "Strong preference for automation that feeds into existing marketing infrastructure.",
+      "Open to proactive discounts but only cautiously and strategically."
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Carlos Mendoza",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pest control",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Need seamless integration with existing tools",
+      "Skepticism about adding redundant tools",
+      "Margin concerns limit use of proactive discounts",
+      "Preference for value-add loyalty over discounts"
+    ],
+    "buying_triggers": [
+      "Clear measurable ROI within a few months",
+      "Proactive, personalized engagement beyond generic emails",
+      "Seamless integration with FieldRoutes"
+    ],
+    "notable_quotes": [
+      "If your tool just flags at-risk customers, then we'd still be using ServiceTitan to reach out to them. So, what's the real advantage?",
+      "On a scale of 1 to 10 for proactive discounts to drive loyalty, I'd say... a 3, maybe a 4 on a good day."
+    ],
+    "hidden_insights": [
+      "Strong preference for value-driven loyalty tactics rather than price incentives",
+      "Frustration with reactive rather than proactive churn management"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Linda Nguyen",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 8,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Preference to maintain control, distrust of 'black box' automation",
+      "Concerns about cost and training burden",
+      "Margin sensitivity limits discount use",
+      "Desire for simplicity and minimal disruption to current workflows"
+    ],
+    "buying_triggers": [
+      "Plug-and-play solution that works with existing minimal systems",
+      "Affordable pricing with quick ROI",
+      "Automation of simple, personalized messages like annual reminders and 'we miss you'"
+    ],
+    "notable_quotes": [
+      "I'm not looking to hand over my customer relationships to some black box.",
+      "It absolutely cannot require us to abandon our current minimal systems."
+    ],
+    "hidden_insights": [
+      "Small business with limited tech adoption and strong preference for manual control",
+      "Retiring soon, so investment horizon is short"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Jamal Harris",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Lawn care",
+    "persona_company_size": 30,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Need seamless integration with existing Salesforce Marketing Cloud",
+      "Concern about disrupting existing workflows",
+      "Margin protection and brand value preservation limit discount use"
+    ],
+    "buying_triggers": [
+      "Effortless integration feeding predictive insights into existing marketing platforms",
+      "Automated, targeted campaigns with precise timing",
+      "Demonstrable ROI and reduction of manual intervention"
+    ],
+    "notable_quotes": [
+      "We need to ensure seamless integration and avoid disrupting what's already working well for us.",
+      "If a discount is precisely targeted at a high-value customer with a high churn probability, and it's effective in retaining them, then it's a worthwhile investment."
+    ],
+    "hidden_insights": [
+      "Sophisticated data usage with internal ML models",
+      "Open to discounts but only as a strategic, targeted tool"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Sharon Blake",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Cleaning services",
+    "persona_company_size": 15,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Desire to retain control over messaging",
+      "Fear of sounding desperate or annoying customers",
+      "Margin concerns limit discount use",
+      "Skepticism about complex software and setup"
+    ],
+    "buying_triggers": [
+      "Automation that 'just works' and integrates with existing tools",
+      "Clear proof of increased repeat bookings before commitment",
+      "Simple, personalized, non-generic messaging"
+    ],
+    "notable_quotes": [
+      "I can't afford that. If I had a magic wand, I'd want something that just *works*.",
+      "I'm worried about sounding desperate or annoying people."
+    ],
+    "hidden_insights": [
+      "Seasonal demand fluctuations cause churn challenges",
+      "Strong preference for personal, genuine communication over automation"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Ethan Coleman",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "HVAC",
+    "persona_company_size": 40,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 4,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "validated"
+    },
+    "key_objections": [
+      "Fragmented communication systems cause inefficiencies",
+      "Need for HVAC-specific churn prediction without lengthy customization",
+      "Margin and brand concerns limit discount use"
+    ],
+    "buying_triggers": [
+      "Unified platform integrating ServiceTitan and HubSpot",
+      "AI-driven actionable churn predictions",
+      "Automated personalized retention campaigns with clear ROI"
+    ],
+    "notable_quotes": [
+      "We know we have valuable customer data, but it's not being leveraged effectively to anticipate problems before they escalate.",
+      "It absolutely cannot require lengthy customization to get those HVAC-specific triggers right."
+    ],
+    "hidden_insights": [
+      "Desire for reduction in manual effort and complexity",
+      "Interest in proactive loyalty programs beyond discounts"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Helen Park",
+    "persona_archetype": "automation_first_buyer",
+    "persona_industry": "Pest control",
+    "persona_company_size": 5,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong need for PestPac integration",
+      "Fear of losing personal touch with automation",
+      "Margin concerns limit discount use",
+      "Skepticism from prior negative experiences with complex solutions"
+    ],
+    "buying_triggers": [
+      "Simple, trustworthy system that flags at-risk customers before churn",
+      "Automation that supports personal outreach without over-automating",
+      "Affordable and easy to use with clear value"
+    ],
+    "notable_quotes": [
+      "Not some overly complex AI black box, but something that genuinely integrates with PestPac.",
+      "I've been burned by 'solutions' before that promised the world and just added more stress and cost."
+    ],
+    "hidden_insights": [
+      "Relies heavily on intuition and manual checks",
+      "Wants automation but only if it preserves genuine customer relationships"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Clara Moreno",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 20,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong preference to keep communications within existing platforms",
+      "Skepticism about promised 'easy integration'",
+      "Margin sensitivity limits discount use",
+      "Administrative burden concerns for managing value-add loyalty programs"
+    ],
+    "buying_triggers": [
+      "Truly seamless integration with Jobber",
+      "Automated, personalized action suggestions",
+      "Clear ROI demonstration"
+    ],
+    "notable_quotes": [
+      "Unless this 'specialized tool' integrates *seamlessly* and practically runs itself, I don't see the benefit.",
+      "I've heard some of the bigger companies use AI for this, but I'm skeptical it's truly applicable or affordable for a business our size."
+    ],
+    "hidden_insights": [
+      "Worries about leaving money on the table due to lack of proactive retention",
+      "Desires automation that thinks for her and reduces manual work"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "David Kwan",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 12,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Need for seamless integration with FieldRoutes",
+      "Skepticism about added value beyond existing systems",
+      "Margin concerns and brand positioning limit discount use",
+      "Desire for accurate, segmented churn insights rather than generic data"
+    ],
+    "buying_triggers": [
+      "Predictive, segmented churn insights integrated with FieldRoutes",
+      "Automated, targeted communications addressing specific churn reasons",
+      "Clear ROI and actionable recommendations"
+    ],
+    "notable_quotes": [
+      "We only really know *why* a customer left after they're gone, and by then, it's too late.",
+      "The 'magic wand' would be knowing who's at risk *before* they even consider leaving."
+    ],
+    "hidden_insights": [
+      "Current churn analysis is mostly reactive and lacks segmentation",
+      "Wants to understand different churn types to tailor retention efforts"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Tina Brown",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "HVAC",
+    "persona_company_size": 15,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Reluctance to learn a new system due to past bad experiences",
+      "Concern that discounts erode margins and devalue brand",
+      "Skepticism that AI tools can accurately predict churn reasons like moving away",
+      "Fear that new software creates more work than it saves"
+    ],
+    "buying_triggers": [
+      "Effortless system that requires no training or extra work",
+      "Accurate identification of customers truly about to leave",
+      "No costly discounts or devaluation of service"
+    ],
+    "notable_quotes": [
+      "\"We've been burned before by software that promised the moon and just ended up being a headache to implement and train on.\"",
+      "\"Honestly, though, I'm pretty skeptical anything like that truly exists, especially for a small business like ours.\""
+    ],
+    "hidden_insights": [
+      "Despite decent retention, churn is accepted as a cost of doing business",
+      "Personalized touches and competence are preferred loyalty drivers over discounts"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Raj Patel",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Reluctance to replace existing Salesforce Marketing Cloud platform",
+      "Margin concerns and brand perception limit discount use",
+      "Need for seamless integration and unique value to consider new tools"
+    ],
+    "buying_triggers": [
+      "Tool that enhances existing Salesforce workflows",
+      "Highly accurate, granular churn prediction with actionable insights",
+      "Non-discount-based, personalized retention interventions"
+    ],
+    "notable_quotes": [
+      "\"I'd be hesitant to introduce another platform solely for retention communications.\"",
+      "\"It would identify those subtle, early behavioral shifts we discussed and suggest hyper-personalized, non-discount-based interventions that align with our brand and perceived value.\""
+    ],
+    "hidden_insights": [
+      "Strong preference for integration over replacement of existing tools",
+      "Proactive, predictive retention is a key unmet need despite advanced current systems"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Jessica Long",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 6,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "invalidated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Fear of losing personal control and touch with customers",
+      "Previous bad experiences with expensive, ineffective marketing platforms",
+      "Skepticism that automation can help without adding complexity",
+      "Margin concerns and fear of discount dependency"
+    ],
+    "buying_triggers": [
+      "Simple, affordable tool that alerts about potential churn without automating outreach",
+      "No complicated setup or ongoing fees",
+      "Tool acts as an assistant rather than replacing personal communication"
+    ],
+    "notable_quotes": [
+      "\"I'm highly skeptical any tool could do that without adding more headaches than it solves.\"",
+      "\"It absolutely could *not* be expensive. No big monthly fees, no complicated setup, and definitely no long contracts.\""
+    ],
+    "hidden_insights": [
+      "Strong preference for manual, personal outreach over automation",
+      "Churn signals are mostly gut feelings and booking pattern changes"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Mark Thompson",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 50,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Reluctance to lose control over brand voice and messaging",
+      "Concerns about margin erosion and customer perception with discounts",
+      "Complexity and overhead of managing loyalty programs"
+    ],
+    "buying_triggers": [
+      "Seamless, deep integration with PestPac and HubSpot",
+      "Highly accurate churn prediction with actionable, customer-specific recommendations",
+      "Automated feeding of insights into existing communication tools"
+    ],
+    "notable_quotes": [
+      "\"We know we have valuable data in PestPac, but extracting actionable insights that aren't just surface-level is a constant struggle.\"",
+      "\"It would tell us *why* a customer is at risk and suggest the best way to re-engage them, without us having to sift through a hundred dashboards.\""
+    ],
+    "hidden_insights": [
+      "Manual data analysis is a major bottleneck",
+      "Strong desire for actionable insights rather than raw data"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Emily Chen",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Plumbing",
+    "persona_company_size": 20,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Need for seamless integration with Briostack to avoid data silos",
+      "Margin concerns and brand devaluation with proactive discounts",
+      "Skepticism about discounts building true loyalty"
+    ],
+    "buying_triggers": [
+      "Smart, actionable churn prediction with clear reasons",
+      "Suggested personalized next actions for each customer",
+      "Integration with existing systems and proven effectiveness for plumbing"
+    ],
+    "notable_quotes": [
+      "\"If it's 'specialized,' it better be really good at what it does, not just another piece of software to manage.\"",
+      "\"It needs to be smart, actionable, and not make us feel like we're just throwing discounts at problems.\""
+    ],
+    "hidden_insights": [
+      "Reactive churn signals are insufficient; desire for nuanced, predictive indicators",
+      "Value placed on making customers feel genuinely valued over transactional incentives"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Alex Rivera",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": 15,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Margin concerns and risk of training customers to expect discounts",
+      "Skepticism about discounts' effectiveness",
+      "Frustration with manual data exports and segmentation"
+    ],
+    "buying_triggers": [
+      "Automatic data analysis with no manual exports",
+      "Seamless integration with ActiveCampaign",
+      "Pre-built personalized campaigns triggered by churn signals"
+    ],
+    "notable_quotes": [
+      "\"If a tool can't integrate cleanly with ActiveCampaign, it's probably a non-starter.\"",
+      "\"What keeps me up at night is the feeling that we're leaving money on the table... not understanding why customers leave or how to win them back.\""
+    ],
+    "hidden_insights": [
+      "Manual processes create significant friction and lost opportunities",
+      "Moderate openness to discounts but preference for value and personalized experiences"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Nancy Wilson",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 4,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong preference for personal control over communications",
+      "Skepticism about automation and AI complexity",
+      "Budget constraints and fear of expensive software",
+      "Discounts seen as margin killers and brand devaluers"
+    ],
+    "buying_triggers": [
+      "Simple, easy-to-use tool that flags at-risk customers from minimal data",
+      "No complicated AI or setup",
+      "Low cost and quick learning curve"
+    ],
+    "notable_quotes": [
+      "\"The idea of a system 'managing' outreach sounds... impersonal, and potentially complicated.\"",
+      "\"My budget for software is pretty much non-existent right now.\""
+    ],
+    "hidden_insights": [
+      "Manual tracking with Google Sheets limits predictive capability",
+      "Desire for lightweight, non-disruptive tools that augment personal outreach"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Samuel Blake",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": 50,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Skepticism about maturity of AI tools for cleaning sector",
+      "Margin concerns and risk of discount dependency",
+      "Need for clear ROI demonstration"
+    ],
+    "buying_triggers": [
+      "Seamless integration with Housecall Pro",
+      "Accurate churn scoring with actionable retention suggestions",
+      "Automation of personalized retention actions with measurable ROI"
+    ],
+    "notable_quotes": [
+      "\"The main issue isn't necessarily the *platform* itself, but the *intelligence* behind the communication.\"",
+      "\"I've heard about AI-powered tools, but I'm skeptical if that's mature enough for the cleaning sector specifically.\""
+    ],
+    "hidden_insights": [
+      "Current retention efforts are reactive and undifferentiated",
+      "Interest in strategic, targeted discounts rather than broad discounting"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Marissa Chen",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Wary of adding another tool that duplicates Mailchimp or Jobber",
+      "Concern about margin erosion from proactive discounts",
+      "Fear of devaluing brand by training customers to expect discounts",
+      "Need for clear ROI to justify tech investments"
+    ],
+    "buying_triggers": [
+      "Seamless integration with Jobber",
+      "Clear, easy-to-understand metrics proving ROI",
+      "Automated, personalized, non-discount-based retention strategies"
+    ],
+    "notable_quotes": [
+      "My main concern would be whether a specialized tool truly offers something significantly better than what we piece together, and how much work it would be to integrate.",
+      "We operate on pretty thin margins already, so giving away discounts just to prevent someone from leaving, without a clear understanding of the ROI, feels risky."
+    ],
+    "hidden_insights": [
+      "Strong preference for non-discount loyalty strategies focused on personalized communication and value-adds",
+      "Manual segmentation and campaign management is a significant time sink"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Jamal Ortiz",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "HVAC",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong preference to avoid adding new platforms due to operational overhead and integration headaches",
+      "Skepticism about effectiveness and brand impact of proactive discounts",
+      "Need for seamless integration with ServiceTitan"
+    ],
+    "buying_triggers": [
+      "Deep integration or native functionality within ServiceTitan",
+      "Automated, personalized, actionable next steps for at-risk customers",
+      "Minimal additional manual work for team"
+    ],
+    "notable_quotes": [
+      "If it means more data entry or logging into yet another system, it's a non-starter.",
+      "A discount might keep someone for one more service, but does it build a lasting relationship? Probably not."
+    ],
+    "hidden_insights": [
+      "Values exclusive, non-discount loyalty benefits like priority scheduling and extended warranties",
+      "Manual tasks often get missed when busy, indicating automation could add value if integrated well"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Diane Murphy",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 110,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Reluctance to add new platforms that complicate brand voice and message consistency",
+      "Low openness to proactive discounts due to margin concerns and brand dilution",
+      "Current churn tracking is manual and reactive, lacking predictive automation"
+    ],
+    "buying_triggers": [
+      "Seamless integration with PestPac and Salesforce Marketing Cloud",
+      "Accurate, dynamic risk scoring with clear reasons for churn risk",
+      "Clear, measurable ROI from retention actions"
+    ],
+    "notable_quotes": [
+      "Introducing another platform just for retention communications sounds like it could complicate things more than it helps.",
+      "Giving away discounts to customers who weren't even thinking of leaving feels like throwing money away."
+    ],
+    "hidden_insights": [
+      "Manual Excel churn tracking is insufficient for large customer base (~10,000)",
+      "Preference for non-discount retention strategies focused on service quality and education"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Tom\u00e1s Aguilar",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Cleaning Services",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "validated",
+      "assumption_3": "mixed",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Not interested in adding complexity or learning new systems",
+      "Discounts risk devaluing service and margin erosion",
+      "Limited resources and stretched thin"
+    ],
+    "buying_triggers": [
+      "Simple, low-cost early warning alerts integrated with existing booking or spreadsheet systems",
+      "Minimal setup and management effort"
+    ],
+    "notable_quotes": [
+      "We're a cleaning business, not a marketing agency.",
+      "It needs to be almost invisible, just giving me the insights I need to act."
+    ],
+    "hidden_insights": [
+      "Primary need is early churn detection rather than complex marketing automation",
+      "Willingness to use targeted discounts only for specific at-risk customers"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "medium"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Caroline Ford",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Reluctance to adopt new tools that duplicate HubSpot and Briostack functionality",
+      "Concerns about discounting devaluing brand and attracting price-sensitive customers",
+      "Integration challenges between existing systems"
+    ],
+    "buying_triggers": [
+      "Seamless integration with Briostack and HubSpot",
+      "Highly accurate predictive insights and actionable next steps",
+      "Attribution tracking to measure retention campaign effectiveness"
+    ],
+    "notable_quotes": [
+      "Unless a new tool offers a significant leap in predictive accuracy or automates multi-channel outreach in a way HubSpot can't, I'd prefer to leverage what we already have.",
+      "We've been burned by discounting before where it just ate into our profits without a noticeable bump in long-term retention."
+    ],
+    "hidden_insights": [
+      "Strong desire for proactive, personalized 'health checks' and upsell automation",
+      "Worries about leaving money on the table from untapped customer potential"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Fredrick Jensen",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Pest Control",
+    "persona_company_size": 4,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Wary of adding complex software requiring dedicated management",
+      "Low openness to proactive discounts due to margin and brand concerns",
+      "Skepticism from past failed churn prediction tools"
+    ],
+    "buying_triggers": [
+      "Simple, integrated solution with FieldRoutes",
+      "Automated, personal-feeling communications that avoid generic sales pitches",
+      "Affordable pricing and no long-term commitment"
+    ],
+    "notable_quotes": [
+      "I've been burned before, so I'm very cautious about new investments in this area.",
+      "It has to feel personal, not like a robot."
+    ],
+    "hidden_insights": [
+      "Seasonal churn is a major concern, especially winter drop-offs",
+      "Preference for quality over quantity in automated communications"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "medium"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Linda Park",
+    "persona_archetype": "competitive_evaluator",
+    "persona_industry": "Plumbing",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "mixed",
+      "assumption_2": "mixed",
+      "assumption_3": "mixed",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "No existing dedicated outreach platform; current setup is low-tech and manual",
+      "Concern about complexity and cost of new tools",
+      "Wary of margin erosion from discounts and training customers to expect them"
+    ],
+    "buying_triggers": [
+      "Simple, easy-to-use analytics that integrate with spreadsheets and manual processes",
+      "Automated, proactive communications like maintenance reminders and post-service follow-ups",
+      "Clear impact measurement without heavy IT or CRM upgrades"
+    ],
+    "notable_quotes": [
+      "It would have to integrate with our current low-tech setup, not replace it with something overly complicated or expensive.",
+      "Our current retention rate is 60%, and I know we could do better, but I just don't have the tools or the time to figure out why customers are leaving."
+    ],
+    "hidden_insights": [
+      "Open to proactive discounts but with caution; prefers loyalty programs rewarding repeat business without cutting margins",
+      "Feels efforts are inconsistent and mostly guesswork"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "medium"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Anika Patel",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "Lawn Care",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong preference to leverage existing Salesforce Marketing Cloud investment",
+      "Skepticism about proactive discounts due to margin erosion and brand devaluation",
+      "Need for proven predictive accuracy on their specific data before adoption"
+    ],
+    "buying_triggers": [
+      "Seamless integration with Jobber and Salesforce Marketing Cloud",
+      "Highly accurate, early churn prediction validated on their data",
+      "Automated, personalized, non-discount retention campaigns with measurable ROI",
+      "Partnership with internal data scientists rather than replacement"
+    ],
+    "notable_quotes": [
+      "The issue isn't the communication platform itself, but rather the intelligence feeding it.",
+      "It absolutely needs to prove its accuracy on our specific customer base before I'd consider it."
+    ],
+    "hidden_insights": [
+      "Large customer base (35,000) with manual BI processes causing bottlenecks",
+      "Focus on non-discount loyalty strategies emphasizing exclusive upgrades and educational content"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Marcus Reynolds",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "HVAC",
+    "persona_company_size": null,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong preference to keep retention communications within existing platforms (ServiceTitan, HubSpot)",
+      "Skepticism about adding new software due to past negative experiences",
+      "Concern about margin erosion and brand devaluation from proactive discounts"
+    ],
+    "buying_triggers": [
+      "Seamless integration with ServiceTitan",
+      "Automated, personalized communications within existing systems",
+      "Clear ROI demonstration"
+    ],
+    "notable_quotes": [
+      "We've been burned by new software implementations disrupting our operations in the past.",
+      "Proactive discounts... we're very cautious. My main concern is margin erosion; we're already operating on pretty tight margins."
+    ],
+    "hidden_insights": [
+      "Primary churn signal is contract expiration; no systematic predictive signals currently used",
+      "Strong desire for proactive identification of at-risk customers beyond contract expiration"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Greta Martinez",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "pest control",
+    "persona_company_size": 7,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Preference to maintain control and authenticity by managing communications themselves",
+      "Skepticism about complexity and potential loss of authenticity from third-party tools",
+      "Margin concerns and doubts about effectiveness of proactive discounts"
+    ],
+    "buying_triggers": [
+      "Simple, 'set it and forget it' solution",
+      "Automatic identification of at-risk customers with clear reasons and recommended actions",
+      "Affordable pricing and minimal management overhead"
+    ],
+    "notable_quotes": [
+      "I'd need a lot of convincing that it wouldn't just mess things up or make us sound inauthentic.",
+      "Handing out discounts just to keep someone who might leave anyway feels like throwing money away."
+    ],
+    "hidden_insights": [
+      "Currently relies heavily on manual tracking and gut feeling for churn prediction",
+      "Strong desire for simplicity and minimal setup in any automation"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Felix Ng",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "cleaning services",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Concern about margin erosion and brand devaluation from proactive discounts",
+      "Skepticism about adding complexity or fragmenting customer view with new platforms"
+    ],
+    "buying_triggers": [
+      "Seamless integration with existing platforms (Briostack, Salesforce Marketing Cloud)",
+      "Improved predictive accuracy for irregular cleaning service churn",
+      "Clear ROI and enhancement rather than replacement of existing systems"
+    ],
+    "notable_quotes": [
+      "Introducing another system for outreach would add complexity and fragment our customer view.",
+      "Discounts... risk training customers to wait for a discount rather than appreciating consistent quality."
+    ],
+    "hidden_insights": [
+      "Has advanced in-house ML churn prediction integrated with CRM and marketing platforms",
+      "Seeks domain-specific churn signals and better predictive accuracy"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Dwayne Hawkins",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "pest control",
+    "persona_company_size": 60,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "invalidated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong preference to manage communications internally to maintain control",
+      "Skepticism about automating communications due to past ineffective personalized campaigns",
+      "Concerns about margin erosion and brand devaluation from discounts",
+      "Doubt about accuracy of AI churn predictions"
+    ],
+    "buying_triggers": [
+      "Highly accurate identification of at-risk customers with clear reasons",
+      "Personalized, effective retention actions beyond generic discounts",
+      "Avoidance of additional communication platforms"
+    ],
+    "notable_quotes": [
+      "I'm not looking for another platform to manage communications, especially not one that 'deploys on our behalf.'",
+      "I'm highly skeptical that kind of accuracy is even possible. I've heard promises about 'AI' before, and it usually just adds more noise."
+    ],
+    "hidden_insights": [
+      "Retention efforts are reactive and rely on gut feeling and contract alerts",
+      "Focus is on understanding root causes of churn rather than increasing automated outreach"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Sonia Kapoor",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "lawn care",
+    "persona_company_size": 40,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "mixed"
+    },
+    "key_objections": [
+      "Concern about losing brand voice and personal touch with external tools",
+      "Past negative experiences with complex or costly integrations",
+      "Hesitation about discounts due to margin and brand value concerns"
+    ],
+    "buying_triggers": [
+      "Seamless integration with RealGreen and Mailchimp",
+      "Automated, personalized, and actionable outreach with clear ROI",
+      "Low management overhead and affordable pricing"
+    ],
+    "notable_quotes": [
+      "Handing that over to an external tool feels risky.",
+      "Discounts... can attract the wrong kind of customer who's just price-shopping."
+    ],
+    "hidden_insights": [
+      "Retention dips during off-season; manual segmentation is time-consuming",
+      "Wants better attribution of marketing spend to retention outcomes"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Luis Romero",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "plumbing",
+    "persona_company_size": 95,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism about adding new specialized tools due to complexity and integration challenges",
+      "Concern about margin erosion and brand devaluation from discounts",
+      "Doubt that external AI can capture plumbing-specific churn signals better than internal knowledge"
+    ],
+    "buying_triggers": [
+      "Seamless integration with ServiceTitan without workflow overhaul",
+      "Accurate prediction of at-risk customers with actionable insights",
+      "Personalized retention actions that do not add manual work"
+    ],
+    "notable_quotes": [
+      "Most software I've seen doesn't deliver on that level of integration and specificity.",
+      "I often don't know why they left until it's too late, and even then, it's anecdotal."
+    ],
+    "hidden_insights": [
+      "Retention is mostly reactive; no predictive churn signals beyond service delays and billing issues",
+      "Strong intuitive understanding of churn triggers but lacks systematic tracking"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Emily Chow",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "pest control",
+    "persona_company_size": null,
+    "problem_resonance": 5,
+    "solution_fit": 5,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "positive",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Concern about integration complexity and fragmentation with third-party tools",
+      "Skepticism about discounts due to margin impact and brand dilution"
+    ],
+    "buying_triggers": [
+      "API-first, modular platform that enhances existing PestPac and custom analytics",
+      "Real-time, AI-driven personalized communications and offers",
+      "Robust data security, compliance, and vendor flexibility"
+    ],
+    "notable_quotes": [
+      "We'd be wary of duplicating efforts or introducing a system that doesn't seamlessly fit into our existing tech stack.",
+      "Discounts often attract price-sensitive customers who will churn the moment a better deal comes along."
+    ],
+    "hidden_insights": [
+      "Internal churn model is good but not real-time; reactive interventions common",
+      "Scaling personalized offers for commercial accounts is a key challenge"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "Jamal Peters",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "lawn care",
+    "persona_company_size": null,
+    "problem_resonance": 3,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "invalidated",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Lack of time and resources to ramp up retention efforts or manage new platforms",
+      "Skepticism about discounts due to margin concerns and brand value",
+      "Concern about complexity and effort required to personalize automated communications"
+    ],
+    "buying_triggers": [
+      "Automated, simple, low-maintenance solution integrated with Jobber",
+      "Affordable pricing and minimal setup or ongoing management",
+      "Accurate early warning of at-risk customers with simple personalized messaging"
+    ],
+    "notable_quotes": [
+      "I don't have the time to 'ramp up' anything right now.",
+      "It needs to do all of this without me needing to spend hours setting it up or constantly monitoring it."
+    ],
+    "hidden_insights": [
+      "Churn signals are mostly reactive and based on non-renewal or competitor presence",
+      "Prefers simple check-in messages over discounts for retention"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 1,
+    "persona_name": "Nora Schmidt",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "home services (multi-vertical)",
+    "persona_company_size": 40,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Reluctance to add another platform due to integration and training overhead",
+      "Concerns about margin erosion and brand devaluation from proactive discounts",
+      "Complexity of multi-vertical data integration"
+    ],
+    "buying_triggers": [
+      "Seamless integration feeding insights into existing platforms (Marketo, FieldRoutes)",
+      "Automated, smart, highly personalized communications tailored per service line",
+      "Clear, actionable insights without need for data scientist babysitting"
+    ],
+    "notable_quotes": [
+      "Introducing *another* platform that handles direct customer outreach sounds like more integration headaches and training, not less.",
+      "If we start offering discounts just to keep people, we're training them to expect it, and that erodes our value proposition."
+    ],
+    "hidden_insights": [
+      "Strong preference for value-add offers over discounts to build loyalty",
+      "Desire for unified churn prediction across multiple service lines but skepticism about feasibility"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 2,
+    "persona_name": "Eleanor Price",
+    "persona_archetype": "strategic_enterprise",
+    "persona_industry": "pest control",
+    "persona_company_size": 43,
+    "problem_resonance": 5,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Preference to maintain control and consistency within Salesforce Marketing Cloud",
+      "Skepticism about replacing nuanced internal processes with generic solutions",
+      "Margin concerns and brand perception issues with proactive discounts"
+    ],
+    "buying_triggers": [
+      "Seamless integration feeding actionable insights into Salesforce Marketing Cloud",
+      "Minimal lift on internal teams, especially during internal software migration",
+      "Clear ROI demonstration"
+    ],
+    "notable_quotes": [
+      "Introducing another platform to manage direct outreach would complicate our workflows, introduce potential inconsistencies, and frankly, just add another vendor to manage.",
+      "Discounts are a short-term fix, not a long-term retention strategy for us."
+    ],
+    "hidden_insights": [
+      "Internal churn model is sophisticated but requires manual effort and integration",
+      "Strong emphasis on personalized, timely messaging and value-driven upsells"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 3,
+    "persona_name": "Darla Mendez",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "lawn care",
+    "persona_company_size": 8,
+    "problem_resonance": 4,
+    "solution_fit": 2,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "negative",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "mixed",
+      "assumption_3": "invalidated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong preference to maintain control over communications via Mailchimp",
+      "Skepticism about AI or complex automation outperforming personal intuition and manual outreach",
+      "Margins are tight; discounts only used as last resort or for referrals"
+    ],
+    "buying_triggers": [
+      "Automated identification of truly at-risk customers before they leave",
+      "Simple, low-effort automation that does not add to workload"
+    ],
+    "notable_quotes": [
+      "I'm not really looking to hand over customer communication to an automated tool I don't fully control.",
+      "I'm skeptical that any software can really do that better than my own experience and a good old-fashioned phone call if it comes to it."
+    ],
+    "hidden_insights": [
+      "Seasonality heavily influences churn; some churn is accepted as natural",
+      "Preference for personal touch over automation in retention"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 4,
+    "persona_name": "Victor Chang",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "HVAC",
+    "persona_company_size": 10,
+    "problem_resonance": 4,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Wary of adding complexity or vendor lock-in with new tools",
+      "Margin concerns and brand perception risks with proactive discounts",
+      "Data privacy concerns with multiple tools"
+    ],
+    "buying_triggers": [
+      "Seamless integration with ServiceTitan and Salesforce Marketing Cloud",
+      "Unified customer journey view with high accuracy churn prediction",
+      "Automated, personalized, value-driven communications without disrupting existing tech stack"
+    ],
+    "notable_quotes": [
+      "If we were to consider something new, it would need to integrate seamlessly and not disrupt our current workflows.",
+      "We're not a budget provider; we pride ourselves on precision and reliability."
+    ],
+    "hidden_insights": [
+      "Fear of losing high-value commercial clients due to fragmented communication",
+      "Strong preference for complementing existing processes rather than replacing them"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 5,
+    "persona_name": "Roselyn Thomas",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "pest control",
+    "persona_company_size": 4,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Unease about losing personal control over communications",
+      "No dedicated marketing automation platform beyond FieldRoutes service reminders",
+      "Margin concerns and discount precedent risks"
+    ],
+    "buying_triggers": [
+      "Simple integration with FieldRoutes with minimal setup",
+      "Automated, accurate alerts with clear reasons for churn risk",
+      "Suggested concrete, personalized actions with human oversight"
+    ],
+    "notable_quotes": [
+      "I've been burned by 'automated' systems before that sent out completely tone-deaf messages.",
+      "Giving discounts just to keep someone who might have stayed anyway feels like leaving money on the table."
+    ],
+    "hidden_insights": [
+      "Personal calls are preferred over automated outreach for retention",
+      "Concern about losing customers after initial contract without knowing why"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 6,
+    "persona_name": "Ethan Brody",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "lawn care",
+    "persona_company_size": 15,
+    "problem_resonance": 5,
+    "solution_fit": 4,
+    "willingness_to_pay": 3,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "validated",
+      "assumption_2": "validated",
+      "assumption_3": "validated",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Strong preference to keep communications within existing HubSpot workflows",
+      "Margin protection concerns with proactive discounts",
+      "Skepticism about discount-driven loyalty"
+    ],
+    "buying_triggers": [
+      "Integration with RealGreen and HubSpot data",
+      "Automated, personalized retention offers aligned with brand values",
+      "Proactive identification of at-risk customers before churn"
+    ],
+    "notable_quotes": [
+      "The last thing I need is another platform trying to handle customer communications. That just screams integration headaches and potential data silos.",
+      "Handing out discounts willy-nilly just cheapens our brand and trains customers to expect lower prices."
+    ],
+    "hidden_insights": [
+      "Desire for automation that understands nuanced churn signals beyond obvious ones",
+      "Focus on value-adds and personalized communication over price cuts"
+    ],
+    "would_buy": "maybe",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 7,
+    "persona_name": "Marina Patel",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "plumbing",
+    "persona_company_size": 7,
+    "problem_resonance": 4,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "validated",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Reluctance to add complex new tools due to limited time and resources",
+      "Preference for very simple, actionable alerts rather than complex campaigns",
+      "Margin concerns and brand perception risks with discounts"
+    ],
+    "buying_triggers": [
+      "Plug-and-play, affordable solution that requires minimal setup and maintenance",
+      "Simple alerts that tell exactly who to call and why without dashboards or complex AI",
+      "Proof of accuracy before commitment"
+    ],
+    "notable_quotes": [
+      "The idea of adding another tool to learn, especially one that claims to 'manage outreach directly,' just sounds like more work for me.",
+      "Slashing prices just to get someone to come back feels like it cheapens our service, and it's not sustainable."
+    ],
+    "hidden_insights": [
+      "Manual, personal outreach dominates retention efforts",
+      "Strong need for simplicity and low-cost solutions in small teams"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  },
+  {
+    "persona_id": 8,
+    "persona_name": "George Whitman",
+    "persona_archetype": "red_team_skeptic",
+    "persona_industry": "pest control",
+    "persona_company_size": 4,
+    "problem_resonance": 3,
+    "solution_fit": 3,
+    "willingness_to_pay": 2,
+    "overall_sentiment": "neutral",
+    "assumption_reactions": {
+      "assumption_1": "invalidated",
+      "assumption_2": "mixed",
+      "assumption_3": "mixed",
+      "assumption_4": "invalidated"
+    },
+    "key_objections": [
+      "Skepticism about adding new tools due to past negative experiences",
+      "Limited capacity to manage loyalty programs or complex automation",
+      "Margin concerns and brand perception risks with discounts"
+    ],
+    "buying_triggers": [
+      "Automated, personalized reminders for annual services and contract renewals",
+      "Simple, low-maintenance solution that avoids adding workload or cost",
+      "Proactive churn prediction especially during seasonal slowdowns"
+    ],
+    "notable_quotes": [
+      "We've been burned before by bringing in outside tools that promised the world and just added more headaches.",
+      "I want something that could tell me *who* is likely to churn *before* they actually call to cancel."
+    ],
+    "hidden_insights": [
+      "Retention is reactive and manual; gut feeling dominates churn prediction",
+      "Seasonality is a major driver of churn and a key pain point"
+    ],
+    "would_buy": "no",
+    "sycophancy_flag": false,
+    "confidence_level": "high"
+  }
+]

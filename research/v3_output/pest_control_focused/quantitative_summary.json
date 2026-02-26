@@ -1,0 +1,817 @@
+{
+  "total_interviews": 25,
+  "sycophancy_count": 0,
+  "sycophancy_rate": 0.0,
+  "clean_interviews": 25,
+  "overall_metrics": {
+    "avg_problem_resonance": 4.2,
+    "avg_solution_fit": 4.04,
+    "avg_willingness_to_pay": 2.6
+  },
+  "adjusted_metrics": {
+    "avg_problem_resonance": 4.2,
+    "avg_solution_fit": 4.04,
+    "avg_willingness_to_pay": 2.6
+  },
+  "sentiment_distribution": {
+    "positive": 6,
+    "neutral": 19
+  },
+  "would_buy_distribution": {
+    "maybe": 20,
+    "no": 5
+  },
+  "adjusted_would_buy_distribution": {
+    "maybe": 20,
+    "no": 5
+  },
+  "assumption_results": {
+    "Service business operators prefer to manage retention communications through their existing marketing automation platform rather than having RevHawk manage it for them": {
+      "validated": 18,
+      "invalidated": 6,
+      "mixed": 1,
+      "validation_rate": 72.0,
+      "invalidation_rate": 24.0,
+      "adjusted_validation_rate": 72.0,
+      "adjusted_invalidation_rate": 24.0
+    },
+    "Operators can articulate specific signals they believe predict churn, and these signals align with what ML models typically identify (missed payments, service complaints, seasonal patterns, reduced engagement)": {
+      "validated": 18,
+      "invalidated": 0,
+      "mixed": 7,
+      "validation_rate": 72.0,
+      "invalidation_rate": 0.0,
+      "adjusted_validation_rate": 72.0,
+      "adjusted_invalidation_rate": 0.0
+    },
+    "Operators want to automate specific types of retention and LTV communications (renewal reminders, win-back campaigns, loyalty offers, service follow-ups, review requests)": {
+      "validated": 20,
+      "invalidated": 1,
+      "mixed": 4,
+      "validation_rate": 80.0,
+      "invalidation_rate": 4.0,
+      "adjusted_validation_rate": 80.0,
+      "adjusted_invalidation_rate": 4.0
+    },
+    "Service business operators are open to using proactive discounts and loyalty incentives as a retention strategy, despite margin concerns": {
+      "validated": 0,
+      "invalidated": 11,
+      "mixed": 14,
+      "validation_rate": 0.0,
+      "invalidation_rate": 44.0,
+      "adjusted_validation_rate": 0.0,
+      "adjusted_invalidation_rate": 44.0
+    }
+  },
+  "archetype_metrics": {
+    "overwhelmed_founder": {
+      "count": 8,
+      "problem_resonance_sum": 33,
+      "solution_fit_sum": 38,
+      "wtp_sum": 24,
+      "would_buy_yes": 0,
+      "would_buy_no": 0,
+      "would_buy_maybe": 8,
+      "sycophancy_count": 0,
+      "avg_problem_resonance": 4.12,
+      "avg_solution_fit": 4.75,
+      "avg_wtp": 3.0,
+      "buy_rate": 0.0,
+      "sycophancy_rate": 0.0
+    },
+    "automation_first_buyer": {
+      "count": 4,
+      "problem_resonance_sum": 15,
+      "solution_fit_sum": 15,
+      "wtp_sum": 9,
+      "would_buy_yes": 0,
+      "would_buy_no": 0,
+      "would_buy_maybe": 4,
+      "sycophancy_count": 0,
+      "avg_problem_resonance": 3.75,
+      "avg_solution_fit": 3.75,
+      "avg_wtp": 2.25,
+      "buy_rate": 0.0,
+      "sycophancy_rate": 0.0
+    },
+    "competitive_evaluator": {
+      "count": 5,
+      "problem_resonance_sum": 22,
+      "solution_fit_sum": 20,
+      "wtp_sum": 13,
+      "would_buy_yes": 0,
+      "would_buy_no": 2,
+      "would_buy_maybe": 3,
+      "sycophancy_count": 0,
+      "avg_problem_resonance": 4.4,
+      "avg_solution_fit": 4.0,
+      "avg_wtp": 2.6,
+      "buy_rate": 0.0,
+      "sycophancy_rate": 0.0
+    },
+    "strategic_enterprise": {
+      "count": 5,
+      "problem_resonance_sum": 23,
+      "solution_fit_sum": 18,
+      "wtp_sum": 13,
+      "would_buy_yes": 0,
+      "would_buy_no": 1,
+      "would_buy_maybe": 4,
+      "sycophancy_count": 0,
+      "avg_problem_resonance": 4.6,
+      "avg_solution_fit": 3.6,
+      "avg_wtp": 2.6,
+      "buy_rate": 0.0,
+      "sycophancy_rate": 0.0
+    },
+    "red_team_skeptic": {
+      "count": 3,
+      "problem_resonance_sum": 12,
+      "solution_fit_sum": 10,
+      "wtp_sum": 6,
+      "would_buy_yes": 0,
+      "would_buy_no": 2,
+      "would_buy_maybe": 1,
+      "sycophancy_count": 0,
+      "avg_problem_resonance": 4.0,
+      "avg_solution_fit": 3.33,
+      "avg_wtp": 2.0,
+      "buy_rate": 0.0,
+      "sycophancy_rate": 0.0
+    }
+  },
+  "top_objections": [
+    [
+      "margin concerns and discount devaluation",
+      2
+    ],
+    [
+      "concern about margin erosion and brand dilution from discounts",
+      2
+    ],
+    [
+      "margin concerns and brand devaluation from discounts",
+      2
+    ],
+    [
+      "concern about losing personal touch and brand voice if external tool manages outreach",
+      1
+    ],
+    [
+      "worries about margin erosion and discount devaluation",
+      1
+    ],
+    [
+      "integration complexity with existing tools",
+      1
+    ],
+    [
+      "limited time and resources to manage additional platforms",
+      1
+    ],
+    [
+      "concern about communications feeling spammy",
+      1
+    ],
+    [
+      "margin concerns and fear of discount expectation",
+      1
+    ],
+    [
+      "reluctance to add new platforms due to integration complexity",
+      1
+    ],
+    [
+      "margin concerns and fear of price wars",
+      1
+    ],
+    [
+      "need for clear roi to justify new tools",
+      1
+    ],
+    [
+      "manual data export/import is time-consuming",
+      1
+    ],
+    [
+      "concern about discount devaluation of brand",
+      1
+    ],
+    [
+      "skepticism about effectiveness of broad discounting",
+      1
+    ]
+  ],
+  "notable_quotes": [
+    {
+      "quote": "My concern with an external tool managing outreach is losing that personal touch or the specific voice we've cultivated.",
+      "persona": "Jasmine Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "The ideal solution would... tell us the likely ROI of that action. I need something that gives us actionable insights and automates the initial outreach without requiring us to hire a new data analyst or marketing specialist.",
+      "persona": "Jasmine Patel",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If a tool could do that automatically, that would be ideal. It's already where all our customer data lives, and adding another platform sounds like more work, not less.",
+      "persona": "Linda Brooks",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I don't have time to review every message.",
+      "persona": "Linda Brooks",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'd prefer to keep things within PestPac if possible... Another platform just for outreach sounds like a headache.",
+      "persona": "Tom\u00e1s Rivera",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "Without clear ROI, it's just another expense.",
+      "persona": "Tom\u00e1s Rivera",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If something could integrate directly with FieldRoutes and automate more, I'd definitely be open to it.",
+      "persona": "Anjali Menon",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "We're probably losing customers we could have saved simply because we don't have the systems to identify them or reach out effectively.",
+      "persona": "Anjali Menon",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If a tool could genuinely do it for me, without adding a bunch of extra work or a steep learning curve, I'd consider it.",
+      "persona": "Carlos Mendez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "The biggest thing that keeps me up at night is those seasonal churn spikes... trying to predict who's going to drop off is a constant headache.",
+      "persona": "Carlos Mendez",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it can't pull the right customer data and service history seamlessly, then it's just creating more manual work.",
+      "persona": "Tom Hardy",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "Discounts feel like a band-aid, not a long-term solution for loyalty.",
+      "persona": "Tom Hardy",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "The idea of another tool managing outreach sounds like it could add more complexity, not less.",
+      "persona": "Jasmine Patel (EcoShield)",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "Correlating service issues to churn is a black box right now.",
+      "persona": "Jasmine Patel (EcoShield)",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If a solution could help us be more proactive without sounding like a generic bot, I'd consider it.",
+      "persona": "Mark Thompson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I know we're losing customers we could probably keep if we just knew who they were and why they were unhappy before they called to cancel.",
+      "persona": "Mark Thompson",
+      "archetype": "overwhelmed_founder",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "Honestly, the idea of 'automating' anything sounds like more work to set up than it's worth.",
+      "persona": "Patricia Klein",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I worry that if I start throwing discounts around, it devalues our service.",
+      "persona": "Patricia Klein",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "Having another system try to replicate or override that just sounds like more complexity and potential for things to go wrong.",
+      "persona": "Joanne Fischer",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "My enthusiasm is pretty low [for proactive discounts].",
+      "persona": "Joanne Fischer",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If your tool just flags at-risk customers, then we'd still be using ServiceTitan to reach out to them. So, what's the real advantage?",
+      "persona": "Carlos Mendoza",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'm skeptical of their effectiveness for true loyalty.",
+      "persona": "Carlos Mendoza",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it doesn't integrate easily with PestPac, it's probably a non-starter.",
+      "persona": "Helen Park",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'm really cautious about anything that feels like over-automating or losing that personal touch we aim for.",
+      "persona": "Helen Park",
+      "archetype": "automation_first_buyer",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "We only really know *why* a customer left after they're gone, and by then, it's too late.",
+      "persona": "David Kwan",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I want to understand the different *types* of churn.",
+      "persona": "David Kwan",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "The idea of another platform taking over customer outreach makes me a bit uneasy.",
+      "persona": "Mark Thompson",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I mean *really* high accuracy, not just a fancy guess.",
+      "persona": "Mark Thompson",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "The idea of a system 'managing' outreach sounds... impersonal, and potentially complicated.",
+      "persona": "Nancy Wilson",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I just wish I knew sooner, before it's too late.",
+      "persona": "Nancy Wilson",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "We react to churn rather than proactively preventing it.",
+      "persona": "Diane Murphy",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "Our manual Excel tracking is just not cutting it for nearly 10,000 customers.",
+      "persona": "Diane Murphy",
+      "archetype": "competitive_evaluator",
+      "industry": "Pest Control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If a new tool means more work for us to manage, that's a hard pass.",
+      "persona": "Fredrick Jensen",
+      "archetype": "competitive_evaluator",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I've seen these automated messages go stale quickly, and then they're just noise. It has to feel personal, not like a robot.",
+      "persona": "Fredrick Jensen",
+      "archetype": "competitive_evaluator",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "The thought of handing over customer communication to another tool... sounds like more hassle than it's worth.",
+      "persona": "Greta Martinez",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "What keeps me up at night is honestly the unknown. Not knowing *why* someone left until they're already gone.",
+      "persona": "Greta Martinez",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'm not looking for another platform to manage communications, especially not one that 'deploys on our behalf.'",
+      "persona": "Dwayne Hawkins",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I've heard promises about 'AI' before, and it usually just adds more noise.",
+      "persona": "Dwayne Hawkins",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "We're often reacting instead of proactively intervening at the earliest possible moment.",
+      "persona": "Emily Chow",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "It wouldn't replace our existing tech, but *enhance* it, filling the gaps where we struggle.",
+      "persona": "Emily Chow",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "We know there are patterns there that could tell us who's about to leave... but we're just not extracting them effectively.",
+      "persona": "Nora Schmidt",
+      "archetype": "strategic_enterprise",
+      "industry": "home services (multi-vertical)",
+      "sycophantic": false
+    },
+    {
+      "quote": "It needs to be smart enough to handle the multi-vertical complexity without us having to build it from scratch.",
+      "persona": "Nora Schmidt",
+      "archetype": "strategic_enterprise",
+      "industry": "home services (multi-vertical)",
+      "sycophantic": false
+    },
+    {
+      "quote": "Scaling personalized retention efforts without ballooning headcount is another big one.",
+      "persona": "Eleanor Price",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "It would need to *complement* our existing processes, not replace them.",
+      "persona": "Eleanor Price",
+      "archetype": "strategic_enterprise",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I've been burned by 'automated' systems before that sent out completely tone-deaf messages.",
+      "persona": "Roselyn Thomas",
+      "archetype": "red_team_skeptic",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I'd want something... simple enough for my team to use while I'm on leave, without needing me to hold their hand.",
+      "persona": "Roselyn Thomas",
+      "archetype": "red_team_skeptic",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "I've been burned too many times by vendors promising 'AI' and 'automation' that just ends up being glorified email blasts.",
+      "persona": "George Whitman",
+      "archetype": "red_team_skeptic",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "It absolutely *cannot* be another piece of software that needs constant babysitting or costs an arm and a leg.",
+      "persona": "George Whitman",
+      "archetype": "red_team_skeptic",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "We've been burned by 'solutions' that promise the world but just create more work.",
+      "persona": "Monica Lopez",
+      "archetype": "red_team_skeptic",
+      "industry": "pest control",
+      "sycophantic": false
+    },
+    {
+      "quote": "If it doesn't reduce churn by at least 5%, it's not worth the price or the complexity.",
+      "persona": "Monica Lopez",
+      "archetype": "red_team_skeptic",
+      "industry": "pest control",
+      "sycophantic": false
+    }
+  ],
+  "hidden_insights": [
+    {
+      "insight": "Strong desire for actionable insights that not only identify at-risk customers but also recommend specific next steps with ROI estimates.",
+      "persona": "Jasmine Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Preference to keep control over messaging despite openness to automation.",
+      "persona": "Jasmine Patel",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Seasonal churn is a major pain point and hard to track manually.",
+      "persona": "Linda Brooks",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong preference for simplicity and automation that reduces manual effort.",
+      "persona": "Linda Brooks",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong desire for predictive insights weeks or months in advance, especially for seasonal churn.",
+      "persona": "Tom\u00e1s Rivera",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Preference for value demonstration and premium offerings over discounts.",
+      "persona": "Tom\u00e1s Rivera",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Manual processes limit granularity of segmentation and personalization.",
+      "persona": "Anjali Menon",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Open to discounts if targeted and ROI-positive, but cautious about brand impact.",
+      "persona": "Anjali Menon",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong preference for a 'smart assistant' that handles retention busywork.",
+      "persona": "Carlos Mendez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Seasonal churn is a major unpredictable revenue risk.",
+      "persona": "Carlos Mendez",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Reactive retention approach causes frustration and lost revenue.",
+      "persona": "Tom Hardy",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong desire for data-driven, actionable insights without needing data scientists.",
+      "persona": "Tom Hardy",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong investment in existing marketing cloud creates high switching/integration barrier.",
+      "persona": "Jasmine Patel (EcoShield)",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Desire for explainable ML predictions, not just risk flags.",
+      "persona": "Jasmine Patel (EcoShield)",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Missed payments are a clear, trackable churn signal.",
+      "persona": "Mark Thompson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Desire for actionable, personalized outreach that doesn't feel robotic.",
+      "persona": "Mark Thompson",
+      "archetype": "overwhelmed_founder"
+    },
+    {
+      "insight": "Strong preference for personal touch and skepticism about automation increasing workload",
+      "persona": "Patricia Klein",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Desires automation that feels as personal as handwritten notes but requires zero effort",
+      "persona": "Patricia Klein",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Strong desire to maintain control and brand consistency through existing platforms",
+      "persona": "Joanne Fischer",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Automation must be smart and personalized, not generic blasts",
+      "persona": "Joanne Fischer",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Wants proactive, personalized outreach beyond generic emails",
+      "persona": "Carlos Mendoza",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Strong focus on value-adds over discounts for loyalty",
+      "persona": "Carlos Mendoza",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Relies heavily on intuition and manual checks for churn signals",
+      "persona": "Helen Park",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Wants automation to augment, not replace, personal outreach",
+      "persona": "Helen Park",
+      "archetype": "automation_first_buyer"
+    },
+    {
+      "insight": "Relies on intuitive signals more than systematic data",
+      "persona": "David Kwan",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Wants automation to address nuanced churn reasons, not just generic triggers",
+      "persona": "David Kwan",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Wants actionable insights, not just data dumps",
+      "persona": "Mark Thompson",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Sees automation as a way to reduce manual workload, not add complexity",
+      "persona": "Mark Thompson",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Wants automation to assist, not replace, her personal touch",
+      "persona": "Nancy Wilson",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Budget constraints heavily limit software adoption",
+      "persona": "Nancy Wilson",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Large operation with complex needs but wary of implementation complexity",
+      "persona": "Diane Murphy",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Wants actionable insights that reduce manual effort and improve targeting",
+      "persona": "Diane Murphy",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Strong preference for personal touch over automation despite recognizing seasonal churn problem",
+      "persona": "Fredrick Jensen",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Wants value-added loyalty approaches rather than discounts",
+      "persona": "Fredrick Jensen",
+      "archetype": "competitive_evaluator"
+    },
+    {
+      "insight": "Strong desire for proactive churn alerts but with minimal complexity",
+      "persona": "Greta Martinez",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Values control and simplicity over feature richness",
+      "persona": "Greta Martinez",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Focus on understanding 'who' and 'why' churns rather than adding more outreach",
+      "persona": "Dwayne Hawkins",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Prefers investment in service quality over discounts or automation",
+      "persona": "Dwayne Hawkins",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Sophisticated internal churn model but limited by lack of real-time processing",
+      "persona": "Emily Chow",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Strong emphasis on complementing rather than replacing existing investments",
+      "persona": "Emily Chow",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Multi-service complexity is a major barrier to effective churn prediction",
+      "persona": "Nora Schmidt",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Strong preference for augmenting existing marketing automation rather than replacing it",
+      "persona": "Nora Schmidt",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Internal churn model is sophisticated but labor-intensive",
+      "persona": "Eleanor Price",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Strong focus on preserving brand voice and messaging consistency",
+      "persona": "Eleanor Price",
+      "archetype": "strategic_enterprise"
+    },
+    {
+      "insight": "Strong preference for human oversight despite interest in automation",
+      "persona": "Roselyn Thomas",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Personal calls seen as more effective than discounts or automated outreach",
+      "persona": "Roselyn Thomas",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Seasonality is a key challenge for churn prediction",
+      "persona": "George Whitman",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Strong distrust of AI/automation hype based on past negative experiences",
+      "persona": "George Whitman",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Strong preference for non-discount loyalty strategies focused on value and personalized service rather than price incentives",
+      "persona": "Monica Lopez",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "High skepticism toward adding new tools without clear integration and ROI, reflecting past negative experiences",
+      "persona": "Monica Lopez",
+      "archetype": "red_team_skeptic"
+    },
+    {
+      "insight": "Reactive retention approach currently dominates, with a desire to move to proactive but only if it does not increase workload",
+      "persona": "Monica Lopez",
+      "archetype": "red_team_skeptic"
+    }
+  ],
+  "confidence_distribution": {
+    "high": 25
+  }
+}

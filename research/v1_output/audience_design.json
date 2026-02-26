@@ -1,0 +1,24 @@
+{
+  "archetype_weights": {
+    "data_hungry_operator": 0.1,
+    "overwhelmed_founder": 0.4,
+    "automation_first_buyer": 0.25,
+    "competitive_evaluator": 0.15,
+    "strategic_enterprise": 0.1
+  },
+  "world_model_keys": [
+    "pest_control",
+    "lawn_care"
+  ],
+  "industry_mix_notes": "Split roughly 60% pest control and 40% lawn care to reflect current customer base dominance while testing cross-vertical expansion potential. Exclude HVAC & Plumbing and Cleaning Services as they are outside current focus and assumptions.",
+  "custom_world_context": "Personas should understand that the ML tool integrates with their CRM systems (e.g., PestRoutes, FieldRoutes for pest control; ServiceTitan, Jobber for lawn care) and that pricing tiers range from $150 to $350/month depending on company size and features. They should also be aware that the core value is predicting churn risk and enabling retention workflows, with a new emphasis on automated outreach to address bandwidth constraints.",
+  "segment_notes": "Include owner-operators of lawn care companies with 500+ recurring residential customers and churn >15%. Represent companies with low current action rates on churn scores (<30%) to validate willingness to pay for automation. Ensure representation across company sizes (small, mid, large), geographic regions (Southeast, Southwest, Midwest, Northeast, West Coast), and tech sophistication levels. Include edge cases such as PE-backed mature companies and very small startups transitioning to growth mode.",
+  "design_rationale": "Weights favor archetypes reflecting resource constraints and desire for automation (overwhelmed founders and automation-first buyers) to validate assumptions about paying for automated outreach. Pest control remains the majority industry to leverage existing customer insights, with lawn care included for expansion testing. Segments are chosen to capture churn pain points and integration needs across diverse company profiles.",
+  "sample_size": 100,
+  "product_description": "RevHawk is a machine learning tool that helps service businesses predict and mitigate \ncustomer churn. Currently focused on pest control, RevHawk integrates with CRM systems like \nPestRoutes/FieldRoutes and ingests detailed customer data to predict \u2014 with high accuracy \u2014 which \ncustomers are likely to churn based on signals like service frequency, payment behavior, complaint \nhistory, and engagement patterns. Company operators use it to know who is at risk, why, and how \nto 'save' those customers. Pricing ranges from $150-$350/month depending on company size.\n\nRevHawk currently has 11+ paying pest control customers ranging from 2-person startups to \ncompanies with 200+ employees and $25M+ revenue. The product offers three tiers:\n- Insights: Analytics and benchmarking dashboard ($150/mo)\n- Actions: AI health scores + automated retention campaign triggers ($200-300/mo)\n- Retention Manager: Full-service retention management ($300-350/mo)\n\nThe product integrates with FieldRoutes, PestPak, and Briostack. It provides AI-generated \ncustomer health scores, churn risk predictions, industry benchmarking, and actionable insights \nthat operators can use in team meetings and retention workflows.",
+  "assumptions": [
+    "Owner-operators of lawn care companies with 500+ recurring residential customers and annual churn above 15% would pay $200-400/month for an ML-based churn prediction tool that integrates with their CRM (ServiceTitan, Jobber, Service Autopilot), because they currently have no systematic way to identify at-risk customers before they cancel.",
+    "Pest control and lawn care operators who currently see churn risk scores but act on fewer than 30% of flagged accounts would pay 50-100% more per month for an automated outreach layer that sends personalized retention campaigns to at-risk customers via email, SMS, and AI voice calls, because the bottleneck is not knowing who's at risk \u2014 it's having the bandwidth to act on it."
+  ],
+  "target_market": "Service businesses in pest control and lawn care verticals across the United States. \n\nThe audience should include:\n- Pest control operators (RevHawk's current market) \u2014 to test the proactive engagement layer assumption\n- Lawn care companies (adjacent vertical) \u2014 to test cross-vertical expansion assumption\n- A mix of company sizes: small (5-20 employees, $500K-$2M revenue), mid-market (20-100 employees, $2M-$15M revenue), and larger (100+ employees, $15M+ revenue)\n- Geographic diversity across US regions (Southeast, Southwest, Midwest, Northeast, West Coast)\n- Varying levels of tech sophistication and current tool usage\n- Companies at different growth stages: early-stage, growth-mode, mature, PE-backed"
+}

@@ -1,0 +1,50 @@
+# ──────────────────────────────────────────────
+# Philo Ventures Market Simulator — Blank Template
+# ──────────────────────────────────────────────
+# Copy this file and fill in your product details.
+# The simulator will auto-generate a world model if you
+# don't provide one — just fill in the product and questions.
+
+product:
+  name: "Your Product Name"
+  description: |
+    Describe your product in 3-5 sentences.
+    What does it do? Who is it for? What problem does it solve?
+    What's the current pricing (if any)?
+    What stage is it at (idea, MVP, paying customers)?
+  target_market: |
+    Describe your target market.
+    Industry, company size, role of the buyer, geography, etc.
+    Be as specific as possible — "SMB SaaS companies" is too broad.
+    "Series A B2B SaaS companies with 50-200 employees selling to
+    mid-market enterprises" is much better.
+
+# ── What to Test ──
+# Use 'assumptions' for things you believe to be true and want to validate.
+# Use 'questions' for open-ended things you want to explore.
+# You can use both, or just one.
+assumptions:
+  - "Your first assumption here"
+  - "Your second assumption here"
+
+questions:
+  - "Your first open-ended question here"
+  - "Your second open-ended question here"
+
+# ── Simulation Settings ──
+settings:
+  persona_count: 100        # 50 for quick runs, 100 for standard, 200+ for deep dives
+  interview_turns: 5         # 5 is the sweet spot for signal-to-noise
+  interaction_context: "warm_demo"  # warm_demo | cold_outreach | blended
+  llm_model: "gemini-2.5-flash"
+
+# ── Context Files (optional, relative to this config file) ──
+# These make the simulation significantly more accurate.
+# If you don't have them, the simulator will work without them.
+context:
+  # world_model: "context/world_model.md"       # Market research, competitor data, industry benchmarks
+  # transcripts: "context/transcripts.md"        # Real sales call transcripts
+  # customer_list: "context/customer_list.md"    # Existing customer details
+
+# ── Output ──
+output_dir: "output"

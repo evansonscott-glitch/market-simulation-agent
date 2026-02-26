@@ -1,0 +1,15 @@
+{
+  "run_id": "sim_20260225_192406",
+  "timestamp": "2026-02-25T19:26:54.169332",
+  "product_description": "RevHawk is a machine learning tool that helps service businesses predict and mitigate \ncustomer churn. Currently focused on pest control, RevHawk integrates with CRM systems like \nPestRoutes/FieldRoutes and ingests detailed customer data to predict \u2014 with high accuracy \u2014 which \ncustomers are likely to churn based on signals like service frequency, payment behavior, complaint \nhistory, and engagement patterns. Company operators use it to know who is at risk, why, and how \nto 'save' those customers. Pricing ranges from $150-$350/month depending on company size.\n\nRevHawk currently has 11+ paying pest control customers ranging from 2-person startups to \ncompanies with 200+ employees and $25M+ revenue. The product offers three tiers:\n- Insights: Analytics and benchmarking dashboard\n- Actions: AI health scores + automated retention campaign triggers  \n- Retention Manager: Full-service retention management",
+  "assumptions": [
+    "Owner-operators of lawn care companies with 500+ recurring residential customers and annual churn above 15% would pay $200-400/month for an ML-based churn prediction tool, because they currently have no systematic way to identify at-risk customers before they cancel.",
+    "Pest control operators who currently see churn risk scores but act on fewer than 30% of flagged accounts would pay 50-100% more per month for an automated outreach layer that sends personalized retention campaigns to at-risk customers via email, SMS, and AI voice calls."
+  ],
+  "target_market": "Service businesses in pest control and lawn care verticals. Mix of:\n- Existing pest control operators (RevHawk's current market) to test the proactive engagement layer\n- Lawn care companies (adjacent vertical) to test cross-vertical expansion\nCompany sizes ranging from small (5-20 employees, $500K-$2M revenue) to mid-market \n(50-200 employees, $5M-$25M revenue). Geographic diversity across the US.",
+  "sample_size": 20,
+  "num_turns": 5,
+  "actual_personas_generated": 12,
+  "actual_interviews_completed": 12,
+  "output_dir": "/home/ubuntu/simulation_agent/output/sim_20260225_192406"
+}
