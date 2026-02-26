@@ -1,5 +1,5 @@
 """
-Research Engine — Autonomous World Model Generator
+Research Engine — Autonomous World Model Generator (Hardened)
 
 When a simulation is run for a new product/industry without a pre-built world model,
 this engine uses the LLM to generate a structured knowledge base covering:
@@ -10,12 +10,18 @@ this engine uses the LLM to generate a structured knowledge base covering:
   - Retention/churn benchmarks (where applicable)
   - Pricing norms and budget expectations
 
-This is a "good enough to start" world model. For higher accuracy, users should
-provide their own researched world model file.
+Hardening improvements:
+  - Proper structured logging (no print statements)
+  - Error handling with clear error messages
+  - Graceful degradation (returns minimal world model on failure)
 """
+import os
 from typing import Dict, Any
 
-from engines.llm_client import chat_completion
+from engines.logging_config import get_logger
+from engines.llm_client import chat_completion, LLMRetryExhausted, LLMResponseEmpty
+
+logger = get_logger(__name__)
 
 
 def generate_world_model(config: Dict[str, Any]) -> str:
@@ -31,6 +37,9 @@ def generate_world_model(config: Dict[str, Any]) -> str:
 
     Returns:
         A Markdown string containing the world model.
+
+    Raises:
+        LLMRetryExhausted: If the LLM call fails after all retries.
     """
     product_name = config["product_name"]
     product_description = config["product_description"]
@@ -70,19 +79,48 @@ Write a structured Markdown document with the following sections:
 
 Focus on the information that would help generate realistic buyer personas and predict how real people in this market would react to this product."""
 
-    print("  Generating world model for target market...")
-    response = chat_completion(
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt},
-        ],
-        model=config["llm_model"],
-        temperature=0.4,
-        max_tokens=6000,
-    )
+    logger.info("Generating world model for target market: %s", target_market[:100])
 
-    print("  World model generated.")
-    return response
+    try:
+        response = chat_completion(
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+            model=config["llm_model"],
+            temperature=0.4,
+            max_tokens=6000,
+        )
+
+        logger.info("World model generated successfully (%d chars)", len(response))
+        return response
+
+    except (LLMRetryExhausted, LLMResponseEmpty) as e:
+        logger.error("Failed to generate world model: %s", str(e)[:200])
+        # Return a minimal fallback world model
+        return _generate_fallback_world_model(product_name, target_market)
+
+    except Exception as e:
+        logger.error("Unexpected error generating world model: %s", e)
+        return _generate_fallback_world_model(product_name, target_market)
+
+
+def _generate_fallback_world_model(product_name: str, target_market: str) -> str:
+    """Generate a minimal world model when the LLM call fails."""
+    logger.warning("Using fallback world model (LLM generation failed)")
+    return f"""# World Model: {product_name} — {target_market}
+
+**Note:** This is a minimal fallback world model generated because the AI-powered
+world model generation failed. The simulation will proceed with limited market context.
+For better results, provide a manually-created world model file in your config.
+
+## Industry Overview
+Target market: {target_market}
+
+## Data Quality Disclaimer
+This is a fallback document with no verified market data. Results from this simulation
+should be treated as preliminary and validated with real market research.
+"""
 
 
 def ensure_world_model(config: Dict[str, Any]) -> str:
@@ -91,27 +129,33 @@ def ensure_world_model(config: Dict[str, Any]) -> str:
     If a world_model file is provided in the config, load it.
     Otherwise, generate one using the LLM.
 
-    Returns the world model text and saves it to the output directory.
+    Args:
+        config: The fully-resolved simulation config dict.
+
+    Returns:
+        The world model text.
     """
-    import os
     from config import load_context_file
 
     world_model = load_context_file(config.get("world_model_path"))
 
     if world_model:
-        print("  Using provided world model file.")
+        logger.info("Using provided world model file (%d chars)", len(world_model))
         return world_model
 
-    print("  No world model file provided. Generating one automatically...")
+    logger.info("No world model file provided — generating one automatically")
     world_model = generate_world_model(config)
 
     # Save the generated world model for reference
     output_dir = config.get("output_dir", ".")
-    os.makedirs(output_dir, exist_ok=True)
-    wm_path = os.path.join(output_dir, "generated_world_model.md")
-    with open(wm_path, "w") as f:
-        f.write(world_model)
-    print(f"  Saved generated world model to: {wm_path}")
+    try:
+        os.makedirs(output_dir, exist_ok=True)
+        wm_path = os.path.join(output_dir, "generated_world_model.md")
+        with open(wm_path, "w", encoding="utf-8") as f:
+            f.write(world_model)
+        logger.info("Saved generated world model to: %s", wm_path)
+    except IOError as e:
+        logger.error("Failed to save generated world model: %s", e)
 
     # Update the config so the persona engine can use it
     config["_generated_world_model"] = world_model

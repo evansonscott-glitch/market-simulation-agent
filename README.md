@@ -4,6 +4,16 @@ A product-agnostic simulation agent that generates realistic buyer personas, con
 
 Built for the Philo Ventures portfolio. Designed to help founders validate assumptions, test product-market fit hypotheses, and explore new markets before investing time and money in real-world experiments.
 
+### v2 Hardening (Production-Ready)
+- **Structured logging** — Proper Python logging with level control, sensitive data redaction, file + console output
+- **Config validation** — Pydantic models with clear, actionable error messages on invalid configs
+- **Robust JSON parsing** — 5-strategy fallback pipeline for LLM response parsing (direct → code block → bracket extraction → repair → full repair)
+- **Error handling** — Retry logic with exponential backoff and jitter, graceful degradation at every stage
+- **Token-aware rate limiting** — Respects API RPM/TPM limits with adaptive backoff on 429s
+- **Crash recovery** — Checkpoint system saves state after each interview; resume with `--resume`
+- **Memory management** — Streams interview results to disk incrementally for large simulations
+- **API key protection** — Sensitive data filter automatically redacts keys/tokens from all log output
+
 ---
 
 ## Quick Start
@@ -32,7 +42,17 @@ cp -r examples/blank my_simulation
 ### 4. Run the Simulation
 
 ```bash
+# Basic run
 python3 run.py my_simulation/config.yaml
+
+# With debug logging
+python3 run.py my_simulation/config.yaml --log-level DEBUG
+
+# Resume a crashed/interrupted run
+python3 run.py my_simulation/config.yaml --resume
+
+# Force fresh run (ignore checkpoint)
+python3 run.py my_simulation/config.yaml --fresh
 ```
 
 The simulator will:
@@ -168,6 +188,9 @@ Each simulation run produces:
 | `insights.json` | Structured insight extractions |
 | `run_metadata.json` | Config snapshot and run statistics |
 | `generated_world_model.md` | Auto-generated world model (if no file provided) |
+| `simulation.log` | Full structured log file for the run |
+| `checkpoint.json` | Simulation state checkpoint (for crash recovery) |
+| `interviews/` | Individual interview files (incremental persistence) |
 
 ---
 
@@ -211,26 +234,44 @@ archetypes:
 ## Architecture
 
 ```
-philo_simulator/
-├── run.py                    # Main entry point (CLI)
-├── config.py                 # Config loader and defaults
+market-simulation-agent/
+├── run.py                          # CLI entry point with argparse
+├── config.py                       # Config loading + Pydantic validation
 ├── engines/
-│   ├── llm_client.py         # LLM API wrapper with retry logic
-│   ├── persona_engine.py     # Persona generation
-│   ├── interview_engine.py   # Multi-turn interview conductor
-│   ├── analysis_engine.py    # Insight extraction and report generation
-│   └── research_engine.py    # Auto world model generation
+│   ├── logging_config.py           # Structured logging + sensitive data filter
+│   ├── llm_client.py               # LLM wrapper with retry, rate limiting, error classification
+│   ├── json_parser.py              # Multi-strategy JSON parser (5 fallback strategies)
+│   ├── checkpoint.py               # State persistence for crash recovery
+│   ├── persona_engine.py           # Persona generation with anti-sycophancy
+│   ├── interview_engine.py         # Multi-turn interviews with checkpointing
+│   ├── analysis_engine.py          # Insight extraction + report generation
+│   └── research_engine.py          # Auto world model generation
 ├── examples/
-│   ├── revhawk/              # RevHawk example (with context files)
+│   ├── revhawk/                    # Complete RevHawk proof of concept
 │   │   ├── config.yaml
 │   │   └── context/
-│   └── blank/                # Blank template to copy
+│   └── blank/                      # Blank template to copy
 │       └── config.yaml
+├── research/                       # Research artifacts & simulation outputs
+│   ├── v1_output/                  # Version 1 simulation results
+│   ├── v2_output/                  # Version 2 (recalibrated) results
+│   ├── v3_output/                  # Version 3 (tactical questions) results
+│   └── audits/                     # Audit reports and comparisons
+├── docs/
+│   ├── simulation_agent_architecture.md
+│   └── slack_bot_architecture.md
 └── README.md
 ```
 
 ---
 
+## Requirements
+
+- Python 3.11+
+- `openai` — LLM API client
+- `pyyaml` — Config file parsing
+- `pydantic` — Config validation
+
 ## License
 
-Internal tool — Philo Ventures. Not for distribution.
+Proprietary — Philo Ventures. Not for distribution.

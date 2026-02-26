@@ -1,7 +1,10 @@
 """
-Philo Ventures Market Simulator — Configuration Loader
+Philo Ventures Market Simulator — Configuration Loader & Validator
 
-Loads simulation parameters from a YAML config file.
+Loads simulation parameters from a YAML config file and validates them
+using Pydantic models. Provides clear, actionable error messages when
+config is invalid.
+
 Every simulation run is defined by a single YAML file that specifies:
   - The product being tested
   - The target market
@@ -11,22 +14,137 @@ Every simulation run is defined by a single YAML file that specifies:
 """
 import os
 import yaml
-from typing import Dict, Any, Optional
+from typing import Dict, Any, List, Optional, Tuple
+from pydantic import BaseModel, Field, field_validator, model_validator
 
-# ── Global Defaults ──
+from engines.logging_config import get_logger
+
+logger = get_logger("config")
+
+
+# ──────────────────────────────────────────────
+# Pydantic Validation Models
+# ──────────────────────────────────────────────
+
+class ProductConfig(BaseModel):
+    """Validates the product section of the config."""
+    name: str = Field(..., min_length=1, description="Product name")
+    description: str = Field(..., min_length=10, description="Product description")
+    target_market: str = Field(..., min_length=10, description="Target market description")
+
+    @field_validator("name")
+    @classmethod
+    def name_not_empty(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("Product name cannot be empty or whitespace")
+        return v.strip()
+
+
+class SettingsConfig(BaseModel):
+    """Validates simulation settings."""
+    llm_model: str = Field(default="gemini-2.5-flash", description="LLM model to use")
+    persona_count: int = Field(default=100, ge=1, le=1000, description="Number of personas to generate")
+    interview_turns: int = Field(default=5, ge=1, le=20, description="Number of interview turns")
+    interaction_context: str = Field(default="warm_demo", description="Interaction context type")
+    persona_concurrency: int = Field(default=5, ge=1, le=50, description="Max concurrent persona generation calls")
+    interview_concurrency: int = Field(default=10, ge=1, le=50, description="Max concurrent interviews")
+
+    @field_validator("interaction_context")
+    @classmethod
+    def valid_interaction_context(cls, v: str) -> str:
+        allowed = {"warm_demo", "cold_outreach", "blended"}
+        if v not in allowed:
+            raise ValueError(
+                f"interaction_context must be one of {allowed}, got '{v}'"
+            )
+        return v
+
+    @field_validator("llm_model")
+    @classmethod
+    def valid_model(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("llm_model cannot be empty")
+        return v.strip()
+
+
+class ContextConfig(BaseModel):
+    """Validates context file references."""
+    world_model: Optional[str] = Field(default=None, description="Path to world model file")
+    transcripts: Optional[str] = Field(default=None, description="Path to transcripts file")
+    customer_list: Optional[str] = Field(default=None, description="Path to customer list file")
+
+
+class ArchetypeConfig(BaseModel):
+    """Validates a single archetype definition."""
+    name: str = Field(..., min_length=1)
+    description: str = Field(..., min_length=10)
+    behaviors: List[str] = Field(default_factory=list)
+    buying_triggers: List[str] = Field(default_factory=list)
+    common_objections: List[str] = Field(default_factory=list)
+    skepticism_range: Tuple[int, int] = Field(default=(4, 7))
+    typical_weight: float = Field(default=0.1, ge=0.0, le=1.0)
+
+    @field_validator("skepticism_range")
+    @classmethod
+    def valid_skepticism_range(cls, v):
+        if isinstance(v, (list, tuple)) and len(v) == 2:
+            low, high = v
+            if not (1 <= low <= 10 and 1 <= high <= 10 and low <= high):
+                raise ValueError(
+                    f"skepticism_range must be [low, high] where 1 <= low <= high <= 10, got {v}"
+                )
+            return (low, high)
+        raise ValueError(f"skepticism_range must be a list/tuple of 2 ints, got {v}")
+
+
+class SimulationConfig(BaseModel):
+    """Top-level config validation."""
+    product: ProductConfig
+    assumptions: List[str] = Field(default_factory=list)
+    questions: List[str] = Field(default_factory=list)
+    settings: SettingsConfig = Field(default_factory=SettingsConfig)
+    context: ContextConfig = Field(default_factory=ContextConfig)
+    archetypes: Optional[Dict[str, Any]] = Field(default=None)
+    disposition_weights: Optional[Dict[str, Any]] = Field(default=None)
+    output_dir: str = Field(default="output")
+
+    @model_validator(mode="after")
+    def must_have_assumptions_or_questions(self):
+        if not self.assumptions and not self.questions:
+            raise ValueError(
+                "Config must include at least one 'assumption' or 'question' to test. "
+                "Add an 'assumptions' list or 'questions' list to your config."
+            )
+        return self
+
+
+class ConfigValidationError(Exception):
+    """Raised when config validation fails. Contains user-friendly error messages."""
+
+    def __init__(self, errors: List[str], config_path: str):
+        self.errors = errors
+        self.config_path = config_path
+        error_list = "\n  - ".join(errors)
+        super().__init__(
+            f"Config validation failed for '{config_path}':\n  - {error_list}"
+        )
+
+
+# ──────────────────────────────────────────────
+# Global Defaults
+# ──────────────────────────────────────────────
+
 DEFAULTS = {
     "llm_model": os.getenv("PV_LLM_MODEL", "gemini-2.5-flash"),
     "persona_count": 100,
     "interview_turns": 5,
-    "interaction_context": "warm_demo",  # warm_demo | cold_outreach | blended
+    "interaction_context": "warm_demo",
     "persona_concurrency": 5,
     "interview_concurrency": 10,
     "log_level": os.getenv("PV_LOG_LEVEL", "INFO"),
 }
 
 # ── Default Archetypes ──
-# These are general-purpose B2B SaaS buyer archetypes.
-# They can be overridden or extended in the YAML config.
 DEFAULT_ARCHETYPES = {
     "data_hungry_operator": {
         "name": "The Data-Hungry Operator",
@@ -201,39 +319,103 @@ DEFAULT_DISPOSITION_WEIGHTS = {
 }
 
 
+# ──────────────────────────────────────────────
+# Config Loading & Validation
+# ──────────────────────────────────────────────
+
+def validate_config(config_path: str, raw_config: Dict[str, Any]) -> SimulationConfig:
+    """
+    Validate a raw YAML config dict using Pydantic models.
+
+    Args:
+        config_path: Path to the config file (for error messages).
+        raw_config: The raw dict loaded from YAML.
+
+    Returns:
+        A validated SimulationConfig instance.
+
+    Raises:
+        ConfigValidationError: If validation fails, with user-friendly error messages.
+    """
+    try:
+        return SimulationConfig(**raw_config)
+    except Exception as e:
+        # Extract user-friendly error messages from Pydantic
+        errors = []
+        if hasattr(e, "errors"):
+            for err in e.errors():
+                loc = " → ".join(str(x) for x in err.get("loc", []))
+                msg = err.get("msg", str(err))
+                errors.append(f"{loc}: {msg}")
+        else:
+            errors.append(str(e))
+
+        raise ConfigValidationError(errors, config_path) from e
+
+
 def load_config(config_path: str) -> Dict[str, Any]:
     """
-    Load a simulation config from a YAML file and merge with defaults.
-    Returns a fully-resolved config dict ready for the simulation runner.
+    Load a simulation config from a YAML file, validate it, and merge with defaults.
+
+    Args:
+        config_path: Path to the YAML config file.
+
+    Returns:
+        A fully-resolved config dict ready for the simulation runner.
+
+    Raises:
+        FileNotFoundError: If the config file doesn't exist.
+        ConfigValidationError: If the config is invalid.
+        yaml.YAMLError: If the YAML is malformed.
     """
-    with open(config_path, "r") as f:
-        user_config = yaml.safe_load(f)
+    # Check file exists
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(f"Config file not found: {config_path}")
+
+    # Load YAML
+    logger.info("Loading config from: %s", config_path)
+    try:
+        with open(config_path, "r") as f:
+            user_config = yaml.safe_load(f)
+    except yaml.YAMLError as e:
+        logger.error("Failed to parse YAML config: %s", e)
+        raise
+
+    if not user_config or not isinstance(user_config, dict):
+        raise ConfigValidationError(
+            ["Config file is empty or not a valid YAML dictionary"],
+            config_path,
+        )
+
+    # Validate with Pydantic
+    validated = validate_config(config_path, user_config)
+    logger.info("Config validation passed")
 
     # Resolve base directory relative to the config file
     config_dir = os.path.dirname(os.path.abspath(config_path))
 
-    # Build the resolved config
+    # Build the resolved config dict (engines expect this format)
     config = {
         # ── Product Definition ──
-        "product_name": user_config["product"]["name"],
-        "product_description": user_config["product"]["description"],
-        "target_market": user_config["product"]["target_market"],
+        "product_name": validated.product.name,
+        "product_description": validated.product.description,
+        "target_market": validated.product.target_market,
 
         # ── What to Test ──
-        "assumptions": user_config.get("assumptions", []),
-        "questions": user_config.get("questions", []),
+        "assumptions": validated.assumptions,
+        "questions": validated.questions,
 
         # ── Simulation Parameters ──
-        "llm_model": user_config.get("settings", {}).get("llm_model", DEFAULTS["llm_model"]),
-        "persona_count": user_config.get("settings", {}).get("persona_count", DEFAULTS["persona_count"]),
-        "interview_turns": user_config.get("settings", {}).get("interview_turns", DEFAULTS["interview_turns"]),
-        "interaction_context": user_config.get("settings", {}).get("interaction_context", DEFAULTS["interaction_context"]),
-        "persona_concurrency": user_config.get("settings", {}).get("persona_concurrency", DEFAULTS["persona_concurrency"]),
-        "interview_concurrency": user_config.get("settings", {}).get("interview_concurrency", DEFAULTS["interview_concurrency"]),
+        "llm_model": validated.settings.llm_model,
+        "persona_count": validated.settings.persona_count,
+        "interview_turns": validated.settings.interview_turns,
+        "interaction_context": validated.settings.interaction_context,
+        "persona_concurrency": validated.settings.persona_concurrency,
+        "interview_concurrency": validated.settings.interview_concurrency,
 
         # ── Archetypes ──
-        "archetypes": user_config.get("archetypes", DEFAULT_ARCHETYPES),
-        "disposition_weights": user_config.get("disposition_weights", DEFAULT_DISPOSITION_WEIGHTS),
+        "archetypes": validated.archetypes or DEFAULT_ARCHETYPES,
+        "disposition_weights": validated.disposition_weights or DEFAULT_DISPOSITION_WEIGHTS,
 
         # ── Context Files ──
         "context_dir": config_dir,
@@ -242,24 +424,65 @@ def load_config(config_path: str) -> Dict[str, Any]:
         "customer_list_path": None,
 
         # ── Output ──
-        "output_dir": user_config.get("output_dir", os.path.join(config_dir, "output")),
+        "output_dir": validated.output_dir if os.path.isabs(validated.output_dir)
+                      else os.path.join(config_dir, validated.output_dir),
     }
 
-    # Resolve context file paths
-    context = user_config.get("context", {})
-    if context.get("world_model"):
-        config["world_model_path"] = os.path.join(config_dir, context["world_model"])
-    if context.get("transcripts"):
-        config["transcripts_path"] = os.path.join(config_dir, context["transcripts"])
-    if context.get("customer_list"):
-        config["customer_list_path"] = os.path.join(config_dir, context["customer_list"])
+    # Resolve context file paths and verify they exist
+    if validated.context.world_model:
+        path = os.path.join(config_dir, validated.context.world_model)
+        if not os.path.exists(path):
+            logger.warning("World model file not found: %s (will auto-generate)", path)
+        else:
+            config["world_model_path"] = path
+
+    if validated.context.transcripts:
+        path = os.path.join(config_dir, validated.context.transcripts)
+        if not os.path.exists(path):
+            logger.warning("Transcripts file not found: %s (will proceed without)", path)
+        else:
+            config["transcripts_path"] = path
+
+    if validated.context.customer_list:
+        path = os.path.join(config_dir, validated.context.customer_list)
+        if not os.path.exists(path):
+            logger.warning("Customer list file not found: %s (will proceed without)", path)
+        else:
+            config["customer_list_path"] = path
+
+    logger.info(
+        "Config loaded: product=%s, personas=%d, turns=%d, model=%s",
+        config["product_name"],
+        config["persona_count"],
+        config["interview_turns"],
+        config["llm_model"],
+    )
 
     return config
 
 
 def load_context_file(path: Optional[str]) -> str:
-    """Load a context file and return its contents, or empty string if not found."""
-    if path and os.path.exists(path):
-        with open(path, "r") as f:
-            return f.read()
-    return ""
+    """
+    Load a context file and return its contents, or empty string if not found.
+
+    Args:
+        path: Path to the context file, or None.
+
+    Returns:
+        File contents as string, or empty string.
+    """
+    if not path:
+        return ""
+
+    if not os.path.exists(path):
+        logger.warning("Context file not found: %s", path)
+        return ""
+
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            content = f.read()
+        logger.debug("Loaded context file: %s (%d chars)", path, len(content))
+        return content
+    except Exception as e:
+        logger.error("Failed to read context file %s: %s", path, e)
+        return ""

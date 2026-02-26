@@ -1,24 +1,41 @@
 """
-Analysis Engine — Product-Agnostic
+Analysis Engine — Product-Agnostic (Hardened)
 
 Analyzes interview transcripts and produces a McKinsey-grade insights report.
 Handles both assumption-validation runs and tactical-question runs.
 
-All product-specific knowledge comes from the config — nothing is hardcoded.
+Hardening improvements:
+  - Proper structured logging (no print statements)
+  - Robust JSON parsing with multi-strategy fallbacks
+  - Error boundaries per batch (failed batches don't crash analysis)
+  - Graceful degradation (partial analysis still produces a report)
+  - Memory-efficient batch processing
 """
 import asyncio
 import json
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
-from engines.llm_client import get_async_client, async_chat_completion
+from engines.logging_config import get_logger
+from engines.llm_client import (
+    get_async_client, async_chat_completion,
+    LLMRetryExhausted, LLMResponseEmpty,
+)
+from engines.json_parser import parse_llm_json, JSONParseError
+
+logger = get_logger(__name__)
 
 
 async def _extract_insights_batch(
     client,
     interviews: List[Dict],
     config: Dict[str, Any],
-) -> List[Dict]:
-    """Extract structured insights from a batch of interviews."""
+    batch_number: int = 1,
+) -> Dict:
+    """
+    Extract structured insights from a batch of interviews.
+
+    Returns a default empty structure on failure (graceful degradation).
+    """
     model = config["llm_model"]
     questions = config.get("questions", [])
     assumptions = config.get("assumptions", [])
@@ -33,11 +50,21 @@ async def _extract_insights_batch(
     transcript_texts = []
     for interview in interviews:
         persona = interview["persona"]
-        lines = [f"### {persona.get('name', 'Unknown')} — {persona.get('title', 'N/A')} at {persona.get('company_type', 'N/A')} ({persona.get('industry', 'N/A')})"]
-        lines.append(f"Archetype: {persona.get('archetype_name', 'N/A')} | Disposition: {persona.get('disposition', 'N/A')} | Skepticism: {persona.get('skepticism_score', 'N/A')}/10")
+        lines = [
+            f"### {persona.get('name', 'Unknown')} — {persona.get('title', 'N/A')} "
+            f"at {persona.get('company_type', 'N/A')} ({persona.get('industry', 'N/A')})"
+        ]
+        lines.append(
+            f"Archetype: {persona.get('archetype_name', 'N/A')} | "
+            f"Disposition: {persona.get('disposition', 'N/A')} | "
+            f"Skepticism: {persona.get('skepticism_score', 'N/A')}/10"
+        )
         for entry in interview.get("transcript", []):
-            role = "Interviewer" if entry["role"] == "interviewer" else persona.get("name", "Prospect")
-            lines.append(f"{role}: {entry['content']}")
+            if entry.get("role") == "error":
+                lines.append(f"[Turn {entry.get('turn', '?')} failed]")
+            else:
+                role = "Interviewer" if entry["role"] == "interviewer" else persona.get("name", "Prospect")
+                lines.append(f"{role}: {entry['content']}")
         transcript_texts.append("\n".join(lines))
 
     all_transcripts = "\n\n---\n\n".join(transcript_texts)
@@ -70,6 +97,14 @@ Return a JSON object with:
 
 Return ONLY the JSON object."""
 
+    empty_result = {
+        "insights": [],
+        "emergent_themes": [],
+        "strongest_objections": [],
+        "sycophancy_flags": [],
+        "key_quotes": [],
+    }
+
     try:
         response = await async_chat_completion(
             client=client,
@@ -82,22 +117,39 @@ Return ONLY the JSON object."""
             max_tokens=6000,
         )
 
-        text = response.strip()
-        if text.startswith("```"):
-            text = text.split("\n", 1)[1] if "\n" in text else text[3:]
-            if text.endswith("```"):
-                text = text[:-3]
-            elif "```" in text:
-                text = text[:text.rfind("```")]
-            text = text.strip()
-            if text.startswith("json"):
-                text = text[4:].strip()
+        result = parse_llm_json(
+            text=response,
+            expected_type=dict,
+            context=f"insight extraction batch {batch_number}",
+        )
 
-        return json.loads(text)
+        # Validate expected structure
+        if "insights" not in result:
+            logger.warning("Batch %d insights missing 'insights' key, using partial result", batch_number)
+            result["insights"] = result.get("insights", [])
+
+        return result
+
+    except JSONParseError as e:
+        logger.error(
+            "JSON parse failed for insight batch %d: %s",
+            batch_number, str(e)[:200],
+        )
+        return empty_result
+
+    except (LLMRetryExhausted, LLMResponseEmpty) as e:
+        logger.error(
+            "LLM call failed for insight batch %d: %s",
+            batch_number, str(e)[:200],
+        )
+        return empty_result
 
     except Exception as e:
-        print(f"  [ERROR] Insight extraction failed: {e}")
-        return {"insights": [], "emergent_themes": [], "strongest_objections": [], "sycophancy_flags": [], "key_quotes": []}
+        logger.error(
+            "Unexpected error in insight batch %d: %s",
+            batch_number, e,
+        )
+        return empty_result
 
 
 async def _generate_report(
@@ -106,7 +158,11 @@ async def _generate_report(
     config: Dict[str, Any],
     audience_stats: Dict,
 ) -> str:
-    """Generate the final McKinsey-grade report from aggregated insights."""
+    """
+    Generate the final McKinsey-grade report from aggregated insights.
+
+    Returns a fallback report on failure.
+    """
     model = config["llm_model"]
     product_name = config["product_name"]
     product_description = config["product_description"]
@@ -120,8 +176,11 @@ async def _generate_report(
     if questions:
         items_block += "## QUESTIONS EXPLORED\n" + "\n".join(f"- {q}" for q in questions) + "\n\n"
 
-    # Aggregate insights
+    # Aggregate insights — truncate if too large for context window
     insights_json = json.dumps(all_insights, indent=2, default=str)
+    if len(insights_json) > 30000:
+        logger.warning("Insights JSON too large (%d chars), truncating for report generation", len(insights_json))
+        insights_json = insights_json[:30000] + "\n... [truncated for length]"
 
     system_prompt = f"""You are a senior partner at McKinsey & Company writing a strategic insights report.
 
@@ -162,18 +221,113 @@ Write a comprehensive, actionable report in Markdown format. Structure it as fol
 - Flag any sycophancy concerns in the confidence assessment.
 - Write in a direct, authoritative style. No hedging language unless warranted by the data."""
 
-    response = await async_chat_completion(
-        client=client,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": f"Here are the aggregated insights from the simulation:\n\n{insights_json}\n\nWrite the full report."},
-        ],
-        model=model,
-        temperature=0.4,
-        max_tokens=8000,
+    try:
+        response = await async_chat_completion(
+            client=client,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"Here are the aggregated insights from the simulation:\n\n{insights_json}\n\nWrite the full report."},
+            ],
+            model=model,
+            temperature=0.4,
+            max_tokens=8000,
+        )
+
+        return response
+
+    except (LLMRetryExhausted, LLMResponseEmpty) as e:
+        logger.error("Report generation failed: %s", str(e)[:200])
+        return _generate_fallback_report(all_insights, audience_stats, config)
+
+    except Exception as e:
+        logger.error("Unexpected error in report generation: %s", e)
+        return _generate_fallback_report(all_insights, audience_stats, config)
+
+
+def _generate_fallback_report(
+    all_insights: List[Dict],
+    audience_stats: Dict,
+    config: Dict[str, Any],
+) -> str:
+    """Generate a basic report from raw data when LLM report generation fails."""
+    logger.warning("Generating fallback report from raw insights data")
+
+    lines = [
+        f"# {config['product_name']} — Market Simulation Report (Fallback)",
+        "",
+        "**Note:** The AI-generated report failed. This is a structured summary of the raw data.",
+        "",
+        "## Audience Statistics",
+        f"- Total interviews: {audience_stats.get('total_interviews', 'N/A')}",
+        f"- Average skepticism: {audience_stats.get('avg_skepticism', 'N/A')}/10",
+        "",
+        "### Disposition Distribution",
+    ]
+
+    for disp, count in audience_stats.get("disposition_distribution", {}).items():
+        lines.append(f"- {disp}: {count}")
+
+    lines.extend(["", "### Archetype Distribution"])
+    for arch, count in audience_stats.get("archetype_distribution", {}).items():
+        lines.append(f"- {arch}: {count}")
+
+    lines.extend(["", "## Raw Insights Data", ""])
+
+    for i, batch in enumerate(all_insights):
+        if isinstance(batch, dict):
+            for insight in batch.get("insights", []):
+                lines.append(f"### {insight.get('item', 'Unknown item')}")
+                lines.append(f"- Validation score: {insight.get('validation_score', 'N/A')}/5")
+                lines.append(f"- Nuance: {insight.get('nuance', 'N/A')}")
+                lines.append("")
+
+    lines.extend([
+        "",
+        "## Key Quotes",
+    ])
+
+    for batch in all_insights:
+        if isinstance(batch, dict):
+            for quote in batch.get("key_quotes", []):
+                lines.append(f"- {quote}")
+
+    return "\n".join(lines)
+
+
+def _compute_audience_stats(interviews: List[Dict]) -> Dict:
+    """Compute audience statistics from interview results."""
+    dispositions = {}
+    archetypes = {}
+    industries = {}
+
+    for interview in interviews:
+        persona = interview.get("persona", {})
+        d = persona.get("disposition", "unknown")
+        dispositions[d] = dispositions.get(d, 0) + 1
+        a = persona.get("archetype_name", "unknown")
+        archetypes[a] = archetypes.get(a, 0) + 1
+        ind = persona.get("industry", "unknown")
+        industries[ind] = industries.get(ind, 0) + 1
+
+    total = max(len(interviews), 1)
+    avg_skepticism = round(
+        sum(i.get("persona", {}).get("skepticism_score", 5) for i in interviews) / total, 1
     )
 
-    return response
+    # Count partial and error interviews
+    partial_count = sum(1 for i in interviews if i.get("partial", False))
+    error_count = sum(1 for i in interviews if i.get("error", False))
+
+    return {
+        "total_interviews": len(interviews),
+        "complete_interviews": len(interviews) - partial_count,
+        "partial_interviews": partial_count,
+        "error_interviews": error_count,
+        "disposition_distribution": dispositions,
+        "archetype_distribution": archetypes,
+        "industry_distribution": industries,
+        "avg_skepticism": avg_skepticism,
+    }
 
 
 async def analyze_interviews(
@@ -183,6 +337,9 @@ async def analyze_interviews(
     """
     Full analysis pipeline: extract insights in batches, then generate report.
 
+    Graceful degradation: if some batches fail, we still generate a report
+    from the batches that succeeded.
+
     Args:
         interviews: List of interview result dicts from the interview engine.
         config: The fully-resolved simulation config dict.
@@ -190,45 +347,70 @@ async def analyze_interviews(
     Returns:
         Dict with 'report' (markdown string), 'insights' (raw data), and 'audience_stats'.
     """
+    if not interviews:
+        logger.error("No interviews to analyze")
+        return {
+            "report": "# No Interviews\n\nNo interviews were completed. Cannot generate a report.",
+            "insights": [],
+            "audience_stats": {"total_interviews": 0},
+        }
+
     client = get_async_client()
 
     # Compute audience stats
-    dispositions = {}
-    archetypes = {}
-    industries = {}
-    for interview in interviews:
-        persona = interview["persona"]
-        d = persona.get("disposition", "unknown")
-        dispositions[d] = dispositions.get(d, 0) + 1
-        a = persona.get("archetype_name", "unknown")
-        archetypes[a] = archetypes.get(a, 0) + 1
-        ind = persona.get("industry", "unknown")
-        industries[ind] = industries.get(ind, 0) + 1
+    audience_stats = _compute_audience_stats(interviews)
+    logger.info(
+        "Analyzing %d interviews (avg skepticism: %.1f/10)",
+        audience_stats["total_interviews"],
+        audience_stats["avg_skepticism"],
+    )
 
-    audience_stats = {
-        "total_interviews": len(interviews),
-        "disposition_distribution": dispositions,
-        "archetype_distribution": archetypes,
-        "industry_distribution": industries,
-        "avg_skepticism": round(
-            sum(i["persona"].get("skepticism_score", 5) for i in interviews) / max(len(interviews), 1), 1
-        ),
-    }
+    # Filter out error-only interviews for analysis
+    analyzable = [i for i in interviews if not i.get("error", False)]
+    if not analyzable:
+        logger.error("All interviews were errors — cannot analyze")
+        return {
+            "report": "# Analysis Failed\n\nAll interviews encountered errors. No data to analyze.",
+            "insights": [],
+            "audience_stats": audience_stats,
+        }
 
     # Extract insights in batches of 10
     batch_size = 10
     all_insights = []
-    for i in range(0, len(interviews), batch_size):
-        batch = interviews[i:i + batch_size]
-        print(f"  Analyzing batch {i // batch_size + 1}/{(len(interviews) + batch_size - 1) // batch_size}...")
-        insights = await _extract_insights_batch(client, batch, config)
-        all_insights.append(insights)
+    failed_batches = 0
+    total_batches = (len(analyzable) + batch_size - 1) // batch_size
+
+    for i in range(0, len(analyzable), batch_size):
+        batch = analyzable[i:i + batch_size]
+        batch_num = i // batch_size + 1
+        logger.info("Analyzing batch %d/%d (%d interviews)...", batch_num, total_batches, len(batch))
+
+        insights = await _extract_insights_batch(client, batch, config, batch_number=batch_num)
+
+        if insights.get("insights") or insights.get("emergent_themes") or insights.get("key_quotes"):
+            all_insights.append(insights)
+        else:
+            failed_batches += 1
+            logger.warning("Batch %d returned empty insights", batch_num)
+
+    if failed_batches > 0:
+        logger.warning(
+            "Analysis: %d/%d insight batches failed or returned empty",
+            failed_batches, total_batches,
+        )
 
     # Generate the final report
-    print("  Generating final report...")
+    logger.info("Generating final report from %d insight batches...", len(all_insights))
     report = await _generate_report(client, all_insights, config, audience_stats)
 
-    await client.close()
+    # Cleanup
+    try:
+        await client.close()
+    except Exception:
+        pass
+
+    logger.info("Analysis complete")
 
     return {
         "report": report,
