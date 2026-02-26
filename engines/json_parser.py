@@ -1,5 +1,5 @@
 """
-Philo Ventures Market Simulator — Robust JSON Parser
+Market Simulator — Robust JSON Parser
 
 Multi-strategy JSON extraction from LLM responses.
 LLMs frequently return JSON wrapped in markdown code blocks, with trailing

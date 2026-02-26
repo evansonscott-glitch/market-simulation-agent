@@ -1,5 +1,5 @@
 """
-Philo Ventures Market Simulator — Logging Configuration
+Market Simulator — Logging Configuration
 
 Provides structured, level-aware logging across all modules.
 Replaces all print statements with proper logging that:
@@ -116,7 +116,7 @@ def setup_logging(
     numeric_level = getattr(logging, level.upper(), logging.INFO)
 
     # Get the root logger for our namespace
-    root_logger = logging.getLogger("philo_sim")
+    root_logger = logging.getLogger("market_sim")
     root_logger.setLevel(numeric_level)
 
     # Clear existing handlers to avoid duplicates on re-init
@@ -146,7 +146,7 @@ def setup_logging(
 
 def get_logger(name: str) -> logging.Logger:
     """
-    Get a named logger under the philo_sim namespace.
+    Get a named logger under the market_sim namespace.
 
     Usage in any module:
         from engines.logging_config import get_logger
@@ -163,7 +163,7 @@ def get_logger(name: str) -> logging.Logger:
     if not _initialized:
         # Auto-initialize with defaults if setup_logging hasn't been called
         setup_logging(
-            level=os.getenv("PV_LOG_LEVEL", "INFO"),
+            level=os.getenv("SIM_LOG_LEVEL", "INFO"),
         )
 
     # Create a child logger under our namespace
@@ -174,4 +174,4 @@ def get_logger(name: str) -> logging.Logger:
     else:
         short_name = name
 
-    return logging.getLogger(f"philo_sim.{short_name}")
+    return logging.getLogger(f"market_sim.{short_name}")

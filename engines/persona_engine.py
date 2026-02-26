@@ -97,7 +97,7 @@ def _generate_persona_batch(
     """
     archetype_name = archetype.get("name", archetype_key)
 
-    system_prompt = f"""You are a market research persona generator for the Philo Ventures Market Simulator.
+    system_prompt = f"""You are a market research persona generator for a Market Simulator.
 
 Your job is to create realistic, diverse buyer personas for a simulated customer interview.
 

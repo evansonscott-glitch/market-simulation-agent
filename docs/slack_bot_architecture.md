@@ -1,8 +1,8 @@
-# Philo Ventures Market Simulator — Slack Bot Architecture
+# Market Simulator — Slack Bot Architecture
 
 ## 1. Executive Summary
 
-This document outlines the technical architecture for the **Philo Ventures Market Simulator**, a Slack-native conversational AI agent. The agent will enable Philo Ventures partners and portfolio founders to initiate, scope, and review market simulations directly within Slack. The primary design goal is to create a frictionless, conversational interface that abstracts the complexity of the underlying simulation engine, transforming it from a command-line tool into a thinking partner.
+This document outlines the technical architecture for the **Market Simulator**, a Slack-native conversational AI agent. The agent will enable partners and portfolio founders to initiate, scope, and review market simulations directly within Slack. The primary design goal is to create a frictionless, conversational interface that abstracts the complexity of the underlying simulation engine, transforming it from a command-line tool into a thinking partner.
 
 ## 2. Core Interaction Model
 
@@ -44,7 +44,7 @@ This is the refactored, reusable Python application we have already built. The S
 ## 4. Technical Requirements & Dependencies
 
 - **Slack App Configuration**:
-    - A new Slack App will be created in the Philo Ventures workspace.
+    - A new Slack App will be created in the workspace.
     - **Scopes**: `app_mentions:read`, `chat:write`, `files:read`, `im:history`, `im:read`, `im:write`.
     - **Socket Mode**: Enabled.
     - **Event Subscriptions**: `app_mention`, `message.im`, `file_shared`, `block_actions`.
@@ -58,7 +58,7 @@ This is the refactored, reusable Python application we have already built. The S
 
 ## 5. Next Steps
 
-1.  Create the Slack App in the Philo Ventures workspace and obtain the necessary tokens (`SLACK_BOT_TOKEN`, `SLACK_APP_TOKEN`).
+1.  Create the Slack App in the workspace and obtain the necessary tokens (`SLACK_BOT_TOKEN`, `SLACK_APP_TOKEN`).
 2.  Build the Slack bot front-end (`app.py`) with listeners for initiating conversations and handling file uploads.
 3.  Implement the conversational scoping logic to generate the `config.yaml` file.
 4.  Integrate the `subprocess` call to trigger the backend simulation engine.

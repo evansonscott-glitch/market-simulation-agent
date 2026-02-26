@@ -1,8 +1,8 @@
-# Philo Ventures Market Simulator
+# Market Simulator
 
 A product-agnostic simulation agent that generates realistic buyer personas, conducts AI-powered customer interviews, and produces McKinsey-grade insights reports — all from a single YAML config file.
 
-Built for the Philo Ventures portfolio. Designed to help founders validate assumptions, test product-market fit hypotheses, and explore new markets before investing time and money in real-world experiments.
+Designed to help founders and investors validate assumptions, test product-market fit hypotheses, and explore new markets before investing time and money in real-world experiments.
 
 ### v2 Hardening (Production-Ready)
 - **Structured logging** — Proper Python logging with level control, sensitive data redaction, file + console output
@@ -274,4 +274,4 @@ market-simulation-agent/
 
 ## License
 
-Proprietary — Philo Ventures. Not for distribution.
+Proprietary. Not for distribution.

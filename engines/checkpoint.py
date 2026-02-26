@@ -1,5 +1,5 @@
 """
-Philo Ventures Market Simulator — State Persistence & Checkpointing
+Market Simulator — State Persistence & Checkpointing
 
 Provides crash recovery for long-running simulations by saving state
 after each completed interview. If a simulation crashes at interview #47

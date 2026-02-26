@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Philo Ventures Market Simulator — Main Runner (Hardened)
+Market Simulator — Main Runner (Hardened)
 
 Usage:
     python3 run.py path/to/config.yaml [--resume] [--log-level DEBUG]
@@ -44,7 +44,7 @@ from engines.checkpoint import SimulationCheckpoint
 def parse_args():
     """Parse command-line arguments."""
     parser = argparse.ArgumentParser(
-        description="Philo Ventures Market Simulator",
+        description="Market Simulator",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -91,7 +91,7 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
     logger = get_logger("runner")
 
     logger.info("=" * 60)
-    logger.info("  PHILO VENTURES MARKET SIMULATOR")
+    logger.info("  MARKET SIMULATOR")
     logger.info("=" * 60)
 
     # ── Step 1: Load & Validate Config ──
