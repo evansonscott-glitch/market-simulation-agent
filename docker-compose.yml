@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  market-simulator-bot:
+    build: .
+    container_name: market-simulator-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Persist simulation output data
+      - ./output:/app/output
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

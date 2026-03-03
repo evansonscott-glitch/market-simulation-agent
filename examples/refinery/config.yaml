@@ -1,0 +1,135 @@
+# ──────────────────────────────────────────────
+# Market Simulator — Refinery Affiliate Slack Agent Config
+# ──────────────────────────────────────────────
+# Testing the hypothesis that a Slack-native AI agent form factor
+# solves the adoption problem that the dashboard-based product faces.
+
+product:
+  name: "Refinery Affiliate Slack Agent"
+  description: |
+    Refinery Affiliate is an AI-powered affiliate marketing analytics tool that helps
+    affiliate managers surface insights, identify opportunities for revenue growth and
+    margin expansion, find new affiliate partners, and detect fraud.
+
+    THE PIVOT BEING TESTED: Instead of a standalone SaaS dashboard that users must log
+    into, Refinery becomes an AI agent that lives in the affiliate manager's Slack
+    workspace. It connects to their affiliate network (Impact.com, CJ, AWIN, Rakuten),
+    proactively reviews their data in the background, and pushes actionable insights
+    directly into Slack — without the user ever having to log into a separate platform.
+
+    Examples of proactive alerts:
+    - "Affiliate X went dark but represented $45K in revenue last month — you should check in"
+    - "Affiliate Y's ROAS is up 35% this month — see if they can do more volume"
+    - "Suspicious click patterns detected from Affiliate Z — 8K excessive clicks flagged"
+    - "Based on your program, these 5 new affiliates could be a good fit"
+    - "Your MoM revenue decreased $87.7K — here are the top 3 contributing factors"
+
+    Current pricing for the dashboard product: $300-$1,000/month depending on programs managed.
+    The Slack agent would be priced similarly.
+
+    Key context: The dashboard product works well but has an adoption problem — people
+    don't want to log into yet another tool. The hypothesis is that bringing the insights
+    to where they already work (Slack) eliminates the adoption friction entirely.
+
+  target_market: |
+    Affiliate managers and heads of affiliate marketing at US companies running
+    affiliate programs through Impact.com, CJ Affiliate, AWIN, or Rakuten.
+
+    Company sizes range from mid-market DTC/ecommerce brands ($10M-$500M revenue)
+    to large enterprise companies with dedicated affiliate teams.
+
+    The buyer hierarchy has two levels:
+    1. Champion/User: Affiliate Manager or Partnership Manager (day-to-day user)
+    2. Budget Holder: VP of Marketing, Head of Affiliate, Director of Partnerships
+
+    Team sizes range from solo affiliate managers to teams of 5-15+ at enterprise scale.
+    Average affiliate manager salary: $80K-$135K/year.
+
+assumptions:
+  - "Affiliate managers would prefer an AI agent that proactively pushes insights to them in Slack over a standalone dashboard they have to log into"
+  - "The Slack-native form factor would significantly reduce the adoption friction that the current dashboard product experiences"
+  - "Affiliate managers and their VPs would pay $300-$1,000/month for a Slack-based AI agent that surfaces actionable affiliate program insights"
+  - "Trust in AI-generated affiliate recommendations is high enough that managers would act on proactive Slack alerts about their partners"
+  - "Data security concerns about connecting affiliate network data to a Slack bot are manageable and not a dealbreaker"
+
+questions:
+  - "What is your current process for reviewing affiliate program performance data, and how much time do you spend on it weekly?"
+  - "If an AI agent in Slack told you 'Affiliate X went dark but drove $45K last month — check in', would you trust that enough to act on it immediately?"
+  - "What types of proactive alerts would be most valuable to you — fraud detection, dormant affiliates, trending partners, new partner recommendations, or something else?"
+  - "What concerns would you have about connecting your Impact.com/CJ/AWIN data to a third-party Slack bot?"
+  - "Would you need to get IT or security approval to install a third-party AI bot in your company's Slack workspace, and how difficult is that process?"
+
+# ── Persona Archetypes ──
+archetypes:
+  overwhelmed_solo_manager:
+    name: "Overwhelmed Solo Affiliate Manager"
+    description: |
+      A single affiliate manager handling 1-3 programs at a mid-market DTC brand.
+      Drowning in data, manually pulling reports, spending hours in spreadsheets.
+      Would love help but skeptical of adding another tool to their stack.
+      Salary range: $60K-$90K. Reports to a VP of Marketing who controls budget.
+    percentage: 20
+
+  seasoned_team_lead:
+    name: "Seasoned Affiliate Team Lead"
+    description: |
+      Experienced affiliate manager or director managing a team of 2-5 people
+      at a larger brand or agency. Has used multiple tools, knows what works
+      and what doesn't. Pragmatic about technology — wants proof before committing.
+      Has some budget authority but major purchases need VP/CMO approval.
+    percentage: 20
+
+  vp_budget_holder:
+    name: "VP of Marketing / Head of Affiliate"
+    description: |
+      Senior leader who oversees the affiliate channel as part of a broader
+      marketing portfolio. Cares about ROI, team efficiency, and competitive
+      positioning. Doesn't use affiliate tools daily but approves budgets.
+      Concerned about data security, vendor management, and measurable impact.
+      Will ask tough questions about ROI and integration complexity.
+    percentage: 20
+
+  agency_affiliate_manager:
+    name: "Agency Affiliate Manager"
+    description: |
+      Works at an affiliate marketing agency managing programs for multiple
+      clients simultaneously. Juggles 5-10+ client programs across different
+      networks. Extremely time-constrained. Values efficiency above all else.
+      Would need the tool to work across multiple client workspaces.
+    percentage: 20
+
+  tech_skeptic_enterprise:
+    name: "Enterprise Affiliate Manager (Tech Skeptic)"
+    description: |
+      Works at a large enterprise (Fortune 500 or major retailer) with strict
+      IT security policies, lengthy vendor approval processes, and existing
+      analytics infrastructure. Skeptical of AI recommendations and concerned
+      about data governance. Would need extensive security review before
+      any third-party bot enters their Slack workspace.
+    percentage: 10
+
+  red_team_critic:
+    name: "Red Team Critic"
+    description: |
+      An experienced affiliate professional who is deliberately critical and
+      hard to impress. Has seen many tools come and go. Will push back on
+      the value proposition, question whether Slack is the right channel,
+      challenge the pricing, and raise concerns others might not voice.
+      Represents the hardest buyers to convert.
+    percentage: 10
+
+# ── Simulation Settings ──
+settings:
+  persona_count: 30
+  interview_turns: 6
+  interaction_context: "warm_demo"
+  llm_model: "gemini-2.5-flash"
+  persona_concurrency: 5
+  interview_concurrency: 10
+
+# ── Context Files ──
+context:
+  world_model: "context/world_model.md"
+
+# ── Output ──
+output_dir: "output"
