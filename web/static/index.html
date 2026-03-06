@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Simulator</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0f1117;
+            --surface: #1a1d27;
+            --surface-hover: #22252f;
+            --border: #2a2d37;
+            --text: #e4e4e7;
+            --text-dim: #71717a;
+            --accent: #6366f1;
+            --accent-hover: #818cf8;
+            --agent-bg: #1e2030;
+            --user-bg: #312e81;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --error: #ef4444;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--surface);
+        }
+        .header-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .header-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .header-subtitle {
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+        .header-status {
+            margin-left: auto;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background: var(--surface-hover);
+            color: var(--text-dim);
+        }
+        .header-status.connected { background: #052e16; color: var(--success); }
+        .header-status.running { background: #422006; color: var(--warning); }
+
+        /* Chat Area */
+        .chat-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            line-height: 1.6;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .message.agent {
+            align-self: flex-start;
+            background: var(--agent-bg);
+            border: 1px solid var(--border);
+            border-bottom-left-radius: 4px;
+        }
+        .message.user {
+            align-self: flex-end;
+            background: var(--user-bg);
+            border-bottom-right-radius: 4px;
+        }
+        .message.progress {
+            align-self: flex-start;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            font-size: 13px;
+            padding: 8px 14px;
+        }
+        .message.error {
+            align-self: flex-start;
+            background: #1c0a0a;
+            border: 1px solid #7f1d1d;
+            color: var(--error);
+        }
+        .message.result {
+            align-self: flex-start;
+            background: var(--agent-bg);
+            border: 1px solid var(--border);
+            max-width: 90%;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        /* Markdown-like formatting in messages */
+        .message strong, .message b { color: #a5b4fc; }
+        .message em, .message i { color: var(--text-dim); }
+
+        /* Typing indicator */
+        .typing {
+            align-self: flex-start;
+            padding: 12px 16px;
+            color: var(--text-dim);
+            font-size: 13px;
+            display: none;
+        }
+        .typing.visible { display: block; }
+        .typing-dots span {
+            animation: blink 1.4s infinite both;
+            font-size: 20px;
+        }
+        .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes blink {
+            0%, 80%, 100% { opacity: 0.2; }
+            40% { opacity: 1; }
+        }
+
+        /* Input Area */
+        .input-area {
+            padding: 16px 24px;
+            border-top: 1px solid var(--border);
+            background: var(--surface);
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+        .input-wrapper {
+            flex: 1;
+            position: relative;
+        }
+        textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 14px;
+            resize: none;
+            outline: none;
+            min-height: 44px;
+            max-height: 200px;
+            line-height: 1.5;
+        }
+        textarea:focus { border-color: var(--accent); }
+        textarea::placeholder { color: var(--text-dim); }
+
+        .send-btn {
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .send-btn:hover { background: var(--accent-hover); }
+        .send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        /* Stage indicator */
+        .stage-bar {
+            padding: 8px 24px;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+        .stage-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--border);
+            transition: background 0.3s;
+        }
+        .stage-dot.active { background: var(--accent); }
+        .stage-dot.complete { background: var(--success); }
+        .stage-label {
+            margin-left: 8px;
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-icon">🎯</div>
+        <div>
+            <div class="header-title">Market Simulator</div>
+            <div class="header-subtitle">Validate product assumptions through simulated interviews</div>
+        </div>
+        <div class="header-status" id="status">Connecting...</div>
+    </div>
+
+    <div class="stage-bar" id="stageBar">
+        <div class="stage-dot" id="dot-idea" title="The Idea"></div>
+        <div class="stage-dot" id="dot-value" title="Value Proposition"></div>
+        <div class="stage-dot" id="dot-segments" title="Customer Segments"></div>
+        <div class="stage-dot" id="dot-assumptions" title="Assumptions & Risks"></div>
+        <div class="stage-dot" id="dot-plan" title="Simulation Plan"></div>
+        <div class="stage-dot" id="dot-running" title="Running"></div>
+        <span class="stage-label" id="stageLabel">Getting started...</span>
+    </div>
+
+    <div class="chat-area" id="chatArea">
+        <div class="typing" id="typing">
+            <span class="typing-dots"><span>.</span><span>.</span><span>.</span></span>
+            Thinking...
+        </div>
+    </div>
+
+    <div class="input-area">
+        <div class="input-wrapper">
+            <textarea
+                id="input"
+                placeholder="Tell me about your product or idea..."
+                rows="1"
+                autofocus
+            ></textarea>
+        </div>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">→</button>
+    </div>
+
+    <script>
+        const chatArea = document.getElementById('chatArea');
+        const input = document.getElementById('input');
+        const sendBtn = document.getElementById('sendBtn');
+        const typing = document.getElementById('typing');
+        const statusEl = document.getElementById('status');
+        const stageLabel = document.getElementById('stageLabel');
+
+        // Generate a session ID
+        const sessionId = 'web_' + Math.random().toString(36).substr(2, 9);
+
+        // Stage mapping
+        const stageMap = {
+            'idle': { dots: [], label: 'Getting started...' },
+            'idea_dump': { dots: ['idea'], label: 'Stage 1: Tell me about your idea' },
+            'value_prop': { dots: ['idea', 'value'], label: 'Stage 2: Value proposition' },
+            'customer_segments': { dots: ['idea', 'value', 'segments'], label: 'Stage 3: Customer segments' },
+            'assumptions': { dots: ['idea', 'value', 'segments', 'assumptions'], label: 'Stage 4: Assumptions & risks' },
+            'simulation_plan': { dots: ['idea', 'value', 'segments', 'assumptions', 'plan'], label: 'Stage 5: Review simulation plan' },
+            'running': { dots: ['idea', 'value', 'segments', 'assumptions', 'plan', 'running'], label: 'Running simulation...' },
+            'complete': { dots: ['idea', 'value', 'segments', 'assumptions', 'plan', 'running'], label: 'Complete!' },
+        };
+
+        function updateStage(stage) {
+            const info = stageMap[stage] || stageMap['idle'];
+            stageLabel.textContent = info.label;
+
+            // Reset all dots
+            document.querySelectorAll('.stage-dot').forEach(d => {
+                d.classList.remove('active', 'complete');
+            });
+
+            // Set complete/active dots
+            const allDots = ['idea', 'value', 'segments', 'assumptions', 'plan', 'running'];
+            info.dots.forEach((dotName, i) => {
+                const el = document.getElementById('dot-' + dotName);
+                if (el) {
+                    if (i < info.dots.length - 1) {
+                        el.classList.add('complete');
+                    } else {
+                        el.classList.add('active');
+                    }
+                }
+            });
+
+            // Update status badge
+            if (stage === 'running') {
+                statusEl.className = 'header-status running';
+                statusEl.textContent = 'Simulating...';
+            } else if (stage === 'complete') {
+                statusEl.className = 'header-status connected';
+                statusEl.textContent = 'Complete';
+            }
+        }
+
+        // WebSocket connection
+        const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+        const ws = new WebSocket(`${protocol}//${window.location.host}/ws/${sessionId}`);
+
+        ws.onopen = () => {
+            statusEl.className = 'header-status connected';
+            statusEl.textContent = 'Connected';
+        };
+
+        ws.onclose = () => {
+            statusEl.className = 'header-status';
+            statusEl.textContent = 'Disconnected';
+        };
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            typing.classList.remove('visible');
+
+            if (data.type === 'agent') {
+                addMessage(data.text, 'agent');
+                if (data.stage) updateStage(data.stage);
+            } else if (data.type === 'progress') {
+                addMessage(data.text, 'progress');
+            } else if (data.type === 'result') {
+                // Show a truncated version of the report
+                const text = data.text || 'Simulation complete!';
+                const truncated = text.length > 3000 ? text.substring(0, 3000) + '\n\n... (report truncated)' : text;
+                addMessage(truncated, 'result');
+                updateStage('complete');
+            } else if (data.type === 'error') {
+                addMessage(data.text, 'error');
+            }
+
+            sendBtn.disabled = false;
+        };
+
+        function addMessage(text, type) {
+            const msg = document.createElement('div');
+            msg.className = `message ${type}`;
+
+            // Basic markdown-like formatting
+            let formatted = text
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/`(.*?)`/g, '<code>$1</code>');
+
+            msg.innerHTML = formatted;
+            chatArea.insertBefore(msg, typing);
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+        function sendMessage() {
+            const text = input.value.trim();
+            if (!text || sendBtn.disabled) return;
+
+            addMessage(text, 'user');
+            ws.send(JSON.stringify({ type: 'message', text: text }));
+
+            input.value = '';
+            input.style.height = 'auto';
+            sendBtn.disabled = true;
+            typing.classList.add('visible');
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+        // Handle Enter key (Shift+Enter for newline)
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // Auto-resize textarea
+        input.addEventListener('input', () => {
+            input.style.height = 'auto';
+            input.style.height = Math.min(input.scrollHeight, 200) + 'px';
+        });
+    </script>
+</body>
+</html>

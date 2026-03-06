@@ -1,91 +1,57 @@
 # Market Simulator
 
-A product-agnostic simulation agent that generates realistic buyer personas, conducts AI-powered customer interviews, and produces McKinsey-grade insights reports — all from a single YAML config file.
+An AI-powered thinking partner that helps founders and investors validate product assumptions through simulated customer interviews. It coaches you through identifying risks, mapping assumptions, and designing the right interview process — then runs the simulation and delivers McKinsey-grade insights.
 
-Designed to help founders and investors validate assumptions, test product-market fit hypotheses, and explore new markets before investing time and money in real-world experiments.
+**Three interfaces, one engine:**
 
-### v2 Hardening (Production-Ready)
-- **Structured logging** — Proper Python logging with level control, sensitive data redaction, file + console output
-- **Config validation** — Pydantic models with clear, actionable error messages on invalid configs
-- **Robust JSON parsing** — 5-strategy fallback pipeline for LLM response parsing (direct → code block → bracket extraction → repair → full repair)
-- **Error handling** — Retry logic with exponential backoff and jitter, graceful degradation at every stage
-- **Token-aware rate limiting** — Respects API RPM/TPM limits with adaptive backoff on 429s
-- **Crash recovery** — Checkpoint system saves state after each interview; resume with `--resume`
-- **Memory management** — Streams interview results to disk incrementally for large simulations
-- **API key protection** — Sensitive data filter automatically redacts keys/tokens from all log output
-
----
-
-## Quick Start
-
-### 1. Install Dependencies
-
-```bash
-pip3 install openai pyyaml
-```
-
-### 2. Set Your API Key
-
-```bash
-export OPENAI_API_KEY="your-key-here"
-```
-
-### 3. Create a Config File
-
-Copy the blank template and fill in your product details:
-
-```bash
-cp -r examples/blank my_simulation
-# Edit my_simulation/config.yaml with your product details
-```
-
-### 4. Run the Simulation
-
-```bash
-# Basic run
-python3 run.py my_simulation/config.yaml
-
-# With debug logging
-python3 run.py my_simulation/config.yaml --log-level DEBUG
-
-# Resume a crashed/interrupted run
-python3 run.py my_simulation/config.yaml --resume
-
-# Force fresh run (ignore checkpoint)
-python3 run.py my_simulation/config.yaml --fresh
-```
-
-The simulator will:
-1. Auto-generate a world model for your target market (or use one you provide)
-2. Generate 100 diverse buyer personas
-3. Conduct 5-turn interviews with each persona
-4. Analyze all interviews and produce a comprehensive report
-
-Output is saved to the `output/` directory specified in your config.
+| Interface | Best For | Command |
+|-----------|----------|---------|
+| **Slack Bot** | Team collaboration, async simulations | `/simulate` in Slack |
+| **CLI** | Quick runs, scripting, power users | `python cli/interactive.py` |
+| **Web App** | Visual interface, demos, sharing | `python web/server.py` |
 
 ---
 
 ## How It Works
 
-### The Four-Layer Architecture
+### The Conversational Flow
+
+Instead of requiring a config file upfront, the simulator acts as a **thinking partner** that guides you through five stages:
+
+```
+Stage 1: The Idea Dump        →  "Tell me about your product."
+Stage 2: Value Proposition     →  "What's the single biggest benefit?"
+Stage 3: Customer Segments     →  "Are all your customers the same?"
+Stage 4: Assumptions & Risks   →  "What has to be true for this to work?"
+Stage 5: Simulation Plan       →  "Here's what I'll test. Ready?"
+```
+
+The agent uses the Socratic method — it doesn't just accept "people will love it." It pushes back: *"OK, but for the business to work, what has to be true?"*
+
+Once you confirm the plan, it:
+1. **Researches** your market automatically (web research + LLM knowledge)
+2. **Generates** realistic buyer personas across your target segments
+3. **Conducts** multi-turn interviews with each persona
+4. **Analyzes** all interviews and produces a comprehensive report
+
+### The Four-Layer Engine
 
 ```
 ┌─────────────────────────────────────────────┐
-│  YAML Config (product, market, questions)    │
+│  Conversational Config (from any interface)  │
 └──────────────────┬──────────────────────────┘
                    │
          ┌─────────▼──────────┐
          │  Research Engine    │  Auto-generates world model
-         │  (if no file given)│  for the target market
          └─────────┬──────────┘
                    │
          ┌─────────▼──────────┐
-         │  Persona Engine    │  Generates N diverse buyer
+         │  Persona Engine    │  Generates diverse buyer
          │                    │  personas across archetypes
          └─────────┬──────────┘
                    │
          ┌─────────▼──────────┐
-         │  Interview Engine  │  5-turn conversational
+         │  Interview Engine  │  Multi-turn conversational
          │                    │  interviews with each persona
          └─────────┬──────────┘
                    │
@@ -95,20 +61,95 @@ Output is saved to the `output/` directory specified in your config.
          └──────────────────────┘
 ```
 
-### Buyer Archetypes
+---
 
-The simulator uses six default buyer archetypes (customizable in config):
+## Quick Start
 
-| Archetype | Weight | Skepticism | Description |
-|-----------|--------|------------|-------------|
-| Overwhelmed Founder | 25% | 3-6 | Resource-constrained, wants to be told what to do |
-| Data-Hungry Operator | 15% | 6-9 | Analytical, compares to their own data |
-| Automation-First Buyer | 15% | 5-8 | Wants action, not dashboards |
-| Competitive Evaluator | 15% | 6-9 | Comparing alternatives, negotiates |
-| Strategic Enterprise | 10% | 7-10 | Evaluating a partner, not a product |
-| Red Team Skeptic | 10% | 8-10 | Designed to say no — reveals real barriers |
+### Option 1: Interactive CLI (Fastest)
 
-### Anti-Sycophancy Calibration
+```bash
+# Install dependencies
+pip3 install openai pyyaml pydantic
+
+# Set your API key
+export OPENAI_API_KEY="your-key-here"
+
+# Start the interactive session
+python cli/interactive.py
+```
+
+The agent will guide you through the entire process conversationally.
+
+### Option 2: Slack Bot (Recommended for Teams)
+
+```bash
+# Install dependencies
+pip3 install openai pyyaml pydantic slack-bolt python-dotenv
+
+# Copy and fill in your environment variables
+cp .env.example .env
+# Edit .env with your Slack and OpenAI credentials
+
+# Start the bot
+python slack_bot/app.py
+```
+
+See [SLACK_SETUP.md](SLACK_SETUP.md) for step-by-step Slack app creation instructions.
+
+### Option 3: Web App
+
+```bash
+# Install dependencies
+pip3 install openai pyyaml pydantic fastapi uvicorn
+
+# Start the web server
+python web/server.py
+```
+
+Open `http://localhost:8080` in your browser.
+
+### Option 4: Config File (Power Users)
+
+If you prefer to skip the conversation and run from a YAML config:
+
+```bash
+# Copy the blank template
+cp -r examples/blank my_simulation
+
+# Edit my_simulation/config.yaml with your product details
+python run.py my_simulation/config.yaml
+```
+
+### Docker Deployment
+
+```bash
+# Build and run with Docker Compose
+cp .env.example .env
+# Edit .env with your credentials
+docker compose up -d
+```
+
+---
+
+## Feeding It Real Data
+
+The simulator gets dramatically better with real-world context. You can provide:
+
+| Context Type | How to Provide | Impact |
+|-------------|----------------|--------|
+| **Sales call transcripts** | Share Attio links, paste transcripts, or upload files | Personas use real customer language and objections |
+| **Customer list** | Describe your current customers | Personas calibrated against real buyer profiles |
+| **Market research** | Share articles, competitor info, industry data | World model grounded in actual market dynamics |
+
+**Accuracy levels by context provided:**
+- No context: C+ (directional, based on LLM knowledge)
+- World model only: B- (grounded in market data)
+- World model + customer list: B (calibrated against real buyers)
+- World model + customer list + transcripts: B+ (calibrated against real conversations)
+
+---
+
+## Anti-Sycophancy Calibration
 
 A key challenge with LLM-based simulations is that personas tend to be too agreeable. The simulator addresses this through:
 
@@ -120,57 +161,16 @@ A key challenge with LLM-based simulations is that personas tend to be too agree
 
 ---
 
-## Config Reference
+## Production Hardening (v2)
 
-### Product Section (Required)
-
-```yaml
-product:
-  name: "Your Product"
-  description: |
-    What it does, who it's for, pricing, stage.
-  target_market: |
-    Industry, company size, buyer role, geography.
-```
-
-### Assumptions & Questions (At Least One Required)
-
-```yaml
-# Hypothesis validation (produces validated/invalidated verdicts)
-assumptions:
-  - "Mid-market HVAC companies would pay $300/month for predictive analytics"
-
-# Open-ended exploration (produces thematic insights)
-questions:
-  - "How do you currently handle customer retention?"
-```
-
-### Settings (Optional — Defaults Shown)
-
-```yaml
-settings:
-  persona_count: 100              # Number of simulated prospects
-  interview_turns: 5              # Conversation turns per interview
-  interaction_context: "warm_demo" # warm_demo | cold_outreach | blended
-  llm_model: "gemini-2.5-flash"  # LLM model to use
-  persona_concurrency: 5          # Parallel persona generation batches
-  interview_concurrency: 10       # Parallel interviews
-```
-
-### Context Files (Optional — Improve Accuracy)
-
-```yaml
-context:
-  world_model: "context/world_model.md"    # Market research, competitors, benchmarks
-  transcripts: "context/transcripts.md"    # Real sales call transcripts
-  customer_list: "context/customer_list.md" # Existing customer details
-```
-
-**Accuracy levels by context provided:**
-- No context: C+ (directional, based on LLM knowledge)
-- World model only: B- (grounded in market data)
-- World model + customer list: B (calibrated against real buyers)
-- World model + customer list + transcripts: B+ (calibrated against real conversations)
+- **Structured logging** — Proper Python logging with level control, sensitive data redaction, file + console output
+- **Config validation** — Pydantic models with clear, actionable error messages
+- **Robust JSON parsing** — 5-strategy fallback pipeline for LLM response parsing
+- **Error handling** — Retry logic with exponential backoff and jitter, graceful degradation
+- **Token-aware rate limiting** — Respects API RPM/TPM limits with adaptive backoff
+- **Crash recovery** — Checkpoint system saves state after each interview; resume with `--resume`
+- **Memory management** — Streams interview results to disk incrementally for large simulations
+- **API key protection** — Sensitive data filter automatically redacts keys/tokens from all log output
 
 ---
 
@@ -183,14 +183,60 @@ Each simulation run produces:
 | `report.md` | The full McKinsey-grade insights report |
 | `transcripts.md` | All interview transcripts in readable format |
 | `audience_summary.md` | Demographic breakdown of the simulated audience |
-| `personas.json` | Raw persona data (for further analysis) |
-| `interviews.json` | Raw interview data (for further analysis) |
 | `insights.json` | Structured insight extractions |
-| `run_metadata.json` | Config snapshot and run statistics |
-| `generated_world_model.md` | Auto-generated world model (if no file provided) |
-| `simulation.log` | Full structured log file for the run |
-| `checkpoint.json` | Simulation state checkpoint (for crash recovery) |
-| `interviews/` | Individual interview files (incremental persistence) |
+| `quantitative_summary.json` | Numerical scores and metrics |
+| `config.yaml` | Snapshot of the simulation config |
+| `simulation.log` | Full structured log file |
+
+---
+
+## Architecture
+
+```
+market-simulation-agent/
+├── core/                               # Shared engine (interface-agnostic)
+│   ├── conversation_engine.py          # 5-stage coaching flow + LLM orchestration
+│   └── simulation_bridge.py            # Converts conversation → simulation config
+├── engines/                            # Simulation pipeline
+│   ├── logging_config.py               # Structured logging + sensitive data filter
+│   ├── llm_client.py                   # LLM wrapper with retry, rate limiting
+│   ├── json_parser.py                  # Multi-strategy JSON parser
+│   ├── checkpoint.py                   # State persistence for crash recovery
+│   ├── persona_engine.py               # Persona generation with anti-sycophancy
+│   ├── interview_engine.py             # Multi-turn interviews with checkpointing
+│   ├── analysis_engine.py              # Insight extraction + report generation
+│   └── research_engine.py              # Auto world model generation
+├── slack_bot/                          # Slack interface
+│   └── app.py                          # Socket Mode bot with slash commands
+├── cli/                                # CLI interface
+│   └── interactive.py                  # Terminal-based conversational flow
+├── web/                                # Web interface
+│   ├── server.py                       # FastAPI + WebSocket backend
+│   └── static/index.html               # Chat-style frontend
+├── run.py                              # Config-file runner (power users)
+├── config.py                           # Config loading + Pydantic validation
+├── examples/                           # Example configs
+│   ├── blank/config.yaml               # Blank template
+│   ├── revhawk/                        # RevHawk example
+│   ├── refinery/                       # Refinery Affiliate example
+│   └── checkk/                         # Checkk.ai example
+├── Dockerfile                          # Container deployment
+├── docker-compose.yml                  # One-command deployment
+├── requirements.txt                    # Python dependencies
+├── SLACK_SETUP.md                      # Slack app creation guide
+└── README.md
+```
+
+---
+
+## Requirements
+
+- Python 3.11+
+- `openai` — LLM API client
+- `pyyaml` — Config file parsing
+- `pydantic` — Config validation
+- `slack-bolt` — Slack bot (optional, for Slack interface)
+- `fastapi` + `uvicorn` — Web server (optional, for web interface)
 
 ---
 
@@ -207,71 +253,3 @@ Each simulation run produces:
 5. **Use the report as a starting point, not a conclusion.** The simulation tells you where to look. Real customer interviews tell you what's true.
 
 6. **Run the same simulation twice.** If the findings are consistent across runs, they're more likely to be real signal. If they diverge, the finding is probably noise.
-
----
-
-## Customizing Archetypes
-
-You can override the default archetypes in your config:
-
-```yaml
-archetypes:
-  my_custom_archetype:
-    name: "The Budget-Conscious CFO"
-    description: "Evaluates everything through an ROI lens..."
-    behaviors:
-      - "Asks about payback period immediately"
-    buying_triggers:
-      - "Clear, quantified ROI within 90 days"
-    common_objections:
-      - "What's the payback period?"
-    skepticism_range: [7, 9]
-    typical_weight: 0.20
-```
-
----
-
-## Architecture
-
-```
-market-simulation-agent/
-├── run.py                          # CLI entry point with argparse
-├── config.py                       # Config loading + Pydantic validation
-├── engines/
-│   ├── logging_config.py           # Structured logging + sensitive data filter
-│   ├── llm_client.py               # LLM wrapper with retry, rate limiting, error classification
-│   ├── json_parser.py              # Multi-strategy JSON parser (5 fallback strategies)
-│   ├── checkpoint.py               # State persistence for crash recovery
-│   ├── persona_engine.py           # Persona generation with anti-sycophancy
-│   ├── interview_engine.py         # Multi-turn interviews with checkpointing
-│   ├── analysis_engine.py          # Insight extraction + report generation
-│   └── research_engine.py          # Auto world model generation
-├── examples/
-│   ├── revhawk/                    # Complete RevHawk proof of concept
-│   │   ├── config.yaml
-│   │   └── context/
-│   └── blank/                      # Blank template to copy
-│       └── config.yaml
-├── research/                       # Research artifacts & simulation outputs
-│   ├── v1_output/                  # Version 1 simulation results
-│   ├── v2_output/                  # Version 2 (recalibrated) results
-│   ├── v3_output/                  # Version 3 (tactical questions) results
-│   └── audits/                     # Audit reports and comparisons
-├── docs/
-│   ├── simulation_agent_architecture.md
-│   └── slack_bot_architecture.md
-└── README.md
-```
-
----
-
-## Requirements
-
-- Python 3.11+
-- `openai` — LLM API client
-- `pyyaml` — Config file parsing
-- `pydantic` — Config validation
-
-## License
-
-Proprietary. Not for distribution.

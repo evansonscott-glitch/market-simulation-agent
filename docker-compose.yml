@@ -1,17 +1,38 @@
 version: "3.8"
 
 services:
-  market-simulator-bot:
+  # Slack Bot (default)
+  slack-bot:
     build: .
-    container_name: market-simulator-bot
+    container_name: market-simulator-slack
     restart: unless-stopped
+    environment:
+      - INTERFACE=slack
     env_file:
       - .env
     volumes:
-      # Persist simulation output data
       - ./output:/app/output
     logging:
       driver: "json-file"
       options:
         max-size: "10m"
         max-file: "3"
+
+  # Web App (uncomment to use)
+  # web:
+  #   build: .
+  #   container_name: market-simulator-web
+  #   restart: unless-stopped
+  #   environment:
+  #     - INTERFACE=web
+  #   env_file:
+  #     - .env
+  #   ports:
+  #     - "8080:8080"
+  #   volumes:
+  #     - ./output:/app/output
+  #   logging:
+  #     driver: "json-file"
+  #     options:
+  #       max-size: "10m"
+  #       max-file: "3"

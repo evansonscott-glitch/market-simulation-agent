@@ -1,0 +1,225 @@
+# ──────────────────────────────────────────────
+# Market Simulator — Checkk.ai Adjacent Market Expansion
+# ──────────────────────────────────────────────
+# Testing which of 10 adjacent customer profiles beyond commercial insurance
+# brokerages would be interested in acquiring a version of Checkk.ai's
+# AI-powered insurance document analysis technology.
+
+product:
+  name: "Checkk.ai — AI-Powered Insurance Document Analysis Platform"
+  description: |
+    Checkk.ai is an AI-powered platform that analyzes insurance documents in minutes.
+    It has three core capabilities:
+
+    1. POLICY COMPARISON: Upload an expiring policy and a renewal. The AI extracts
+       every field — limits, deductibles, exclusions, endorsements, forms, schedules —
+       and produces a color-coded side-by-side comparison flagging every change.
+       Includes AI-generated executive summary in plain English.
+
+    2. QUOTE COMPARISON: Upload quotes from multiple carriers. The AI normalizes
+       them into a structured side-by-side comparison so you can see exactly how
+       carriers differ on limits, pricing, terms, and exclusions.
+
+    3. PROPOSAL GENERATION: Upload policies or quotes and the AI generates branded,
+       client-facing proposals with executive summaries, coverage breakdowns, and
+       professional formatting. Customizable templates.
+
+    Additional capabilities:
+    - Processes both searchable and non-searchable (scanned/OCR) PDFs
+    - AI chat assistant that answers questions about uploaded documents
+    - Customizable checklists by line of business
+    - AMS integrations (AMS 360, Hawksoft, Applied Epic)
+    - Auto-generated activities and tasks in connected systems
+    - Structured data export (spreadsheets, emails, documentation)
+
+    Current pricing: $99/month (50 docs) to $249/month (200 docs), $2/doc overage.
+    Month-to-month, no setup fees, no commitments, free trial available.
+
+    The platform currently serves commercial insurance brokerages. This simulation
+    tests whether the core AI document analysis engine can be repositioned for
+    10 adjacent customer profiles in the broader insurance ecosystem.
+
+    IMPORTANT CONTEXT FROM REAL CUSTOMER CALLS:
+    - Current customers save 8+ hours per week on policy comparison
+    - The proposal tool has the highest demand of any feature
+    - AMS integration is the #1 driver of adoption — people won't use it without it
+    - Staff adoption is the biggest challenge — even good tools fail if staff resist
+    - E&O risk reduction is a powerful motivator: "Even if it catches one mistake
+      that prevents a lawsuit, it's worth it"
+    - Pricing is generally not an issue — value is clear for commercial lines
+    - Personal lines agencies see less value at current price points
+
+  target_market: |
+    This simulation targets 10 adjacent customer profiles OUTSIDE of commercial
+    insurance brokerages. Each represents a different segment of the insurance
+    value chain that handles insurance documents and could benefit from AI-powered
+    document analysis, comparison, and summarization.
+
+    The goal is to identify which profiles have the strongest product-market fit
+    with Checkk's existing capabilities, what product modifications each would
+    require, and what messaging/positioning changes are needed.
+
+assumptions:
+  - "At least 3-4 of the 10 adjacent profiles have strong enough product-market fit to pursue with minimal product modifications"
+  - "The core AI document analysis engine (policy parsing, comparison, summarization) transfers directly to non-brokerage use cases"
+  - "Adjacent profiles would pay equal or higher prices than current brokerage customers ($99-$249/month) given their larger scale and higher-value workflows"
+  - "The biggest barriers to adoption in adjacent markets will be integration requirements and compliance/security concerns, not the core value proposition"
+  - "Some adjacent profiles (e.g., Insurance BPO, Law Firms) could represent significantly larger contract values than individual brokerages"
+
+questions:
+  - "Walk me through your current process for handling insurance documents — policies, endorsements, COIs, or whatever you deal with. How much time does your team spend on this weekly?"
+  - "If an AI tool could parse your insurance documents, extract key data, compare them side-by-side, and generate structured reports in minutes instead of hours — what would that be worth to your organization?"
+  - "What specific types of insurance documents do you work with most? Policies, endorsements, COIs, binders, quotes, reinsurance treaties, or something else?"
+  - "What systems do you currently use to manage insurance documents, and how important is integration with those systems?"
+  - "What would need to be true about this tool's accuracy, security, and compliance certifications for you to trust it with your insurance document workflows?"
+  - "If I told you this tool costs $249/month for 200 documents processed, how does that compare to your current cost of doing this work manually?"
+
+# ── Persona Archetypes ──
+# Each archetype represents one of the 10 adjacent customer profiles.
+# 3 personas per archetype = 30 total interviews.
+archetypes:
+  corporate_risk_manager:
+    name: "Corporate Risk Manager (Large Enterprise)"
+    description: |
+      In-house risk or insurance manager at a mid-market or enterprise company
+      managing multi-location, multi-policy programs across multiple carriers and
+      brokers. Needs to centralize policies, ensure coverage consistency across
+      locations, track changes at renewal, and generate executive-friendly summaries.
+      Currently relies on brokers to flag issues but has no independent verification.
+      Uses spreadsheets and email chains to track policies. Manages 50-200+ policies
+      across 10-50 locations. Reports to CFO or General Counsel. Budget: $50K-$500K
+      for risk management tools. Cares deeply about E&O exposure and board reporting.
+    percentage: 10
+
+  carrier_underwriting_ops:
+    name: "Insurance Carrier Underwriting Ops"
+    description: |
+      Underwriting operations or product management team inside a P&C carrier.
+      Processes hundreds of broker submissions per week. Needs to normalize incoming
+      submissions, benchmark terms against underwriting guidelines, and flag
+      out-of-appetite wording or exceptions. Currently uses legacy policy admin
+      systems that don't do intelligent document comparison. Volume is high,
+      accuracy is critical, and speed determines competitive positioning.
+      Budget decisions made at VP/SVP level. Existing tech stack is deeply entrenched.
+    percentage: 10
+
+  mga_program_admin:
+    name: "MGA / Program Administrator"
+    description: |
+      Managing general agent or program administrator sitting between carriers and
+      retail distribution. Needs to compare fronting carrier wordings, monitor
+      adherence to program manuals, ensure endorsements match carrier templates,
+      and create standardized quote/policy packs for their agent network.
+      Operates at high volume with strict compliance requirements from carriers.
+      Tech-savvy but constrained by carrier relationships and regulatory requirements.
+      Typically 20-200 employees, processing thousands of policies per year.
+    percentage: 10
+
+  tpa_claims:
+    name: "Third-Party Administrator (TPA) for Claims"
+    description: |
+      TPA handling claims on behalf of employers or carriers. Must ingest policies,
+      endorsements, and binders attached to each claim, extract coverage triggers,
+      limits, deductibles, and exclusions, and generate coverage position summaries
+      for adjusters. Speed is critical — every hour of delay costs money. Handles
+      hundreds to thousands of claims per month. Current process involves manual
+      policy review by claims adjusters. Needs audit trails and defensible outputs.
+      Budget controlled by operations leadership. Integration with claims management
+      systems is essential.
+    percentage: 10
+
+  insurance_law_firm:
+    name: "Insurance-Focused Law Firm"
+    description: |
+      Coverage counsel or litigation team at a law firm specializing in insurance
+      recovery or insurer defense. Needs to rapidly parse and compare policy forms
+      across multiple policy years, identify wording changes relevant to disputes,
+      and build timelines and issue-spotting reports for case prep. Currently bills
+      hundreds of hours for manual policy review. Partners bill $500-$1,000+/hour.
+      Associates and paralegals do the heavy lifting on document review.
+      Accuracy is paramount — errors can lose cases. Would pay premium pricing
+      for a tool that's defensible in litigation.
+    percentage: 10
+
+  lender_project_finance:
+    name: "Lender / Project Finance Team"
+    description: |
+      Bank risk/credit officer or project finance team requiring evidence of
+      insurance (EOI) and covenant compliance. Needs to validate that borrower
+      policies meet loan agreement requirements (limits, additional insured,
+      loss payee, waiver of subrogation), track expirations, and auto-flag
+      non-compliance. Current process involves manual COI review by junior staff.
+      Handles hundreds to thousands of borrower relationships. Regulatory
+      pressure to maintain compliance documentation. Budget for compliance
+      tools is available but procurement is slow. Integration with loan
+      origination systems matters.
+    percentage: 10
+
+  real_estate_asset_manager:
+    name: "Real Estate Owner / Asset Manager"
+    description: |
+      Owner/operator of a large real estate portfolio (REIT, multifamily,
+      industrial, retail). Needs to aggregate policies for all properties,
+      confirm consistent limits and key endorsements, track changes by property
+      and year, and generate owner-level risk dashboards. Managing insurance
+      across 50-500+ properties is a massive manual burden. Current process
+      involves spreadsheets and broker reliance. Budget decisions made by
+      CFO or VP of Risk. Willing to pay for tools that reduce portfolio risk
+      exposure and simplify board reporting.
+    percentage: 10
+
+  captive_risk_pool:
+    name: "Captive Insurer / Risk Pool Administrator"
+    description: |
+      Captive manager or pool administrator for a municipal, healthcare, or
+      industry risk pool. Needs to standardize and compare member policies and
+      reinsurance treaties, ensure conformity to pool standards, track retention
+      and limit structures, and prepare summarized packs for boards and regulators.
+      Highly regulated environment with strict documentation requirements.
+      Smaller market but high-value contracts. Budget controlled by board.
+      Conservative buyers who move slowly but have real pain.
+    percentage: 10
+
+  regulated_compliance:
+    name: "Regulated Industry Compliance Officer"
+    description: |
+      Compliance officer in transportation, construction, healthcare, or energy.
+      Intakes vendors' and contractors' COIs and policies at scale, verifies
+      required coverages/limits/endorsements, maintains auditable trails for
+      regulators, and auto-expires non-compliant vendors. Volume is the key
+      challenge — large construction firms may have thousands of subcontractors.
+      Current tools are basic COI tracking platforms that don't do deep policy
+      analysis. Willing to pay for compliance automation. Integration with
+      vendor management systems is important. Regulatory penalties for
+      non-compliance create urgency.
+    percentage: 10
+
+  insurance_bpo:
+    name: "Insurance BPO / Outsourcing Provider"
+    description: |
+      Insurance back-office outsourcing firm that currently staffs manual
+      policy-checking teams of 50-500+ people. Could use a white-labeled or
+      embedded Checkk engine to speed up policy checking, sell higher-margin
+      "AI-assisted QA" services, and provide clients with structured outputs
+      and audit history. This is a distribution/channel play — they become
+      a reseller. Cares about white-labeling, API access, volume pricing,
+      and margin improvement. Budget decisions made by CEO/COO. Would want
+      enterprise pricing and SLA guarantees. Represents potentially the
+      largest single contract opportunity.
+    percentage: 10
+
+# ── Simulation Settings ──
+settings:
+  persona_count: 30
+  interview_turns: 6
+  interaction_context: "warm_demo"
+  llm_model: "gemini-2.5-flash"
+  persona_concurrency: 5
+  interview_concurrency: 10
+
+# ── Context Files ──
+context:
+  world_model: "context/world_model.md"
+
+# ── Output ──
+output_dir: "output"

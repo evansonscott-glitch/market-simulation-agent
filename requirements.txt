@@ -1,5 +1,16 @@
+# Core
 openai>=1.0.0
 pyyaml>=6.0
-pydantic>=2.0
+pydantic>=2.0.0
+
+# Slack Bot (optional — only needed for Slack interface)
 slack-bolt>=1.18.0
 slack-sdk>=3.21.0
+python-dotenv>=1.0.0
+
+# Web App (optional — only needed for web interface)
+fastapi>=0.100.0
+uvicorn>=0.23.0
+websockets>=11.0
+
+# CLI (no additional dependencies beyond core)
