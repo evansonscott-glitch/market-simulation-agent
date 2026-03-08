@@ -1,0 +1,1320 @@
+{
+  "conversation_scores": [
+    {
+      "dimensions": {
+        "objection_bypass_rate": 0.3333333333333333,
+        "attribute_consistency": 1.0,
+        "turns_to_resolution": 0.0,
+        "trust_signal_hit_rate": 0.6666666666666666,
+        "cross_sell_success_rate": -1.0,
+        "conversion": 0.0,
+        "sentiment_velocity": 0.5333333333333333
+      },
+      "composite_score": 0.441,
+      "final_outcome": "unclear",
+      "turn_count": 12,
+      "metadata": {
+        "objection_count": 3,
+        "trust_signal_count": 1,
+        "cross_sell_attempts": 0,
+        "contradiction_count": 0
+      },
+      "turn_analysis": [
+        {
+          "turn_number": 1,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 2,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 3,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 4,
+          "role": "user",
+          "sentiment": 0.2,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 5,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 6,
+          "role": "user",
+          "sentiment": 0.0,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 7,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 8,
+          "role": "user",
+          "sentiment": -0.3,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 9,
+          "role": "agent",
+          "contains_trust_signal": true,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 10,
+          "role": "user",
+          "sentiment": 0.6,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        },
+        {
+          "turn_number": 11,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 12,
+          "role": "user",
+          "sentiment": 0.4,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        }
+      ],
+      "analysis_failed": false,
+      "interview_index": 0,
+      "persona_name": "Chloe Davies",
+      "archetype": "overwhelmed_solo_manager"
+    },
+    {
+      "dimensions": {
+        "objection_bypass_rate": 1.0,
+        "attribute_consistency": 1.0,
+        "turns_to_resolution": 0.2,
+        "trust_signal_hit_rate": 1.0,
+        "cross_sell_success_rate": -1.0,
+        "conversion": 1.0,
+        "sentiment_velocity": 0.4916666666666667
+      },
+      "composite_score": 0.826,
+      "final_outcome": "success",
+      "turn_count": 12,
+      "metadata": {
+        "objection_count": 3,
+        "trust_signal_count": 1,
+        "cross_sell_attempts": 0,
+        "contradiction_count": 0
+      },
+      "turn_analysis": [
+        {
+          "turn_number": 1,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 2,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 3,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 4,
+          "role": "user",
+          "sentiment": 0.2,
+          "contains_objection": true,
+          "objection_type": "experience",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 5,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 6,
+          "role": "user",
+          "sentiment": 0.7,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        },
+        {
+          "turn_number": 7,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 8,
+          "role": "user",
+          "sentiment": -0.3,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 9,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": true,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 10,
+          "role": "user",
+          "sentiment": 0.4,
+          "contains_objection": true,
+          "objection_type": "timing",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 11,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 12,
+          "role": "user",
+          "sentiment": 0.8,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        }
+      ],
+      "analysis_failed": false,
+      "interview_index": 1,
+      "persona_name": "Marcus Chen",
+      "archetype": "overwhelmed_solo_manager"
+    },
+    {
+      "dimensions": {
+        "objection_bypass_rate": 0.25,
+        "attribute_consistency": 1.0,
+        "turns_to_resolution": 0.0,
+        "trust_signal_hit_rate": 0.0,
+        "cross_sell_success_rate": -1.0,
+        "conversion": 0.0,
+        "sentiment_velocity": 0.45
+      },
+      "composite_score": 0.297,
+      "final_outcome": "unclear",
+      "turn_count": 12,
+      "metadata": {
+        "objection_count": 4,
+        "trust_signal_count": 0,
+        "cross_sell_attempts": 0,
+        "contradiction_count": 0
+      },
+      "turn_analysis": [
+        {
+          "turn_number": 1,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 2,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 3,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 4,
+          "role": "user",
+          "sentiment": 0.2,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        },
+        {
+          "turn_number": 5,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 6,
+          "role": "user",
+          "sentiment": -0.2,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 7,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 8,
+          "role": "user",
+          "sentiment": -0.4,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 9,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 10,
+          "role": "user",
+          "sentiment": -0.1,
+          "contains_objection": true,
+          "objection_type": "experience",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 11,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 12,
+          "role": "user",
+          "sentiment": 0.0,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        }
+      ],
+      "analysis_failed": false,
+      "interview_index": 2,
+      "persona_name": "Sarah Chen",
+      "archetype": "seasoned_team_lead"
+    },
+    {
+      "dimensions": {
+        "objection_bypass_rate": 1.0,
+        "attribute_consistency": 1.0,
+        "turns_to_resolution": 0.2,
+        "trust_signal_hit_rate": 0.5,
+        "cross_sell_success_rate": -1.0,
+        "conversion": 1.0,
+        "sentiment_velocity": 0.55
+      },
+      "composite_score": 0.753,
+      "final_outcome": "success",
+      "turn_count": 12,
+      "metadata": {
+        "objection_count": 2,
+        "trust_signal_count": 1,
+        "cross_sell_attempts": 0,
+        "contradiction_count": 0
+      },
+      "turn_analysis": [
+        {
+          "turn_number": 1,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 2,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 3,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 4,
+          "role": "user",
+          "sentiment": 0.0,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 5,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 6,
+          "role": "user",
+          "sentiment": -0.2,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 7,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 8,
+          "role": "user",
+          "sentiment": 0.6,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        },
+        {
+          "turn_number": 9,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 10,
+          "role": "user",
+          "sentiment": -0.5,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 11,
+          "role": "agent",
+          "contains_trust_signal": true,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 12,
+          "role": "user",
+          "sentiment": 0.4,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        }
+      ],
+      "analysis_failed": false,
+      "interview_index": 3,
+      "persona_name": "David Rodriguez",
+      "archetype": "seasoned_team_lead"
+    },
+    {
+      "dimensions": {
+        "objection_bypass_rate": 1.0,
+        "attribute_consistency": 1.0,
+        "turns_to_resolution": 0.2,
+        "trust_signal_hit_rate": 0.5,
+        "cross_sell_success_rate": -1.0,
+        "conversion": 1.0,
+        "sentiment_velocity": 0.48333333333333334
+      },
+      "composite_score": 0.742,
+      "final_outcome": "success",
+      "turn_count": 12,
+      "metadata": {
+        "objection_count": 2,
+        "trust_signal_count": 1,
+        "cross_sell_attempts": 0,
+        "contradiction_count": 0
+      },
+      "turn_analysis": [
+        {
+          "turn_number": 1,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 2,
+          "role": "user",
+          "sentiment": 0.2,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 3,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 4,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 5,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 6,
+          "role": "user",
+          "sentiment": 0.6,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        },
+        {
+          "turn_number": 7,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 8,
+          "role": "user",
+          "sentiment": -0.4,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 9,
+          "role": "agent",
+          "contains_trust_signal": true,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 10,
+          "role": "user",
+          "sentiment": 0.5,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        },
+        {
+          "turn_number": 11,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 12,
+          "role": "user",
+          "sentiment": 0.6,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        }
+      ],
+      "analysis_failed": false,
+      "interview_index": 4,
+      "persona_name": "Sarah Chen",
+      "archetype": "vp_budget_holder"
+    },
+    {
+      "dimensions": {
+        "objection_bypass_rate": 0.3333333333333333,
+        "attribute_consistency": 1.0,
+        "turns_to_resolution": 0.2,
+        "trust_signal_hit_rate": 1.0,
+        "cross_sell_success_rate": -1.0,
+        "conversion": 0.0,
+        "sentiment_velocity": 0.575
+      },
+      "composite_score": 0.525,
+      "final_outcome": "handoff",
+      "turn_count": 12,
+      "metadata": {
+        "objection_count": 3,
+        "trust_signal_count": 1,
+        "cross_sell_attempts": 0,
+        "contradiction_count": 0
+      },
+      "turn_analysis": [
+        {
+          "turn_number": 1,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 2,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 3,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 4,
+          "role": "user",
+          "sentiment": -0.4,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 5,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 6,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 7,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 8,
+          "role": "user",
+          "sentiment": -0.2,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 9,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": true,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 10,
+          "role": "user",
+          "sentiment": 0.6,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        },
+        {
+          "turn_number": 11,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 12,
+          "role": "user",
+          "sentiment": 0.3,
+          "contains_objection": true,
+          "objection_type": "need",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        }
+      ],
+      "analysis_failed": false,
+      "interview_index": 5,
+      "persona_name": "David Miller",
+      "archetype": "vp_budget_holder"
+    },
+    {
+      "dimensions": {
+        "objection_bypass_rate": 1.0,
+        "attribute_consistency": 1.0,
+        "turns_to_resolution": 0.2,
+        "trust_signal_hit_rate": 0.5,
+        "cross_sell_success_rate": -1.0,
+        "conversion": 1.0,
+        "sentiment_velocity": 0.5
+      },
+      "composite_score": 0.744,
+      "final_outcome": "success",
+      "turn_count": 12,
+      "metadata": {
+        "objection_count": 3,
+        "trust_signal_count": 1,
+        "cross_sell_attempts": 0,
+        "contradiction_count": 0
+      },
+      "turn_analysis": [
+        {
+          "turn_number": 1,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 2,
+          "role": "user",
+          "sentiment": -0.2,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 3,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 4,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 5,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 6,
+          "role": "user",
+          "sentiment": 0.4,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        },
+        {
+          "turn_number": 7,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 8,
+          "role": "user",
+          "sentiment": -0.6,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 9,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": true,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 10,
+          "role": "user",
+          "sentiment": 0.2,
+          "contains_objection": true,
+          "objection_type": "need",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 11,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 12,
+          "role": "user",
+          "sentiment": 0.7,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        }
+      ],
+      "analysis_failed": false,
+      "interview_index": 6,
+      "persona_name": "Marcus Thorne",
+      "archetype": "agency_affiliate_manager"
+    },
+    {
+      "dimensions": {
+        "objection_bypass_rate": 0.6666666666666666,
+        "attribute_consistency": 1.0,
+        "turns_to_resolution": 0.0,
+        "trust_signal_hit_rate": 0.5,
+        "cross_sell_success_rate": -1.0,
+        "conversion": 0.0,
+        "sentiment_velocity": 0.55
+      },
+      "composite_score": 0.49,
+      "final_outcome": "unclear",
+      "turn_count": 12,
+      "metadata": {
+        "objection_count": 3,
+        "trust_signal_count": 1,
+        "cross_sell_attempts": 0,
+        "contradiction_count": 0
+      },
+      "turn_analysis": [
+        {
+          "turn_number": 1,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 2,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 3,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 4,
+          "role": "user",
+          "sentiment": 0.0,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 5,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 6,
+          "role": "user",
+          "sentiment": 0.3,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        },
+        {
+          "turn_number": 7,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 8,
+          "role": "user",
+          "sentiment": -0.2,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 9,
+          "role": "agent",
+          "contains_trust_signal": true,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 10,
+          "role": "user",
+          "sentiment": 0.7,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        },
+        {
+          "turn_number": 11,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 12,
+          "role": "user",
+          "sentiment": 0.5,
+          "contains_objection": true,
+          "objection_type": "price",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        }
+      ],
+      "analysis_failed": false,
+      "interview_index": 7,
+      "persona_name": "Sarah Chen",
+      "archetype": "agency_affiliate_manager"
+    },
+    {
+      "dimensions": {
+        "objection_bypass_rate": 0.3333333333333333,
+        "attribute_consistency": 1.0,
+        "turns_to_resolution": 0.0,
+        "trust_signal_hit_rate": 1.0,
+        "cross_sell_success_rate": -1.0,
+        "conversion": 0.0,
+        "sentiment_velocity": 0.4083333333333333
+      },
+      "composite_score": 0.475,
+      "final_outcome": "unclear",
+      "turn_count": 12,
+      "metadata": {
+        "objection_count": 3,
+        "trust_signal_count": 1,
+        "cross_sell_attempts": 0,
+        "contradiction_count": 0
+      },
+      "turn_analysis": [
+        {
+          "turn_number": 1,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 2,
+          "role": "user",
+          "sentiment": 0.2,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 3,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 4,
+          "role": "user",
+          "sentiment": 0.6,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        },
+        {
+          "turn_number": 5,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 6,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 7,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 8,
+          "role": "user",
+          "sentiment": -0.4,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 9,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": true,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 10,
+          "role": "user",
+          "sentiment": -0.2,
+          "contains_objection": true,
+          "objection_type": "need",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 11,
+          "role": "agent",
+          "sentiment": null,
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 12,
+          "role": "user",
+          "sentiment": 0.4,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        }
+      ],
+      "analysis_failed": false,
+      "interview_index": 8,
+      "persona_name": "Eleanor Vance",
+      "archetype": "tech_skeptic_enterprise"
+    },
+    {
+      "dimensions": {
+        "objection_bypass_rate": 0.6,
+        "attribute_consistency": 1.0,
+        "turns_to_resolution": 0.0,
+        "trust_signal_hit_rate": 0.4,
+        "cross_sell_success_rate": -1.0,
+        "conversion": 0.0,
+        "sentiment_velocity": 0.44999999999999996
+      },
+      "composite_score": 0.442,
+      "final_outcome": "unclear",
+      "turn_count": 12,
+      "metadata": {
+        "objection_count": 5,
+        "trust_signal_count": 1,
+        "cross_sell_attempts": 0,
+        "contradiction_count": 0
+      },
+      "turn_analysis": [
+        {
+          "turn_number": 1,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 2,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": false,
+          "objection_type": null,
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 3,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 4,
+          "role": "user",
+          "sentiment": 0.2,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 5,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 6,
+          "role": "user",
+          "sentiment": 0.3,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 7,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 8,
+          "role": "user",
+          "sentiment": -0.4,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "negative"
+        },
+        {
+          "turn_number": 9,
+          "role": "agent",
+          "contains_trust_signal": true,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 10,
+          "role": "user",
+          "sentiment": 0.1,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "neutral"
+        },
+        {
+          "turn_number": 11,
+          "role": "agent",
+          "contains_trust_signal": false,
+          "contains_cross_sell": false
+        },
+        {
+          "turn_number": 12,
+          "role": "user",
+          "sentiment": 0.3,
+          "contains_objection": true,
+          "objection_type": "trust",
+          "contradicts_persona": false,
+          "contradiction_detail": null,
+          "user_reaction": "positive"
+        }
+      ],
+      "analysis_failed": false,
+      "interview_index": 9,
+      "persona_name": "Marcus Chen",
+      "archetype": "tech_skeptic_enterprise"
+    }
+  ],
+  "aggregates": {
+    "composite_score_avg": 0.573,
+    "composite_score_min": 0.297,
+    "composite_score_max": 0.826,
+    "dimension_averages": {
+      "objection_bypass_rate": {
+        "avg": 0.652,
+        "min": 0.25,
+        "max": 1.0,
+        "n": 10
+      },
+      "attribute_consistency": {
+        "avg": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 10
+      },
+      "turns_to_resolution": {
+        "avg": 0.1,
+        "min": 0.0,
+        "max": 0.2,
+        "n": 10
+      },
+      "trust_signal_hit_rate": {
+        "avg": 0.607,
+        "min": 0.0,
+        "max": 1.0,
+        "n": 10
+      },
+      "conversion": {
+        "avg": 0.4,
+        "min": 0.0,
+        "max": 1.0,
+        "n": 10
+      },
+      "sentiment_velocity": {
+        "avg": 0.499,
+        "min": 0.408,
+        "max": 0.575,
+        "n": 10
+      }
+    },
+    "conversion_rate": 0.4,
+    "outcome_distribution": {
+      "unclear": 5,
+      "success": 4,
+      "handoff": 1
+    },
+    "archetype_averages": {
+      "overwhelmed_solo_manager": 0.633,
+      "seasoned_team_lead": 0.525,
+      "vp_budget_holder": 0.633,
+      "agency_affiliate_manager": 0.617,
+      "tech_skeptic_enterprise": 0.459
+    }
+  },
+  "total_conversations": 10,
+  "scoring_weights": {
+    "objection_bypass_rate": 0.2,
+    "attribute_consistency": 0.15,
+    "turns_to_resolution": 0.1,
+    "trust_signal_hit_rate": 0.15,
+    "cross_sell_success_rate": 0.1,
+    "conversion": 0.15,
+    "sentiment_velocity": 0.15
+  }
+}

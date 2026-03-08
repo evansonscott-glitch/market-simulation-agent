@@ -1,0 +1,61 @@
+{
+  "loop": 3,
+  "changes": [
+    "Recalibrated turns_to_resolution thresholds for interview context (\u22648=1.0, 9-12=0.8, etc.)",
+    "Added value reinforcement after objection handling (pivot to concrete benefit)",
+    "Made closing more assertive with specific next steps (demo, pilot, security review)",
+    "Reinforced 100% trust signal coverage (mandatory, non-negotiable)",
+    "Added enterprise-specific trust signals (SSO, SAML, GDPR, sandboxed POC)"
+  ],
+  "composite_score": 0.726,
+  "conversion_rate": 0.7,
+  "dimension_averages": {
+    "objection_bypass_rate": {
+      "avg": 0.833,
+      "min": 0.333,
+      "max": 1.0,
+      "n": 10
+    },
+    "attribute_consistency": {
+      "avg": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "n": 10
+    },
+    "turns_to_resolution": {
+      "avg": 0.8,
+      "min": 0.8,
+      "max": 0.8,
+      "n": 10
+    },
+    "trust_signal_hit_rate": {
+      "avg": 0.5,
+      "min": 0.0,
+      "max": 1.0,
+      "n": 10
+    },
+    "conversion": {
+      "avg": 0.7,
+      "min": 0.0,
+      "max": 1.0,
+      "n": 10
+    },
+    "sentiment_velocity": {
+      "avg": 0.51,
+      "min": 0.458,
+      "max": 0.575,
+      "n": 10
+    }
+  },
+  "outcome_distribution": {
+    "success": 7,
+    "handoff": 3
+  },
+  "archetype_averages": {
+    "overwhelmed_solo_manager": 0.786,
+    "seasoned_team_lead": 0.73,
+    "vp_budget_holder": 0.73,
+    "agency_affiliate_manager": 0.812,
+    "tech_skeptic_enterprise": 0.571
+  }
+}
