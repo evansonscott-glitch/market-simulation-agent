@@ -1,0 +1,41 @@
+{
+  "total_sequences": 3,
+  "outcomes": {
+    "converted": 2,
+    "lost": 0,
+    "ghosted": 0,
+    "still_engaged": 1
+  },
+  "conversion_rate": 0.6666666666666666,
+  "conversion_by_round": {
+    "1": 2
+  },
+  "dropoff_by_round": {},
+  "top_objections": {
+    "justifying another spend, affiliate channel is secondary, sounds like just an alert system": 1
+  },
+  "channel_effectiveness": {
+    "sms": {
+      "engaged": 0,
+      "deferred": 0,
+      "declined": 0,
+      "converted": 2,
+      "no_response": 1
+    },
+    "email": {
+      "engaged": 0,
+      "deferred": 0,
+      "declined": 0,
+      "converted": 0,
+      "no_response": 1
+    },
+    "phone_call": {
+      "engaged": 1,
+      "deferred": 0,
+      "declined": 0,
+      "converted": 0,
+      "no_response": 0
+    }
+  },
+  "avg_turns_to_conversion": 6.0
+}

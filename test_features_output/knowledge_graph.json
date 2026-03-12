@@ -1,0 +1,978 @@
+{
+  "entities": {
+    "60c7be937351": {
+      "id": "60c7be937351",
+      "name": "Refinery Affiliate",
+      "entity_type": "product",
+      "attributes": {
+        "type": "AI-powered affiliate marketing analytics tool",
+        "status": "existing product, pivoting"
+      },
+      "source_documents": [
+        "product_overview"
+      ]
+    },
+    "590ad77c5022": {
+      "id": "590ad77c5022",
+      "name": "AI agent",
+      "entity_type": "technology",
+      "attributes": {},
+      "source_documents": [
+        "product_overview"
+      ]
+    },
+    "98d791a4508f": {
+      "id": "98d791a4508f",
+      "name": "Slack",
+      "entity_type": "product",
+      "attributes": {
+        "type": "workspace platform"
+      },
+      "source_documents": [
+        "product_overview",
+        "market_context"
+      ]
+    },
+    "1113ca68c3cf": {
+      "id": "1113ca68c3cf",
+      "name": "Impact.com",
+      "entity_type": "company",
+      "attributes": {
+        "type": "affiliate network"
+      },
+      "source_documents": [
+        "product_overview",
+        "market_context"
+      ]
+    },
+    "67f48f742e88": {
+      "id": "67f48f742e88",
+      "name": "CJ",
+      "entity_type": "company",
+      "attributes": {
+        "type": "affiliate network"
+      },
+      "source_documents": [
+        "product_overview"
+      ]
+    },
+    "f0eaa106e725": {
+      "id": "f0eaa106e725",
+      "name": "AWIN",
+      "entity_type": "company",
+      "attributes": {
+        "type": "affiliate network"
+      },
+      "source_documents": [
+        "product_overview",
+        "market_context"
+      ]
+    },
+    "f6f604c17b55": {
+      "id": "f6f604c17b55",
+      "name": "Rakuten",
+      "entity_type": "company",
+      "attributes": {
+        "type": "affiliate network"
+      },
+      "source_documents": [
+        "product_overview",
+        "market_context"
+      ]
+    },
+    "4458823104c3": {
+      "id": "4458823104c3",
+      "name": "affiliate managers",
+      "entity_type": "person",
+      "attributes": {
+        "role": "user"
+      },
+      "source_documents": [
+        "product_overview"
+      ]
+    },
+    "bbbb4014ffbf": {
+      "id": "bbbb4014ffbf",
+      "name": "SaaS dashboard",
+      "entity_type": "concept",
+      "attributes": {
+        "type": "previous product form"
+      },
+      "source_documents": [
+        "product_overview"
+      ]
+    },
+    "df5a7586108b": {
+      "id": "df5a7586108b",
+      "name": "Affiliate Marketing Industry",
+      "entity_type": "market",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "a857b3581c8a": {
+      "id": "a857b3581c8a",
+      "name": "CJ Affiliate",
+      "entity_type": "company",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "6ca5ee32f46c": {
+      "id": "6ca5ee32f46c",
+      "name": "Affiliate Manager",
+      "entity_type": "person",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "48748db35612": {
+      "id": "48748db35612",
+      "name": "Affluent",
+      "entity_type": "product",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "989d062230b8": {
+      "id": "989d062230b8",
+      "name": "Trackonomics",
+      "entity_type": "product",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "069bf442fd6b": {
+      "id": "069bf442fd6b",
+      "name": "Affiverse",
+      "entity_type": "product",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "822b4ef91d38": {
+      "id": "822b4ef91d38",
+      "name": "Manual Spreadsheet Workflows",
+      "entity_type": "concept",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "e5b1be0a5455": {
+      "id": "e5b1be0a5455",
+      "name": "Fraud Detection",
+      "entity_type": "concept",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "70ae020d3859": {
+      "id": "70ae020d3859",
+      "name": "Dormant Affiliates",
+      "entity_type": "concept",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "865f4a4c308f": {
+      "id": "865f4a4c308f",
+      "name": "Cross-network Reporting",
+      "entity_type": "concept",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "7380e69f4b4d": {
+      "id": "7380e69f4b4d",
+      "name": "New Partner Discovery",
+      "entity_type": "concept",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "a854abb155f5": {
+      "id": "a854abb155f5",
+      "name": "Performance Anomalies",
+      "entity_type": "concept",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "f90b2fb278a9": {
+      "id": "f90b2fb278a9",
+      "name": "Fortune 100 companies",
+      "entity_type": "company",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "036da297b2aa": {
+      "id": "036da297b2aa",
+      "name": "Slack App Marketplace",
+      "entity_type": "product",
+      "attributes": {},
+      "source_documents": [
+        "market_context"
+      ]
+    },
+    "588bbf4a1657": {
+      "id": "588bbf4a1657",
+      "name": "Enterprise companies",
+      "entity_type": "market",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "f9713e5089c2": {
+      "id": "f9713e5089c2",
+      "name": "Slack integrations",
+      "entity_type": "technology",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "d4d0c08981fc": {
+      "id": "d4d0c08981fc",
+      "name": "SOC 2 Type II certification",
+      "entity_type": "concept",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "f8ade3c26d81": {
+      "id": "f8ade3c26d81",
+      "name": "Data encryption at rest",
+      "entity_type": "technology",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "1a422a692406": {
+      "id": "1a422a692406",
+      "name": "Data encryption in transit",
+      "entity_type": "technology",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "30c16a235609": {
+      "id": "30c16a235609",
+      "name": "OAuth 2.0 scopes",
+      "entity_type": "technology",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "91fa97d92e9e": {
+      "id": "91fa97d92e9e",
+      "name": "IT security teams",
+      "entity_type": "person",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "f6946c7515a8": {
+      "id": "f6946c7515a8",
+      "name": "Slack bot permissions",
+      "entity_type": "technology",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "8db5296442c0": {
+      "id": "8db5296442c0",
+      "name": "On-premise deployment",
+      "entity_type": "technology",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "f0c9eab2026e": {
+      "id": "f0c9eab2026e",
+      "name": "VPC deployment",
+      "entity_type": "technology",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "76a1d58b1145": {
+      "id": "76a1d58b1145",
+      "name": "GDPR compliance",
+      "entity_type": "regulation",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "6b9fc3f213b3": {
+      "id": "6b9fc3f213b3",
+      "name": "EU-based affiliate data",
+      "entity_type": "concept",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    },
+    "640765ec8acf": {
+      "id": "640765ec8acf",
+      "name": "Enterprise vendor approval process",
+      "entity_type": "concept",
+      "attributes": {},
+      "source_documents": [
+        "security_concerns"
+      ]
+    }
+  },
+  "relationships": [
+    {
+      "source_id": "60c7be937351",
+      "target_id": "590ad77c5022",
+      "relationship_type": "pivots_to",
+      "description": "Refinery Affiliate is pivoting from a SaaS dashboard to an AI agent.",
+      "weight": 1.0,
+      "source_document": "product_overview"
+    },
+    {
+      "source_id": "60c7be937351",
+      "target_id": "4458823104c3",
+      "relationship_type": "helps",
+      "description": "Refinery Affiliate helps affiliate managers.",
+      "weight": 1.0,
+      "source_document": "product_overview"
+    },
+    {
+      "source_id": "590ad77c5022",
+      "target_id": "98d791a4508f",
+      "relationship_type": "lives_in",
+      "description": "The AI agent lives in the affiliate manager's Slack workspace.",
+      "weight": 1.0,
+      "source_document": "product_overview"
+    },
+    {
+      "source_id": "590ad77c5022",
+      "target_id": "1113ca68c3cf",
+      "relationship_type": "connects_to",
+      "description": "The AI agent connects to affiliate networks like Impact.com.",
+      "weight": 1.0,
+      "source_document": "product_overview"
+    },
+    {
+      "source_id": "590ad77c5022",
+      "target_id": "67f48f742e88",
+      "relationship_type": "connects_to",
+      "description": "The AI agent connects to affiliate networks like CJ.",
+      "weight": 1.0,
+      "source_document": "product_overview"
+    },
+    {
+      "source_id": "590ad77c5022",
+      "target_id": "f0eaa106e725",
+      "relationship_type": "connects_to",
+      "description": "The AI agent connects to affiliate networks like AWIN.",
+      "weight": 1.0,
+      "source_document": "product_overview"
+    },
+    {
+      "source_id": "590ad77c5022",
+      "target_id": "f6f604c17b55",
+      "relationship_type": "connects_to",
+      "description": "The AI agent connects to affiliate networks like Rakuten.",
+      "weight": 1.0,
+      "source_document": "product_overview"
+    },
+    {
+      "source_id": "48748db35612",
+      "target_id": "1113ca68c3cf",
+      "relationship_type": "acquired_by",
+      "description": "Affluent was acquired by Impact.com",
+      "weight": 1.0,
+      "source_document": "market_context"
+    },
+    {
+      "source_id": "df5a7586108b",
+      "target_id": "1113ca68c3cf",
+      "relationship_type": "uses",
+      "description": "Impact.com is a key platform in the affiliate marketing industry",
+      "weight": 1.0,
+      "source_document": "market_context"
+    },
+    {
+      "source_id": "df5a7586108b",
+      "target_id": "a857b3581c8a",
+      "relationship_type": "uses",
+      "description": "CJ Affiliate is a key platform in the affiliate marketing industry",
+      "weight": 1.0,
+      "source_document": "market_context"
+    },
+    {
+      "source_id": "df5a7586108b",
+      "target_id": "f0eaa106e725",
+      "relationship_type": "uses",
+      "description": "AWIN is a key platform in the affiliate marketing industry",
+      "weight": 1.0,
+      "source_document": "market_context"
+    },
+    {
+      "source_id": "df5a7586108b",
+      "target_id": "f6f604c17b55",
+      "relationship_type": "uses",
+      "description": "Rakuten is a key platform in the affiliate marketing industry",
+      "weight": 1.0,
+      "source_document": "market_context"
+    },
+    {
+      "source_id": "48748db35612",
+      "target_id": "6ca5ee32f46c",
+      "relationship_type": "serves",
+      "description": "Affluent is a competitor in affiliate analytics for affiliate managers",
+      "weight": 1.0,
+      "source_document": "market_context"
+    },
+    {
+      "source_id": "989d062230b8",
+      "target_id": "6ca5ee32f46c",
+      "relationship_type": "serves",
+      "description": "Trackonomics is a competitor in affiliate analytics for affiliate managers",
+      "weight": 1.0,
+      "source_document": "market_context"
+    },
+    {
+      "source_id": "069bf442fd6b",
+      "target_id": "6ca5ee32f46c",
+      "relationship_type": "serves",
+      "description": "Affiverse is a competitor in affiliate analytics for affiliate managers",
+      "weight": 1.0,
+      "source_document": "market_context"
+    },
+    {
+      "source_id": "822b4ef91d38",
+      "target_id": "6ca5ee32f46c",
+      "relationship_type": "used_by",
+      "description": "Manual spreadsheet workflows are used by affiliate managers for analytics",
+      "weight": 1.0,
+      "source_document": "market_context"
+    },
+    {
+      "source_id": "f90b2fb278a9",
+      "target_id": "98d791a4508f",
+      "relationship_type": "uses",
+      "description": "77% of Fortune 100 companies use Slack",
+      "weight": 1.0,
+      "source_document": "market_context"
+    },
+    {
+      "source_id": "036da297b2aa",
+      "target_id": "98d791a4508f",
+      "relationship_type": "part_of",
+      "description": "The Slack App Marketplace is part of Slack",
+      "weight": 1.0,
+      "source_document": "market_context"
+    },
+    {
+      "source_id": "588bbf4a1657",
+      "target_id": "f9713e5089c2",
+      "relationship_type": "has_requirements_for",
+      "description": "Enterprise companies have strict requirements for third-party Slack integrations.",
+      "weight": 1.0,
+      "source_document": "security_concerns"
+    },
+    {
+      "source_id": "588bbf4a1657",
+      "target_id": "d4d0c08981fc",
+      "relationship_type": "requires",
+      "description": "Enterprise companies typically require SOC 2 Type II certification for third-party Slack integrations.",
+      "weight": 1.0,
+      "source_document": "security_concerns"
+    },
+    {
+      "source_id": "588bbf4a1657",
+      "target_id": "f8ade3c26d81",
+      "relationship_type": "requires",
+      "description": "Enterprise companies require data to be encrypted at rest.",
+      "weight": 1.0,
+      "source_document": "security_concerns"
+    },
+    {
+      "source_id": "588bbf4a1657",
+      "target_id": "1a422a692406",
+      "relationship_type": "requires",
+      "description": "Enterprise companies require data to be encrypted in transit.",
+      "weight": 1.0,
+      "source_document": "security_concerns"
+    },
+    {
+      "source_id": "588bbf4a1657",
+      "target_id": "30c16a235609",
+      "relationship_type": "requires",
+      "description": "Enterprise companies require OAuth 2.0 scopes to be minimally permissive.",
+      "weight": 1.0,
+      "source_document": "security_concerns"
+    },
+    {
+      "source_id": "91fa97d92e9e",
+      "target_id": "f6946c7515a8",
+      "relationship_type": "reviews",
+      "description": "IT security teams review all Slack bot permissions.",
+      "weight": 1.0,
+      "source_document": "security_concerns"
+    },
+    {
+      "source_id": "588bbf4a1657",
+      "target_id": "8db5296442c0",
+      "relationship_type": "may_require",
+      "description": "Some enterprise companies require on-premise deployment options.",
+      "weight": 1.0,
+      "source_document": "security_concerns"
+    },
+    {
+      "source_id": "588bbf4a1657",
+      "target_id": "f0c9eab2026e",
+      "relationship_type": "may_require",
+      "description": "Some enterprise companies require VPC deployment options.",
+      "weight": 1.0,
+      "source_document": "security_concerns"
+    },
+    {
+      "source_id": "588bbf4a1657",
+      "target_id": "76a1d58b1145",
+      "relationship_type": "requires",
+      "description": "GDPR compliance is required for EU-based affiliate data by enterprise companies.",
+      "weight": 1.0,
+      "source_document": "security_concerns"
+    },
+    {
+      "source_id": "76a1d58b1145",
+      "target_id": "6b9fc3f213b3",
+      "relationship_type": "applies_to",
+      "description": "GDPR compliance is required for EU-based affiliate data.",
+      "weight": 1.0,
+      "source_document": "security_concerns"
+    }
+  ],
+  "facts": {
+    "83cc963eed8f": {
+      "id": "83cc963eed8f",
+      "content": "Refinery Affiliate is an AI-powered affiliate marketing analytics tool.",
+      "entity_ids": [
+        "60c7be937351"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "general"
+    },
+    "0a4b2a3afbb4": {
+      "id": "0a4b2a3afbb4",
+      "content": "Refinery Affiliate helps affiliate managers surface insights.",
+      "entity_ids": [
+        "60c7be937351",
+        "4458823104c3"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "general"
+    },
+    "67fca357d823": {
+      "id": "67fca357d823",
+      "content": "Refinery Affiliate helps affiliate managers identify opportunities for revenue growth.",
+      "entity_ids": [
+        "60c7be937351",
+        "4458823104c3"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "general"
+    },
+    "a3a9176ce21c": {
+      "id": "a3a9176ce21c",
+      "content": "Refinery Affiliate helps affiliate managers identify opportunities for margin expansion.",
+      "entity_ids": [
+        "60c7be937351",
+        "4458823104c3"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "general"
+    },
+    "be8c1845e299": {
+      "id": "be8c1845e299",
+      "content": "Refinery Affiliate helps affiliate managers find new affiliate partners.",
+      "entity_ids": [
+        "60c7be937351",
+        "4458823104c3"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "general"
+    },
+    "7ee71d4d8481": {
+      "id": "7ee71d4d8481",
+      "content": "Refinery Affiliate helps affiliate managers detect fraud.",
+      "entity_ids": [
+        "60c7be937351",
+        "4458823104c3"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "general"
+    },
+    "6e285b52f74d": {
+      "id": "6e285b52f74d",
+      "content": "The pivot being tested for Refinery Affiliate is becoming an AI agent that lives in the affiliate manager's Slack workspace.",
+      "entity_ids": [
+        "60c7be937351",
+        "590ad77c5022",
+        "98d791a4508f"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "general"
+    },
+    "1bb79d7cd49c": {
+      "id": "1bb79d7cd49c",
+      "content": "The AI agent connects to affiliate networks such as Impact.com, CJ, AWIN, and Rakuten.",
+      "entity_ids": [
+        "590ad77c5022",
+        "1113ca68c3cf",
+        "67f48f742e88",
+        "f0eaa106e725",
+        "f6f604c17b55"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "technology"
+    },
+    "9f26913f6292": {
+      "id": "9f26913f6292",
+      "content": "The AI agent proactively reviews data in the background.",
+      "entity_ids": [
+        "590ad77c5022"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "technology"
+    },
+    "70d3a1ca57c5": {
+      "id": "70d3a1ca57c5",
+      "content": "The AI agent pushes actionable insights directly into Slack.",
+      "entity_ids": [
+        "590ad77c5022",
+        "98d791a4508f"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "technology"
+    },
+    "50a1428d7230": {
+      "id": "50a1428d7230",
+      "content": "The AI agent eliminates the need for users to log into a separate platform.",
+      "entity_ids": [
+        "590ad77c5022"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "pain_point"
+    },
+    "934cb2882e54": {
+      "id": "934cb2882e54",
+      "content": "Refinery Affiliate's pricing is $300-$1,000/month.",
+      "entity_ids": [
+        "60c7be937351"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "pricing"
+    },
+    "00bebab03f1a": {
+      "id": "00bebab03f1a",
+      "content": "Refinery Affiliate's pricing depends on the number of programs managed.",
+      "entity_ids": [
+        "60c7be937351"
+      ],
+      "source_document": "product_overview",
+      "confidence": 1.0,
+      "category": "pricing"
+    },
+    "81147fe41239": {
+      "id": "81147fe41239",
+      "content": "The affiliate marketing industry is valued at $17 billion globally (2023).",
+      "entity_ids": [
+        "df5a7586108b"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "market_size"
+    },
+    "bc19963a710c": {
+      "id": "bc19963a710c",
+      "content": "The affiliate marketing industry is growing at 10% CAGR.",
+      "entity_ids": [
+        "df5a7586108b"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "market_size"
+    },
+    "81b19c76e606": {
+      "id": "81b19c76e606",
+      "content": "The average affiliate manager spends 15-20 hours per week on manual data analysis and reporting.",
+      "entity_ids": [
+        "6ca5ee32f46c"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "pain_point"
+    },
+    "527fd0ca1f57": {
+      "id": "527fd0ca1f57",
+      "content": "The average marketing team uses 12+ different SaaS tools.",
+      "entity_ids": [],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "pain_point"
+    },
+    "22e11edbaeef": {
+      "id": "22e11edbaeef",
+      "content": "Slack has 32.3 million daily active users.",
+      "entity_ids": [
+        "98d791a4508f"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "general"
+    },
+    "408a0ca68edd": {
+      "id": "408a0ca68edd",
+      "content": "77% of Fortune 100 companies use Slack.",
+      "entity_ids": [
+        "f90b2fb278a9",
+        "98d791a4508f"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "general"
+    },
+    "a2c422229ac6": {
+      "id": "a2c422229ac6",
+      "content": "The Slack app marketplace has 2,600+ integrations.",
+      "entity_ids": [
+        "036da297b2aa"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "general"
+    },
+    "d07c493b7d17": {
+      "id": "d07c493b7d17",
+      "content": "Affluent is a key competitor in affiliate analytics.",
+      "entity_ids": [
+        "48748db35612"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "competitor"
+    },
+    "dd448493f518": {
+      "id": "dd448493f518",
+      "content": "Trackonomics is a key competitor in affiliate analytics.",
+      "entity_ids": [
+        "989d062230b8"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "competitor"
+    },
+    "acca6b8fcbe5": {
+      "id": "acca6b8fcbe5",
+      "content": "Affiverse is a key competitor in affiliate analytics.",
+      "entity_ids": [
+        "069bf442fd6b"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "competitor"
+    },
+    "4f78f810cf3a": {
+      "id": "4f78f810cf3a",
+      "content": "Manual spreadsheet workflows are a key competitor in affiliate analytics.",
+      "entity_ids": [
+        "822b4ef91d38"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "competitor"
+    },
+    "8f0cf45e587c": {
+      "id": "8f0cf45e587c",
+      "content": "Fraud detection for affiliate managers is reactive, not proactive.",
+      "entity_ids": [
+        "e5b1be0a5455",
+        "6ca5ee32f46c"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "pain_point"
+    },
+    "bca0f977f8e2": {
+      "id": "bca0f977f8e2",
+      "content": "Dormant affiliates go unnoticed until revenue drops.",
+      "entity_ids": [
+        "70ae020d3859",
+        "6ca5ee32f46c"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "pain_point"
+    },
+    "61a9942ed0a5": {
+      "id": "61a9942ed0a5",
+      "content": "Cross-network reporting requires manual data aggregation.",
+      "entity_ids": [
+        "865f4a4c308f",
+        "6ca5ee32f46c"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "pain_point"
+    },
+    "2fd14744f818": {
+      "id": "2fd14744f818",
+      "content": "New partner discovery is manual and time-consuming.",
+      "entity_ids": [
+        "7380e69f4b4d",
+        "6ca5ee32f46c"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "pain_point"
+    },
+    "6b253e0c0bef": {
+      "id": "6b253e0c0bef",
+      "content": "Performance anomalies are caught too late to act on.",
+      "entity_ids": [
+        "a854abb155f5",
+        "6ca5ee32f46c"
+      ],
+      "source_document": "market_context",
+      "confidence": 1.0,
+      "category": "pain_point"
+    },
+    "e1328aad58ee": {
+      "id": "e1328aad58ee",
+      "content": "SOC 2 Type II certification is typically required for third-party Slack integrations by enterprise companies.",
+      "entity_ids": [
+        "d4d0c08981fc",
+        "f9713e5089c2",
+        "588bbf4a1657"
+      ],
+      "source_document": "security_concerns",
+      "confidence": 1.0,
+      "category": "regulation"
+    },
+    "ad204b1cdcaf": {
+      "id": "ad204b1cdcaf",
+      "content": "Data must be encrypted at rest for third-party Slack integrations in enterprise companies.",
+      "entity_ids": [
+        "f8ade3c26d81",
+        "f9713e5089c2",
+        "588bbf4a1657"
+      ],
+      "source_document": "security_concerns",
+      "confidence": 1.0,
+      "category": "technology"
+    },
+    "34abf3bc02b7": {
+      "id": "34abf3bc02b7",
+      "content": "Data must be encrypted in transit for third-party Slack integrations in enterprise companies.",
+      "entity_ids": [
+        "1a422a692406",
+        "f9713e5089c2",
+        "588bbf4a1657"
+      ],
+      "source_document": "security_concerns",
+      "confidence": 1.0,
+      "category": "technology"
+    },
+    "f966cdcb5eff": {
+      "id": "f966cdcb5eff",
+      "content": "OAuth 2.0 scopes must be minimally permissive for third-party Slack integrations in enterprise companies.",
+      "entity_ids": [
+        "30c16a235609",
+        "f9713e5089c2",
+        "588bbf4a1657"
+      ],
+      "source_document": "security_concerns",
+      "confidence": 1.0,
+      "category": "technology"
+    },
+    "abe711bb2b86": {
+      "id": "abe711bb2b86",
+      "content": "IT security teams in enterprise companies review all Slack bot permissions.",
+      "entity_ids": [
+        "91fa97d92e9e",
+        "f6946c7515a8",
+        "588bbf4a1657"
+      ],
+      "source_document": "security_concerns",
+      "confidence": 1.0,
+      "category": "customer_behavior"
+    },
+    "1140a6a43266": {
+      "id": "1140a6a43266",
+      "content": "Some enterprise companies require on-premise or VPC deployment options for third-party Slack integrations.",
+      "entity_ids": [
+        "588bbf4a1657",
+        "8db5296442c0",
+        "f0c9eab2026e",
+        "f9713e5089c2"
+      ],
+      "source_document": "security_concerns",
+      "confidence": 1.0,
+      "category": "customer_behavior"
+    },
+    "0d9f703a09a9": {
+      "id": "0d9f703a09a9",
+      "content": "GDPR compliance is required for EU-based affiliate data in enterprise contexts.",
+      "entity_ids": [
+        "76a1d58b1145",
+        "6b9fc3f213b3",
+        "588bbf4a1657"
+      ],
+      "source_document": "security_concerns",
+      "confidence": 1.0,
+      "category": "regulation"
+    },
+    "099cd6e95680": {
+      "id": "099cd6e95680",
+      "content": "The average enterprise vendor approval process takes 4-12 weeks.",
+      "entity_ids": [
+        "640765ec8acf"
+      ],
+      "source_document": "security_concerns",
+      "confidence": 1.0,
+      "category": "general"
+    }
+  }
+}
