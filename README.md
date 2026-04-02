@@ -3,13 +3,14 @@
 An AI-powered thinking partner that helps founders and investors validate product assumptions through simulated customer interviews. It coaches you through identifying risks, mapping assumptions, and designing the right interview process — then runs the simulation and delivers McKinsey-grade insights.
 
 This repo contains two things:
-1. **The Simulation Engine** — A standalone Python tool that generates personas, conducts multi-turn interviews, and produces McKinsey-grade reports.
-2. **The Manus Skill** — A reusable methodology for running iterative, self-improving simulations inside [Manus](https://manus.im), including a 7-dimension scoring rubric and a Karpathy-style "autoresearch" loop.
+1. **The Simulation Engine** — A standalone Python pipeline that generates personas, conducts multi-turn interviews, runs bias audits, and produces McKinsey-grade reports with statistical validation.
+2. **The Claude Code Skill** — A reusable methodology for running iterative, self-improving simulations inside [Claude Code](https://claude.ai/code), including a 7-dimension scoring engine and a Karpathy-style "autoresearch" loop.
 
-**Three interfaces, one engine:**
+**Four interfaces, one engine:**
 
-| Interface | Best For | Command |
-|-----------|----------|---------|
+| Interface | Best For | How |
+|-----------|----------|-----|
+| **Claude Code** | Guided experience, iteration, coaching | Open repo in Claude Code → `/user-simulation` |
 | **Slack Bot** | Team collaboration, async simulations | `/simulate` in Slack |
 | **CLI** | Quick runs, scripting, power users | `python cli/interactive.py` |
 | **Web App** | Visual interface, demos, sharing | `python web/server.py` |
@@ -69,14 +70,33 @@ Once you confirm the plan, it:
 
 ## Quick Start
 
-### Option 1: Interactive CLI (Fastest)
+### Option 1: Claude Code (Recommended)
+
+Open this repo in [Claude Code](https://claude.ai/code) and say:
+
+> "I want to run a market simulation for my product"
+
+Claude will trigger the `/user-simulation` skill and walk you through:
+1. Describing your product and target market
+2. Identifying assumptions to test
+3. Providing context (transcripts, customer data, market research)
+4. Running the simulation and scoring results
+5. Iterating to improve fidelity
+
+The skill orchestrates all the Python engines in this repo — persona generation, interviews, bias auditing, statistical validation — so you get production-grade output with a conversational experience.
+
+**No API key required.** Claude Code IS the LLM — it generates personas, runs interviews, and writes analysis directly. The Python engines handle only the computational work (config validation, bias detection, statistics).
+
+For large-scale automated runs (100+ personas), see [Standalone Pipeline](#option-5-config-file-power-users) which requires an API key.
+
+### Option 2: Interactive CLI
 
 ```bash
 # Install dependencies
-pip3 install openai pyyaml pydantic
+pip3 install anthropic openai pyyaml pydantic
 
-# Set your API key
-export OPENAI_API_KEY="your-key-here"
+# Set your API key (Anthropic for Claude models, OpenAI for GPT/Gemini)
+export ANTHROPIC_API_KEY="your-key-here"
 
 # Start the interactive session
 python cli/interactive.py
@@ -84,15 +104,15 @@ python cli/interactive.py
 
 The agent will guide you through the entire process conversationally.
 
-### Option 2: Slack Bot (Recommended for Teams)
+### Option 3: Slack Bot (Recommended for Teams)
 
 ```bash
 # Install dependencies
-pip3 install openai pyyaml pydantic slack-bolt python-dotenv
+pip3 install anthropic openai pyyaml pydantic slack-bolt python-dotenv
 
 # Copy and fill in your environment variables
 cp .env.example .env
-# Edit .env with your Slack and OpenAI credentials
+# Edit .env with your Slack and API credentials
 
 # Start the bot
 python slack_bot/app.py
@@ -100,11 +120,11 @@ python slack_bot/app.py
 
 See [SLACK_SETUP.md](SLACK_SETUP.md) for step-by-step Slack app creation instructions.
 
-### Option 3: Web App
+### Option 4: Web App
 
 ```bash
 # Install dependencies
-pip3 install openai pyyaml pydantic fastapi uvicorn
+pip3 install anthropic openai pyyaml pydantic fastapi uvicorn
 
 # Start the web server
 python web/server.py
@@ -112,7 +132,7 @@ python web/server.py
 
 Open `http://localhost:8080` in your browser.
 
-### Option 4: Config File (Power Users)
+### Option 5: Config File (Power Users)
 
 If you prefer to skip the conversation and run from a YAML config:
 
@@ -184,19 +204,25 @@ Each simulation run produces:
 
 | File | Description |
 |------|-------------|
-| `report.md` | The full McKinsey-grade insights report |
+| `report.md` | Strategic report with bias audit and statistical appendix |
 | `transcripts.md` | All interview transcripts in readable format |
 | `audience_summary.md` | Demographic breakdown of the simulated audience |
+| `personas.json` | Full persona definitions with metadata |
+| `interviews.json` | Raw interview data |
 | `insights.json` | Structured insight extractions |
 | `quantitative_summary.json` | Numerical scores and metrics |
-| `config.yaml` | Snapshot of the simulation config |
+| `bias_audit.json` | Disposition adherence and sycophancy detection results |
+| `context_quality.json` | Context quality grade (A-F) and details |
+| `scoring_report.md` | Per-dimension scoring breakdown (if scoring engine used) |
+| `scoring_results.json` | Raw scoring data (if scoring engine used) |
+| `run_metadata.json` | Timestamp, config snapshot, quality grades |
 | `simulation.log` | Full structured log file |
 
 ---
 
-## Manus Skill: Iterative Simulation Loop
+## Claude Code Skill: Iterative Simulation Loop
 
-The `skill/` directory contains a [Manus Skill](https://manus.im) that wraps the simulation engine in an iterative, self-improving workflow inspired by Andrej Karpathy's "autoresearch" concept.
+The `skill/` directory contains a Claude Code skill that wraps the simulation engine in an iterative, self-improving workflow inspired by Andrej Karpathy's "autoresearch" concept.
 
 ### The Loop
 
@@ -206,25 +232,26 @@ Define World Model → Define Scoring Function → Run Simulation → Score Resu
                                                       └──────────────────────────────────────────────┘
 ```
 
-### Scoring Rubric (7 Dimensions)
+### Scoring Engine (7 Code-Based Dimensions)
 
-| Dimension | What It Measures | Scale |
+| Dimension | What It Measures | Score |
 |---|---|---|
-| Objection Handling Fidelity | Does the agent deploy the proven response for each objection type? | 1-5 |
-| Persona Consistency | Does the simulated user behave like their defined archetype? | 1-5 |
-| Conversation Efficiency | How many turns to reach a clear outcome? | 1-5 |
-| Trust Signal Deployment | Does the agent weave in trust signals at the right moments? | 1-5 |
-| Cross-Sell Opportunity ID | Does the agent recognize and act on natural cross-sell moments? | 0-1 |
-| Conversion Rate (by Trigger) | What % of simulations end in a successful outcome? | 0-100% |
-| Emotional Arc Realism | Does the conversation follow a believable emotional trajectory? | 1-5 |
+| Objection Bypass Rate | % of objections where agent response led to positive next turn | 0.0-1.0 |
+| Attribute Consistency | 1.0 minus (contradictions / user turns) | 0.0-1.0 |
+| Turns to Resolution | Normalized score based on turn count (fewer = better) | 0.0-1.0 |
+| Trust Signal Hit Rate | % of trust objections followed by a trust signal within 2 turns | 0.0-1.0 |
+| Cross-Sell Success Rate | % of cross-sell attempts getting positive reaction | 0.0-1.0 |
+| Conversion | Did the conversation end in success? | 0.0 or 1.0 |
+| Sentiment Velocity | Change in sentiment from first half to second half | 0.0-1.0 |
 
-See [`skill/references/scoring_rubric.md`](skill/references/scoring_rubric.md) for the full rubric.
+See [`skill/references/scoring_rubric.md`](skill/references/scoring_rubric.md) for the qualitative calibration rubric used for manual spot-checks.
 
-### Using the Skill in Manus
+### Using the Skill in Claude Code
 
-1. Add the skill to your Manus workspace (upload `skill/SKILL.md`)
-2. In any conversation, mention that you want to simulate user interactions, test assumptions, or build a knowledge base
-3. The skill triggers and walks you through the 6-step workflow conversationally
+1. Open this repo in Claude Code
+2. Say "I want to run a market simulation" (or anything related to testing product assumptions)
+3. Claude triggers the `/user-simulation` skill and walks you through the 6-step workflow
+4. Each step uses the Python engines in this repo — no manual CLI commands needed
 
 ---
 
@@ -232,18 +259,35 @@ See [`skill/references/scoring_rubric.md`](skill/references/scoring_rubric.md) f
 
 ```
 market-simulation-agent/
+├── CLAUDE.md                           # Claude Code context and instructions
+├── run.py                              # Main pipeline runner (single entry point)
+├── config.py                           # YAML config loading + Pydantic validation
 ├── core/                               # Shared engine (interface-agnostic)
-│   ├── conversation_engine.py          # 5-stage coaching flow + LLM orchestration
+│   ├── conversation_engine.py          # 5-stage Socratic coaching flow
 │   └── simulation_bridge.py            # Converts conversation → simulation config
 ├── engines/                            # Simulation pipeline
-│   ├── logging_config.py               # Structured logging + sensitive data filter
-│   ├── llm_client.py                   # LLM wrapper with retry, rate limiting
-│   ├── json_parser.py                  # Multi-strategy JSON parser
-│   ├── checkpoint.py                   # State persistence for crash recovery
-│   ├── persona_engine.py               # Persona generation with anti-sycophancy
-│   ├── interview_engine.py             # Multi-turn interviews with checkpointing
-│   ├── analysis_engine.py              # Insight extraction + report generation
-│   └── research_engine.py              # Auto world model generation
+│   ├── persona_engine.py               # Stratified persona generation + anti-sycophancy
+│   ├── interview_engine.py             # Async multi-turn interviews + checkpointing
+│   ├── analysis_engine.py              # Insight extraction + McKinsey-grade reports
+│   ├── scoring_engine.py               # 7-dimension code-based conversation scoring
+│   ├── research_engine.py              # Auto world model generation
+│   ├── market_census.py                # Statistically valid sample frame generator
+│   ├── focus_group.py                  # Agent-to-agent focus group discussions
+│   ├── temporal_sequence.py            # Multi-touch sales sequence simulation
+│   ├── post_sim_chat.py                # Follow-up chat with personas post-simulation
+│   ├── context_quality.py              # A-F context quality grading
+│   ├── statistical_validation.py       # Confidence intervals, sample size, significance
+│   ├── bias_detection.py               # Disposition adherence + sycophancy detection
+│   ├── experiment_formats.py           # Format-specific prompts/metrics/caveats
+│   ├── graph_memory.py                 # Lightweight knowledge graph for grounding
+│   ├── llm_client.py                   # LLM wrapper with retry + rate limiting
+│   ├── json_parser.py                  # Multi-strategy robust JSON parser
+│   ├── checkpoint.py                   # Crash recovery via atomic writes
+│   └── logging_config.py              # Structured logging + sensitive data filter
+├── skill/                              # Claude Code Skill (iterative simulation loop)
+│   ├── SKILL.md                        # Skill definition (6-step workflow)
+│   └── references/
+│       └── scoring_rubric.md           # Qualitative rubric for manual calibration
 ├── slack_bot/                          # Slack interface
 │   └── app.py                          # Socket Mode bot with slash commands
 ├── cli/                                # CLI interface
@@ -251,22 +295,15 @@ market-simulation-agent/
 ├── web/                                # Web interface
 │   ├── server.py                       # FastAPI + WebSocket backend
 │   └── static/index.html               # Chat-style frontend
-├── run.py                              # Config-file runner (power users)
-├── config.py                           # Config loading + Pydantic validation
 ├── examples/                           # Example configs
 │   ├── blank/config.yaml               # Blank template
 │   ├── revhawk/                        # RevHawk example
-│   ├── refinery/                       # Refinery Affiliate example
-│   └── checkk/                         # Checkk.ai example
+│   └── refinery/                       # Refinery Affiliate example
+├── REVIEW.md                           # Full review with 27 identified gaps
 ├── Dockerfile                          # Container deployment
 ├── docker-compose.yml                  # One-command deployment
 ├── requirements.txt                    # Python dependencies
-├── SLACK_SETUP.md                      # Slack app creation guide
-├── skill/                              # Manus Skill (iterative simulation loop)
-│   ├── SKILL.md                        # Skill definition (6-step workflow)
-│   └── references/
-│       └── scoring_rubric.md           # 7-dimension scoring function
-└── README.md
+└── SLACK_SETUP.md                      # Slack app creation guide
 ```
 
 ---
@@ -274,7 +311,8 @@ market-simulation-agent/
 ## Requirements
 
 - Python 3.11+
-- `openai` — LLM API client
+- `anthropic` — Anthropic Claude API client (default backend)
+- `openai` — OpenAI/Gemini API client (alternative backend)
 - `pyyaml` — Config file parsing
 - `pydantic` — Config validation
 - `slack-bolt` — Slack bot (optional, for Slack interface)

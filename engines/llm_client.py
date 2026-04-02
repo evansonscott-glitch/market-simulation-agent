@@ -1,5 +1,13 @@
 """
-LLM Client — Hardened Wrapper for OpenAI-compatible API calls.
+LLM Client — Multi-Backend Wrapper for Anthropic and OpenAI-compatible APIs.
+
+Supports two backends, auto-detected from the model name:
+  - Anthropic (Claude models): Uses the Anthropic SDK. Set ANTHROPIC_API_KEY.
+  - OpenAI-compatible (Gemini, GPT, etc.): Uses the OpenAI SDK. Set OPENAI_API_KEY.
+
+Detection logic:
+  - Model starts with "claude-" → Anthropic backend
+  - Everything else → OpenAI backend
 
 Handles:
   - Proper retry logic with exponential backoff and jitter
@@ -9,15 +17,29 @@ Handles:
   - Proper logging (no print statements, no API key exposure)
 """
 import asyncio
+import os
 import random
 import time
 from typing import List, Dict, Any, Optional
 
-from openai import OpenAI, AsyncOpenAI, APIError, RateLimitError, APIConnectionError, APITimeoutError
-
 from engines.logging_config import get_logger
 
 logger = get_logger(__name__)
+
+# ──────────────────────────────────────────────
+# Constants
+# ──────────────────────────────────────────────
+
+DEFAULT_MODEL = "claude-sonnet-4-6"
+
+
+# ──────────────────────────────────────────────
+# Backend Detection
+# ──────────────────────────────────────────────
+
+def _is_anthropic_model(model: str) -> bool:
+    """Check if a model name indicates the Anthropic backend."""
+    return model.startswith("claude-")
 
 
 # ──────────────────────────────────────────────
@@ -51,10 +73,6 @@ class TokenAwareRateLimiter:
     """
     Token-aware rate limiter that tracks requests and tokens per minute.
 
-    Respects OpenAI-style rate limits:
-      - Requests per minute (RPM)
-      - Tokens per minute (TPM)
-
     Uses a sliding window approach with adaptive backoff when limits are hit.
     """
 
@@ -72,17 +90,11 @@ class TokenAwareRateLimiter:
         self._consecutive_rate_limits = 0
 
     async def acquire(self, estimated_tokens: int = 1000) -> None:
-        """
-        Wait until we can safely make a request within rate limits.
-
-        Args:
-            estimated_tokens: Estimated token usage for this request.
-        """
+        """Wait until we can safely make a request within rate limits."""
         async with self._lock:
             now = time.monotonic()
-            window = 60.0  # 1-minute sliding window
+            window = 60.0
 
-            # Clean old entries
             self.request_timestamps = [
                 t for t in self.request_timestamps if now - t < window
             ]
@@ -90,22 +102,18 @@ class TokenAwareRateLimiter:
                 (t, tokens) for t, tokens in self.token_usage if now - t < window
             ]
 
-            # Check RPM
             while len(self.request_timestamps) >= self.max_rpm:
                 oldest = self.request_timestamps[0]
                 wait_time = window - (now - oldest) + 0.1
                 if wait_time > 0:
-                    logger.debug(
-                        "Rate limit: RPM at %d/%d, waiting %.1fs",
-                        len(self.request_timestamps), self.max_rpm, wait_time,
-                    )
+                    logger.debug("Rate limit: RPM at %d/%d, waiting %.1fs",
+                                 len(self.request_timestamps), self.max_rpm, wait_time)
                     await asyncio.sleep(wait_time)
                 now = time.monotonic()
                 self.request_timestamps = [
                     t for t in self.request_timestamps if now - t < window
                 ]
 
-            # Check TPM
             current_tpm = sum(tokens for _, tokens in self.token_usage)
             while current_tpm + estimated_tokens > self.max_tpm:
                 if self.token_usage:
@@ -114,10 +122,8 @@ class TokenAwareRateLimiter:
                 else:
                     wait_time = 1.0
                 if wait_time > 0:
-                    logger.debug(
-                        "Rate limit: TPM at %d/%d, waiting %.1fs",
-                        current_tpm, self.max_tpm, wait_time,
-                    )
+                    logger.debug("Rate limit: TPM at %d/%d, waiting %.1fs",
+                                 current_tpm, self.max_tpm, wait_time)
                     await asyncio.sleep(wait_time)
                 now = time.monotonic()
                 self.token_usage = [
@@ -125,33 +131,29 @@ class TokenAwareRateLimiter:
                 ]
                 current_tpm = sum(tokens for _, tokens in self.token_usage)
 
-            # Record this request
             self.request_timestamps.append(now)
             self.token_usage.append((now, estimated_tokens))
+            return len(self.token_usage) - 1
 
-    async def record_actual_usage(self, tokens: int) -> None:
+    async def record_actual_usage(self, tokens: int, slot: int = -1) -> None:
         """Update with actual token usage after a response."""
         async with self._lock:
             now = time.monotonic()
-            # Replace the estimated entry with actual
-            if self.token_usage:
+            if 0 <= slot < len(self.token_usage):
+                self.token_usage[slot] = (now, tokens)
+            elif self.token_usage:
                 self.token_usage[-1] = (now, tokens)
 
     async def record_rate_limit_hit(self) -> float:
-        """
-        Record that we hit a rate limit. Returns recommended wait time.
-        Uses adaptive backoff — consecutive hits increase wait time.
-        """
+        """Record that we hit a rate limit. Returns recommended wait time."""
         async with self._lock:
             self._consecutive_rate_limits += 1
             wait_time = min(
                 2 ** self._consecutive_rate_limits + random.uniform(1, 3),
-                60.0,  # Cap at 60 seconds
+                60.0,
             )
-            logger.warning(
-                "Rate limit hit (consecutive: %d), backing off %.1fs",
-                self._consecutive_rate_limits, wait_time,
-            )
+            logger.warning("Rate limit hit (consecutive: %d), backing off %.1fs",
+                           self._consecutive_rate_limits, wait_time)
             return wait_time
 
     async def record_success(self) -> None:
@@ -165,7 +167,6 @@ _rate_limiter: Optional[TokenAwareRateLimiter] = None
 
 
 def get_rate_limiter() -> TokenAwareRateLimiter:
-    """Get or create the global rate limiter."""
     global _rate_limiter
     if _rate_limiter is None:
         _rate_limiter = TokenAwareRateLimiter()
@@ -173,7 +174,6 @@ def get_rate_limiter() -> TokenAwareRateLimiter:
 
 
 def configure_rate_limiter(max_rpm: int = 500, max_tpm: int = 200_000) -> None:
-    """Configure the global rate limiter with custom limits."""
     global _rate_limiter
     _rate_limiter = TokenAwareRateLimiter(max_rpm=max_rpm, max_tpm=max_tpm)
     logger.info("Rate limiter configured: RPM=%d, TPM=%d", max_rpm, max_tpm)
@@ -183,14 +183,74 @@ def configure_rate_limiter(max_rpm: int = 500, max_tpm: int = 200_000) -> None:
 # Client Factories
 # ──────────────────────────────────────────────
 
-def get_sync_client() -> OpenAI:
-    """Create a synchronous OpenAI client."""
-    return OpenAI()
+_sync_clients: Dict[str, Any] = {}
 
 
-def get_async_client() -> AsyncOpenAI:
-    """Create an async OpenAI client."""
-    return AsyncOpenAI()
+def get_sync_client(model: str = ""):
+    """Get or create a cached synchronous client for the appropriate backend."""
+    backend = "anthropic" if _is_anthropic_model(model) else "openai"
+    if backend not in _sync_clients:
+        if backend == "anthropic":
+            from anthropic import Anthropic
+            _sync_clients[backend] = Anthropic()
+        else:
+            from openai import OpenAI
+            _sync_clients[backend] = OpenAI()
+    return _sync_clients[backend]
+
+
+def get_async_client(model: str = ""):
+    """Create an async client for the appropriate backend. Not cached (async clients are session-scoped)."""
+    if _is_anthropic_model(model):
+        from anthropic import AsyncAnthropic
+        return AsyncAnthropic()
+    else:
+        from openai import AsyncOpenAI
+        return AsyncOpenAI()
+
+
+# ──────────────────────────────────────────────
+# Anthropic ↔ OpenAI Message Format Conversion
+# ──────────────────────────────────────────────
+
+def _convert_messages_for_anthropic(messages: List[Dict[str, str]]) -> tuple:
+    """
+    Convert OpenAI-format messages to Anthropic format.
+
+    Anthropic requires:
+    - system prompt passed separately (not in messages array)
+    - messages array contains only user/assistant alternating turns
+    - first message must be from user
+
+    Returns:
+        (system_prompt: str, messages: list)
+    """
+    system_prompt = ""
+    anthropic_messages = []
+
+    for msg in messages:
+        role = msg.get("role", "user")
+        content = msg.get("content", "")
+
+        if role == "system":
+            system_prompt += ("\n\n" + content if system_prompt else content)
+        elif role in ("user", "assistant"):
+            anthropic_messages.append({"role": role, "content": content})
+
+    # Anthropic requires messages to start with a user turn and alternate.
+    # Merge consecutive same-role messages.
+    merged = []
+    for msg in anthropic_messages:
+        if merged and merged[-1]["role"] == msg["role"]:
+            merged[-1]["content"] += "\n\n" + msg["content"]
+        else:
+            merged.append(msg)
+
+    # If first message isn't user, prepend a minimal user message
+    if not merged or merged[0]["role"] != "user":
+        merged.insert(0, {"role": "user", "content": "Please proceed."})
+
+    return system_prompt, merged
 
 
 # ──────────────────────────────────────────────
@@ -200,79 +260,90 @@ def get_async_client() -> AsyncOpenAI:
 def _classify_error(error: Exception) -> tuple:
     """
     Classify an API error to determine retry behavior.
-
-    Returns:
-        (is_retryable: bool, is_rate_limit: bool, description: str)
+    Returns: (is_retryable, is_rate_limit, description)
     """
-    if isinstance(error, RateLimitError):
+    error_type_name = type(error).__name__
+    error_str = str(error).lower()
+
+    # Check for rate limit patterns
+    if "ratelimit" in error_type_name.lower() or "429" in error_str or "rate" in error_str:
         return True, True, "rate_limit"
-    elif isinstance(error, APITimeoutError):
+
+    # Check for timeout patterns
+    if "timeout" in error_type_name.lower() or "timeout" in error_str:
         return True, False, "timeout"
-    elif isinstance(error, APIConnectionError):
+
+    # Check for connection patterns
+    if "connection" in error_type_name.lower() or "connection" in error_str:
         return True, False, "connection_error"
-    elif isinstance(error, APIError):
-        status = getattr(error, "status_code", None)
+
+    # Check for server errors
+    status = getattr(error, "status_code", None)
+    if status:
         if status == 429:
             return True, True, "rate_limit_429"
-        elif status and status >= 500:
+        elif status >= 500:
             return True, False, f"server_error_{status}"
-        elif status and status >= 400:
+        elif status >= 400:
             return False, False, f"client_error_{status}"
-        return True, False, f"api_error_{status}"
-    else:
-        # Unknown errors — check for common patterns in message
-        error_str = str(error).lower()
-        if "429" in error_str or "rate" in error_str:
-            return True, True, "rate_limit_inferred"
-        elif "timeout" in error_str:
-            return True, False, "timeout_inferred"
-        elif "connection" in error_str:
-            return True, False, "connection_inferred"
-        return False, False, "unknown"
+
+    # Check for overloaded (Anthropic-specific)
+    if "overloaded" in error_str:
+        return True, False, "overloaded"
+
+    return False, False, "unknown"
 
 
 def _calculate_backoff(attempt: int, is_rate_limit: bool) -> float:
-    """Calculate backoff time with exponential increase and jitter."""
     if is_rate_limit:
-        base = 2 ** (attempt + 2)  # Start higher for rate limits
+        base = 2 ** (attempt + 2)
         jitter = random.uniform(1, 5)
     else:
         base = 2 ** attempt
         jitter = random.uniform(0, 1)
-    return min(base + jitter, 120.0)  # Cap at 2 minutes
+    return min(base + jitter, 120.0)
 
 
 # ──────────────────────────────────────────────
 # Core Completion Functions
 # ──────────────────────────────────────────────
 
-def chat_completion(
-    messages: List[Dict[str, str]],
-    model: str = "gemini-2.5-flash",
-    temperature: float = 0.7,
-    max_tokens: int = 4096,
-    response_format: Optional[Dict] = None,
-    max_retries: int = 3,
-) -> str:
-    """
-    Synchronous chat completion with retry logic.
+def _build_anthropic_kwargs(messages, model, temperature, max_tokens):
+    """Build kwargs dict for Anthropic messages.create()."""
+    system_prompt, anthropic_messages = _convert_messages_for_anthropic(messages)
+    kwargs = {
+        "model": model,
+        "messages": anthropic_messages,
+        "max_tokens": max_tokens,
+    }
+    if system_prompt:
+        kwargs["system"] = system_prompt
+    if temperature is not None:
+        kwargs["temperature"] = min(temperature, 1.0)
+    return kwargs
 
-    Args:
-        messages: Chat messages.
-        model: LLM model name.
-        temperature: Sampling temperature.
-        max_tokens: Max response tokens.
-        response_format: Optional response format spec.
-        max_retries: Maximum retry attempts.
 
-    Returns:
-        The LLM response text.
+def _extract_anthropic_response(response):
+    """Extract text and usage from an Anthropic response."""
+    text = ""
+    if response.content and len(response.content) > 0:
+        text = response.content[0].text
+    usage = None
+    if hasattr(response, "usage") and response.usage:
+        usage = response.usage.input_tokens + response.usage.output_tokens
+    return text, usage
 
-    Raises:
-        LLMRetryExhausted: If all retries fail.
-        LLMResponseEmpty: If the response is empty.
-    """
-    client = get_sync_client()
+
+def _call_anthropic_sync(client, messages, model, temperature, max_tokens):
+    """Make a synchronous Anthropic API call."""
+    kwargs = _build_anthropic_kwargs(messages, model, temperature, max_tokens)
+    response = client.messages.create(**kwargs)
+    text, _ = _extract_anthropic_response(response)
+    return text
+
+
+def _call_openai_sync(client, messages, model, temperature, max_tokens, response_format):
+    """Make a synchronous OpenAI API call."""
     kwargs = {
         "model": model,
         "messages": messages,
@@ -282,28 +353,82 @@ def chat_completion(
     if response_format:
         kwargs["response_format"] = response_format
 
+    response = client.chat.completions.create(**kwargs)
+    return response.choices[0].message.content
+
+
+async def _call_anthropic_async(client, messages, model, temperature, max_tokens):
+    """Make an async Anthropic API call."""
+    kwargs = _build_anthropic_kwargs(messages, model, temperature, max_tokens)
+    response = await client.messages.create(**kwargs)
+    return _extract_anthropic_response(response)
+
+
+async def _call_openai_async(client, messages, model, temperature, max_tokens, response_format):
+    """Make an async OpenAI API call."""
+    kwargs = {
+        "model": model,
+        "messages": messages,
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+    }
+    if response_format:
+        kwargs["response_format"] = response_format
+
+    response = await client.chat.completions.create(**kwargs)
+    content = response.choices[0].message.content
+
+    usage = None
+    if hasattr(response, "usage") and response.usage:
+        usage = response.usage.total_tokens
+    return content, usage
+
+
+def chat_completion(
+    messages: List[Dict[str, str]],
+    model: str = DEFAULT_MODEL,
+    temperature: float = 0.7,
+    max_tokens: int = 4096,
+    response_format: Optional[Dict] = None,
+    max_retries: int = 3,
+) -> str:
+    """
+    Synchronous chat completion with retry logic. Auto-detects backend from model name.
+
+    Args:
+        messages: Chat messages (OpenAI format — system/user/assistant roles).
+        model: LLM model name. "claude-*" uses Anthropic, everything else uses OpenAI.
+        temperature: Sampling temperature.
+        max_tokens: Max response tokens.
+        response_format: Optional response format (OpenAI only, ignored for Anthropic).
+        max_retries: Maximum retry attempts.
+
+    Returns:
+        The LLM response text.
+    """
+    use_anthropic = _is_anthropic_model(model)
+    client = get_sync_client(model)
+
     last_error = None
     for attempt in range(max_retries):
         try:
-            response = client.chat.completions.create(**kwargs)
-            content = response.choices[0].message.content
+            if use_anthropic:
+                content = _call_anthropic_sync(client, messages, model, temperature, max_tokens)
+            else:
+                content = _call_openai_sync(client, messages, model, temperature, max_tokens, response_format)
 
             if not content or not content.strip():
                 raise LLMResponseEmpty(
                     f"LLM returned empty response (model={model}, attempt={attempt + 1})"
                 )
-
             return content
 
         except LLMResponseEmpty:
-            # Retry empty responses
             last_error = LLMResponseEmpty("Empty response")
             if attempt < max_retries - 1:
                 wait_time = _calculate_backoff(attempt, False)
-                logger.warning(
-                    "Empty response on attempt %d/%d, retrying in %.1fs",
-                    attempt + 1, max_retries, wait_time,
-                )
+                logger.warning("Empty response on attempt %d/%d, retrying in %.1fs",
+                               attempt + 1, max_retries, wait_time)
                 time.sleep(wait_time)
             continue
 
@@ -312,10 +437,7 @@ def chat_completion(
             is_retryable, is_rate_limit, error_type = _classify_error(e)
 
             if not is_retryable:
-                logger.error(
-                    "Non-retryable error (%s): %s",
-                    error_type, str(e)[:200],
-                )
+                logger.error("Non-retryable error (%s): %s", error_type, str(e)[:200])
                 raise LLMRetryExhausted(
                     f"Non-retryable error: {error_type}",
                     attempts=attempt + 1,
@@ -324,16 +446,12 @@ def chat_completion(
 
             if attempt < max_retries - 1:
                 wait_time = _calculate_backoff(attempt, is_rate_limit)
-                logger.warning(
-                    "Retryable error (%s) on attempt %d/%d, retrying in %.1fs",
-                    error_type, attempt + 1, max_retries, wait_time,
-                )
+                logger.warning("Retryable error (%s) on attempt %d/%d, retrying in %.1fs",
+                               error_type, attempt + 1, max_retries, wait_time)
                 time.sleep(wait_time)
             else:
-                logger.error(
-                    "All %d retries exhausted. Last error (%s): %s",
-                    max_retries, error_type, str(e)[:200],
-                )
+                logger.error("All %d retries exhausted. Last error (%s): %s",
+                             max_retries, error_type, str(e)[:200])
 
     raise LLMRetryExhausted(
         f"All {max_retries} retries exhausted",
@@ -343,58 +461,38 @@ def chat_completion(
 
 
 async def async_chat_completion(
-    client: AsyncOpenAI,
+    client,
     messages: List[Dict[str, str]],
-    model: str = "gemini-2.5-flash",
+    model: str = DEFAULT_MODEL,
     temperature: float = 0.7,
     max_tokens: int = 4096,
     response_format: Optional[Dict] = None,
     max_retries: int = 5,
 ) -> str:
     """
-    Async chat completion with exponential backoff, jitter, and rate limiting.
-
-    Args:
-        client: Async OpenAI client instance.
-        messages: Chat messages.
-        model: LLM model name.
-        temperature: Sampling temperature.
-        max_tokens: Max response tokens.
-        response_format: Optional response format spec.
-        max_retries: Maximum retry attempts.
-
-    Returns:
-        The LLM response text.
-
-    Raises:
-        LLMRetryExhausted: If all retries fail.
-        LLMResponseEmpty: If the response is empty after retries.
+    Async chat completion with retry, backoff, and rate limiting.
+    Auto-detects backend from model name.
     """
-    kwargs = {
-        "model": model,
-        "messages": messages,
-        "temperature": temperature,
-        "max_tokens": max_tokens,
-    }
-    if response_format:
-        kwargs["response_format"] = response_format
-
+    use_anthropic = _is_anthropic_model(model)
     rate_limiter = get_rate_limiter()
     estimated_tokens = max_tokens + sum(len(m.get("content", "")) // 4 for m in messages)
 
     last_error = None
     for attempt in range(max_retries):
         try:
-            # Acquire rate limit slot
-            await rate_limiter.acquire(estimated_tokens)
+            slot = await rate_limiter.acquire(estimated_tokens)
 
-            response = await client.chat.completions.create(**kwargs)
-            content = response.choices[0].message.content
+            if use_anthropic:
+                content, usage = await _call_anthropic_async(
+                    client, messages, model, temperature, max_tokens
+                )
+            else:
+                content, usage = await _call_openai_async(
+                    client, messages, model, temperature, max_tokens, response_format
+                )
 
-            # Record actual token usage if available
-            if hasattr(response, "usage") and response.usage:
-                total_tokens = response.usage.total_tokens
-                await rate_limiter.record_actual_usage(total_tokens)
+            if usage:
+                await rate_limiter.record_actual_usage(usage, slot)
 
             await rate_limiter.record_success()
 
@@ -402,17 +500,14 @@ async def async_chat_completion(
                 raise LLMResponseEmpty(
                     f"LLM returned empty response (model={model}, attempt={attempt + 1})"
                 )
-
             return content
 
         except LLMResponseEmpty:
             last_error = LLMResponseEmpty("Empty response")
             if attempt < max_retries - 1:
                 wait_time = _calculate_backoff(attempt, False)
-                logger.warning(
-                    "Empty response on attempt %d/%d, retrying in %.1fs",
-                    attempt + 1, max_retries, wait_time,
-                )
+                logger.warning("Empty response on attempt %d/%d, retrying in %.1fs",
+                               attempt + 1, max_retries, wait_time)
                 await asyncio.sleep(wait_time)
             continue
 
@@ -423,10 +518,7 @@ async def async_chat_completion(
             if is_rate_limit:
                 wait_time = await rate_limiter.record_rate_limit_hit()
             elif not is_retryable:
-                logger.error(
-                    "Non-retryable error (%s): %s",
-                    error_type, str(e)[:200],
-                )
+                logger.error("Non-retryable error (%s): %s", error_type, str(e)[:200])
                 raise LLMRetryExhausted(
                     f"Non-retryable error: {error_type}",
                     attempts=attempt + 1,
@@ -436,16 +528,12 @@ async def async_chat_completion(
                 wait_time = _calculate_backoff(attempt, False)
 
             if attempt < max_retries - 1:
-                logger.warning(
-                    "Retryable error (%s) on attempt %d/%d, retrying in %.1fs",
-                    error_type, attempt + 1, max_retries, wait_time,
-                )
+                logger.warning("Retryable error (%s) on attempt %d/%d, retrying in %.1fs",
+                               error_type, attempt + 1, max_retries, wait_time)
                 await asyncio.sleep(wait_time)
             else:
-                logger.error(
-                    "All %d retries exhausted. Last error (%s): %s",
-                    max_retries, error_type, str(e)[:200],
-                )
+                logger.error("All %d retries exhausted. Last error (%s): %s",
+                             max_retries, error_type, str(e)[:200])
 
     raise LLMRetryExhausted(
         f"All {max_retries} retries exhausted",
@@ -460,30 +548,32 @@ async def run_concurrent_completions(
 ) -> List[Optional[str]]:
     """
     Run multiple chat completions concurrently with a semaphore.
-
-    Each task dict: {messages, model, temperature, max_tokens, response_format}.
-    Failed tasks return None instead of raising (graceful degradation).
-
-    Args:
-        tasks: List of task dicts.
-        max_concurrent: Maximum concurrent requests.
-
-    Returns:
-        Results in same order as tasks. Failed tasks are None.
+    Auto-detects backend from model name in each task.
     """
     semaphore = asyncio.Semaphore(max_concurrent)
-    client = get_async_client()
+
+    # Group tasks by backend — all tasks in a batch should use the same backend.
+    # Create one client per backend type encountered.
+    clients = {}
     results: List[Optional[str]] = [None] * len(tasks)
     failed_count = 0
 
+    def _get_client_for_model(model: str):
+        backend = "anthropic" if _is_anthropic_model(model) else "openai"
+        if backend not in clients:
+            clients[backend] = get_async_client(model)
+        return clients[backend]
+
     async def run_one(index: int, task: Dict):
         nonlocal failed_count
+        task_model = task.get("model", DEFAULT_MODEL)
+        task_client = _get_client_for_model(task_model)
         async with semaphore:
             try:
                 result = await async_chat_completion(
-                    client=client,
+                    client=task_client,
                     messages=task["messages"],
-                    model=task.get("model", "gemini-2.5-flash"),
+                    model=task_model,
                     temperature=task.get("temperature", 0.7),
                     max_tokens=task.get("max_tokens", 4096),
                     response_format=task.get("response_format"),
@@ -491,10 +581,8 @@ async def run_concurrent_completions(
                 results[index] = result
             except LLMRetryExhausted as e:
                 failed_count += 1
-                logger.error(
-                    "Task %d/%d failed after %d retries: %s",
-                    index + 1, len(tasks), e.attempts, str(e.last_error)[:100],
-                )
+                logger.error("Task %d/%d failed after %d retries: %s",
+                             index + 1, len(tasks), e.attempts, str(e.last_error)[:100])
                 results[index] = None
             except Exception as e:
                 failed_count += 1
@@ -503,15 +591,13 @@ async def run_concurrent_completions(
 
     await asyncio.gather(*[run_one(i, t) for i, t in enumerate(tasks)])
 
-    try:
-        await client.close()
-    except Exception:
-        pass  # Don't fail on cleanup
+    for c in clients.values():
+        try:
+            await c.close()
+        except Exception:
+            pass
 
     if failed_count > 0:
-        logger.warning(
-            "Concurrent completions: %d/%d tasks failed",
-            failed_count, len(tasks),
-        )
+        logger.warning("Concurrent completions: %d/%d tasks failed", failed_count, len(tasks))
 
     return results

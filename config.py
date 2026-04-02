@@ -42,7 +42,7 @@ class ProductConfig(BaseModel):
 
 class SettingsConfig(BaseModel):
     """Validates simulation settings."""
-    llm_model: str = Field(default="gemini-2.5-flash", description="LLM model to use")
+    llm_model: str = Field(default="claude-sonnet-4-6", description="LLM model to use")
     persona_count: int = Field(default=100, ge=1, le=1000, description="Number of personas to generate")
     interview_turns: int = Field(default=5, ge=1, le=20, description="Number of interview turns")
     interaction_context: str = Field(default="warm_demo", description="Interaction context type")
@@ -153,7 +153,7 @@ class ConfigValidationError(Exception):
 # ──────────────────────────────────────────────
 
 DEFAULTS = {
-    "llm_model": os.getenv("PV_LLM_MODEL", "gemini-2.5-flash"),
+    "llm_model": os.getenv("PV_LLM_MODEL", "claude-sonnet-4-6"),
     "persona_count": 100,
     "interview_turns": 5,
     "interaction_context": "warm_demo",

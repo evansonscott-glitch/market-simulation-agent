@@ -42,7 +42,7 @@ settings:
   persona_count: 100
   interview_turns: 5
   interaction_context: "warm_demo"  # warm_demo | cold_outreach | blended
-  llm_model: "gemini-2.5-flash"
+  llm_model: "claude-sonnet-4-6"
   persona_concurrency: 5
   interview_concurrency: 10
 

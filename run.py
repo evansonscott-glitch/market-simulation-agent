@@ -78,9 +78,50 @@ Examples:
     return parser.parse_args()
 
 
+def _check_api_key(model: str):
+    """Check that the required API key is set for standalone pipeline mode."""
+    if model.startswith("claude-"):
+        key = os.environ.get("ANTHROPIC_API_KEY", "")
+        if not key:
+            print("\n" + "=" * 70)
+            print("  ANTHROPIC_API_KEY not set")
+            print("=" * 70)
+            print()
+            print("  The standalone pipeline needs an API key to make LLM calls.")
+            print()
+            print("  For Claude models (default):")
+            print("    export ANTHROPIC_API_KEY='your-key-here'")
+            print()
+            print("  Using Claude Code instead? No API key needed!")
+            print("  Open this repo in Claude Code and say:")
+            print("    'I want to run a market simulation'")
+            print("  Claude Code will handle the LLM work directly.")
+            print()
+            print("=" * 70 + "\n")
+            sys.exit(1)
+    else:
+        key = os.environ.get("OPENAI_API_KEY", "")
+        if not key:
+            print("\n" + "=" * 70)
+            print(f"  OPENAI_API_KEY not set (required for model: {model})")
+            print("=" * 70)
+            print()
+            print("  Set your API key:")
+            print("    export OPENAI_API_KEY='your-key-here'")
+            print()
+            print("  Or switch to Claude (no key needed in Claude Code):")
+            print("    Set llm_model: 'claude-sonnet-4-6' in your config")
+            print()
+            print("=" * 70 + "\n")
+            sys.exit(1)
+
+
 def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, log_level: str = "INFO"):
     """
-    Run the full simulation pipeline.
+    Run the full simulation pipeline (standalone mode — requires API key).
+
+    For Claude Code users: use the /user-simulation skill instead.
+    Claude Code handles LLM work directly — no API key needed.
 
     Args:
         config_path: Path to the YAML config file.
@@ -116,6 +157,9 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
     except Exception as e:
         logger.error("Failed to load config: %s", e)
         sys.exit(1)
+
+    # Check API key before proceeding
+    _check_api_key(config["llm_model"])
 
     logger.info("  Product: %s", config["product_name"])
     logger.info("  Target Market: %s", config["target_market"][:80])
@@ -258,7 +302,7 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
             run_interviews(
                 personas=personas,
                 config=config,
-                checkpoint=checkpoint if resume else checkpoint,  # Always use checkpoint for persistence
+                checkpoint=checkpoint,
             )
         )
     except Exception as e:
@@ -381,7 +425,7 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
     config_snapshot["run_timestamp"] = timestamp
     config_snapshot["personas_generated"] = len(personas)
     config_snapshot["interviews_completed"] = len(interviews)
-    config_snapshot["elapsed_seconds"] = round(elapsed, 1),
+    config_snapshot["elapsed_seconds"] = round(elapsed, 1)
     config_snapshot["log_level"] = log_level
     config_snapshot["context_quality_grade"] = context_quality.get("grade", "?")
     config_snapshot["bias_risk"] = bias_audit.get("overall_risk", "unknown")

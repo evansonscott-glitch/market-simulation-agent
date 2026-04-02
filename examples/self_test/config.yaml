@@ -1,0 +1,180 @@
+# ──────────────────────────────────────────────
+# Self-Test: Simulating Users of the Simulation Tool
+# ──────────────────────────────────────────────
+# This config uses the simulation agent to test itself.
+# The "product" is this very simulation tool, and the
+# "customers" are founders, PMs, and investors who would
+# use it via Claude Code.
+
+product:
+  name: "Market Simulation Agent"
+  description: |
+    An AI-powered market simulation tool that validates product assumptions
+    through simulated customer interviews. Users describe their product,
+    provide context (transcripts, CRM data, market research), and the tool
+    generates realistic buyer personas, conducts multi-turn interviews,
+    and produces a strategic report with bias auditing and statistical
+    validation.
+
+    The tool runs inside Claude Code via a guided skill (/user-simulation)
+    that walks users through a 6-step iterative loop. Users can also run
+    it via CLI, Slack bot, or web app.
+
+    Key differentiators from generic LLM simulation:
+    - Anti-sycophancy architecture (40% skeptical/resistant personas)
+    - Post-hoc bias audit (disposition adherence + sycophancy detection)
+    - Statistical validation (confidence intervals, sample adequacy)
+    - Context quality grading (A-F, visible in report header)
+    - 7-dimension code-based scoring engine
+    - Iterative improvement loop with version tracking
+
+    Pricing: Open source / free. Requires user's own LLM API key.
+  target_market: |
+    Founders, product managers, and investors who need to validate product
+    assumptions faster than traditional customer interviews allow. Primary
+    users are early-stage founders (pre-revenue to $1M ARR) who can't
+    afford formal market research and growth-stage founders ($1-10M ARR)
+    who need faster iteration on positioning, pricing, and messaging.
+
+# ── What to Test ──
+assumptions:
+  - "Users will understand they need to provide real context files (transcripts, customer data) to get good results, without being explicitly coached"
+  - "Users will read and act on the context quality grade (A-F) in the report header, adjusting their inputs if the grade is low"
+  - "Users can get from 'I want to test my product' to a completed simulation report in one Claude Code session without getting confused or stuck"
+  - "Users will trust the simulation results enough to change their product strategy based on them, but not treat them as definitive market proof"
+
+questions:
+  - "What's the first thing you'd want to see when you get the simulation report? Executive summary? Raw transcripts? Scores?"
+  - "If the simulation told you that 70% of simulated customers wouldn't pay your planned price, would you lower the price, change the value prop, or dismiss the simulation?"
+  - "How would you explain this tool to a colleague? What would you call it?"
+  - "What would make you run the simulation a second time with revised inputs vs. deciding one run is enough?"
+
+# ── Simulation Settings ──
+settings:
+  persona_count: 100
+  interview_turns: 6
+  interaction_context: "warm_demo"
+  experiment_format: "interview"
+  llm_model: "claude-sonnet-4-6"
+  persona_concurrency: 5
+  interview_concurrency: 10
+
+# ── Context Files ──
+context:
+  world_model: "context/world_model.md"
+  transcripts: "context/transcripts.md"
+
+# ── Custom Archetypes (overriding defaults) ──
+archetypes:
+  just_run_it_founder:
+    name: "The Just-Run-It Founder"
+    description: |
+      Impatient, action-oriented early-stage founder. Wants results in
+      under 15 minutes. Will NOT read documentation. Expects to describe
+      their product in 2 sentences and get an answer. Has no transcripts,
+      no CRM data, no market research. Judges the tool entirely on speed
+      and whether the output "feels right." Will abandon the process if
+      any step takes more than 3 minutes or feels like homework.
+    behaviors:
+      - "Skips setup steps and tries to jump to results"
+      - "Asks 'how long does this take?' within the first 30 seconds"
+      - "Provides minimal product description"
+      - "Gets frustrated if asked for context files they don't have"
+      - "Wants a 3-bullet summary, not a 20-page report"
+    buying_triggers:
+      - "Seeing a compelling output in under 5 minutes"
+      - "Being told the tool caught something they hadn't thought of"
+      - "Social proof from other founders they respect"
+    common_objections:
+      - "I don't have time to set this up properly"
+      - "I don't have transcripts or customer data to provide"
+      - "Can't I just talk to real customers instead?"
+      - "This seems like a lot of work for simulated data"
+    skepticism_range: [3, 6]
+    typical_weight: 0.30
+
+  data_rich_operator:
+    name: "The Data-Rich Operator"
+    description: |
+      Sophisticated product manager or growth-stage founder with extensive
+      customer data. Has CRM exports, call recordings, NPS surveys, and
+      analytics dashboards. Evaluates the tool on methodology rigor, not
+      speed. Wants to understand the anti-sycophancy system, the statistical
+      validation, and the bias audit before trusting results. Will provide
+      extensive context files and expects the output quality to reflect that
+      investment. Compares against doing real customer interviews.
+    behaviors:
+      - "Reads the README and architecture docs before starting"
+      - "Asks detailed questions about methodology and bias handling"
+      - "Provides extensive context files (transcripts, customer list, world model)"
+      - "Checks whether confidence intervals are reasonable"
+      - "Wants to compare results against their own customer data for calibration"
+    buying_triggers:
+      - "Seeing that the bias audit catches known issues"
+      - "Statistical rigor that matches their expectations"
+      - "Being able to test variations (pricing, messaging) quickly"
+    common_objections:
+      - "How do I know the personas are realistic and not generic?"
+      - "What's the catch rate on sycophantic responses?"
+      - "Can I test two variants against the same audience?"
+      - "I already have real customer data — why simulate?"
+    skepticism_range: [5, 8]
+    typical_weight: 0.25
+
+  first_timer:
+    name: "The First-Timer"
+    description: |
+      Has never used Claude Code, AI simulation tools, or formal customer
+      discovery methodology. May not know what a "persona" or "archetype" is.
+      Came from a blog post or recommendation. Needs hand-holding through
+      every step. Will get confused by technical terminology. Will provide
+      context if clearly asked but doesn't know what's valuable to provide.
+      Judges the tool on whether it felt easy and whether they learned something.
+    behaviors:
+      - "Asks 'what do I do first?' and waits for instructions"
+      - "Gets confused by terms like archetype, disposition, or interaction context"
+      - "Provides context when asked but needs specific guidance on what to share"
+      - "Reads the full report because they don't know which parts to skip"
+      - "Asks 'is this normal?' about simulation results"
+    buying_triggers:
+      - "Feeling guided and supported through the process"
+      - "Learning something about their market they didn't know"
+      - "The output being easy to understand and share with co-founders"
+    common_objections:
+      - "I don't understand what this is doing"
+      - "What does 'context quality grade C' mean? Is that bad?"
+      - "These simulated interviews seem fake — are real people involved?"
+      - "I don't know what a YAML config is"
+    skepticism_range: [2, 5]
+    typical_weight: 0.25
+
+  the_skeptic:
+    name: "The Skeptic"
+    description: |
+      Second-time founder or experienced PM who has been burned by "AI-powered"
+      tools that were basically ChatGPT wrappers. Deeply distrustful of AI
+      simulation. Will test the tool against known results to see if it's
+      accurate. If the simulation confirms something they know to be false,
+      they'll never use it again. Demands transparency about limitations.
+      Actually reads the bias audit and statistical appendix. Will respect
+      honest caveats more than polished marketing.
+    behaviors:
+      - "Immediately questions whether LLM personas can be realistic"
+      - "Tests against a known-failed product to calibrate accuracy"
+      - "Reads the bias audit and statistical appendix closely"
+      - "Pushes back on any finding that seems too convenient"
+      - "Respects the tool more if it admits its limitations upfront"
+    buying_triggers:
+      - "The simulation catching a known failure mode from a past product"
+      - "Honest limitations section that matches their own concerns"
+      - "Bias audit flagging actual issues (not just saying 'all clear')"
+    common_objections:
+      - "I tried an AI research tool before and it was garbage"
+      - "LLM personas just tell you what you want to hear"
+      - "Why should I trust simulated data over 5 real customer calls?"
+      - "This is just fancy ChatGPT with extra steps"
+    skepticism_range: [7, 10]
+    typical_weight: 0.20
+
+# ── Output ──
+output_dir: "output"
