@@ -85,7 +85,9 @@ Claude will trigger the `/user-simulation` skill and walk you through:
 
 The skill orchestrates all the Python engines in this repo — persona generation, interviews, bias auditing, statistical validation — so you get production-grade output with a conversational experience.
 
-**Requirements:** An Anthropic API key (`ANTHROPIC_API_KEY`). Default model is `claude-sonnet-4-6`. For OpenAI/Gemini models, set `OPENAI_API_KEY` and specify the model in your config YAML.
+**No API key required.** Claude Code IS the LLM — it generates personas, runs interviews, and writes analysis directly. The Python engines handle only the computational work (config validation, bias detection, statistics).
+
+For large-scale automated runs (100+ personas), see [Standalone Pipeline](#option-5-config-file-power-users) which requires an API key.
 
 ### Option 2: Interactive CLI
 

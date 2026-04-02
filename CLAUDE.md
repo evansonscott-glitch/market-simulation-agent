@@ -6,16 +6,20 @@ This is the Market Simulation Agent — an AI-powered tool that validates produc
 
 ## How to Use This Repo in Claude Code
 
+### No API Key Required
+
+When running inside Claude Code, **you ARE the LLM**. You generate personas, conduct interviews, and write analysis directly. The Python engines handle only computation — config validation, bias detection, statistical analysis. No separate API key needed.
+
 ### Primary Flow: The `/user-simulation` Skill
 
 When a user wants to run a simulation, trigger the `user-simulation` skill defined in `skill/SKILL.md`. This walks through a 6-step iterative loop:
 
 1. Gather context (transcripts, product definition, assumptions, market data)
-2. Define the scoring function (7 code-based dimensions)
-3. Run the simulation via `python3 run.py path/to/config.yaml`
-4. Score and audit results (automatic: bias audit, statistical appendix, context quality grade)
-5. Analyze gaps and revise inputs
-6. Commit versioned improvements and repeat
+2. Create and validate a YAML config
+3. Generate personas and conduct interviews (you do this — you are the LLM)
+4. Run bias audit + statistical validation (Python utilities)
+5. Write the analysis report
+6. Iterate based on results
 
 ### When to Trigger the Skill
 
@@ -37,9 +41,10 @@ Trigger `/user-simulation` when the user says anything like:
 
 ```
 config.py                          # YAML config loading + Pydantic validation
-run.py                             # Main pipeline runner (the single entry point)
-core/conversation_engine.py        # 5-stage Socratic coaching flow
+run.py                             # Standalone pipeline runner (needs API key)
+core/conversation_engine.py        # 5-stage Socratic coaching flow (for Slack/CLI/web)
 engines/
+  sim_utils.py                     # Non-LLM utilities for Claude Code skill flow
   persona_engine.py                # Stratified persona generation with anti-sycophancy
   interview_engine.py              # Async multi-turn interviews with checkpointing
   analysis_engine.py               # Insight extraction + McKinsey-grade reports
@@ -53,7 +58,7 @@ engines/
   statistical_validation.py        # Confidence intervals, sample size, significance tests
   bias_detection.py                # Disposition adherence + sycophancy detection
   experiment_formats.py            # Format-specific prompts/metrics (webpage, PDF, form, etc.)
-  llm_client.py                    # LLM wrapper with retry + rate limiting
+  llm_client.py                    # LLM wrapper with retry + rate limiting (standalone mode)
   json_parser.py                   # Multi-strategy robust JSON parser
   checkpoint.py                    # Crash recovery via atomic writes
 skill/
@@ -61,14 +66,35 @@ skill/
   references/scoring_rubric.md     # Qualitative 1-5 rubric for manual calibration
 ```
 
-## Running the Pipeline
+### Two Modes
+
+| Mode | LLM Work Done By | API Key? | Use Case |
+|------|-------------------|----------|----------|
+| **Claude Code skill** | You (Claude) | No | Default. Interactive, iterative. |
+| **Standalone pipeline** | `python3 run.py` via API | Yes (`ANTHROPIC_API_KEY`) | Large-scale runs, CI, automation. |
+
+## Running the Standalone Pipeline
 
 ```bash
-# Full pipeline
+# Only needed for standalone mode (100+ persona runs, automation)
+export ANTHROPIC_API_KEY="your-key"
 python3 run.py path/to/config.yaml [--resume] [--log-level DEBUG]
 
-# Default model: claude-sonnet-4-6 (uses ANTHROPIC_API_KEY)
+# Default model: claude-sonnet-4-6
 # For OpenAI/Gemini models: set OPENAI_API_KEY and specify model in YAML
+```
+
+## Quick Utilities (for Claude Code skill flow)
+
+```bash
+# Validate a config
+python3 engines/sim_utils.py validate path/to/config.yaml
+
+# Grade context quality
+python3 engines/sim_utils.py context-quality path/to/config.yaml
+
+# Check sample size adequacy
+python3 engines/sim_utils.py sample-check 30 6
 ```
 
 ## Config Format
@@ -86,7 +112,7 @@ assumptions:
 Optional but impactful:
 ```yaml
 settings:
-  persona_count: 100        # 1-1000, default 100
+  persona_count: 20          # 10-30 for Claude Code mode, up to 1000 for standalone
   interview_turns: 5         # 1-20, default 5
   interaction_context: warm_demo  # warm_demo | cold_outreach | blended
   experiment_format: interview    # interview | focus_group | sales_sequence | webpage_review | document_review | form_test | in_person_interview
