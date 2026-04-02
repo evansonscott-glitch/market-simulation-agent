@@ -5,90 +5,232 @@ description: Run an iterative, self-improving user simulation to test a product,
 
 # User Simulation Skill
 
-This skill enables Manus to run an iterative, self-improving user simulation loop, modeled on Andrej Karpathy’s “autoresearch” concept. It is designed to test a product, agent, or go-to-market strategy against a set of simulated user personas, score the results against a defined rubric, and iteratively refine the inputs until the simulation realistically mirrors real-world behavior.
+This skill enables Manus to run an iterative, self-improving user simulation loop. It orchestrates the Python simulation engines in this repository to test a product, agent, or go-to-market strategy against simulated user personas, score the results, and iteratively refine until the simulation realistically mirrors real-world behavior.
+
+## Architecture
+
+This skill is the **orchestration layer** for the simulation engines in this repository:
+
+| Skill Step | Engine Used | File |
+|---|---|---|
+| Context gathering | Context Quality Engine | `engines/context_quality.py` |
+| Scoring definition | Scoring Engine | `engines/scoring_engine.py` |
+| World model | Research Engine | `engines/research_engine.py` |
+| Persona generation | Persona Engine + Market Census | `engines/persona_engine.py`, `engines/market_census.py` |
+| Interview execution | Interview Engine (or Focus Group / Temporal Sequence) | `engines/interview_engine.py`, `engines/focus_group.py`, `engines/temporal_sequence.py` |
+| Scoring | Scoring Engine (code-based, 7 dimensions) | `engines/scoring_engine.py` |
+| Bias audit | Bias Detection Engine | `engines/bias_detection.py` |
+| Statistical validation | Statistical Validation Engine | `engines/statistical_validation.py` |
+| Format-specific handling | Experiment Formats Engine | `engines/experiment_formats.py` |
+| Analysis & report | Analysis Engine | `engines/analysis_engine.py` |
+| Full pipeline | Main Runner | `run.py` |
+
+**The skill defines the process. The engines provide the implementation.**
+
+---
 
 ## Core Workflow
 
-The simulation process follows a six-step, iterative loop:
+The simulation follows a six-step iterative loop:
 
-1.  **Define the World Model:** Gather the necessary context for the simulation. This is the most critical step and requires a conversational approach with the user to gather the right inputs.
-2.  **Define the Scoring Function:** Establish a clear, measurable rubric for what “better” looks like. This is grounded in real data where possible.
-3.  **Run the Simulation:** Generate multi-turn conversations between the agent/product and the simulated user personas across a set of defined triggers.
-4.  **Score the Results:** Score each conversation against the rubric to identify gaps between the simulation and the desired outcome.
-5.  **Revise and Refine:** Analyze the lowest-scoring dimensions and revise the inputs (personas, agent playbooks, trigger framing) to close the gaps.
-6.  **Commit and Iterate:** Commit the improved knowledge base with a version number and changelog, then repeat the loop until the simulation reaches a desired level of fidelity.
+1. **Define the World Model** — Gather context (transcripts, CRM data, product definition, goals, triggers, market research)
+2. **Define the Scoring Function** — Establish a measurable rubric for what "better" looks like
+3. **Run the Simulation** — Execute the pipeline via `run.py` or individual engines
+4. **Score the Results** — Evaluate each conversation against the rubric using `engines/scoring_engine.py`
+5. **Revise and Refine** — Analyze gaps, update personas/playbooks/triggers
+6. **Commit and Iterate** — Version the knowledge base and repeat
 
 ---
 
 ## Step 1: Define the World Model (Input Gathering)
 
-Before running any simulation, you must gather the necessary context. Use a conversational approach to ask the user for the following inputs. Do not ask for them all at once; gather them progressively.
+Before running any simulation, gather context using a conversational approach. Do NOT ask for everything at once — gather progressively.
 
-### Data Gathering Checklist:
+### Data Gathering Checklist
 
-| Input | Description | Priority | Why It Matters |
+| Input | Description | Priority | Quality Impact |
 |---|---|---|---|
-| **Real Transcripts** | Actual call recordings, SMS threads, or email chains with real users/customers. | **Critical** | This is the ground truth. The simulation’s primary goal is to statistically match the patterns in these transcripts. |
-| **CRM Data** | Customer relationship management data (e.g., from JobNimbus, Salesforce). | High | Provides quantitative data on customer segments, job values, conversion rates, and service history. |
-| **The Product/Agent** | A clear definition of what is being simulated (the product, the AI agent, the sales rep). | High | Defines one side of the conversation. |
-| **The Goal** | What is the desired outcome of the interaction (e.g., book an appointment, make a purchase, resolve a support ticket)? | High | Defines the “win” condition for the simulation. |
-| **Triggers** | The specific events that initiate the interaction (e.g., a user signs up, a storm hits a customer’s zip code). | High | Defines the context for the conversation. |
-| **Market Research** | Any existing research on the target audience, market dynamics, or competitive landscape. | Medium | Helps build more realistic personas when real transcript data is limited. |
-| **Competitor Analysis** | How do competitors talk to their customers? What are their value propositions? | Medium | Provides context for how users perceive the market. |
+| **Real Transcripts** | Actual call recordings, SMS threads, or email chains with real users/customers. | **Critical** | Ground truth. Without this, context quality grade will be D or F. |
+| **CRM Data / Customer List** | Customer relationship data (segments, job values, conversion rates, service history). | High | Enables calibrated personas that match real buyer distribution. |
+| **The Product/Agent** | Clear definition of what is being simulated (the product, AI agent, sales rep). | **Required** | Defines one side of the conversation. Must be specific (>10 chars). |
+| **The Goal** | Desired outcome (book appointment, make purchase, resolve ticket). | **Required** | Defines the "win" condition for scoring. |
+| **Triggers** | Events that initiate interaction (signup, storm, competitor switch). | High | Defines conversation context. Maps to `interaction_context` in config. |
+| **Market Research / World Model** | Research on target audience, market dynamics, competitive landscape. | High | Grounds personas in reality. If missing, auto-generated (lower quality). |
+| **Assumptions to Test** | Specific, testable hypotheses about the market. | **Required** | At least one assumption OR question is required by config validation. |
+| **Experiment Format** | How the interaction happens: interview, focus group, webpage review, form test, etc. | Medium | Determines which engine to use and what metrics to track. |
 
-**If real transcripts are not available, you MUST inform the user that the simulation will be based on a *proxy* model and will have lower fidelity.**
+### Context Quality Grades
+
+The `engines/context_quality.py` module grades context A-F. This grade appears in the report header:
+
+| Grade | What Was Provided | Reliability |
+|---|---|---|
+| **A** | World model + transcripts + customer list (all substantive) | High — findings are grounded in real data |
+| **B** | World model + at least one of transcripts/customer list | Good — partially grounded |
+| **C** | World model only, or transcripts + customer list | Moderate — significant LLM estimation |
+| **D** | One thin file, or auto-generated world model only | Low — mostly LLM imagination |
+| **F** | No context files at all | Very low — treat as hypotheses only |
+
+**If real transcripts are not available, you MUST inform the user that the simulation will have lower fidelity (grade D or below) and results should be treated as directional hypotheses, not market evidence.**
 
 ---
 
 ## Step 2: Define the Scoring Function
 
-Once the world model is defined, you must establish the scoring function. The default scoring rubric is located in `references/scoring_rubric.md`. Read this file to understand the 7 dimensions of the rubric.
+The scoring engine (`engines/scoring_engine.py`) uses 7 code-based, deterministic dimensions:
 
-**Action:** Read `/home/ubuntu/skills/user-simulation/references/scoring_rubric.md`.
+| # | Dimension | What It Measures | Score Type |
+|---|---|---|---|
+| 1 | **Objection Bypass Rate** | % of objections where the next user turn is positive/neutral | 0.0-1.0 |
+| 2 | **Attribute Consistency** | 1.0 minus (contradictions / user turns) | 0.0-1.0 |
+| 3 | **Turns to Resolution** | Normalized score based on turn count (fewer = better) | 0.0-1.0 |
+| 4 | **Trust Signal Hit Rate** | % of trust objections followed by a trust signal within 2 turns | 0.0-1.0 |
+| 5 | **Cross-Sell Success Rate** | % of cross-sell attempts getting positive reaction | 0.0-1.0 |
+| 6 | **Conversion** | Did the conversation end in success? | 0.0 or 1.0 |
+| 7 | **Sentiment Velocity** | Change in sentiment from first half to second half | 0.0-1.0 |
 
-Propose the scoring rubric to the user and get their buy-in before proceeding. If the user wants to adjust the rubric (e.g., add a dimension, change a weight), incorporate their feedback.
+Default weights:
+```
+objection_bypass_rate: 0.20
+attribute_consistency: 0.15
+turns_to_resolution:  0.10
+trust_signal_hit_rate: 0.15
+cross_sell_success_rate: 0.10
+conversion: 0.15
+sentiment_velocity: 0.15
+```
+
+Propose the rubric to the user and get buy-in before proceeding. If they want to adjust weights or add dimensions, update the weights dict passed to `score_simulation_batch()`.
+
+### Qualitative Rubric (for manual review)
+
+For manual spot-checks during iteration, use `references/scoring_rubric.md` which provides the 1-5 scale descriptions for human evaluation. The code-based scoring is primary; the qualitative rubric is for calibration.
 
 ---
 
 ## Step 3: Run the Simulation
 
-With the world model and scoring function defined, run the simulation. This typically involves using the `map` tool to generate a batch of conversations in parallel.
+### Option A: Full Pipeline (Recommended)
 
-**Key considerations:**
+Run the complete pipeline via CLI:
+```bash
+python3 run.py path/to/config.yaml [--resume] [--log-level DEBUG]
+```
 
-*   **Persona Diversity:** Ensure the simulation covers a representative sample of the defined user archetypes.
-*   **Trigger Variants:** For each trigger, generate 3-5 variations (different framing, different urgency) to test which ones perform best.
-*   **Outcome Targets:** Simulate a mix of successful, moderate, and unsuccessful outcomes to understand the full range of user behavior.
+This executes: config validation → world model → persona generation → interviews → analysis → bias audit → statistical appendix → report.
+
+### Option B: Individual Engines
+
+For iteration on specific stages:
+```python
+from engines.persona_engine import generate_personas
+from engines.interview_engine import run_interviews
+from engines.scoring_engine import score_simulation_batch
+from engines.analysis_engine import analyze_interviews
+```
+
+### Experiment Format Selection
+
+Set `experiment_format` in config to match the test type:
+
+| Format | Use When | Engine |
+|---|---|---|
+| `interview` | Standard customer discovery | `interview_engine.py` |
+| `focus_group` | Testing group dynamics, social proof | `focus_group.py` |
+| `sales_sequence` | Multi-touch outreach optimization | `temporal_sequence.py` |
+| `webpage_review` | Testing landing page messaging | `interview_engine.py` + format prompts |
+| `document_review` | Testing whitepaper/pitch deck content | `interview_engine.py` + format prompts |
+| `form_test` | Testing signup/onboarding flow | `interview_engine.py` + format prompts |
+| `in_person_interview` | Simulating in-person with caveats | `interview_engine.py` + format prompts |
+
+### Sample Size Guidance
+
+The `engines/statistical_validation.py` module recommends minimum sample sizes:
+- **Directional insights**: 15+ per segment (minimum)
+- **Statistically rigorous**: Use `recommend_sample_size(num_segments)` to calculate
+- If any segment has < 20 personas, sub-group findings are flagged as unreliable
 
 ---
 
 ## Step 4: Score the Results
 
-After the simulation run is complete, score each conversation against the agreed-upon rubric. This will produce a set of quantitative scores for each of the 7 dimensions.
+After the simulation run, score every conversation:
 
-**Action:** Create a table or spreadsheet that summarizes the scores for each conversation and calculates the average score for each dimension across the entire batch.
+```python
+from engines.scoring_engine import score_simulation_batch, generate_score_report
+
+scoring_result = score_simulation_batch(interviews, model="gemini-2.5-flash")
+report_path = generate_score_report(scoring_result, output_dir)
+```
+
+This produces:
+- Per-conversation scores across all 7 dimensions
+- Aggregate scores with mean, min, max, std dev
+- Per-archetype breakdown
+- Weakest/strongest dimension identification
+- `scoring_report.md` and `scoring_results.json`
+
+### Automated Quality Checks
+
+The pipeline also runs:
+- **Bias audit** (`engines/bias_detection.py`): Disposition adherence, sycophancy detection
+- **Statistical validation** (`engines/statistical_validation.py`): Confidence intervals, sample adequacy
+- **Context quality** (`engines/context_quality.py`): A-F grade on input quality
 
 ---
 
 ## Step 5: Revise and Refine
 
-Analyze the scoring results to identify the biggest gaps between the simulation and the desired outcome.
+Analyze the scoring results to identify the biggest gaps:
 
-*   **Identify the lowest-scoring dimensions.** For example, if “Persona Consistency” is consistently low, it means the persona definitions need to be improved.
-*   **Formulate a hypothesis for improvement.** For example, “The ‘Retiree’ persona is not price-sensitive enough. I will revise the persona to include a stronger emphasis on fixed-income budget constraints.”
-*   **Revise the inputs.** Update the persona definitions, agent playbooks, or trigger framing based on your hypothesis.
+1. **Identify the lowest-scoring dimensions.** If "Attribute Consistency" is low, persona definitions need work. If "Objection Bypass Rate" is low, the agent playbook needs revision.
+2. **Check the bias audit.** If disposition adherence is low, personas aren't behaving as assigned. If sycophancy rate is > 20%, anti-sycophancy prompts need strengthening.
+3. **Check segment differences.** Use the statistical validation to see if differences between archetypes are real or noise.
+4. **Formulate a hypothesis.** Example: "The 'Retiree' persona is not price-sensitive enough. I will revise the persona to include stronger fixed-income budget constraints."
+5. **Revise the inputs.** Update persona definitions, agent playbooks, trigger framing, or archetype weights in the YAML config.
 
 ---
 
 ## Step 6: Commit and Iterate
 
-Commit the revised inputs and the new simulation results as a new version of the knowledge base.
+Commit the revised inputs and results as a new version.
 
-**Versioning:**
+### Versioning
 
-*   Use a simple version number (e.g., v1.1, v1.2).
-*   Include a plain-language summary of what changed and why (e.g., “v1.2 — Increased price sensitivity in Retiree persona to better match real-world budget objections.”).
+- Use a simple version number (e.g., v1.1, v1.2)
+- Include a plain-language summary of what changed and why
+- Example: `v1.2 — Increased price sensitivity in Retiree persona to better match real-world budget objections. Attribute Consistency improved from 0.62 to 0.78.`
 
-**The Loop:** After committing the changes, repeat the process from Step 3. The goal is to see the scores on each dimension improve with each iteration, indicating that the simulation is becoming a more accurate proxy for reality.
+### The Loop
 
-This iterative process transforms the simulation from a one-time snapshot into a durable, compounding research asset.
+After committing, repeat from Step 3. Track score progression across iterations:
+
+| Version | Composite Score | Weakest Dimension | Key Change |
+|---|---|---|---|
+| v1.0 | 0.54 | Objection Bypass (0.31) | Baseline |
+| v1.1 | 0.61 | Trust Signal Hit Rate (0.38) | Revised objection playbook |
+| v1.2 | 0.68 | Persona Consistency (0.55) | Added trust signal scripts |
+| v1.3 | 0.74 | — | Refined persona definitions |
+
+The goal is to see scores improve with each iteration, indicating the simulation is becoming a more accurate proxy for reality.
+
+---
+
+## Output Files
+
+Each simulation run produces:
+
+| File | Description |
+|---|---|
+| `report.md` | McKinsey-grade strategic report with bias audit and statistical appendix |
+| `transcripts.md` | All interview transcripts in readable format |
+| `personas.json` | Full persona definitions with metadata |
+| `interviews.json` | Raw interview data |
+| `quantitative_summary.json` | Numerical scores and metrics |
+| `audience_summary.md` | Demographic/archetype distribution |
+| `bias_audit.json` | Disposition adherence and sycophancy detection results |
+| `context_quality.json` | Context quality grade and details |
+| `scoring_report.md` | Per-dimension scoring breakdown (if scoring engine used) |
+| `scoring_results.json` | Raw scoring data (if scoring engine used) |
+| `run_metadata.json` | Timestamp, config, runtime stats, quality grades |
+| `simulation.log` | Structured log with all debug info |
