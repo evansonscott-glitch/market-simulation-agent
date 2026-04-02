@@ -1,6 +1,6 @@
 # Market Simulator
 
-An AI-powered thinking partner that helps founders and investors validate product assumptions through simulated customer interviews. It coaches you through identifying risks, mapping assumptions, and designing the right interview process — then runs the simulation and delivers McKinsey-grade insights.
+An AI-powered thinking partner that helps founders and investors validate product assumptions through simulated customer interviews. It coaches you through identifying risks, mapping assumptions, and designing the right interview process — then runs the simulation and delivers detailed insights.
 
 This repo contains two things:
 1. **The Simulation Engine** — A standalone Python pipeline that generates personas, conducts multi-turn interviews, runs bias audits, and produces McKinsey-grade reports with statistical validation.
