@@ -182,6 +182,42 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
     for w in format_validation.get("warnings", []):
         logger.warning("Format: %s", w)
 
+    # Inject format-specific interviewer prompt extension
+    config["format_prompt_extension"] = format_validation.get("interviewer_prompt_extension", "")
+
+    # Extract web content if a URL is provided for web-based formats
+    config["extracted_content"] = ""
+    url_fields = {
+        "webpage_review": "webpage_url",
+        "form_test": "form_url",
+        "document_review": "document_url",
+    }
+    url_field = url_fields.get(experiment_format)
+    if url_field and config.get(url_field):
+        try:
+            from engines.web_extraction import (
+                extract_webpage, extract_form,
+                format_webpage_for_prompt, format_form_for_prompt,
+            )
+            target_url = config[url_field]
+            logger.info("Extracting content from: %s", target_url)
+            if experiment_format == "form_test":
+                extraction = extract_form(target_url)
+                config["extracted_content"] = format_form_for_prompt(extraction)
+            else:
+                extraction = extract_webpage(target_url)
+                config["extracted_content"] = format_webpage_for_prompt(extraction)
+            logger.info("Web content extracted (%d chars)", len(config["extracted_content"]))
+        except Exception as e:
+            logger.warning("Web extraction failed: %s. Falling back to description.", str(e)[:200])
+
+    # Fall back to manual descriptions if no URL extraction
+    if not config["extracted_content"]:
+        for desc_field in ("webpage_description", "document_description", "form_steps"):
+            if config.get(desc_field):
+                config["extracted_content"] = config[desc_field]
+                break
+
     # Create timestamped output directory
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     run_name = f"sim_{config['product_name'].lower().replace(' ', '_')}_{timestamp}"
