@@ -120,6 +120,9 @@ context:
   world_model: "path/to/world_model.md"
   transcripts: "path/to/transcripts.md"
   customer_list: "path/to/customers.md"
+  webpage_url: "https://..."    # for webpage_review — Claude fetches it directly
+  form_url: "https://..."       # for form_test
+  document_url: "https://..."   # for document_review
 ```
 
 ## Context Quality Matters

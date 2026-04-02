@@ -5,50 +5,226 @@ When the skill needs to simulate a user viewing a webpage or filling out a form,
 this engine fetches the actual page and extracts structured content that can be
 fed to personas during interviews.
 
-Two extraction paths:
-  - URL mode: Uses Scrapling Fetcher to fetch and parse a live URL
-  - HTML mode: Uses Scrapling Adaptor to parse raw HTML (for local files, testing)
-
-Falls back gracefully if Scrapling is not installed or the URL is unreachable.
+Three extraction paths (automatic fallback):
+  1. Scrapling (if installed): Rich CSS-selector-based extraction
+  2. stdlib (html.parser + urllib): Basic extraction, no dependencies
+  3. Claude Code mode: Claude uses its own WebFetch tool — this engine not needed
 
 Extraction modes:
   - webpage: Extracts headline, sections, CTAs, pricing, social proof, navigation
   - form: Extracts form fields, steps, labels, required fields, submit buttons
 """
 import os
+import re
 from typing import Dict, Any, List, Optional
+from html.parser import HTMLParser
 
 from engines.logging_config import get_logger
 
 logger = get_logger(__name__)
 
+# Flag: is Scrapling available?
+_HAS_SCRAPLING = False
+try:
+    from scrapling.parser import Adaptor
+    from scrapling.fetchers import Fetcher
+    _HAS_SCRAPLING = True
+except ImportError:
+    pass
+
+
+# ──────────────────────────────────────────────
+# Stdlib HTML Parser (fallback when Scrapling unavailable)
+# ──────────────────────────────────────────────
+
+class _SimpleHTMLExtractor(HTMLParser):
+    """Minimal HTML parser that extracts structural elements without dependencies."""
+
+    def __init__(self):
+        super().__init__()
+        self._tag_stack = []
+        self._current_text = []
+        self.title = ""
+        self.meta_description = ""
+        self.h1s = []
+        self.h2_sections = []
+        self.links = []
+        self.buttons = []
+        self.forms = []
+        self._current_form = None
+        self._current_form_fields = []
+        self.images_alt = []
+        self._in_title = False
+        self._in_h1 = False
+        self._in_h2 = False
+        self._h2_text = ""
+        self._h2_content = ""
+        self._in_button = False
+        self._in_nav = False
+        self.nav_links = []
+        self.body_text = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs_dict = dict(attrs)
+        self._tag_stack.append(tag)
+
+        if tag == "title":
+            self._in_title = True
+        elif tag == "meta" and attrs_dict.get("name", "").lower() == "description":
+            self.meta_description = attrs_dict.get("content", "")
+        elif tag == "h1":
+            self._in_h1 = True
+            self._current_text = []
+        elif tag == "h2":
+            # Save previous h2 section
+            if self._in_h2 and self._h2_text:
+                self.h2_sections.append({"heading": self._h2_text, "content": self._h2_content[:500]})
+            self._in_h2 = True
+            self._h2_text = ""
+            self._h2_content = ""
+            self._current_text = []
+        elif tag == "a":
+            href = attrs_dict.get("href", "")
+            self.links.append({"href": href, "text": "", "_fill": True})
+            if self._in_nav:
+                self.nav_links.append({"href": href, "text": "", "_fill": True})
+        elif tag == "button":
+            self._in_button = True
+            self._current_text = []
+        elif tag == "nav":
+            self._in_nav = True
+        elif tag == "form":
+            self._current_form = {
+                "action": attrs_dict.get("action", ""),
+                "method": attrs_dict.get("method", "GET"),
+            }
+            self._current_form_fields = []
+        elif tag == "input" and self._current_form is not None:
+            self._current_form_fields.append({
+                "type": attrs_dict.get("type", "text"),
+                "name": attrs_dict.get("name", ""),
+                "placeholder": attrs_dict.get("placeholder", ""),
+                "required": "required" in attrs_dict,
+                "label": "",
+            })
+        elif tag == "img":
+            alt = attrs_dict.get("alt", "").strip()
+            if alt and len(alt) > 5:
+                self.images_alt.append(alt)
+
+    def handle_endtag(self, tag):
+        if tag == "title":
+            self._in_title = False
+        elif tag == "h1":
+            self._in_h1 = False
+            text = "".join(self._current_text).strip()
+            if text:
+                self.h1s.append(text)
+        elif tag == "h2":
+            self._h2_text = "".join(self._current_text).strip()
+            self._current_text = []
+        elif tag == "button":
+            self._in_button = False
+            text = "".join(self._current_text).strip()
+            if text:
+                self.buttons.append(text)
+        elif tag == "nav":
+            self._in_nav = False
+        elif tag == "form" and self._current_form is not None:
+            self._current_form["fields"] = self._current_form_fields
+            self.forms.append(self._current_form)
+            self._current_form = None
+            self._current_form_fields = []
+        elif tag == "a":
+            pass  # text filled via handle_data
+
+        if self._tag_stack and self._tag_stack[-1] == tag:
+            self._tag_stack.pop()
+
+    def handle_data(self, data):
+        text = data.strip()
+        if not text:
+            return
+        if self._in_title:
+            self.title += text
+        if self._in_h1 or self._in_h2 or self._in_button:
+            self._current_text.append(text)
+        if self._in_h2 and not self._in_h1:
+            self._h2_content += " " + text
+        # Fill last link text
+        if self.links and self.links[-1].get("_fill"):
+            self.links[-1]["text"] += text
+        if self.nav_links and self.nav_links[-1].get("_fill"):
+            self.nav_links[-1]["text"] += text
+        # Body text
+        if "script" not in self._tag_stack and "style" not in self._tag_stack:
+            self.body_text.append(text)
+
+    def finalize(self):
+        """Call after feeding all HTML to flush pending state."""
+        if self._in_h2 and self._h2_text:
+            self.h2_sections.append({"heading": self._h2_text, "content": self._h2_content[:500]})
+        # Clean up link fill markers
+        for link in self.links:
+            link.pop("_fill", None)
+            link["text"] = link.get("text", "").strip()
+        for link in self.nav_links:
+            link.pop("_fill", None)
+            link["text"] = link.get("text", "").strip()
+
+
+def _fetch_html_stdlib(url: str) -> str:
+    """Fetch a URL using only stdlib (no dependencies)."""
+    import urllib.request
+    import urllib.error
+
+    req = urllib.request.Request(url, headers={
+        "User-Agent": "Mozilla/5.0 (compatible; MarketSimAgent/1.0)",
+    })
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        charset = resp.headers.get_content_charset() or "utf-8"
+        return resp.read().decode(charset, errors="replace")
+
 
 def _get_page(url_or_html: str):
     """
-    Get a Scrapling page object from either a URL or raw HTML string.
+    Get a page object from either a URL or raw HTML string.
 
-    Returns (page, error_string). If page is None, error_string explains why.
+    Returns (page, backend, error_string).
+    - backend is "scrapling" or "stdlib"
+    - If page is None, error_string explains why.
     """
     is_html = url_or_html.strip().startswith("<") or "\n" in url_or_html[:200]
 
     if is_html:
-        try:
-            from scrapling.parser import Adaptor
-            return Adaptor(url_or_html, url="local://"), None
-        except ImportError:
-            return None, "Scrapling not installed. Run: pip install scrapling"
-        except Exception as e:
-            return None, f"Failed to parse HTML: {e}"
+        if _HAS_SCRAPLING:
+            try:
+                return Adaptor(url_or_html, url="local://"), "scrapling", None
+            except Exception as e:
+                return None, None, f"Failed to parse HTML with Scrapling: {e}"
+        # Stdlib fallback
+        parser = _SimpleHTMLExtractor()
+        parser.feed(url_or_html)
+        parser.finalize()
+        return parser, "stdlib", None
 
-    # URL mode — try Fetcher
+    # URL mode — try Scrapling first, then stdlib
+    if _HAS_SCRAPLING:
+        try:
+            page = Fetcher.get(url_or_html)
+            return page, "scrapling", None
+        except Exception as e:
+            logger.warning("Scrapling fetch failed, trying stdlib: %s", str(e)[:100])
+
+    # Stdlib fallback: fetch + parse
     try:
-        from scrapling.fetchers import Fetcher
-        page = Fetcher.get(url_or_html)
-        return page, None
-    except ImportError:
-        return None, "Scrapling fetchers not installed. Run: pip install 'scrapling[fetchers]'"
+        html = _fetch_html_stdlib(url_or_html)
+        parser = _SimpleHTMLExtractor()
+        parser.feed(html)
+        parser.finalize()
+        return parser, "stdlib", None
     except Exception as e:
-        return None, f"Failed to fetch {url_or_html}: {e}"
+        return None, None, f"Failed to fetch {url_or_html}: {e}"
 
 
 def _safe_css(page, selector: str) -> list:
@@ -67,31 +243,9 @@ def _el_text(el) -> str:
         return ""
 
 
-def extract_webpage(url_or_html: str) -> Dict[str, Any]:
-    """
-    Extract structured content from a webpage URL or raw HTML.
-
-    Returns a dict with: url, title, meta_description, headline, sections,
-    ctas, navigation, forms, images_alt, social_proof, pricing, raw_text.
-    """
-    page, error = _get_page(url_or_html)
-    if page is None:
-        return {"error": error, "url": url_or_html[:200]}
-
-    result = {
-        "url": url_or_html[:200] if not url_or_html.strip().startswith("<") else "local://",
-        "title": "",
-        "meta_description": "",
-        "headline": "",
-        "sections": [],
-        "ctas": [],
-        "navigation": [],
-        "forms": [],
-        "images_alt": [],
-        "social_proof": [],
-        "pricing": [],
-        "raw_text": "",
-    }
+def _extract_webpage_scrapling(page) -> Dict[str, Any]:
+    """Extract webpage content using Scrapling (rich CSS selectors)."""
+    result = _empty_webpage_result()
 
     # Title
     title_els = _safe_css(page, "title")
@@ -199,8 +353,79 @@ def extract_webpage(url_or_html: str) -> Dict[str, Any]:
     if body:
         result["raw_text"] = _el_text(body[0])[:3000]
 
-    logger.info("Extracted webpage: %d sections, %d CTAs, %d forms",
-                len(result["sections"]), len(result["ctas"]), len(result["forms"]))
+    return result
+
+
+def _extract_webpage_stdlib(parser: _SimpleHTMLExtractor) -> Dict[str, Any]:
+    """Extract webpage content from stdlib parser results."""
+    result = _empty_webpage_result()
+
+    result["title"] = parser.title
+    result["meta_description"] = parser.meta_description
+    result["headline"] = parser.h1s[0] if parser.h1s else ""
+    result["sections"] = parser.h2_sections[:15]
+    result["images_alt"] = parser.images_alt[:10]
+    result["navigation"] = [l["text"] for l in parser.nav_links if l["text"]][:10]
+    result["forms"] = parser.forms
+
+    # CTAs from buttons and CTA-like links
+    cta_patterns = re.compile(r"signup|register|demo|trial|start|get.started|buy|pricing", re.I)
+    seen = set()
+    for text in parser.buttons:
+        if text and text not in seen and len(text) < 100:
+            seen.add(text)
+            result["ctas"].append({"text": text, "href": ""})
+    for link in parser.links:
+        if cta_patterns.search(link.get("href", "")) and link["text"] and link["text"] not in seen:
+            seen.add(link["text"])
+            result["ctas"].append({"text": link["text"], "href": link["href"]})
+
+    # Raw text
+    result["raw_text"] = " ".join(parser.body_text)[:3000]
+
+    return result
+
+
+def _empty_webpage_result() -> Dict[str, Any]:
+    """Return an empty webpage extraction result dict."""
+    return {
+        "url": "",
+        "title": "",
+        "meta_description": "",
+        "headline": "",
+        "sections": [],
+        "ctas": [],
+        "navigation": [],
+        "forms": [],
+        "images_alt": [],
+        "social_proof": [],
+        "pricing": [],
+        "raw_text": "",
+    }
+
+
+def extract_webpage(url_or_html: str) -> Dict[str, Any]:
+    """
+    Extract structured content from a webpage URL or raw HTML.
+
+    Works with or without Scrapling installed — falls back to stdlib html.parser.
+
+    Returns a dict with: url, title, meta_description, headline, sections,
+    ctas, navigation, forms, images_alt, social_proof, pricing, raw_text.
+    """
+    page, backend, error = _get_page(url_or_html)
+    if page is None:
+        return {"error": error, "url": url_or_html[:200]}
+
+    if backend == "scrapling":
+        result = _extract_webpage_scrapling(page)
+    else:
+        result = _extract_webpage_stdlib(page)
+
+    result["url"] = url_or_html[:200] if not url_or_html.strip().startswith("<") else "local://"
+
+    logger.info("Extracted webpage (%s backend): %d sections, %d CTAs, %d forms",
+                backend, len(result["sections"]), len(result["ctas"]), len(result["forms"]))
     return result
 
 

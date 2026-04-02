@@ -56,7 +56,7 @@ context:
   world_model: "context/world_model.md"    # if user provided
   transcripts: "context/transcripts.md"    # if user provided
   customer_list: "context/customers.md"    # if user provided
-  # For web-based formats — provide a URL for auto-extraction:
+  # For web-based formats — provide a URL (you'll fetch it with WebFetch):
   # webpage_url: "https://example.com/landing"    # for webpage_review
   # form_url: "https://example.com/signup"        # for form_test
   # document_url: "https://example.com/whitepaper" # for document_review
@@ -272,6 +272,19 @@ For quantitative scoring across iterations, use the 7-dimension scoring engine:
 | `document_review` | Testing whitepaper/pitch deck | Provide URL (auto-extracted) or describe the document |
 | `form_test` | Testing signup/onboarding flow | Provide URL (auto-extracted) or describe form steps |
 | `in_person_interview` | Simulating face-to-face | Add caveat: body language/rapport cannot be simulated |
+
+### Handling URLs in Claude Code Mode
+
+When the user provides a URL for `webpage_review`, `form_test`, or `document_review`:
+
+1. **Use your WebFetch tool** to grab the page content directly — do NOT shell out to Python
+2. Analyze the page structure yourself: headline, sections, CTAs, forms, pricing, social proof
+3. Include the extracted content in each persona's interview context so they react to specifics
+4. Reference actual page elements (headlines, button text, form fields) in your interview questions
+
+This keeps it zero-dependency — no API keys, no pip installs, just you reading the page.
+
+The `engines/web_extraction.py` module exists only for the **standalone pipeline** (`run.py`), which runs without Claude.
 
 ---
 
