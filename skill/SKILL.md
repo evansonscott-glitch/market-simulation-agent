@@ -5,7 +5,19 @@ description: Run an iterative, self-improving user simulation to test a product,
 
 # User Simulation Skill
 
-This skill enables Manus to run an iterative, self-improving user simulation loop. It orchestrates the Python simulation engines in this repository to test a product, agent, or go-to-market strategy against simulated user personas, score the results, and iteratively refine until the simulation realistically mirrors real-world behavior.
+This skill runs an iterative, self-improving user simulation loop. It orchestrates the Python simulation engines in this repository to test a product, agent, or go-to-market strategy against simulated user personas, score the results, and iteratively refine until the simulation realistically mirrors real-world behavior.
+
+## How to Orchestrate (for Claude)
+
+When this skill is triggered, follow this flow:
+
+1. **Start conversationally.** Ask the user what they want to test. Don't ask for everything at once — use the Data Gathering Checklist below to progressively collect inputs across 3-5 exchanges.
+2. **Build the config.** Once you have enough context, create a YAML config file (see `examples/blank/config.yaml` for the template). Save it in a new directory under `examples/`.
+3. **Assess context quality.** Before running, mentally grade the context (A-F using the table below). If it's D or F, warn the user and ask if they want to provide more data first.
+4. **Run the pipeline.** Execute `python3 run.py path/to/config.yaml` via the Bash tool. Monitor output for errors.
+5. **Read and present results.** Read the generated `report.md`, `bias_audit.json`, and `context_quality.json`. Summarize key findings, flag any bias warnings, and present the context quality grade.
+6. **Propose iteration.** Based on the weakest scoring dimension or bias flags, propose specific changes and ask if the user wants to iterate.
+7. **On iteration:** Update the config, re-run, compare scores to the previous version. Track improvement in a version table.
 
 ## Architecture
 
