@@ -46,6 +46,7 @@ class SettingsConfig(BaseModel):
     persona_count: int = Field(default=100, ge=1, le=1000, description="Number of personas to generate")
     interview_turns: int = Field(default=5, ge=1, le=20, description="Number of interview turns")
     interaction_context: str = Field(default="warm_demo", description="Interaction context type")
+    experiment_format: str = Field(default="interview", description="Experiment format type")
     persona_concurrency: int = Field(default=5, ge=1, le=50, description="Max concurrent persona generation calls")
     interview_concurrency: int = Field(default=10, ge=1, le=50, description="Max concurrent interviews")
 
@@ -56,6 +57,20 @@ class SettingsConfig(BaseModel):
         if v not in allowed:
             raise ValueError(
                 f"interaction_context must be one of {allowed}, got '{v}'"
+            )
+        return v
+
+    @field_validator("experiment_format")
+    @classmethod
+    def valid_experiment_format(cls, v: str) -> str:
+        allowed = {
+            "interview", "focus_group", "sales_sequence",
+            "webpage_review", "document_review", "form_test",
+            "in_person_interview",
+        }
+        if v not in allowed:
+            raise ValueError(
+                f"experiment_format must be one of {allowed}, got '{v}'"
             )
         return v
 
@@ -72,6 +87,9 @@ class ContextConfig(BaseModel):
     world_model: Optional[str] = Field(default=None, description="Path to world model file")
     transcripts: Optional[str] = Field(default=None, description="Path to transcripts file")
     customer_list: Optional[str] = Field(default=None, description="Path to customer list file")
+    webpage_description: Optional[str] = Field(default=None, description="Structured description of webpage to test (for webpage_review format)")
+    document_description: Optional[str] = Field(default=None, description="Structured description of document to test (for document_review format)")
+    form_steps: Optional[str] = Field(default=None, description="Structured description of form steps to test (for form_test format)")
 
 
 class ArchetypeConfig(BaseModel):
@@ -412,6 +430,7 @@ def load_config(config_path: str) -> Dict[str, Any]:
         "interaction_context": validated.settings.interaction_context,
         "persona_concurrency": validated.settings.persona_concurrency,
         "interview_concurrency": validated.settings.interview_concurrency,
+        "experiment_format": validated.settings.experiment_format,
 
         # ── Archetypes ──
         "archetypes": validated.archetypes or DEFAULT_ARCHETYPES,
@@ -450,12 +469,21 @@ def load_config(config_path: str) -> Dict[str, Any]:
         else:
             config["customer_list_path"] = path
 
+    # Store format-specific content descriptions (inline, not file paths)
+    if validated.context.webpage_description:
+        config["webpage_description"] = validated.context.webpage_description
+    if validated.context.document_description:
+        config["document_description"] = validated.context.document_description
+    if validated.context.form_steps:
+        config["form_steps"] = validated.context.form_steps
+
     logger.info(
-        "Config loaded: product=%s, personas=%d, turns=%d, model=%s",
+        "Config loaded: product=%s, personas=%d, turns=%d, model=%s, format=%s",
         config["product_name"],
         config["persona_count"],
         config["interview_turns"],
         config["llm_model"],
+        config["experiment_format"],
     )
 
     return config

@@ -39,6 +39,14 @@ from engines.persona_engine import generate_personas
 from engines.interview_engine import run_interviews, format_transcripts_markdown
 from engines.analysis_engine import analyze_interviews
 from engines.checkpoint import SimulationCheckpoint
+from engines.context_quality import compute_context_quality
+from engines.statistical_validation import (
+    check_sample_adequacy,
+    recommend_sample_size,
+    generate_statistical_appendix,
+)
+from engines.bias_detection import run_bias_audit, generate_bias_audit_section
+from engines.experiment_formats import validate_experiment_format, generate_format_section
 
 
 def parse_args():
@@ -121,6 +129,15 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
     if config.get("questions"):
         logger.info("  Questions to explore: %d", len(config["questions"]))
 
+    # ── Validate experiment format ──
+    experiment_format = config.get("experiment_format", "interview")
+    format_validation = validate_experiment_format(experiment_format, config)
+    if not format_validation["valid"]:
+        logger.error("Experiment format error: %s", format_validation["error"])
+        sys.exit(1)
+    for w in format_validation.get("warnings", []):
+        logger.warning("Format: %s", w)
+
     # Create timestamped output directory
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     run_name = f"sim_{config['product_name'].lower().replace(' ', '_')}_{timestamp}"
@@ -154,6 +171,24 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
 
     checkpoint.save_state(phase="world_model", progress="World model ready")
 
+    # ── Context Quality Assessment ──
+    context_quality = compute_context_quality(config)
+    logger.info("Context quality grade: %s", context_quality["grade"])
+    for w in context_quality.get("warnings", []):
+        logger.warning("Context: %s", w)
+
+    # ── Sample Size Guidance ──
+    num_segments = len(config.get("archetypes", {}))
+    sample_rec = recommend_sample_size(num_segments)
+    if config["persona_count"] < sample_rec["directional_total"]:
+        logger.warning(
+            "Sample size (%d) is below the recommended minimum (%d) for %d segments. "
+            "Consider increasing persona_count for more reliable results.",
+            config["persona_count"],
+            sample_rec["directional_total"],
+            num_segments,
+        )
+
     # ── Step 3: Generate Personas ──
     logger.info("[3/6] Generating %d personas...", config["persona_count"])
 
@@ -186,6 +221,17 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
             json.dump(personas, f, indent=2, default=str)
     except IOError as e:
         logger.error("Failed to save personas: %s", e)
+
+    # Check sample adequacy per segment
+    archetype_counts = {}
+    for p in personas:
+        a = p.get("archetype_name", "unknown")
+        archetype_counts[a] = archetype_counts.get(a, 0) + 1
+    adequacy = check_sample_adequacy(len(personas), archetype_counts)
+    if adequacy["adequacy"] == "underpowered":
+        logger.warning("Sample adequacy: %s", adequacy["summary"])
+    for w in adequacy.get("warnings", []):
+        logger.warning("Sample: %s", w)
 
     # Save audience summary
     audience_summary = _build_audience_summary(personas)
@@ -262,13 +308,52 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
             "audience_stats": {"total_interviews": len(interviews)},
         }
 
+    # ── Run Bias Audit ──
+    logger.info("Running bias audit...")
+    bias_audit = run_bias_audit(interviews)
+    logger.info("Bias risk: %s", bias_audit["overall_risk"])
+
+    # ── Generate Statistical Appendix ──
+    stat_appendix = generate_statistical_appendix(
+        audience_stats=results.get("audience_stats", {}),
+        config=config,
+        context_quality=context_quality,
+    )
+
+    # ── Generate Format-Specific Section ──
+    format_section = generate_format_section(experiment_format)
+
+    # ── Enrich Report with Quality, Bias, and Statistical Sections ──
+    enriched_report = results["report"]
+    enriched_report += "\n\n---\n\n"
+    if format_section:
+        enriched_report += format_section + "\n\n"
+    enriched_report += generate_bias_audit_section(bias_audit) + "\n\n"
+    enriched_report += stat_appendix + "\n"
+
     # Save report
     report_path = os.path.join(output_dir, "report.md")
     try:
         with open(report_path, "w", encoding="utf-8") as f:
-            f.write(results["report"])
+            f.write(enriched_report)
     except IOError as e:
         logger.error("Failed to save report: %s", e)
+
+    # Save bias audit data
+    try:
+        bias_path = os.path.join(output_dir, "bias_audit.json")
+        with open(bias_path, "w", encoding="utf-8") as f:
+            json.dump(bias_audit, f, indent=2, default=str)
+    except IOError as e:
+        logger.error("Failed to save bias audit: %s", e)
+
+    # Save context quality data
+    try:
+        ctx_path = os.path.join(output_dir, "context_quality.json")
+        with open(ctx_path, "w", encoding="utf-8") as f:
+            json.dump(context_quality, f, indent=2, default=str)
+    except IOError as e:
+        logger.error("Failed to save context quality: %s", e)
 
     # Save raw insights
     try:
@@ -298,6 +383,10 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
     config_snapshot["interviews_completed"] = len(interviews)
     config_snapshot["elapsed_seconds"] = round(elapsed, 1),
     config_snapshot["log_level"] = log_level
+    config_snapshot["context_quality_grade"] = context_quality.get("grade", "?")
+    config_snapshot["bias_risk"] = bias_audit.get("overall_risk", "unknown")
+    config_snapshot["experiment_format"] = experiment_format
+    config_snapshot["sample_adequacy"] = adequacy.get("adequacy", "unknown")
 
     try:
         meta_path = os.path.join(output_dir, "run_metadata.json")
