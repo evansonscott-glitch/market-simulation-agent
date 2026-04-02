@@ -36,7 +36,7 @@ settings:
   persona_count: 100        # 50 for quick runs, 100 for standard, 200+ for deep dives
   interview_turns: 5         # 5 is the sweet spot for signal-to-noise
   interaction_context: "warm_demo"  # warm_demo | cold_outreach | blended
-  llm_model: "gemini-2.5-flash"
+  llm_model: "claude-sonnet-4-6"
 
 # ── Context Files (optional, relative to this config file) ──
 # These make the simulation significantly more accurate.

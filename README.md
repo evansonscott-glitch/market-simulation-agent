@@ -85,16 +85,16 @@ Claude will trigger the `/user-simulation` skill and walk you through:
 
 The skill orchestrates all the Python engines in this repo — persona generation, interviews, bias auditing, statistical validation — so you get production-grade output with a conversational experience.
 
-**Requirements:** An OpenAI-compatible API key set in your environment (`OPENAI_API_KEY`). Default model is `gemini-2.5-flash`.
+**Requirements:** An Anthropic API key (`ANTHROPIC_API_KEY`). Default model is `claude-sonnet-4-6`. For OpenAI/Gemini models, set `OPENAI_API_KEY` and specify the model in your config YAML.
 
 ### Option 2: Interactive CLI
 
 ```bash
 # Install dependencies
-pip3 install openai pyyaml pydantic
+pip3 install anthropic openai pyyaml pydantic
 
-# Set your API key
-export OPENAI_API_KEY="your-key-here"
+# Set your API key (Anthropic for Claude models, OpenAI for GPT/Gemini)
+export ANTHROPIC_API_KEY="your-key-here"
 
 # Start the interactive session
 python cli/interactive.py
@@ -106,11 +106,11 @@ The agent will guide you through the entire process conversationally.
 
 ```bash
 # Install dependencies
-pip3 install openai pyyaml pydantic slack-bolt python-dotenv
+pip3 install anthropic openai pyyaml pydantic slack-bolt python-dotenv
 
 # Copy and fill in your environment variables
 cp .env.example .env
-# Edit .env with your Slack and OpenAI credentials
+# Edit .env with your Slack and API credentials
 
 # Start the bot
 python slack_bot/app.py
@@ -122,7 +122,7 @@ See [SLACK_SETUP.md](SLACK_SETUP.md) for step-by-step Slack app creation instruc
 
 ```bash
 # Install dependencies
-pip3 install openai pyyaml pydantic fastapi uvicorn
+pip3 install anthropic openai pyyaml pydantic fastapi uvicorn
 
 # Start the web server
 python web/server.py
@@ -309,7 +309,8 @@ market-simulation-agent/
 ## Requirements
 
 - Python 3.11+
-- `openai` — LLM API client
+- `anthropic` — Anthropic Claude API client (default backend)
+- `openai` — OpenAI/Gemini API client (alternative backend)
 - `pyyaml` — Config file parsing
 - `pydantic` — Config validation
 - `slack-bolt` — Slack bot (optional, for Slack interface)

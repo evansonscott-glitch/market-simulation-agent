@@ -22,7 +22,7 @@ from enum import Enum
 from typing import Dict, Any, Optional, List, Callable
 from datetime import datetime
 
-from openai import OpenAI
+from engines.llm_client import chat_completion, _is_anthropic_model, get_sync_client
 
 logger = logging.getLogger("market_sim.conversation")
 
@@ -286,9 +286,8 @@ class ConversationEngine:
     and produces responses via the LLM.
     """
 
-    def __init__(self, model: str = "gemini-2.5-flash"):
+    def __init__(self, model: str = "claude-sonnet-4-6"):
         self.sessions: Dict[str, Session] = {}
-        self.client = OpenAI()
         self.model = model
 
     def get_or_create_session(
@@ -528,12 +527,12 @@ Conversation excerpt:
 {response}"""
 
         try:
-            summary = self.client.chat.completions.create(
-                model=self.model,
+            summary = chat_completion(
                 messages=[{"role": "user", "content": summary_prompt}],
+                model=self.model,
                 temperature=0.3,
                 max_tokens=200,
-            ).choices[0].message.content
+            )
 
             stage_to_context = {
                 Stage.IDEA_DUMP: "product_summary",
@@ -562,13 +561,12 @@ Conversation excerpt:
         messages = [{"role": "system", "content": system_prompt}] + session.messages
 
         try:
-            response = self.client.chat.completions.create(
-                model=self.model,
+            return chat_completion(
                 messages=messages,
+                model=self.model,
                 temperature=0.7,
                 max_tokens=2000,
             )
-            return response.choices[0].message.content
         except Exception as e:
             logger.error("LLM call failed: %s", e)
             return f"Sorry, I hit an error: {str(e)}. Try sending your message again?"

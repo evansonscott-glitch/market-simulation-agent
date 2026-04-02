@@ -123,7 +123,7 @@ settings:
   persona_count: 30
   interview_turns: 6
   interaction_context: "warm_demo"
-  llm_model: "gemini-2.5-flash"
+  llm_model: "claude-sonnet-4-6"
   persona_concurrency: 5
   interview_concurrency: 10
 

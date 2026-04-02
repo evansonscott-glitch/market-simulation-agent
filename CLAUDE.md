@@ -67,8 +67,8 @@ skill/
 # Full pipeline
 python3 run.py path/to/config.yaml [--resume] [--log-level DEBUG]
 
-# Requires: OPENAI_API_KEY or compatible API key set in environment
-# Default model: gemini-2.5-flash (configurable in YAML)
+# Default model: claude-sonnet-4-6 (uses ANTHROPIC_API_KEY)
+# For OpenAI/Gemini models: set OPENAI_API_KEY and specify model in YAML
 ```
 
 ## Config Format
