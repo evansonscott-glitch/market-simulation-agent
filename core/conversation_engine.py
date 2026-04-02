@@ -22,7 +22,7 @@ from enum import Enum
 from typing import Dict, Any, Optional, List, Callable
 from datetime import datetime
 
-from engines.llm_client import chat_completion, _is_anthropic_model, get_sync_client
+from engines.llm_client import chat_completion
 
 logger = logging.getLogger("market_sim.conversation")
 

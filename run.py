@@ -80,8 +80,7 @@ Examples:
 
 def _check_api_key(model: str):
     """Check that the required API key is set for standalone pipeline mode."""
-    from engines.llm_client import _is_anthropic_model
-    if _is_anthropic_model(model):
+    if model.startswith("claude-"):
         key = os.environ.get("ANTHROPIC_API_KEY", "")
         if not key:
             print("\n" + "=" * 70)
@@ -303,7 +302,7 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
             run_interviews(
                 personas=personas,
                 config=config,
-                checkpoint=checkpoint if resume else checkpoint,  # Always use checkpoint for persistence
+                checkpoint=checkpoint,
             )
         )
     except Exception as e:
@@ -426,7 +425,7 @@ def run_simulation(config_path: str, resume: bool = False, fresh: bool = False, 
     config_snapshot["run_timestamp"] = timestamp
     config_snapshot["personas_generated"] = len(personas)
     config_snapshot["interviews_completed"] = len(interviews)
-    config_snapshot["elapsed_seconds"] = round(elapsed, 1),
+    config_snapshot["elapsed_seconds"] = round(elapsed, 1)
     config_snapshot["log_level"] = log_level
     config_snapshot["context_quality_grade"] = context_quality.get("grade", "?")
     config_snapshot["bias_risk"] = bias_audit.get("overall_risk", "unknown")

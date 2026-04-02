@@ -8,20 +8,24 @@ handle the computational/analytical work that Claude Code calls via Python:
   - Persona metadata assignment (dispositions, skepticism scores)
   - Bias detection (post-hoc analysis on interview data)
   - Statistical validation (confidence intervals, sample adequacy)
-  - Scoring computation (deterministic 7-dimension scoring)
   - Report assembly
 
 None of these functions make LLM API calls. They are pure computation.
+
+This module is a facade — it re-exports from the underlying engines to give
+the skill a single import point. Functions that would duplicate engine logic
+delegate directly rather than reimplementing.
 """
 import json
 import os
-import random
 import sys
 from datetime import datetime
 from typing import Dict, Any, List, Optional
 
-# Add project root to path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add project root to path if not already present
+_project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _project_root not in sys.path:
+    sys.path.insert(0, _project_root)
 
 
 def validate_config(config_path: str) -> Dict[str, Any]:
@@ -51,43 +55,12 @@ def assign_persona_metadata(
 ) -> Dict[str, Any]:
     """
     Assign simulation metadata (disposition, skepticism score) to a persona.
-    This is the non-LLM part of persona generation — Claude generates the
-    persona content, this function adds the simulation mechanics.
+    Delegates to persona_engine._enrich_persona().
     """
-    from engines.persona_engine import _assign_disposition, _assign_skepticism_score
-
-    persona["archetype"] = archetype_key
-    persona["archetype_name"] = archetype.get("name", archetype_key)
-    persona["disposition"] = _assign_disposition(
-        archetype_key, disposition_weights, interaction_context
+    from engines.persona_engine import _enrich_persona
+    return _enrich_persona(
+        persona, archetype_key, archetype, disposition_weights, interaction_context
     )
-    persona["skepticism_score"] = _assign_skepticism_score(archetype)
-    return persona
-
-
-def compute_sample_allocation(
-    archetypes: Dict[str, Any],
-    persona_count: int,
-) -> Dict[str, int]:
-    """
-    Compute how many personas to generate per archetype based on weights.
-    Returns: {archetype_key: count}
-    """
-    total_weight = sum(a.get("typical_weight", 0.1) for a in archetypes.values())
-    allocation = {}
-    remaining = persona_count
-
-    keys = list(archetypes.keys())
-    for i, key in enumerate(keys):
-        weight = archetypes[key].get("typical_weight", 0.1)
-        if i == len(keys) - 1:
-            allocation[key] = remaining
-        else:
-            count = max(1, round(persona_count * weight / total_weight))
-            allocation[key] = count
-            remaining -= count
-
-    return allocation
 
 
 def check_sample_adequacy(
@@ -96,25 +69,35 @@ def check_sample_adequacy(
 ) -> Dict[str, Any]:
     """
     Check if sample size is adequate for the number of segments.
-    Returns: {adequate, recommended, per_segment, warning}
+    Delegates to statistical_validation for the recommendation,
+    returns a simplified result dict for the skill flow.
     """
     from engines.statistical_validation import recommend_sample_size
-    recommended = recommend_sample_size(num_segments)
+    rec = recommend_sample_size(num_segments)
+    recommended_total = rec["recommended_total"]
+    directional_total = rec["directional_total"]
     per_segment = persona_count // max(num_segments, 1)
-    adequate = persona_count >= recommended
+    adequate = persona_count >= recommended_total
 
     result = {
         "adequate": adequate,
-        "recommended": recommended,
+        "recommended_total": recommended_total,
+        "directional_total": directional_total,
         "actual": persona_count,
         "per_segment": per_segment,
+        "explanation": rec["explanation"],
     }
 
-    if not adequate:
+    if not adequate and persona_count >= directional_total:
+        result["warning"] = (
+            f"Sample size ({persona_count}) is below the statistically rigorous minimum "
+            f"({recommended_total}) but sufficient for directional insights."
+        )
+    elif not adequate:
         result["warning"] = (
             f"Sample size ({persona_count}) is below recommended minimum "
-            f"({recommended}) for {num_segments} segments. "
-            f"Results should be treated as directional only."
+            f"({directional_total} directional, {recommended_total} rigorous) "
+            f"for {num_segments} segments."
         )
     if per_segment < 20:
         result["segment_warning"] = (
@@ -126,10 +109,7 @@ def check_sample_adequacy(
 
 
 def run_bias_audit(interviews: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """
-    Run post-hoc bias detection on completed interviews.
-    Returns the full bias audit dict.
-    """
+    """Run post-hoc bias detection on completed interviews."""
     from engines.bias_detection import run_bias_audit as _run_audit
     return _run_audit(interviews)
 
@@ -138,42 +118,19 @@ def generate_statistical_appendix(
     interviews: List[Dict[str, Any]],
     personas: List[Dict[str, Any]],
 ) -> str:
-    """
-    Generate a statistical appendix section for the report.
-    Returns markdown text.
-    """
+    """Generate a statistical appendix section for the report (markdown)."""
     from engines.statistical_validation import generate_statistical_appendix as _gen
     return _gen(interviews, personas)
 
 
-def score_conversations(
-    interviews: List[Dict[str, Any]],
-    weights: Optional[Dict[str, float]] = None,
-) -> Dict[str, Any]:
+def get_format_info(experiment_format: str) -> Dict[str, Any]:
     """
-    Score conversations using the deterministic 7-dimension scoring engine.
-    Note: Some dimensions in the scoring engine use LLM calls for turn analysis.
-    For fully LLM-free scoring, use score_conversations_basic().
+    Get format-specific information for the skill flow.
+    Uses validate_experiment_format() which returns prompt extensions,
+    metrics, and caveats in one call.
     """
-    from engines.scoring_engine import score_simulation_batch
-    return score_simulation_batch(interviews, weights=weights)
-
-
-def get_format_prompts(experiment_format: str) -> Dict[str, str]:
-    """
-    Get format-specific interviewer prompt extensions and metrics.
-    Returns: {interviewer_extension, metrics_note, limitation_caveat}
-    """
-    from engines.experiment_formats import (
-        get_interviewer_prompt_extension,
-        get_format_metrics,
-        get_format_limitations,
-    )
-    return {
-        "interviewer_extension": get_interviewer_prompt_extension(experiment_format),
-        "metrics_note": get_format_metrics(experiment_format),
-        "limitation_caveat": get_format_limitations(experiment_format),
-    }
+    from engines.experiment_formats import validate_experiment_format
+    return validate_experiment_format(experiment_format, {})
 
 
 def save_simulation_output(
@@ -216,7 +173,6 @@ def save_simulation_output(
     if scoring_results:
         _save("scoring_results.json", scoring_results)
 
-    # Run metadata
     metadata = {
         "timestamp": datetime.now().isoformat(),
         "persona_count": len(personas),
@@ -225,7 +181,7 @@ def save_simulation_output(
         "bias_risk": bias_audit.get("overall_risk", "N/A") if bias_audit else "N/A",
         "config_snapshot": {
             k: v for k, v in config.items()
-            if k not in ("archetypes", "disposition_weights")  # keep metadata compact
+            if k not in ("archetypes", "disposition_weights")
         },
     }
     _save("run_metadata.json", metadata)
@@ -238,12 +194,6 @@ def save_simulation_output(
 # ──────────────────────────────────────────────
 
 if __name__ == "__main__":
-    """
-    Quick utility CLI. Usage:
-      python3 engines/sim_utils.py validate path/to/config.yaml
-      python3 engines/sim_utils.py context-quality path/to/config.yaml
-      python3 engines/sim_utils.py sample-check 30 6
-    """
     if len(sys.argv) < 2:
         print("Usage: python3 engines/sim_utils.py <command> [args]")
         print("Commands: validate, context-quality, sample-check")

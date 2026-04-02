@@ -26,6 +26,12 @@ from engines.logging_config import get_logger
 
 logger = get_logger(__name__)
 
+# ──────────────────────────────────────────────
+# Constants
+# ──────────────────────────────────────────────
+
+DEFAULT_MODEL = "claude-sonnet-4-6"
+
 
 # ──────────────────────────────────────────────
 # Backend Detection
@@ -127,12 +133,15 @@ class TokenAwareRateLimiter:
 
             self.request_timestamps.append(now)
             self.token_usage.append((now, estimated_tokens))
+            return len(self.token_usage) - 1
 
-    async def record_actual_usage(self, tokens: int) -> None:
+    async def record_actual_usage(self, tokens: int, slot: int = -1) -> None:
         """Update with actual token usage after a response."""
         async with self._lock:
             now = time.monotonic()
-            if self.token_usage:
+            if 0 <= slot < len(self.token_usage):
+                self.token_usage[slot] = (now, tokens)
+            elif self.token_usage:
                 self.token_usage[-1] = (now, tokens)
 
     async def record_rate_limit_hit(self) -> float:
@@ -174,18 +183,24 @@ def configure_rate_limiter(max_rpm: int = 500, max_tpm: int = 200_000) -> None:
 # Client Factories
 # ──────────────────────────────────────────────
 
+_sync_clients: Dict[str, Any] = {}
+
+
 def get_sync_client(model: str = ""):
-    """Create a synchronous client for the appropriate backend."""
-    if _is_anthropic_model(model):
-        from anthropic import Anthropic
-        return Anthropic()
-    else:
-        from openai import OpenAI
-        return OpenAI()
+    """Get or create a cached synchronous client for the appropriate backend."""
+    backend = "anthropic" if _is_anthropic_model(model) else "openai"
+    if backend not in _sync_clients:
+        if backend == "anthropic":
+            from anthropic import Anthropic
+            _sync_clients[backend] = Anthropic()
+        else:
+            from openai import OpenAI
+            _sync_clients[backend] = OpenAI()
+    return _sync_clients[backend]
 
 
 def get_async_client(model: str = ""):
-    """Create an async client for the appropriate backend."""
+    """Create an async client for the appropriate backend. Not cached (async clients are session-scoped)."""
     if _is_anthropic_model(model):
         from anthropic import AsyncAnthropic
         return AsyncAnthropic()
@@ -293,10 +308,9 @@ def _calculate_backoff(attempt: int, is_rate_limit: bool) -> float:
 # Core Completion Functions
 # ──────────────────────────────────────────────
 
-def _call_anthropic_sync(client, messages, model, temperature, max_tokens):
-    """Make a synchronous Anthropic API call."""
+def _build_anthropic_kwargs(messages, model, temperature, max_tokens):
+    """Build kwargs dict for Anthropic messages.create()."""
     system_prompt, anthropic_messages = _convert_messages_for_anthropic(messages)
-
     kwargs = {
         "model": model,
         "messages": anthropic_messages,
@@ -304,16 +318,28 @@ def _call_anthropic_sync(client, messages, model, temperature, max_tokens):
     }
     if system_prompt:
         kwargs["system"] = system_prompt
-    # Anthropic temperature range is 0-1
     if temperature is not None:
         kwargs["temperature"] = min(temperature, 1.0)
+    return kwargs
 
-    response = client.messages.create(**kwargs)
 
-    # Extract text from Anthropic response
+def _extract_anthropic_response(response):
+    """Extract text and usage from an Anthropic response."""
+    text = ""
     if response.content and len(response.content) > 0:
-        return response.content[0].text
-    return ""
+        text = response.content[0].text
+    usage = None
+    if hasattr(response, "usage") and response.usage:
+        usage = response.usage.input_tokens + response.usage.output_tokens
+    return text, usage
+
+
+def _call_anthropic_sync(client, messages, model, temperature, max_tokens):
+    """Make a synchronous Anthropic API call."""
+    kwargs = _build_anthropic_kwargs(messages, model, temperature, max_tokens)
+    response = client.messages.create(**kwargs)
+    text, _ = _extract_anthropic_response(response)
+    return text
 
 
 def _call_openai_sync(client, messages, model, temperature, max_tokens, response_format):
@@ -333,28 +359,9 @@ def _call_openai_sync(client, messages, model, temperature, max_tokens, response
 
 async def _call_anthropic_async(client, messages, model, temperature, max_tokens):
     """Make an async Anthropic API call."""
-    system_prompt, anthropic_messages = _convert_messages_for_anthropic(messages)
-
-    kwargs = {
-        "model": model,
-        "messages": anthropic_messages,
-        "max_tokens": max_tokens,
-    }
-    if system_prompt:
-        kwargs["system"] = system_prompt
-    if temperature is not None:
-        kwargs["temperature"] = min(temperature, 1.0)
-
+    kwargs = _build_anthropic_kwargs(messages, model, temperature, max_tokens)
     response = await client.messages.create(**kwargs)
-
-    if response.content and len(response.content) > 0:
-        text = response.content[0].text
-        # Return usage info for rate limiter
-        usage = None
-        if hasattr(response, "usage") and response.usage:
-            usage = response.usage.input_tokens + response.usage.output_tokens
-        return text, usage
-    return "", None
+    return _extract_anthropic_response(response)
 
 
 async def _call_openai_async(client, messages, model, temperature, max_tokens, response_format):
@@ -379,7 +386,7 @@ async def _call_openai_async(client, messages, model, temperature, max_tokens, r
 
 def chat_completion(
     messages: List[Dict[str, str]],
-    model: str = "claude-sonnet-4-6",
+    model: str = DEFAULT_MODEL,
     temperature: float = 0.7,
     max_tokens: int = 4096,
     response_format: Optional[Dict] = None,
@@ -456,7 +463,7 @@ def chat_completion(
 async def async_chat_completion(
     client,
     messages: List[Dict[str, str]],
-    model: str = "claude-sonnet-4-6",
+    model: str = DEFAULT_MODEL,
     temperature: float = 0.7,
     max_tokens: int = 4096,
     response_format: Optional[Dict] = None,
@@ -473,7 +480,7 @@ async def async_chat_completion(
     last_error = None
     for attempt in range(max_retries):
         try:
-            await rate_limiter.acquire(estimated_tokens)
+            slot = await rate_limiter.acquire(estimated_tokens)
 
             if use_anthropic:
                 content, usage = await _call_anthropic_async(
@@ -485,7 +492,7 @@ async def async_chat_completion(
                 )
 
             if usage:
-                await rate_limiter.record_actual_usage(usage)
+                await rate_limiter.record_actual_usage(usage, slot)
 
             await rate_limiter.record_success()
 
@@ -545,20 +552,28 @@ async def run_concurrent_completions(
     """
     semaphore = asyncio.Semaphore(max_concurrent)
 
-    # Determine backend from first task
-    first_model = tasks[0].get("model", "claude-sonnet-4-6") if tasks else "claude-sonnet-4-6"
-    client = get_async_client(first_model)
+    # Group tasks by backend — all tasks in a batch should use the same backend.
+    # Create one client per backend type encountered.
+    clients = {}
     results: List[Optional[str]] = [None] * len(tasks)
     failed_count = 0
 
+    def _get_client_for_model(model: str):
+        backend = "anthropic" if _is_anthropic_model(model) else "openai"
+        if backend not in clients:
+            clients[backend] = get_async_client(model)
+        return clients[backend]
+
     async def run_one(index: int, task: Dict):
         nonlocal failed_count
+        task_model = task.get("model", DEFAULT_MODEL)
+        task_client = _get_client_for_model(task_model)
         async with semaphore:
             try:
                 result = await async_chat_completion(
-                    client=client,
+                    client=task_client,
                     messages=task["messages"],
-                    model=task.get("model", "claude-sonnet-4-6"),
+                    model=task_model,
                     temperature=task.get("temperature", 0.7),
                     max_tokens=task.get("max_tokens", 4096),
                     response_format=task.get("response_format"),
@@ -576,10 +591,11 @@ async def run_concurrent_completions(
 
     await asyncio.gather(*[run_one(i, t) for i, t in enumerate(tasks)])
 
-    try:
-        await client.close()
-    except Exception:
-        pass
+    for c in clients.values():
+        try:
+            await c.close()
+        except Exception:
+            pass
 
     if failed_count > 0:
         logger.warning("Concurrent completions: %d/%d tasks failed", failed_count, len(tasks))
