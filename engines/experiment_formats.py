@@ -79,11 +79,12 @@ EXPERIMENT_FORMATS = {
     "webpage_review": {
         "name": "Webpage / Landing Page Review",
         "description": (
-            "Persona reviews a described webpage and provides reactions. "
-            "Requires a structured description of the page content."
+            "Persona reviews a webpage and provides reactions. "
+            "Provide a URL (auto-extracted) or a structured description of the page content."
         ),
         "requires_content": True,
         "content_field": "webpage_description",
+        "url_field": "webpage_url",
         "specific_metrics": [
             "first_impression_sentiment",
             "cta_comprehension",
@@ -103,11 +104,13 @@ EXPERIMENT_FORMATS = {
     "document_review": {
         "name": "Document / PDF Review",
         "description": (
-            "Persona reviews a described document (whitepaper, pitch deck, case study) "
-            "and provides reactions section by section."
+            "Persona reviews a document (whitepaper, pitch deck, case study) "
+            "and provides reactions section by section. "
+            "Provide a URL (auto-extracted) or a structured description."
         ),
         "requires_content": True,
         "content_field": "document_description",
+        "url_field": "document_url",
         "specific_metrics": [
             "section_engagement",
             "key_takeaway_accuracy",
@@ -127,10 +130,11 @@ EXPERIMENT_FORMATS = {
         "name": "Form / Signup Flow Test",
         "description": (
             "Persona walks through a form or signup flow step-by-step. "
-            "Requires a structured description of each form step/field."
+            "Provide a URL (auto-extracted) or a structured description of each form step/field."
         ),
         "requires_content": True,
         "content_field": "form_steps",
+        "url_field": "form_url",
         "specific_metrics": [
             "completion_intent",
             "field_level_friction",
@@ -267,22 +271,29 @@ def validate_experiment_format(
     format_def = EXPERIMENT_FORMATS[format_type]
     warnings = []
 
-    # Check if required content is provided
+    # Check if required content is provided (URL or description)
     if format_def["requires_content"]:
         content_field = format_def["content_field"]
+        url_field = format_def.get("url_field")
         content = config.get(content_field, "")
+        url = config.get(url_field, "") if url_field else ""
 
-        if not content:
+        if not content and not url:
+            url_hint = f" or a '{url_field}' URL" if url_field else ""
             return {
                 "valid": False,
                 "error": (
-                    f"Format '{format_type}' requires a '{content_field}' field in the config "
-                    f"describing the content to test. Please add it."
+                    f"Format '{format_type}' requires a '{content_field}' description{url_hint} "
+                    f"in the config. Please add one."
                 ),
                 "format_def": format_def,
             }
 
-        if len(str(content)) < 100:
+        if url:
+            warnings.append(
+                f"URL provided ({url_field}). Content will be auto-extracted at runtime."
+            )
+        elif len(str(content)) < 100:
             warnings.append(
                 f"The '{content_field}' is very short ({len(str(content))} chars). "
                 "Provide a detailed, structured description for realistic persona reactions."

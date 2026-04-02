@@ -74,6 +74,8 @@ def _build_interviewer_system_prompt(
     questions: List[str],
     assumptions: List[str],
     num_turns: int,
+    format_prompt_extension: str = "",
+    extracted_content: str = "",
 ) -> str:
     """Build the system prompt for the interviewer agent."""
     items_to_explore = []
@@ -84,13 +86,25 @@ def _build_interviewer_system_prompt(
 
     exploration_block = "\n\n".join(items_to_explore) if items_to_explore else "Explore the prospect's needs and reactions to the product."
 
+    # Build content section if we have extracted web/form/document content
+    content_block = ""
+    if extracted_content:
+        content_block = f"""
+
+## CONTENT BEING TESTED
+The following is the actual content the persona is reviewing. Reference specific elements
+(headlines, CTAs, form fields, pricing, etc.) in your questions rather than speaking abstractly.
+
+{extracted_content}
+"""
+
     return f"""You are a skilled customer discovery interviewer conducting a simulated market research interview.
 
 ## THE PRODUCT
 {product_description}
 
 {exploration_block}
-
+{content_block}
 ## INTERVIEW RULES
 1. You have {num_turns} turns. Make every question count.
 2. Start with an open-ended question about their current situation — do NOT pitch the product immediately.
@@ -103,7 +117,7 @@ def _build_interviewer_system_prompt(
 9. If they say something surprising, follow up on it even if it's off-script.
 10. Keep questions to 1-2 sentences. Be conversational.
 11. In your final turn, ask a direct closing question: "Based on everything we've discussed, how likely would you be to try something like this?"
-
+{format_prompt_extension}
 Your goal is to understand this person's REAL reaction to the product — positive, negative, or indifferent."""
 
 
@@ -126,7 +140,11 @@ async def _conduct_interview(
     model = config["llm_model"]
 
     persona_system = _build_persona_system_prompt(persona, product_description)
-    interviewer_system = _build_interviewer_system_prompt(product_description, questions, assumptions, num_turns)
+    interviewer_system = _build_interviewer_system_prompt(
+        product_description, questions, assumptions, num_turns,
+        format_prompt_extension=config.get("format_prompt_extension", ""),
+        extracted_content=config.get("extracted_content", ""),
+    )
 
     # Interview state
     interviewer_messages = [{"role": "system", "content": interviewer_system}]

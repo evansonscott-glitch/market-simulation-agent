@@ -51,11 +51,15 @@ settings:
   persona_count: 20          # 10-30 is ideal for Claude Code mode
   interview_turns: 5
   interaction_context: warm_demo
-  experiment_format: interview
+  experiment_format: interview    # or: webpage_review, form_test, document_review, etc.
 context:
   world_model: "context/world_model.md"    # if user provided
   transcripts: "context/transcripts.md"    # if user provided
   customer_list: "context/customers.md"    # if user provided
+  # For web-based formats — provide a URL for auto-extraction:
+  # webpage_url: "https://example.com/landing"    # for webpage_review
+  # form_url: "https://example.com/signup"        # for form_test
+  # document_url: "https://example.com/whitepaper" # for document_review
 ```
 
 **Validate and grade context quality** using the Python utilities:
@@ -264,9 +268,9 @@ For quantitative scoring across iterations, use the 7-dimension scoring engine:
 | `interview` | Standard customer discovery | Default — no special setup |
 | `focus_group` | Testing group dynamics, social proof | You play moderator + multiple personas simultaneously |
 | `sales_sequence` | Multi-touch outreach optimization | Run as sequence of contacts over simulated time |
-| `webpage_review` | Testing landing page messaging | Describe the page in config, personas react to it |
-| `document_review` | Testing whitepaper/pitch deck | Describe the document, personas evaluate it |
-| `form_test` | Testing signup/onboarding flow | Describe form steps, personas walk through them |
+| `webpage_review` | Testing landing page messaging | Provide URL (auto-extracted) or describe the page in config |
+| `document_review` | Testing whitepaper/pitch deck | Provide URL (auto-extracted) or describe the document |
+| `form_test` | Testing signup/onboarding flow | Provide URL (auto-extracted) or describe form steps |
 | `in_person_interview` | Simulating face-to-face | Add caveat: body language/rapport cannot be simulated |
 
 ---

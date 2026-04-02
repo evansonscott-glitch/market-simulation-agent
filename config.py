@@ -87,9 +87,12 @@ class ContextConfig(BaseModel):
     world_model: Optional[str] = Field(default=None, description="Path to world model file")
     transcripts: Optional[str] = Field(default=None, description="Path to transcripts file")
     customer_list: Optional[str] = Field(default=None, description="Path to customer list file")
-    webpage_description: Optional[str] = Field(default=None, description="Structured description of webpage to test (for webpage_review format)")
-    document_description: Optional[str] = Field(default=None, description="Structured description of document to test (for document_review format)")
-    form_steps: Optional[str] = Field(default=None, description="Structured description of form steps to test (for form_test format)")
+    webpage_url: Optional[str] = Field(default=None, description="URL of webpage to test (for webpage_review format — auto-extracted)")
+    form_url: Optional[str] = Field(default=None, description="URL of form/signup page to test (for form_test format — auto-extracted)")
+    document_url: Optional[str] = Field(default=None, description="URL of document to test (for document_review format — auto-extracted)")
+    webpage_description: Optional[str] = Field(default=None, description="Manual description of webpage (fallback if URL not provided)")
+    document_description: Optional[str] = Field(default=None, description="Manual description of document (fallback if URL not provided)")
+    form_steps: Optional[str] = Field(default=None, description="Manual description of form steps (fallback if URL not provided)")
 
 
 class ArchetypeConfig(BaseModel):
@@ -469,7 +472,15 @@ def load_config(config_path: str) -> Dict[str, Any]:
         else:
             config["customer_list_path"] = path
 
-    # Store format-specific content descriptions (inline, not file paths)
+    # Store format-specific URLs (for auto-extraction by web_extraction engine)
+    if validated.context.webpage_url:
+        config["webpage_url"] = validated.context.webpage_url
+    if validated.context.form_url:
+        config["form_url"] = validated.context.form_url
+    if validated.context.document_url:
+        config["document_url"] = validated.context.document_url
+
+    # Store manual descriptions (fallback if URLs not provided)
     if validated.context.webpage_description:
         config["webpage_description"] = validated.context.webpage_description
     if validated.context.document_description:
