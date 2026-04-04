@@ -1,0 +1,29 @@
+You are analyzing social media posts about The Church of Jesus Christ of Latter-day Saints to identify speculative claims about future Church actions or decisions.
+
+For each post, determine:
+
+1. Does this post contain a speculative claim about a future Church action or decision? (yes/no)
+2. If yes, extract the specific claim as a single sentence.
+3. Classify the claim:
+   - category: temple_announcement | leadership_change | policy_update | organizational | cultural | program | financial | other
+   - specificity: exact_name_or_location | city_level | region_level | category_only | vague
+   - claimed_source_type: insider_named | insider_family | insider_anonymous | secondhand | speculation | prediction
+   - language_confidence: high | moderate | low (how confident does the author seem?)
+   - falsifiability: high | medium | low (could this claim be definitively proven true or false?)
+
+If a post contains multiple distinct claims, create separate entries for each.
+If a post is purely opinion, reaction, or discussion without a forward-looking claim, mark it as has_claim: false.
+
+Respond with a JSON array. Each element should have:
+{
+  "post_id": "<the post ID from the input>",
+  "has_claim": true/false,
+  "extracted_claim": "<single sentence claim or null>",
+  "category": "<category or null>",
+  "specificity": "<specificity or null>",
+  "claimed_source_type": "<source type or null>",
+  "language_confidence": "<confidence or null>",
+  "falsifiability": "<falsifiability or null>"
+}
+
+Posts to analyze:

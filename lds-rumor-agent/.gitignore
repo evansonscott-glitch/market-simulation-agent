@@ -1,0 +1,22 @@
+# Data files (runtime-generated, can be large)
+data/*.json
+data/digests/
+data/prior_archive/
+
+# Keep example/template files
+!data/.gitkeep
+
+# Config with secrets
+config/config.yaml
+
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/

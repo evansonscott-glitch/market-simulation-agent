@@ -1,0 +1,53 @@
+# LDS Rumor Intelligence Agent — Configuration
+# Copy to config.yaml and fill in secrets.
+# Secrets can also be set via environment variables (see .env.example).
+
+anthropic_api_key: ""  # or set ANTHROPIC_API_KEY env var
+llm_model: "claude-sonnet-4-6"
+
+reddit:
+  client_id: ""         # or REDDIT_CLIENT_ID
+  client_secret: ""     # or REDDIT_CLIENT_SECRET
+  user_agent: "lds-rumor-agent/1.0 (by u/your_username)"
+  subreddits:
+    - latterdaysaints
+    - lds
+    - mormon
+    - exmormon
+    - temples
+  speculative_keywords:
+    - "I heard"
+    - "rumor"
+    - "prediction"
+    - "my bishop said"
+    - "my stake president"
+    - "someone at COB"
+    - "I bet they"
+    - "wouldn't be surprised"
+    - "anyone else hearing"
+    - "temple in"
+    - "going to announce"
+    - "new temple"
+    - "called as"
+    - "handbook change"
+    - "policy change"
+    - "I think they'll"
+    - "speculation"
+    - "inside source"
+    - "confirmed"
+    - "unconfirmed"
+    - "leaked"
+  min_engagement_comments: 10
+
+email:
+  smtp_server: "smtp.gmail.com"
+  smtp_port: 587
+  sender_address: ""     # or GMAIL_ADDRESS
+  app_password: ""       # or GMAIL_APP_PASSWORD
+  recipient: ""          # or DIGEST_RECIPIENT
+
+newsroom_base_url: "https://newsroom.churchofjesuschrist.org"
+temples_url: "https://www.churchofjesuschrist.org/temples"
+data_dir: "data"
+lookback_months: 12
+batch_size: 50

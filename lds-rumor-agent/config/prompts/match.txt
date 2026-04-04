@@ -1,0 +1,30 @@
+You are matching speculative claims about The Church of Jesus Christ of Latter-day Saints to official announcements to determine if rumors came true.
+
+For each rumor cluster, determine:
+1. Does it match any official announcement from the ground truth timeline?
+2. If yes, what is the match quality?
+   - exact: The claim matches the announcement in all specifics
+   - partial: The claim got the category right but specifics wrong (e.g., predicted temple in wrong city but right country)
+   - related: The announcement is in the same domain but the claim was materially different
+   - no_match: No corresponding announcement found
+3. If matched, how many days before the announcement was the earliest post in the cluster?
+4. Resolution status: confirmed | partially_confirmed | denied | unresolved
+   - confirmed: exact or partial match with high alignment
+   - partially_confirmed: partial match or related with meaningful overlap
+   - denied: an official announcement explicitly contradicts the claim, or sufficient time has passed (6+ months) with no corresponding announcement
+   - unresolved: no match found yet, but the claim is still within a reasonable window
+
+Respond with a JSON array:
+{
+  "cluster_id": "cluster-0001",
+  "matched_announcement_id": "ann-2025-042" or null,
+  "match_quality": "exact" | "partial" | "related" | "no_match",
+  "days_before_announcement": 17 or null,
+  "resolution_status": "confirmed" | "partially_confirmed" | "denied" | "unresolved"
+}
+
+Ground truth timeline:
+{ground_truth}
+
+Rumor clusters to match:
+{clusters}
