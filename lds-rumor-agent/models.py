@@ -6,7 +6,7 @@ author records, and weekly digests.
 """
 from datetime import datetime, date
 from enum import Enum
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 from pydantic import BaseModel, Field, field_validator
 
 
@@ -87,7 +87,63 @@ class SourcePlatform(str, Enum):
     REDDIT = "reddit"
     TWITTER = "twitter"
     BLOG = "blog"
+    CHURCH_SITE = "church_site"
     OTHER = "other"
+
+
+class SiteChangeType(str, Enum):
+    NEW_PAGE = "new_page"
+    CONTENT_CHANGE = "content_change"
+    NEW_SITEMAP_URL = "new_sitemap_url"
+    STRUCTURAL_CHANGE = "structural_change"
+    REMOVED_PAGE = "removed_page"
+
+
+class SiteChangeSignificance(str, Enum):
+    HIGH = "high"
+    MEDIUM = "medium"
+    LOW = "low"
+
+
+# ──────────────────────────────────────────────
+# Church Site Change Record
+# ──────────────────────────────────────────────
+
+class SiteChangeRecord(BaseModel):
+    """A detected change on a Church website."""
+    id: str = Field(..., description="Unique ID like 'site-2026-abc12'")
+    detected_date: date = Field(default_factory=date.today)
+    site_domain: str = Field(..., description="e.g. 'churchofjesuschrist.org'")
+    url: str
+    change_type: SiteChangeType
+    significance: SiteChangeSignificance = SiteChangeSignificance.MEDIUM
+    category: Optional[AnnouncementCategory] = None
+    summary: str = ""
+    diff_snippet: str = Field(default="", description="Key changed text, max 500 chars")
+    previous_snapshot_hash: Optional[str] = None
+    current_snapshot_hash: Optional[str] = None
+    corroborates_cluster_ids: List[str] = Field(
+        default_factory=list,
+        description="Cluster IDs this change may corroborate"
+    )
+
+    @field_validator("id")
+    @classmethod
+    def id_format(cls, v: str) -> str:
+        if not v.startswith("site-"):
+            raise ValueError("Site change ID must start with 'site-'")
+        return v
+
+
+class MonitoredPage(BaseModel):
+    """A page being monitored for changes."""
+    url: str
+    label: str = ""
+    category: Optional[AnnouncementCategory] = None
+    selector: Optional[str] = None  # CSS selector to focus diff on
+    last_hash: Optional[str] = None
+    last_checked: Optional[date] = None
+    last_snapshot_path: Optional[str] = None
 
 
 # ──────────────────────────────────────────────
@@ -132,6 +188,11 @@ class RumorFeatures(BaseModel):
     corroborating_post_ids: List[str] = Field(default_factory=list)
     falsifiability: Falsifiability
     public_record_available: bool = False
+    site_change_corroboration: bool = Field(
+        default=False,
+        description="Whether a Church website change corroborates this rumor"
+    )
+    corroborating_site_change_ids: List[str] = Field(default_factory=list)
 
 
 class RumorResolution(BaseModel):
@@ -313,12 +374,34 @@ class EmailConfig(BaseModel):
     recipient: str = ""
 
 
+class SiteMonitorConfig(BaseModel):
+    """Configuration for Church website change detection."""
+    enabled: bool = True
+    snapshot_dir: str = "data/site_snapshots"
+    monitored_sitemaps: List[str] = Field(default_factory=lambda: [
+        "https://www.churchofjesuschrist.org/sitemap.xml",
+    ])
+    monitored_pages: List[Dict[str, Any]] = Field(default_factory=lambda: [
+        {"url": "https://www.churchofjesuschrist.org/temples/list", "label": "Temple List", "category": "temple_announcement"},
+        {"url": "https://www.churchofjesuschrist.org/temples/find-a-temple", "label": "Temple Finder", "category": "temple_announcement"},
+        {"url": "https://www.churchofjesuschrist.org/study/manual/general-handbook", "label": "General Handbook TOC", "category": "policy_update"},
+        {"url": "https://www.churchofjesuschrist.org/callings/missionary/temple-and-family-history-consultants", "label": "Temple Callings", "category": "organizational"},
+        {"url": "https://newsroom.churchofjesuschrist.org/topic/temples", "label": "Newsroom Temples", "category": "temple_announcement"},
+        {"url": "https://newsroom.churchofjesuschrist.org/topic/leadership-changes", "label": "Newsroom Leadership", "category": "leadership_change"},
+        {"url": "https://www.churchofjesuschrist.org/si/leader/stake", "label": "Stake Info", "category": "organizational"},
+        {"url": "https://store.churchofjesuschrist.org/usa/en/new-arrivals", "label": "Store New Arrivals", "category": "program"},
+        {"url": "https://www.churchofjesuschrist.org/study/manual/come-follow-me", "label": "Come Follow Me", "category": "program"},
+        {"url": "https://www.churchofjesuschrist.org/youth/childrenandyouth", "label": "Children & Youth", "category": "program"},
+    ])
+
+
 class AgentConfig(BaseModel):
     """Top-level configuration for the LDS Rumor Agent."""
     anthropic_api_key: str = ""
     llm_model: str = "claude-sonnet-4-6"
     reddit: RedditConfig = Field(default_factory=RedditConfig)
     email: EmailConfig = Field(default_factory=EmailConfig)
+    site_monitor: SiteMonitorConfig = Field(default_factory=SiteMonitorConfig)
     newsroom_base_url: str = "https://newsroom.churchofjesuschrist.org"
     temples_url: str = "https://www.churchofjesuschrist.org/temples"
     data_dir: str = "data"

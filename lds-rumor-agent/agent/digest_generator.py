@@ -46,10 +46,14 @@ def _format_digest_data(
     # New this week
     sections.append("== NEW RUMORS THIS WEEK ==")
     for r in new_scored[:20]:
+        site_flag = " [SITE SIGNAL]" if r.get("source_type") == "church_site" else ""
+        site_corr = ""
+        if r.get("has_site_corroboration") or r.get("corroborating_site_change_ids"):
+            site_corr = " | Corroborated by Church website change"
         sections.append(
-            f"Score: {r.get('score', 0):.2f} [{r.get('confidence_tier', 'noise')}]\n"
+            f"Score: {r.get('score', 0):.2f} [{r.get('confidence_tier', 'noise')}]{site_flag}\n"
             f"Summary: {r.get('cluster_summary', '')}\n"
-            f"Explanation: {r.get('score_explanation', '')}\n"
+            f"Explanation: {r.get('score_explanation', '')}{site_corr}\n"
             f"Sources: {r.get('independent_source_count', 0)} independent\n"
             f"Post count: {len(r.get('rumor_ids', []))}\n"
             f"Earliest: {r.get('earliest_post_date', '')}\n"

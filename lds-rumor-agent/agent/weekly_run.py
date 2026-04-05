@@ -35,6 +35,9 @@ sys.path.insert(0, PROJECT_DIR)
 from engines.logging_config import setup_logging, get_logger
 from scrapers.reddit_scraper import scrape_reddit
 from scrapers.newsroom_scraper import scrape_ground_truth
+from scrapers.church_site_monitor import (
+    run_site_monitor, match_changes_to_clusters, generate_standalone_signals,
+)
 from scrapers.utils import atomic_write_json, load_json, ensure_data_dir
 from rumor_engine.classifier import classify_candidates
 from rumor_engine.clusterer import cluster_rumors, update_clusters_with_new_rumors
@@ -73,6 +76,10 @@ def load_config() -> Dict[str, Any]:
     email.setdefault("recipient", os.environ.get("DIGEST_RECIPIENT", ""))
 
     config.setdefault("data_dir", os.path.join(PROJECT_DIR, "data"))
+    config.setdefault("site_monitor", {
+        "enabled": True,
+        "snapshot_dir": os.path.join(PROJECT_DIR, "data", "site_snapshots"),
+    })
 
     return config
 
@@ -86,6 +93,7 @@ def weekly_run(config: Optional[Dict[str, Any]] = None, dry_run: bool = False):
     model = config.get("llm_model", "claude-sonnet-4-6")
     reddit_cfg = config.get("reddit", {})
     email_cfg = config.get("email", {})
+    site_cfg = config.get("site_monitor", {})
 
     # Set ANTHROPIC_API_KEY if provided
     if config.get("anthropic_api_key"):
@@ -149,13 +157,42 @@ def weekly_run(config: Optional[Dict[str, Any]] = None, dry_run: bool = False):
             new_clusters = cluster_rumors(new_rumors_dicts, model=model)
             open_clusters.extend([c.model_dump(mode="json") for c in new_clusters])
 
-    # ── Step 4: Score all open clusters ──
-    logger.info("Step 4: Scoring")
+    # ── Step 4: Church website change detection ──
+    site_changes = []
+    standalone_signals = []
+    if site_cfg.get("enabled", True):
+        logger.info("Step 4: Monitoring Church websites")
+        from models import SiteMonitorConfig
+        sm_config = SiteMonitorConfig(**site_cfg) if isinstance(site_cfg, dict) else SiteMonitorConfig()
+
+        site_changes = run_site_monitor(
+            monitored_pages=sm_config.monitored_pages,
+            monitored_sitemaps=sm_config.monitored_sitemaps,
+            snapshot_dir=sm_config.snapshot_dir or os.path.join(data_dir, "site_snapshots"),
+            data_dir=data_dir,
+        )
+        logger.info(f"  Detected {len(site_changes)} site changes")
+
+        if site_changes and open_clusters:
+            # Match changes to existing clusters (boosts their scores)
+            open_clusters = match_changes_to_clusters(
+                site_changes, open_clusters, model=model,
+            )
+
+            # Generate standalone signals for unmatched changes
+            standalone_signals = generate_standalone_signals(site_changes, model=model)
+            if standalone_signals:
+                logger.info(f"  Generated {len(standalone_signals)} standalone site signals")
+    else:
+        logger.info("Step 4: Site monitoring disabled — skipping")
+
+    # ── Step 5: Score all open clusters ──
+    logger.info("Step 5: Scoring")
     scored = score_clusters(open_clusters, all_rumors, prior_tables, author_records)
     open_clusters = scored
 
-    # ── Step 5: Scrape newsroom for new announcements ──
-    logger.info("Step 5: Checking newsroom")
+    # ── Step 6: Scrape newsroom for new announcements ──
+    logger.info("Step 6: Checking newsroom")
     new_announcements = scrape_ground_truth(
         lookback_months=1,  # Only last month for weekly check
         output_path=os.path.join(data_dir, "ground_truth_weekly.json"),
@@ -172,8 +209,8 @@ def weekly_run(config: Optional[Dict[str, Any]] = None, dry_run: bool = False):
         atomic_write_json(os.path.join(data_dir, "ground_truth.json"), existing_gt)
         logger.info(f"  Added {len(truly_new)} new announcements to ground truth")
 
-    # ── Step 6: Resolve open rumors ──
-    logger.info("Step 6: Resolving rumors")
+    # ── Step 7: Resolve open rumors ──
+    logger.info("Step 7: Resolving rumors")
     open_clusters, newly_resolved, author_records = resolve_rumors(
         open_clusters, truly_new, all_rumors, author_records, model=model,
     )
@@ -181,8 +218,8 @@ def weekly_run(config: Optional[Dict[str, Any]] = None, dry_run: bool = False):
     # Check for stale rumors (>6 months)
     open_clusters = check_stale_rumors(open_clusters)
 
-    # ── Step 7: Update priors and save state ──
-    logger.info("Step 7: Updating priors")
+    # ── Step 8: Update priors and save state ──
+    logger.info("Step 8: Updating priors")
     if newly_resolved:
         prior_tables = update_priors(prior_tables, newly_resolved, all_rumors)
         save_prior_tables(prior_tables, os.path.join(data_dir, "prior_tables.json"))
@@ -190,11 +227,13 @@ def weekly_run(config: Optional[Dict[str, Any]] = None, dry_run: bool = False):
     atomic_write_json(os.path.join(data_dir, "open_rumors.json"), open_clusters)
     atomic_write_json(os.path.join(data_dir, "author_records.json"), author_records)
 
-    # ── Step 8: Generate and send digest ──
-    logger.info("Step 8: Generating digest")
+    # ── Step 9: Generate and send digest ──
+    logger.info("Step 9: Generating digest")
 
-    # Split clusters into tiers for the digest
+    # Combine scored clusters with standalone site signals
     new_this_week = [c for c in open_clusters if c.get("score") is not None]
+    if standalone_signals:
+        new_this_week.extend(standalone_signals)
     new_this_week.sort(key=lambda c: c.get("score", 0), reverse=True)
 
     still_watching = [
@@ -208,6 +247,10 @@ def weekly_run(config: Optional[Dict[str, Any]] = None, dry_run: bool = False):
         "resolved_this_week": len(newly_resolved),
         "accuracy_last_30_days": None,
         "prior_tables_version": prior_tables.version,
+        "site_changes_detected": len(site_changes),
+        "site_corroborations": sum(
+            1 for c in open_clusters if c.get("has_site_corroboration")
+        ),
     }
 
     if dry_run:
@@ -215,6 +258,8 @@ def weekly_run(config: Optional[Dict[str, Any]] = None, dry_run: bool = False):
         logger.info(f"  New rumors: {len(new_this_week)}")
         logger.info(f"  Resolved: {len(newly_resolved)}")
         logger.info(f"  Still watching: {len(still_watching)}")
+        logger.info(f"  Site changes: {len(site_changes)}")
+        logger.info(f"  Standalone site signals: {len(standalone_signals)}")
     else:
         sent = generate_and_send_digest(
             new_scored=new_this_week[:20],
@@ -230,7 +275,7 @@ def weekly_run(config: Optional[Dict[str, Any]] = None, dry_run: bool = False):
         else:
             logger.error("Failed to send digest")
 
-    # ── Step 9: Monthly audit check ──
+    # ── Step 10: Monthly audit check ──
     maybe_run_monthly_audit(
         data_dir=data_dir,
         prior_tables=prior_tables,

@@ -46,6 +46,43 @@ email:
   app_password: ""       # or GMAIL_APP_PASSWORD
   recipient: ""          # or DIGEST_RECIPIENT
 
+site_monitor:
+  enabled: true
+  snapshot_dir: "data/site_snapshots"
+  monitored_sitemaps:
+    - "https://www.churchofjesuschrist.org/sitemap.xml"
+  monitored_pages:
+    - url: "https://www.churchofjesuschrist.org/temples/list"
+      label: "Temple List"
+      category: "temple_announcement"
+    - url: "https://www.churchofjesuschrist.org/temples/find-a-temple"
+      label: "Temple Finder"
+      category: "temple_announcement"
+    - url: "https://www.churchofjesuschrist.org/study/manual/general-handbook"
+      label: "General Handbook TOC"
+      category: "policy_update"
+    - url: "https://newsroom.churchofjesuschrist.org/topic/temples"
+      label: "Newsroom Temples"
+      category: "temple_announcement"
+    - url: "https://newsroom.churchofjesuschrist.org/topic/leadership-changes"
+      label: "Newsroom Leadership"
+      category: "leadership_change"
+    - url: "https://www.churchofjesuschrist.org/callings/missionary/temple-and-family-history-consultants"
+      label: "Temple Callings"
+      category: "organizational"
+    - url: "https://www.churchofjesuschrist.org/si/leader/stake"
+      label: "Stake Info"
+      category: "organizational"
+    - url: "https://store.churchofjesuschrist.org/usa/en/new-arrivals"
+      label: "Store New Arrivals"
+      category: "program"
+    - url: "https://www.churchofjesuschrist.org/study/manual/come-follow-me"
+      label: "Come Follow Me"
+      category: "program"
+    - url: "https://www.churchofjesuschrist.org/youth/childrenandyouth"
+      label: "Children & Youth"
+      category: "program"
+
 newsroom_base_url: "https://newsroom.churchofjesuschrist.org"
 temples_url: "https://www.churchofjesuschrist.org/temples"
 data_dir: "data"

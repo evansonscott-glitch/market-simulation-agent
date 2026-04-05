@@ -42,6 +42,7 @@ FEATURE_DIMENSIONS = [
     "source_platform",
     "corroboration_count",
     "author_track_record",
+    "site_change_corroboration",
 ]
 
 # Confidence tier thresholds
@@ -155,6 +156,24 @@ def build_prior_tables(
                     track = "mixed"
         _count_feature(feature_priors, "author_track_record", track, is_true)
 
+        # Site change corroboration
+        has_site = "yes" if features.get("site_change_corroboration") else "no"
+        _count_feature(feature_priors, "site_change_corroboration", has_site, is_true)
+
+    # Seed default priors for site_change_corroboration if insufficient data
+    site_dim = feature_priors.get("site_change_corroboration", {})
+    if "yes" not in site_dim or site_dim["yes"].sample_size < 3:
+        # Use strong default: site corroboration is a high-signal feature
+        feature_priors.setdefault("site_change_corroboration", {})
+        feature_priors["site_change_corroboration"]["yes"] = FeatureStats(
+            likelihood_ratio=3.0, sample_size=max(site_dim.get("yes", FeatureStats()).sample_size, 1),
+            base_rate=0.0, true_positive_rate=0.0,
+        )
+        feature_priors["site_change_corroboration"]["no"] = FeatureStats(
+            likelihood_ratio=0.9, sample_size=max(site_dim.get("no", FeatureStats()).sample_size, 1),
+            base_rate=0.0, true_positive_rate=0.0,
+        )
+
     # Compute likelihood ratios with Laplace smoothing
     for dimension, values in feature_priors.items():
         for value, stats in values.items():
@@ -214,6 +233,7 @@ def score_rumor(
     author_track_record: str = "no_history",
     source_platform: str = "",
     corroboration_count: int = 0,
+    has_site_corroboration: bool = False,
 ) -> Tuple[float, ConfidenceTier, str]:
     """Score a single rumor using Bayesian posterior probability.
 
@@ -239,6 +259,8 @@ def score_rumor(
             value = author_track_record
         elif dimension == "corroboration_count":
             value = str(min(corroboration_count, 3)) if corroboration_count < 3 else "3+"
+        elif dimension == "site_change_corroboration":
+            value = "yes" if has_site_corroboration else "no"
         else:
             value = features.get(dimension, "")
 
@@ -309,6 +331,10 @@ def score_clusters(
         # Get source platform (most common sub)
         platform = _most_common_platform(rids, rumor_lookup)
 
+        # Check for site change corroboration
+        has_site_corr = bool(cluster.get("has_site_corroboration") or
+                            cluster.get("corroborating_site_change_ids"))
+
         # Score
         score, tier, explanation = score_rumor(
             features=agg_features,
@@ -316,6 +342,7 @@ def score_clusters(
             author_track_record=best_track,
             source_platform=platform,
             corroboration_count=cluster.get("independent_source_count", 0),
+            has_site_corroboration=has_site_corr,
         )
 
         cluster_scored = dict(cluster)

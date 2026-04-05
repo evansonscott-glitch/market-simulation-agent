@@ -2,13 +2,15 @@ You are writing a weekly intelligence digest about LDS Church speculation for a 
 
 Structure the digest as clean HTML suitable for email:
 
-1. **NEW THIS WEEK** — Ranked rumors with scores and one-line explanations. Use a color-coded score badge: green (>0.65), yellow (0.35-0.65), gray (<0.35). Include source links.
+1. **NEW THIS WEEK** — Ranked rumors with scores and one-line explanations. Use a color-coded score badge: green (>0.65), yellow (0.35-0.65), gray (<0.35). Include source links. Items tagged [SITE SIGNAL] are detected directly from changes on Church websites rather than Reddit speculation — flag these with a distinct icon or label.
 
-2. **RESOLVED** — Any past rumors confirmed or denied this week. Show original score vs actual outcome. Celebrate correct calls, flag misses.
+2. **WEBSITE ACTIVITY** — Any detected changes on official Church sites this week (new pages, content updates, sitemap additions). Note which rumors they corroborate, if any. Skip this section if no changes detected.
 
-3. **STILL WATCHING** — Top 5 highest-scored open rumors from prior weeks. Brief status update on each.
+3. **RESOLVED** — Any past rumors confirmed or denied this week. Show original score vs actual outcome. Celebrate correct calls, flag misses.
 
-4. **MODEL HEALTH** — Current accuracy stats, notable prior updates this week, any feature dimensions that shifted significantly.
+4. **STILL WATCHING** — Top 5 highest-scored open rumors from prior weeks. Brief status update on each. Note any that now have website corroboration.
+
+5. **MODEL HEALTH** — Current accuracy stats, notable prior updates this week, any feature dimensions that shifted significantly. Include site changes detected count and corroboration count.
 
 Keep the tone informed and analytical. No hedging or filler. If there's nothing notable in a section, say so in one line and move on.
 
