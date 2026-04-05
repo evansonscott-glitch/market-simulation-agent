@@ -11,8 +11,7 @@ from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 
 # Add repo root to path for engine imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
-from engines.logging_config import get_logger
+from lib.logging_config import get_logger
 
 logger = get_logger("scrapers.utils")
 

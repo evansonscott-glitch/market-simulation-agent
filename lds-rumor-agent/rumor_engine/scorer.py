@@ -19,8 +19,7 @@ import math
 from datetime import date
 from typing import Dict, List, Optional, Any, Tuple
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
-from engines.logging_config import get_logger
+from lib.logging_config import get_logger
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from models import (
@@ -619,7 +618,7 @@ if __name__ == "__main__":
     parser.add_argument("--output", default="data/calibration_report.json")
     args = parser.parse_args()
 
-    from engines.logging_config import setup_logging
+    from lib.logging_config import setup_logging
     setup_logging("INFO")
 
     if args.command == "build":

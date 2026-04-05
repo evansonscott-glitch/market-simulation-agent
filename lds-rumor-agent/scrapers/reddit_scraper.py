@@ -17,8 +17,7 @@ import time
 from datetime import date, datetime, timedelta
 from typing import List, Optional, Dict, Any, Set
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
-from engines.logging_config import get_logger
+from lib.logging_config import get_logger
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from models import SourcePlatform
@@ -335,7 +334,7 @@ if __name__ == "__main__":
     parser.add_argument("--output-candidates", default="data/reddit_candidates.json")
     args = parser.parse_args()
 
-    from engines.logging_config import setup_logging
+    from lib.logging_config import setup_logging
     setup_logging("INFO")
 
     if args.mode == "live":

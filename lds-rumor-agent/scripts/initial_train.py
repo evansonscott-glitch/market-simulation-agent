@@ -23,11 +23,9 @@ from pathlib import Path
 # Setup paths
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
-REPO_DIR = os.path.dirname(PROJECT_DIR)
-sys.path.insert(0, REPO_DIR)
 sys.path.insert(0, PROJECT_DIR)
 
-from engines.logging_config import setup_logging, get_logger
+from lib.logging_config import setup_logging, get_logger
 from scrapers.newsroom_scraper import scrape_ground_truth
 from scrapers.reddit_scraper import scrape_reddit
 from scrapers.utils import ensure_data_dir, load_json

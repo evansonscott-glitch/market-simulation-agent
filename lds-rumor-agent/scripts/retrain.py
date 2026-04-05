@@ -9,11 +9,9 @@ import sys
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
-REPO_DIR = os.path.dirname(PROJECT_DIR)
-sys.path.insert(0, REPO_DIR)
 sys.path.insert(0, PROJECT_DIR)
 
-from engines.logging_config import setup_logging, get_logger
+from lib.logging_config import setup_logging, get_logger
 from scrapers.utils import load_json, atomic_write_json
 from rumor_engine.scorer import (
     build_prior_tables, save_prior_tables, load_prior_tables,

@@ -23,8 +23,7 @@ from typing import List, Dict, Any, Optional, Tuple, Set
 from html.parser import HTMLParser
 from xml.etree import ElementTree as ET
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
-from engines.logging_config import get_logger
+from lib.logging_config import get_logger
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from models import (
@@ -552,8 +551,8 @@ def match_changes_to_clusters(
     if not significant:
         return open_clusters
 
-    from engines.llm_client import chat_completion
-    from engines.json_parser import parse_llm_json
+    from lib.llm_client import chat_completion
+    from lib.json_parser import parse_llm_json
 
     # Format changes
     changes_text = "\n".join(
@@ -687,7 +686,7 @@ if __name__ == "__main__":
     parser.add_argument("--pages-only", action="store_true")
     args = parser.parse_args()
 
-    from engines.logging_config import setup_logging
+    from lib.logging_config import setup_logging
     setup_logging("INFO")
 
     from models import SiteMonitorConfig

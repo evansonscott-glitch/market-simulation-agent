@@ -13,10 +13,9 @@ from email.mime.multipart import MIMEMultipart
 from datetime import date, datetime
 from typing import List, Dict, Any, Optional
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
-from engines.llm_client import chat_completion
-from engines.json_parser import parse_llm_json
-from engines.logging_config import get_logger
+from lib.llm_client import chat_completion
+from lib.json_parser import parse_llm_json
+from lib.logging_config import get_logger
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from models import DigestRecord, ScoredRumor, ResolvedRumor, ModelStats, ConfidenceTier
@@ -279,7 +278,7 @@ if __name__ == "__main__":
     parser.add_argument("--test", action="store_true", help="Send a test digest")
     args = parser.parse_args()
 
-    from engines.logging_config import setup_logging
+    from lib.logging_config import setup_logging
     setup_logging("INFO")
 
     if args.test:

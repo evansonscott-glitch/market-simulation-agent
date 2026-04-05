@@ -13,8 +13,7 @@ import sys
 from datetime import date
 from typing import List, Dict, Any, Optional, Tuple
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
-from engines.logging_config import get_logger
+from lib.logging_config import get_logger
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from rumor_engine.matcher import match_new_announcements
